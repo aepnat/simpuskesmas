@@ -1,17 +1,16 @@
 
 <?php
-switch($_GET[act]){
+switch ($_GET[act]) {
 
-default:  
+default:
 
-
- $gtampil=mysql_query("SELECT * FROM informasi_perusahaan where id_informasi_perusahaan = '1'");
- $g=mysql_fetch_array($gtampil);
+ $gtampil = mysql_query("SELECT * FROM informasi_perusahaan where id_informasi_perusahaan = '1'");
+ $g = mysql_fetch_array($gtampil);
 
 if ($g['pict']) {
-	$pict = $g['pict'];
+    $pict = $g['pict'];
 } else {
-	$pict = '';
+    $pict = '';
 }
 
 ?>
@@ -19,7 +18,7 @@ if ($g['pict']) {
 <div class="x_panel">
    <div class="x_title">
       <h3><span style="font-weight: bold;"><?php echo $g['company']?>	</span></h3>
-      <h5><span><?php echo $g['address'].' '.$g['city']." ".$g['state'].", ".$g['prov']." ".$g['zip'];?></span></h5>
+      <h5><span><?php echo $g['address'].' '.$g['city'].' '.$g['state'].', '.$g['prov'].' '.$g['zip']; ?></span></h5>
       <h5><span>Telepon : <?php echo $g['phone']?> Fax: <?php echo $g['fax']?></span></h5>
    </div>
  
