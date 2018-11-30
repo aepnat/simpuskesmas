@@ -45,7 +45,7 @@ $ldate   = date("Y-m-d");
 
                      <?php for ($x = 'A'; $x <= 'Z'; $x++) { ?>
                         <option value= '<?=$x;?>'><?=$x;?></option>
-                     <? } ?>
+                     <?php } ?>
 
                      </select>   
                 </div> -->
@@ -55,7 +55,7 @@ $ldate   = date("Y-m-d");
                    <label class="control-label">Tampilkan </label>
                 </div> 
                 <div class="col-md-9 col-sm-9 col-xs-9 form-group"> 
-                    <?
+                    <?php
                     echo"<input type=radio name='printto' value='1' class='flat' checked>&nbsp Preview &nbsp";
                     echo"<input type=radio name='printto' value='2' class='flat'>&nbsp Print ";
                     ?>                

@@ -70,7 +70,7 @@ $userid   = $_SESSION['userid'];
                    
         <div class="row">
 
-          <form name="myform" id="myform" method="get" action="<? echo"modul/mod_$module/print_$module.php";?>"  onSubmit="popup<?=$module?>(this, 'join')"> 
+          <form name="myform" id="myform" method="get" action="<?php echo"modul/mod_$module/print_$module.php";?>"  onSubmit="popup<?=$module?>(this, 'join')"> 
   
                 <div class="col-md-12 col-sm-12 col-xs-12">
                     <div class="x_panel">
@@ -106,7 +106,7 @@ $userid   = $_SESSION['userid'];
                 </div> 
                 <div class="col-md-9 col-sm-9 col-xs-9 form-group"> 
                  <label class="control-label">
-                    <?
+                    <?php
                     echo"<input type=radio name='printto' value='1' class='flat' checked>&nbsp Preview &nbsp</label>";
                     echo"<input type=radio name='printto' value='2' class='flat'>&nbsp Print</label> ";
                     ?>      
@@ -125,7 +125,7 @@ $userid   = $_SESSION['userid'];
             </form>    
                    
                 </div>
-                <?for($i = 0; $i <= 20; $i++)  { 
+                <?php for($i = 0; $i <= 20; $i++)  { 
                     ?>
                     <br />
                     <?php
