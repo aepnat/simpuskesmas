@@ -1,0 +1,815 @@
+[31-Mar-2015 15:31:43 America/New_York] PHP Warning:  session_start(): Cannot send session cookie - headers already sent in /home/k6240433/public_html/trial/adminweb/modul/mod_banner/banner.php on line 2
+[31-Mar-2015 15:31:43 America/New_York] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent in /home/k6240433/public_html/trial/adminweb/modul/mod_banner/banner.php on line 2
+[31-Mar-2015 15:31:44 America/New_York] PHP Warning:  session_start(): Cannot send session cookie - headers already sent in /home/k6240433/public_html/trial/adminweb/modul/mod_banner/aksi_banner.php on line 2
+[31-Mar-2015 15:31:44 America/New_York] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent in /home/k6240433/public_html/trial/adminweb/modul/mod_banner/aksi_banner.php on line 2
+[15-Jan-2017 05:35:55 UTC] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/soldigge/public_html/pilatus/config/koneksi.php on line 7
+[15-Jan-2017 05:35:55 UTC] PHP Stack trace:
+[15-Jan-2017 05:35:55 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php:0
+[15-Jan-2017 05:35:55 UTC] PHP   2. include() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php:6
+[15-Jan-2017 05:35:55 UTC] PHP   3. mysql_connect() /home/soldigge/public_html/pilatus/config/koneksi.php:7
+[15-Jan-2017 05:35:55 UTC] PHP Notice:  Undefined index: title in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php on line 38
+[15-Jan-2017 05:35:55 UTC] PHP Stack trace:
+[15-Jan-2017 05:35:55 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php:0
+[15-Jan-2017 05:35:55 UTC] PHP Notice:  Undefined index: business_type in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php on line 39
+[15-Jan-2017 05:35:55 UTC] PHP Stack trace:
+[15-Jan-2017 05:35:55 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php:0
+[15-Jan-2017 05:35:55 UTC] PHP Notice:  Undefined index: igroup in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php on line 53
+[15-Jan-2017 05:35:55 UTC] PHP Stack trace:
+[15-Jan-2017 05:35:55 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php:0
+[15-Jan-2017 05:35:55 UTC] PHP Notice:  Undefined index: imenu in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php on line 60
+[15-Jan-2017 05:35:55 UTC] PHP Stack trace:
+[15-Jan-2017 05:35:55 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php:0
+[15-Jan-2017 05:35:55 UTC] PHP Notice:  Use of undefined constant PHP_SELF - assumed 'PHP_SELF' in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php on line 73
+[15-Jan-2017 05:35:55 UTC] PHP Stack trace:
+[15-Jan-2017 05:35:55 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php:0
+[15-Jan-2017 05:36:15 UTC] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/soldigge/public_html/pilatus/config/koneksi.php on line 7
+[15-Jan-2017 05:36:15 UTC] PHP Stack trace:
+[15-Jan-2017 05:36:15 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php:0
+[15-Jan-2017 05:36:15 UTC] PHP   2. include() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php:6
+[15-Jan-2017 05:36:15 UTC] PHP   3. mysql_connect() /home/soldigge/public_html/pilatus/config/koneksi.php:7
+[15-Jan-2017 05:36:15 UTC] PHP Notice:  Use of undefined constant module - assumed 'module' in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php on line 9
+[15-Jan-2017 05:36:15 UTC] PHP Stack trace:
+[15-Jan-2017 05:36:15 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php:0
+[15-Jan-2017 05:36:15 UTC] PHP Notice:  Use of undefined constant act - assumed 'act' in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php on line 10
+[15-Jan-2017 05:36:15 UTC] PHP Stack trace:
+[15-Jan-2017 05:36:15 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php:0
+[15-Jan-2017 05:36:15 UTC] PHP Warning:  date(): It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected the timezone 'UTC' for now, but please set date.timezone to select your timezone. in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php on line 12
+[15-Jan-2017 05:36:15 UTC] PHP Stack trace:
+[15-Jan-2017 05:36:15 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php:0
+[15-Jan-2017 05:36:15 UTC] PHP   2. date() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php:12
+[15-Jan-2017 05:36:15 UTC] PHP Warning:  date(): It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected the timezone 'UTC' for now, but please set date.timezone to select your timezone. in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php on line 13
+[15-Jan-2017 05:36:15 UTC] PHP Stack trace:
+[15-Jan-2017 05:36:15 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php:0
+[15-Jan-2017 05:36:15 UTC] PHP   2. date() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php:13
+[15-Jan-2017 05:36:15 UTC] PHP Warning:  date(): It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected the timezone 'UTC' for now, but please set date.timezone to select your timezone. in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php on line 15
+[15-Jan-2017 05:36:15 UTC] PHP Stack trace:
+[15-Jan-2017 05:36:15 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php:0
+[15-Jan-2017 05:36:15 UTC] PHP   2. date() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php:15
+[15-Jan-2017 05:36:15 UTC] PHP Notice:  Undefined index: business_type in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php on line 17
+[15-Jan-2017 05:36:15 UTC] PHP Stack trace:
+[15-Jan-2017 05:36:15 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php:0
+[15-Jan-2017 05:36:15 UTC] PHP Notice:  Undefined index: id4 in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php on line 57
+[15-Jan-2017 05:36:15 UTC] PHP Stack trace:
+[15-Jan-2017 05:36:15 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php:0
+[15-Jan-2017 05:36:15 UTC] PHP Notice:  Undefined index: id5 in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php on line 57
+[15-Jan-2017 05:36:15 UTC] PHP Stack trace:
+[15-Jan-2017 05:36:15 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php:0
+[16-Jan-2017 01:04:21 UTC] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/soldigge/public_html/pilatus/config/koneksi.php on line 7
+[16-Jan-2017 01:04:21 UTC] PHP Stack trace:
+[16-Jan-2017 01:04:21 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php:0
+[16-Jan-2017 01:04:21 UTC] PHP   2. include() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php:6
+[16-Jan-2017 01:04:21 UTC] PHP   3. mysql_connect() /home/soldigge/public_html/pilatus/config/koneksi.php:7
+[16-Jan-2017 01:04:21 UTC] PHP Notice:  Undefined index: title in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php on line 38
+[16-Jan-2017 01:04:21 UTC] PHP Stack trace:
+[16-Jan-2017 01:04:21 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php:0
+[16-Jan-2017 01:04:21 UTC] PHP Notice:  Undefined index: business_type in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php on line 39
+[16-Jan-2017 01:04:21 UTC] PHP Stack trace:
+[16-Jan-2017 01:04:21 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php:0
+[16-Jan-2017 01:04:21 UTC] PHP Notice:  Undefined index: igroup in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php on line 53
+[16-Jan-2017 01:04:21 UTC] PHP Stack trace:
+[16-Jan-2017 01:04:21 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php:0
+[16-Jan-2017 01:04:21 UTC] PHP Notice:  Undefined index: imenu in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php on line 60
+[16-Jan-2017 01:04:21 UTC] PHP Stack trace:
+[16-Jan-2017 01:04:21 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php:0
+[16-Jan-2017 01:04:21 UTC] PHP Notice:  Use of undefined constant PHP_SELF - assumed 'PHP_SELF' in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php on line 73
+[16-Jan-2017 01:04:21 UTC] PHP Stack trace:
+[16-Jan-2017 01:04:21 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php:0
+[16-Jan-2017 01:04:21 UTC] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/soldigge/public_html/pilatus/config/koneksi.php on line 7
+[16-Jan-2017 01:04:21 UTC] PHP Stack trace:
+[16-Jan-2017 01:04:21 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php:0
+[16-Jan-2017 01:04:21 UTC] PHP   2. include() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php:6
+[16-Jan-2017 01:04:21 UTC] PHP   3. mysql_connect() /home/soldigge/public_html/pilatus/config/koneksi.php:7
+[16-Jan-2017 01:04:21 UTC] PHP Notice:  Undefined index: title in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php on line 38
+[16-Jan-2017 01:04:21 UTC] PHP Stack trace:
+[16-Jan-2017 01:04:21 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php:0
+[16-Jan-2017 01:04:21 UTC] PHP Notice:  Undefined index: business_type in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php on line 39
+[16-Jan-2017 01:04:21 UTC] PHP Stack trace:
+[16-Jan-2017 01:04:21 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php:0
+[16-Jan-2017 01:04:21 UTC] PHP Notice:  Undefined index: igroup in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php on line 53
+[16-Jan-2017 01:04:21 UTC] PHP Stack trace:
+[16-Jan-2017 01:04:21 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php:0
+[16-Jan-2017 01:04:21 UTC] PHP Notice:  Undefined index: imenu in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php on line 60
+[16-Jan-2017 01:04:21 UTC] PHP Stack trace:
+[16-Jan-2017 01:04:21 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php:0
+[16-Jan-2017 01:04:21 UTC] PHP Notice:  Use of undefined constant PHP_SELF - assumed 'PHP_SELF' in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php on line 73
+[16-Jan-2017 01:04:21 UTC] PHP Stack trace:
+[16-Jan-2017 01:04:21 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php:0
+[16-Jan-2017 01:04:32 UTC] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/soldigge/public_html/pilatus/config/koneksi.php on line 7
+[16-Jan-2017 01:04:32 UTC] PHP Stack trace:
+[16-Jan-2017 01:04:32 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php:0
+[16-Jan-2017 01:04:32 UTC] PHP   2. include() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php:6
+[16-Jan-2017 01:04:32 UTC] PHP   3. mysql_connect() /home/soldigge/public_html/pilatus/config/koneksi.php:7
+[16-Jan-2017 01:04:32 UTC] PHP Notice:  Use of undefined constant module - assumed 'module' in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php on line 9
+[16-Jan-2017 01:04:32 UTC] PHP Stack trace:
+[16-Jan-2017 01:04:32 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php:0
+[16-Jan-2017 01:04:32 UTC] PHP Notice:  Use of undefined constant act - assumed 'act' in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php on line 10
+[16-Jan-2017 01:04:32 UTC] PHP Stack trace:
+[16-Jan-2017 01:04:32 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php:0
+[16-Jan-2017 01:04:32 UTC] PHP Warning:  date(): It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected the timezone 'UTC' for now, but please set date.timezone to select your timezone. in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php on line 12
+[16-Jan-2017 01:04:32 UTC] PHP Stack trace:
+[16-Jan-2017 01:04:32 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php:0
+[16-Jan-2017 01:04:32 UTC] PHP   2. date() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php:12
+[16-Jan-2017 01:04:32 UTC] PHP Warning:  date(): It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected the timezone 'UTC' for now, but please set date.timezone to select your timezone. in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php on line 13
+[16-Jan-2017 01:04:32 UTC] PHP Stack trace:
+[16-Jan-2017 01:04:32 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php:0
+[16-Jan-2017 01:04:32 UTC] PHP   2. date() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php:13
+[16-Jan-2017 01:04:32 UTC] PHP Warning:  date(): It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected the timezone 'UTC' for now, but please set date.timezone to select your timezone. in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php on line 15
+[16-Jan-2017 01:04:32 UTC] PHP Stack trace:
+[16-Jan-2017 01:04:32 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php:0
+[16-Jan-2017 01:04:32 UTC] PHP   2. date() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php:15
+[16-Jan-2017 01:04:32 UTC] PHP Notice:  Undefined index: business_type in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php on line 17
+[16-Jan-2017 01:04:32 UTC] PHP Stack trace:
+[16-Jan-2017 01:04:32 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php:0
+[16-Jan-2017 01:04:32 UTC] PHP Notice:  Undefined index: id1 in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php on line 57
+[16-Jan-2017 01:04:32 UTC] PHP Stack trace:
+[16-Jan-2017 01:04:32 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php:0
+[16-Jan-2017 01:04:32 UTC] PHP Notice:  Undefined index: id4 in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php on line 57
+[16-Jan-2017 01:04:32 UTC] PHP Stack trace:
+[16-Jan-2017 01:04:32 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php:0
+[16-Jan-2017 01:04:32 UTC] PHP Notice:  Undefined index: id5 in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php on line 57
+[16-Jan-2017 01:04:32 UTC] PHP Stack trace:
+[16-Jan-2017 01:04:32 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php:0
+[16-Jan-2017 01:04:39 UTC] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/soldigge/public_html/pilatus/config/koneksi.php on line 7
+[16-Jan-2017 01:04:39 UTC] PHP Stack trace:
+[16-Jan-2017 01:04:39 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php:0
+[16-Jan-2017 01:04:39 UTC] PHP   2. include() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php:6
+[16-Jan-2017 01:04:39 UTC] PHP   3. mysql_connect() /home/soldigge/public_html/pilatus/config/koneksi.php:7
+[16-Jan-2017 01:04:39 UTC] PHP Notice:  Undefined index: title in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php on line 38
+[16-Jan-2017 01:04:39 UTC] PHP Stack trace:
+[16-Jan-2017 01:04:39 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php:0
+[16-Jan-2017 01:04:39 UTC] PHP Notice:  Undefined index: business_type in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php on line 39
+[16-Jan-2017 01:04:39 UTC] PHP Stack trace:
+[16-Jan-2017 01:04:39 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php:0
+[16-Jan-2017 01:04:39 UTC] PHP Notice:  Undefined index: igroup in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php on line 53
+[16-Jan-2017 01:04:39 UTC] PHP Stack trace:
+[16-Jan-2017 01:04:39 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php:0
+[16-Jan-2017 01:04:39 UTC] PHP Notice:  Undefined index: imenu in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php on line 60
+[16-Jan-2017 01:04:39 UTC] PHP Stack trace:
+[16-Jan-2017 01:04:39 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php:0
+[16-Jan-2017 01:04:39 UTC] PHP Notice:  Use of undefined constant PHP_SELF - assumed 'PHP_SELF' in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php on line 73
+[16-Jan-2017 01:04:39 UTC] PHP Stack trace:
+[16-Jan-2017 01:04:39 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php:0
+[16-Jan-2017 01:04:44 UTC] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/soldigge/public_html/pilatus/config/koneksi.php on line 7
+[16-Jan-2017 01:04:44 UTC] PHP Stack trace:
+[16-Jan-2017 01:04:44 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php:0
+[16-Jan-2017 01:04:44 UTC] PHP   2. include() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php:6
+[16-Jan-2017 01:04:44 UTC] PHP   3. mysql_connect() /home/soldigge/public_html/pilatus/config/koneksi.php:7
+[16-Jan-2017 01:04:44 UTC] PHP Notice:  Use of undefined constant module - assumed 'module' in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php on line 9
+[16-Jan-2017 01:04:44 UTC] PHP Stack trace:
+[16-Jan-2017 01:04:44 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php:0
+[16-Jan-2017 01:04:44 UTC] PHP Notice:  Use of undefined constant act - assumed 'act' in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php on line 10
+[16-Jan-2017 01:04:44 UTC] PHP Stack trace:
+[16-Jan-2017 01:04:44 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php:0
+[16-Jan-2017 01:04:44 UTC] PHP Warning:  date(): It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected the timezone 'UTC' for now, but please set date.timezone to select your timezone. in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php on line 12
+[16-Jan-2017 01:04:44 UTC] PHP Stack trace:
+[16-Jan-2017 01:04:44 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php:0
+[16-Jan-2017 01:04:44 UTC] PHP   2. date() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php:12
+[16-Jan-2017 01:04:44 UTC] PHP Warning:  date(): It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected the timezone 'UTC' for now, but please set date.timezone to select your timezone. in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php on line 13
+[16-Jan-2017 01:04:44 UTC] PHP Stack trace:
+[16-Jan-2017 01:04:44 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php:0
+[16-Jan-2017 01:04:44 UTC] PHP   2. date() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php:13
+[16-Jan-2017 01:04:44 UTC] PHP Warning:  date(): It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected the timezone 'UTC' for now, but please set date.timezone to select your timezone. in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php on line 15
+[16-Jan-2017 01:04:44 UTC] PHP Stack trace:
+[16-Jan-2017 01:04:44 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php:0
+[16-Jan-2017 01:04:44 UTC] PHP   2. date() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php:15
+[16-Jan-2017 01:04:44 UTC] PHP Notice:  Undefined index: business_type in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php on line 17
+[16-Jan-2017 01:04:44 UTC] PHP Stack trace:
+[16-Jan-2017 01:04:44 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php:0
+[16-Jan-2017 01:04:44 UTC] PHP Notice:  Undefined index: id1 in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php on line 57
+[16-Jan-2017 01:04:44 UTC] PHP Stack trace:
+[16-Jan-2017 01:04:44 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php:0
+[16-Jan-2017 01:04:44 UTC] PHP Notice:  Undefined index: id3 in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php on line 57
+[16-Jan-2017 01:04:44 UTC] PHP Stack trace:
+[16-Jan-2017 01:04:44 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php:0
+[16-Jan-2017 01:05:06 UTC] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/soldigge/public_html/pilatus/config/koneksi.php on line 7
+[16-Jan-2017 01:05:06 UTC] PHP Stack trace:
+[16-Jan-2017 01:05:06 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php:0
+[16-Jan-2017 01:05:06 UTC] PHP   2. include() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php:6
+[16-Jan-2017 01:05:06 UTC] PHP   3. mysql_connect() /home/soldigge/public_html/pilatus/config/koneksi.php:7
+[16-Jan-2017 01:05:06 UTC] PHP Notice:  Use of undefined constant module - assumed 'module' in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php on line 9
+[16-Jan-2017 01:05:06 UTC] PHP Stack trace:
+[16-Jan-2017 01:05:06 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php:0
+[16-Jan-2017 01:05:06 UTC] PHP Notice:  Use of undefined constant act - assumed 'act' in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php on line 10
+[16-Jan-2017 01:05:06 UTC] PHP Stack trace:
+[16-Jan-2017 01:05:06 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php:0
+[16-Jan-2017 01:05:06 UTC] PHP Warning:  date(): It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected the timezone 'UTC' for now, but please set date.timezone to select your timezone. in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php on line 12
+[16-Jan-2017 01:05:06 UTC] PHP Stack trace:
+[16-Jan-2017 01:05:06 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php:0
+[16-Jan-2017 01:05:06 UTC] PHP   2. date() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php:12
+[16-Jan-2017 01:05:06 UTC] PHP Warning:  date(): It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected the timezone 'UTC' for now, but please set date.timezone to select your timezone. in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php on line 13
+[16-Jan-2017 01:05:06 UTC] PHP Stack trace:
+[16-Jan-2017 01:05:06 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php:0
+[16-Jan-2017 01:05:06 UTC] PHP   2. date() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php:13
+[16-Jan-2017 01:05:06 UTC] PHP Warning:  date(): It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected the timezone 'UTC' for now, but please set date.timezone to select your timezone. in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php on line 15
+[16-Jan-2017 01:05:06 UTC] PHP Stack trace:
+[16-Jan-2017 01:05:06 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php:0
+[16-Jan-2017 01:05:06 UTC] PHP   2. date() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php:15
+[16-Jan-2017 01:05:06 UTC] PHP Notice:  Undefined index: business_type in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php on line 17
+[16-Jan-2017 01:05:06 UTC] PHP Stack trace:
+[16-Jan-2017 01:05:06 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php:0
+[16-Jan-2017 01:05:25 UTC] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/soldigge/public_html/pilatus/config/koneksi.php on line 7
+[16-Jan-2017 01:05:25 UTC] PHP Stack trace:
+[16-Jan-2017 01:05:25 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php:0
+[16-Jan-2017 01:05:25 UTC] PHP   2. include() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php:6
+[16-Jan-2017 01:05:25 UTC] PHP   3. mysql_connect() /home/soldigge/public_html/pilatus/config/koneksi.php:7
+[16-Jan-2017 01:05:25 UTC] PHP Notice:  Undefined index: title in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php on line 38
+[16-Jan-2017 01:05:25 UTC] PHP Stack trace:
+[16-Jan-2017 01:05:25 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php:0
+[16-Jan-2017 01:05:25 UTC] PHP Notice:  Undefined index: business_type in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php on line 39
+[16-Jan-2017 01:05:25 UTC] PHP Stack trace:
+[16-Jan-2017 01:05:25 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php:0
+[16-Jan-2017 01:05:25 UTC] PHP Notice:  Undefined index: id_groupmodul in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php on line 43
+[16-Jan-2017 01:05:25 UTC] PHP Stack trace:
+[16-Jan-2017 01:05:25 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php:0
+[16-Jan-2017 01:05:25 UTC] PHP Notice:  Undefined index: igroup in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php on line 53
+[16-Jan-2017 01:05:25 UTC] PHP Stack trace:
+[16-Jan-2017 01:05:25 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php:0
+[16-Jan-2017 01:05:25 UTC] PHP Notice:  Undefined variable: data in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php on line 56
+[16-Jan-2017 01:05:25 UTC] PHP Stack trace:
+[16-Jan-2017 01:05:25 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php:0
+[16-Jan-2017 01:05:25 UTC] PHP Notice:  Trying to get property of non-object in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php on line 56
+[16-Jan-2017 01:05:25 UTC] PHP Stack trace:
+[16-Jan-2017 01:05:25 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php:0
+[16-Jan-2017 01:05:25 UTC] PHP Notice:  Undefined index: imenu in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php on line 60
+[16-Jan-2017 01:05:25 UTC] PHP Stack trace:
+[16-Jan-2017 01:05:25 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php:0
+[16-Jan-2017 01:05:25 UTC] PHP Notice:  Undefined variable: data in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php on line 63
+[16-Jan-2017 01:05:25 UTC] PHP Stack trace:
+[16-Jan-2017 01:05:25 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php:0
+[16-Jan-2017 01:05:25 UTC] PHP Notice:  Trying to get property of non-object in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php on line 63
+[16-Jan-2017 01:05:25 UTC] PHP Stack trace:
+[16-Jan-2017 01:05:25 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php:0
+[16-Jan-2017 01:05:25 UTC] PHP Notice:  Use of undefined constant PHP_SELF - assumed 'PHP_SELF' in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php on line 73
+[16-Jan-2017 01:05:25 UTC] PHP Stack trace:
+[16-Jan-2017 01:05:25 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php:0
+[16-Jan-2017 01:05:25 UTC] PHP Notice:  Undefined variable: no in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php on line 191
+[16-Jan-2017 01:05:25 UTC] PHP Stack trace:
+[16-Jan-2017 01:05:25 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php:0
+[16-Jan-2017 01:05:31 UTC] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/soldigge/public_html/pilatus/config/koneksi.php on line 7
+[16-Jan-2017 01:05:31 UTC] PHP Stack trace:
+[16-Jan-2017 01:05:31 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php:0
+[16-Jan-2017 01:05:31 UTC] PHP   2. include() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php:6
+[16-Jan-2017 01:05:31 UTC] PHP   3. mysql_connect() /home/soldigge/public_html/pilatus/config/koneksi.php:7
+[16-Jan-2017 01:05:31 UTC] PHP Notice:  Undefined index: title in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php on line 38
+[16-Jan-2017 01:05:31 UTC] PHP Stack trace:
+[16-Jan-2017 01:05:31 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php:0
+[16-Jan-2017 01:05:31 UTC] PHP Notice:  Undefined index: business_type in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php on line 39
+[16-Jan-2017 01:05:31 UTC] PHP Stack trace:
+[16-Jan-2017 01:05:31 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php:0
+[16-Jan-2017 01:05:31 UTC] PHP Notice:  Undefined index: id_groupmodul in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php on line 43
+[16-Jan-2017 01:05:31 UTC] PHP Stack trace:
+[16-Jan-2017 01:05:31 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php:0
+[16-Jan-2017 01:05:31 UTC] PHP Notice:  Use of undefined constant PHP_SELF - assumed 'PHP_SELF' in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php on line 73
+[16-Jan-2017 01:05:31 UTC] PHP Stack trace:
+[16-Jan-2017 01:05:31 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php:0
+[16-Jan-2017 01:05:32 UTC] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/soldigge/public_html/pilatus/config/koneksi.php on line 7
+[16-Jan-2017 01:05:32 UTC] PHP Stack trace:
+[16-Jan-2017 01:05:32 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php:0
+[16-Jan-2017 01:05:32 UTC] PHP   2. include() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php:6
+[16-Jan-2017 01:05:32 UTC] PHP   3. mysql_connect() /home/soldigge/public_html/pilatus/config/koneksi.php:7
+[16-Jan-2017 01:05:32 UTC] PHP Notice:  Use of undefined constant module - assumed 'module' in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php on line 9
+[16-Jan-2017 01:05:32 UTC] PHP Stack trace:
+[16-Jan-2017 01:05:32 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php:0
+[16-Jan-2017 01:05:32 UTC] PHP Notice:  Use of undefined constant act - assumed 'act' in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php on line 10
+[16-Jan-2017 01:05:32 UTC] PHP Stack trace:
+[16-Jan-2017 01:05:32 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php:0
+[16-Jan-2017 01:05:32 UTC] PHP Warning:  date(): It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected the timezone 'UTC' for now, but please set date.timezone to select your timezone. in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php on line 12
+[16-Jan-2017 01:05:32 UTC] PHP Stack trace:
+[16-Jan-2017 01:05:32 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php:0
+[16-Jan-2017 01:05:32 UTC] PHP   2. date() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php:12
+[16-Jan-2017 01:05:32 UTC] PHP Warning:  date(): It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected the timezone 'UTC' for now, but please set date.timezone to select your timezone. in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php on line 13
+[16-Jan-2017 01:05:32 UTC] PHP Stack trace:
+[16-Jan-2017 01:05:32 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php:0
+[16-Jan-2017 01:05:32 UTC] PHP   2. date() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php:13
+[16-Jan-2017 01:05:32 UTC] PHP Warning:  date(): It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected the timezone 'UTC' for now, but please set date.timezone to select your timezone. in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php on line 15
+[16-Jan-2017 01:05:32 UTC] PHP Stack trace:
+[16-Jan-2017 01:05:32 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php:0
+[16-Jan-2017 01:05:32 UTC] PHP   2. date() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php:15
+[16-Jan-2017 01:05:32 UTC] PHP Notice:  Undefined index: business_type in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php on line 17
+[16-Jan-2017 01:05:32 UTC] PHP Stack trace:
+[16-Jan-2017 01:05:32 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php:0
+[24-Jan-2017 10:02:47 Asia/Jakarta] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/soldigge/public_html/pilatus/config/koneksi.php on line 7
+[24-Jan-2017 10:02:47 Asia/Jakarta] PHP Stack trace:
+[24-Jan-2017 10:02:47 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php:0
+[24-Jan-2017 10:02:47 Asia/Jakarta] PHP   2. include() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php:6
+[24-Jan-2017 10:02:47 Asia/Jakarta] PHP   3. mysql_connect() /home/soldigge/public_html/pilatus/config/koneksi.php:7
+[24-Jan-2017 10:02:47 Asia/Jakarta] PHP Notice:  Undefined index: title in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php on line 38
+[24-Jan-2017 10:02:47 Asia/Jakarta] PHP Stack trace:
+[24-Jan-2017 10:02:47 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php:0
+[24-Jan-2017 10:02:47 Asia/Jakarta] PHP Notice:  Undefined index: business_type in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php on line 39
+[24-Jan-2017 10:02:47 Asia/Jakarta] PHP Stack trace:
+[24-Jan-2017 10:02:47 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php:0
+[24-Jan-2017 10:02:47 Asia/Jakarta] PHP Notice:  Undefined index: id_groupmodul in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php on line 43
+[24-Jan-2017 10:02:47 Asia/Jakarta] PHP Stack trace:
+[24-Jan-2017 10:02:47 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php:0
+[24-Jan-2017 10:02:47 Asia/Jakarta] PHP Notice:  Undefined index: igroup in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php on line 53
+[24-Jan-2017 10:02:47 Asia/Jakarta] PHP Stack trace:
+[24-Jan-2017 10:02:47 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php:0
+[24-Jan-2017 10:02:47 Asia/Jakarta] PHP Notice:  Undefined variable: data in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php on line 56
+[24-Jan-2017 10:02:47 Asia/Jakarta] PHP Stack trace:
+[24-Jan-2017 10:02:47 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php:0
+[24-Jan-2017 10:02:47 Asia/Jakarta] PHP Notice:  Trying to get property of non-object in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php on line 56
+[24-Jan-2017 10:02:47 Asia/Jakarta] PHP Stack trace:
+[24-Jan-2017 10:02:47 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php:0
+[24-Jan-2017 10:02:47 Asia/Jakarta] PHP Notice:  Undefined index: imenu in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php on line 60
+[24-Jan-2017 10:02:47 Asia/Jakarta] PHP Stack trace:
+[24-Jan-2017 10:02:47 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php:0
+[24-Jan-2017 10:02:47 Asia/Jakarta] PHP Notice:  Undefined variable: data in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php on line 63
+[24-Jan-2017 10:02:47 Asia/Jakarta] PHP Stack trace:
+[24-Jan-2017 10:02:47 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php:0
+[24-Jan-2017 10:02:47 Asia/Jakarta] PHP Notice:  Trying to get property of non-object in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php on line 63
+[24-Jan-2017 10:02:47 Asia/Jakarta] PHP Stack trace:
+[24-Jan-2017 10:02:47 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php:0
+[24-Jan-2017 10:02:47 Asia/Jakarta] PHP Notice:  Use of undefined constant PHP_SELF - assumed 'PHP_SELF' in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php on line 73
+[24-Jan-2017 10:02:47 Asia/Jakarta] PHP Stack trace:
+[24-Jan-2017 10:02:47 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php:0
+[24-Jan-2017 10:02:47 Asia/Jakarta] PHP Notice:  Undefined variable: no in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php on line 191
+[24-Jan-2017 10:02:47 Asia/Jakarta] PHP Stack trace:
+[24-Jan-2017 10:02:47 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php:0
+[24-Jan-2017 10:02:53 Asia/Jakarta] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/soldigge/public_html/pilatus/config/koneksi.php on line 7
+[24-Jan-2017 10:02:53 Asia/Jakarta] PHP Stack trace:
+[24-Jan-2017 10:02:53 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php:0
+[24-Jan-2017 10:02:53 Asia/Jakarta] PHP   2. include() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php:6
+[24-Jan-2017 10:02:53 Asia/Jakarta] PHP   3. mysql_connect() /home/soldigge/public_html/pilatus/config/koneksi.php:7
+[24-Jan-2017 10:02:53 Asia/Jakarta] PHP Notice:  Undefined index: title in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php on line 38
+[24-Jan-2017 10:02:53 Asia/Jakarta] PHP Stack trace:
+[24-Jan-2017 10:02:53 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php:0
+[24-Jan-2017 10:02:53 Asia/Jakarta] PHP Notice:  Undefined index: business_type in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php on line 39
+[24-Jan-2017 10:02:53 Asia/Jakarta] PHP Stack trace:
+[24-Jan-2017 10:02:53 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php:0
+[24-Jan-2017 10:02:53 Asia/Jakarta] PHP Notice:  Undefined index: igroup in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php on line 53
+[24-Jan-2017 10:02:53 Asia/Jakarta] PHP Stack trace:
+[24-Jan-2017 10:02:53 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php:0
+[24-Jan-2017 10:02:53 Asia/Jakarta] PHP Notice:  Undefined index: imenu in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php on line 60
+[24-Jan-2017 10:02:53 Asia/Jakarta] PHP Stack trace:
+[24-Jan-2017 10:02:53 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php:0
+[24-Jan-2017 10:02:53 Asia/Jakarta] PHP Notice:  Use of undefined constant PHP_SELF - assumed 'PHP_SELF' in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php on line 73
+[24-Jan-2017 10:02:53 Asia/Jakarta] PHP Stack trace:
+[24-Jan-2017 10:02:53 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php:0
+[24-Jan-2017 10:02:57 Asia/Jakarta] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/soldigge/public_html/pilatus/config/koneksi.php on line 7
+[24-Jan-2017 10:02:57 Asia/Jakarta] PHP Stack trace:
+[24-Jan-2017 10:02:57 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php:0
+[24-Jan-2017 10:02:57 Asia/Jakarta] PHP   2. include() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php:6
+[24-Jan-2017 10:02:57 Asia/Jakarta] PHP   3. mysql_connect() /home/soldigge/public_html/pilatus/config/koneksi.php:7
+[24-Jan-2017 10:02:57 Asia/Jakarta] PHP Notice:  Use of undefined constant module - assumed 'module' in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php on line 9
+[24-Jan-2017 10:02:57 Asia/Jakarta] PHP Stack trace:
+[24-Jan-2017 10:02:57 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php:0
+[24-Jan-2017 10:02:57 Asia/Jakarta] PHP Notice:  Use of undefined constant act - assumed 'act' in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php on line 10
+[24-Jan-2017 10:02:57 Asia/Jakarta] PHP Stack trace:
+[24-Jan-2017 10:02:57 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php:0
+[24-Jan-2017 10:02:57 Asia/Jakarta] PHP Notice:  Undefined index: business_type in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php on line 17
+[24-Jan-2017 10:02:57 Asia/Jakarta] PHP Stack trace:
+[24-Jan-2017 10:02:57 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php:0
+[24-Jan-2017 10:02:57 Asia/Jakarta] PHP Notice:  Undefined index: id1 in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php on line 57
+[24-Jan-2017 10:02:57 Asia/Jakarta] PHP Stack trace:
+[24-Jan-2017 10:02:57 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php:0
+[24-Jan-2017 10:02:57 Asia/Jakarta] PHP Notice:  Undefined index: id2 in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php on line 57
+[24-Jan-2017 10:02:57 Asia/Jakarta] PHP Stack trace:
+[24-Jan-2017 10:02:57 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php:0
+[24-Jan-2017 10:02:57 Asia/Jakarta] PHP Notice:  Undefined index: id3 in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php on line 57
+[24-Jan-2017 10:02:57 Asia/Jakarta] PHP Stack trace:
+[24-Jan-2017 10:02:57 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php:0
+[24-Jan-2017 10:02:57 Asia/Jakarta] PHP Notice:  Undefined index: id4 in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php on line 57
+[24-Jan-2017 10:02:57 Asia/Jakarta] PHP Stack trace:
+[24-Jan-2017 10:02:57 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php:0
+[24-Jan-2017 10:02:57 Asia/Jakarta] PHP Notice:  Undefined index: id5 in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php on line 57
+[24-Jan-2017 10:02:57 Asia/Jakarta] PHP Stack trace:
+[24-Jan-2017 10:02:57 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php:0
+[24-Jan-2017 10:02:57 Asia/Jakarta] PHP Notice:  Undefined index: id7 in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php on line 57
+[24-Jan-2017 10:02:57 Asia/Jakarta] PHP Stack trace:
+[24-Jan-2017 10:02:57 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php:0
+[24-Jan-2017 10:02:57 Asia/Jakarta] PHP Notice:  Undefined index: id8 in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php on line 57
+[24-Jan-2017 10:02:57 Asia/Jakarta] PHP Stack trace:
+[24-Jan-2017 10:02:57 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php:0
+[24-Jan-2017 10:02:57 Asia/Jakarta] PHP Notice:  Undefined index: id9 in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php on line 57
+[24-Jan-2017 10:02:57 Asia/Jakarta] PHP Stack trace:
+[24-Jan-2017 10:02:57 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php:0
+[24-Jan-2017 10:02:57 Asia/Jakarta] PHP Notice:  Undefined index: id10 in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php on line 57
+[24-Jan-2017 10:02:57 Asia/Jakarta] PHP Stack trace:
+[24-Jan-2017 10:02:57 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php:0
+[24-Jan-2017 13:32:17 Asia/Jakarta] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/soldigge/public_html/pilatus/config/koneksi.php on line 7
+[24-Jan-2017 13:32:17 Asia/Jakarta] PHP Stack trace:
+[24-Jan-2017 13:32:17 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php:0
+[24-Jan-2017 13:32:17 Asia/Jakarta] PHP   2. include() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php:6
+[24-Jan-2017 13:32:17 Asia/Jakarta] PHP   3. mysql_connect() /home/soldigge/public_html/pilatus/config/koneksi.php:7
+[24-Jan-2017 13:32:17 Asia/Jakarta] PHP Notice:  Undefined index: title in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php on line 38
+[24-Jan-2017 13:32:17 Asia/Jakarta] PHP Stack trace:
+[24-Jan-2017 13:32:17 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php:0
+[24-Jan-2017 13:32:17 Asia/Jakarta] PHP Notice:  Undefined index: business_type in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php on line 39
+[24-Jan-2017 13:32:17 Asia/Jakarta] PHP Stack trace:
+[24-Jan-2017 13:32:17 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php:0
+[24-Jan-2017 13:32:17 Asia/Jakarta] PHP Notice:  Undefined index: igroup in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php on line 53
+[24-Jan-2017 13:32:17 Asia/Jakarta] PHP Stack trace:
+[24-Jan-2017 13:32:17 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php:0
+[24-Jan-2017 13:32:17 Asia/Jakarta] PHP Notice:  Undefined index: imenu in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php on line 60
+[24-Jan-2017 13:32:17 Asia/Jakarta] PHP Stack trace:
+[24-Jan-2017 13:32:17 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php:0
+[24-Jan-2017 13:32:17 Asia/Jakarta] PHP Notice:  Use of undefined constant PHP_SELF - assumed 'PHP_SELF' in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php on line 73
+[24-Jan-2017 13:32:17 Asia/Jakarta] PHP Stack trace:
+[24-Jan-2017 13:32:17 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php:0
+[24-Jan-2017 13:32:21 Asia/Jakarta] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/soldigge/public_html/pilatus/config/koneksi.php on line 7
+[24-Jan-2017 13:32:21 Asia/Jakarta] PHP Stack trace:
+[24-Jan-2017 13:32:21 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php:0
+[24-Jan-2017 13:32:21 Asia/Jakarta] PHP   2. include() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php:6
+[24-Jan-2017 13:32:21 Asia/Jakarta] PHP   3. mysql_connect() /home/soldigge/public_html/pilatus/config/koneksi.php:7
+[24-Jan-2017 13:32:21 Asia/Jakarta] PHP Notice:  Use of undefined constant module - assumed 'module' in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php on line 9
+[24-Jan-2017 13:32:21 Asia/Jakarta] PHP Stack trace:
+[24-Jan-2017 13:32:21 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php:0
+[24-Jan-2017 13:32:21 Asia/Jakarta] PHP Notice:  Use of undefined constant act - assumed 'act' in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php on line 10
+[24-Jan-2017 13:32:21 Asia/Jakarta] PHP Stack trace:
+[24-Jan-2017 13:32:21 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php:0
+[24-Jan-2017 13:32:21 Asia/Jakarta] PHP Notice:  Undefined index: business_type in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php on line 17
+[24-Jan-2017 13:32:21 Asia/Jakarta] PHP Stack trace:
+[24-Jan-2017 13:32:21 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php:0
+[24-Jan-2017 13:32:21 Asia/Jakarta] PHP Notice:  Undefined index: id6 in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php on line 57
+[24-Jan-2017 13:32:21 Asia/Jakarta] PHP Stack trace:
+[24-Jan-2017 13:32:21 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php:0
+[24-Jan-2017 13:32:34 Asia/Jakarta] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/soldigge/public_html/pilatus/config/koneksi.php on line 7
+[24-Jan-2017 13:32:34 Asia/Jakarta] PHP Stack trace:
+[24-Jan-2017 13:32:34 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php:0
+[24-Jan-2017 13:32:34 Asia/Jakarta] PHP   2. include() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php:6
+[24-Jan-2017 13:32:34 Asia/Jakarta] PHP   3. mysql_connect() /home/soldigge/public_html/pilatus/config/koneksi.php:7
+[24-Jan-2017 13:32:34 Asia/Jakarta] PHP Notice:  Undefined index: title in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php on line 38
+[24-Jan-2017 13:32:34 Asia/Jakarta] PHP Stack trace:
+[24-Jan-2017 13:32:34 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php:0
+[24-Jan-2017 13:32:34 Asia/Jakarta] PHP Notice:  Undefined index: business_type in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php on line 39
+[24-Jan-2017 13:32:34 Asia/Jakarta] PHP Stack trace:
+[24-Jan-2017 13:32:34 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php:0
+[24-Jan-2017 13:32:34 Asia/Jakarta] PHP Notice:  Undefined index: id_groupmodul in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php on line 43
+[24-Jan-2017 13:32:34 Asia/Jakarta] PHP Stack trace:
+[24-Jan-2017 13:32:34 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php:0
+[24-Jan-2017 13:32:34 Asia/Jakarta] PHP Notice:  Undefined index: igroup in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php on line 53
+[24-Jan-2017 13:32:34 Asia/Jakarta] PHP Stack trace:
+[24-Jan-2017 13:32:34 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php:0
+[24-Jan-2017 13:32:34 Asia/Jakarta] PHP Notice:  Undefined variable: data in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php on line 56
+[24-Jan-2017 13:32:34 Asia/Jakarta] PHP Stack trace:
+[24-Jan-2017 13:32:34 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php:0
+[24-Jan-2017 13:32:34 Asia/Jakarta] PHP Notice:  Trying to get property of non-object in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php on line 56
+[24-Jan-2017 13:32:34 Asia/Jakarta] PHP Stack trace:
+[24-Jan-2017 13:32:34 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php:0
+[24-Jan-2017 13:32:34 Asia/Jakarta] PHP Notice:  Undefined index: imenu in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php on line 60
+[24-Jan-2017 13:32:34 Asia/Jakarta] PHP Stack trace:
+[24-Jan-2017 13:32:34 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php:0
+[24-Jan-2017 13:32:34 Asia/Jakarta] PHP Notice:  Undefined variable: data in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php on line 63
+[24-Jan-2017 13:32:34 Asia/Jakarta] PHP Stack trace:
+[24-Jan-2017 13:32:34 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php:0
+[24-Jan-2017 13:32:34 Asia/Jakarta] PHP Notice:  Trying to get property of non-object in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php on line 63
+[24-Jan-2017 13:32:34 Asia/Jakarta] PHP Stack trace:
+[24-Jan-2017 13:32:34 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php:0
+[24-Jan-2017 13:32:34 Asia/Jakarta] PHP Notice:  Use of undefined constant PHP_SELF - assumed 'PHP_SELF' in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php on line 73
+[24-Jan-2017 13:32:34 Asia/Jakarta] PHP Stack trace:
+[24-Jan-2017 13:32:34 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php:0
+[24-Jan-2017 13:32:34 Asia/Jakarta] PHP Notice:  Undefined variable: no in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php on line 191
+[24-Jan-2017 13:32:34 Asia/Jakarta] PHP Stack trace:
+[24-Jan-2017 13:32:34 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php:0
+[24-Jan-2017 13:32:45 Asia/Jakarta] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/soldigge/public_html/pilatus/config/koneksi.php on line 7
+[24-Jan-2017 13:32:45 Asia/Jakarta] PHP Stack trace:
+[24-Jan-2017 13:32:45 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php:0
+[24-Jan-2017 13:32:45 Asia/Jakarta] PHP   2. include() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php:6
+[24-Jan-2017 13:32:45 Asia/Jakarta] PHP   3. mysql_connect() /home/soldigge/public_html/pilatus/config/koneksi.php:7
+[24-Jan-2017 13:32:45 Asia/Jakarta] PHP Notice:  Undefined index: title in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php on line 38
+[24-Jan-2017 13:32:45 Asia/Jakarta] PHP Stack trace:
+[24-Jan-2017 13:32:45 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php:0
+[24-Jan-2017 13:32:45 Asia/Jakarta] PHP Notice:  Undefined index: business_type in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php on line 39
+[24-Jan-2017 13:32:45 Asia/Jakarta] PHP Stack trace:
+[24-Jan-2017 13:32:45 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php:0
+[24-Jan-2017 13:32:45 Asia/Jakarta] PHP Notice:  Undefined index: id_groupmodul in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php on line 43
+[24-Jan-2017 13:32:45 Asia/Jakarta] PHP Stack trace:
+[24-Jan-2017 13:32:45 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php:0
+[24-Jan-2017 13:32:45 Asia/Jakarta] PHP Notice:  Use of undefined constant PHP_SELF - assumed 'PHP_SELF' in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php on line 73
+[24-Jan-2017 13:32:45 Asia/Jakarta] PHP Stack trace:
+[24-Jan-2017 13:32:45 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php:0
+[24-Jan-2017 13:33:09 Asia/Jakarta] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/soldigge/public_html/pilatus/config/koneksi.php on line 7
+[24-Jan-2017 13:33:09 Asia/Jakarta] PHP Stack trace:
+[24-Jan-2017 13:33:09 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php:0
+[24-Jan-2017 13:33:09 Asia/Jakarta] PHP   2. include() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php:6
+[24-Jan-2017 13:33:09 Asia/Jakarta] PHP   3. mysql_connect() /home/soldigge/public_html/pilatus/config/koneksi.php:7
+[24-Jan-2017 13:33:09 Asia/Jakarta] PHP Notice:  Use of undefined constant module - assumed 'module' in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php on line 9
+[24-Jan-2017 13:33:09 Asia/Jakarta] PHP Stack trace:
+[24-Jan-2017 13:33:09 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php:0
+[24-Jan-2017 13:33:09 Asia/Jakarta] PHP Notice:  Use of undefined constant act - assumed 'act' in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php on line 10
+[24-Jan-2017 13:33:09 Asia/Jakarta] PHP Stack trace:
+[24-Jan-2017 13:33:09 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php:0
+[24-Jan-2017 13:33:09 Asia/Jakarta] PHP Notice:  Undefined index: business_type in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php on line 17
+[24-Jan-2017 13:33:09 Asia/Jakarta] PHP Stack trace:
+[24-Jan-2017 13:33:09 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php:0
+[24-Jan-2017 13:33:09 Asia/Jakarta] PHP Notice:  Undefined index: id1 in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php on line 57
+[24-Jan-2017 13:33:09 Asia/Jakarta] PHP Stack trace:
+[24-Jan-2017 13:33:09 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php:0
+[24-Jan-2017 13:33:09 Asia/Jakarta] PHP Notice:  Undefined index: id3 in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php on line 57
+[24-Jan-2017 13:33:09 Asia/Jakarta] PHP Stack trace:
+[24-Jan-2017 13:33:09 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php:0
+[24-Jan-2017 13:33:09 Asia/Jakarta] PHP Notice:  Undefined index: id4 in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php on line 57
+[24-Jan-2017 13:33:09 Asia/Jakarta] PHP Stack trace:
+[24-Jan-2017 13:33:09 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php:0
+[24-Jan-2017 13:33:09 Asia/Jakarta] PHP Notice:  Undefined index: id5 in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php on line 57
+[24-Jan-2017 13:33:09 Asia/Jakarta] PHP Stack trace:
+[24-Jan-2017 13:33:09 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php:0
+[24-Jan-2017 13:33:09 Asia/Jakarta] PHP Notice:  Undefined index: id7 in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php on line 57
+[24-Jan-2017 13:33:09 Asia/Jakarta] PHP Stack trace:
+[24-Jan-2017 13:33:09 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php:0
+[24-Jan-2017 13:33:09 Asia/Jakarta] PHP Notice:  Undefined index: id8 in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php on line 57
+[24-Jan-2017 13:33:09 Asia/Jakarta] PHP Stack trace:
+[24-Jan-2017 13:33:09 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php:0
+[24-Jan-2017 13:33:09 Asia/Jakarta] PHP Notice:  Undefined index: id9 in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php on line 57
+[24-Jan-2017 13:33:09 Asia/Jakarta] PHP Stack trace:
+[24-Jan-2017 13:33:09 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php:0
+[24-Jan-2017 13:33:09 Asia/Jakarta] PHP Notice:  Undefined index: id10 in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php on line 57
+[24-Jan-2017 13:33:09 Asia/Jakarta] PHP Stack trace:
+[24-Jan-2017 13:33:09 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php:0
+[24-Jan-2017 13:33:11 Asia/Jakarta] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/soldigge/public_html/pilatus/config/koneksi.php on line 7
+[24-Jan-2017 13:33:11 Asia/Jakarta] PHP Stack trace:
+[24-Jan-2017 13:33:11 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php:0
+[24-Jan-2017 13:33:11 Asia/Jakarta] PHP   2. include() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php:6
+[24-Jan-2017 13:33:11 Asia/Jakarta] PHP   3. mysql_connect() /home/soldigge/public_html/pilatus/config/koneksi.php:7
+[24-Jan-2017 13:33:11 Asia/Jakarta] PHP Notice:  Undefined index: title in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php on line 38
+[24-Jan-2017 13:33:11 Asia/Jakarta] PHP Stack trace:
+[24-Jan-2017 13:33:11 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php:0
+[24-Jan-2017 13:33:11 Asia/Jakarta] PHP Notice:  Undefined index: business_type in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php on line 39
+[24-Jan-2017 13:33:11 Asia/Jakarta] PHP Stack trace:
+[24-Jan-2017 13:33:11 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php:0
+[24-Jan-2017 13:33:11 Asia/Jakarta] PHP Notice:  Undefined index: id_groupmodul in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php on line 43
+[24-Jan-2017 13:33:11 Asia/Jakarta] PHP Stack trace:
+[24-Jan-2017 13:33:11 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php:0
+[24-Jan-2017 13:33:11 Asia/Jakarta] PHP Notice:  Undefined index: igroup in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php on line 53
+[24-Jan-2017 13:33:11 Asia/Jakarta] PHP Stack trace:
+[24-Jan-2017 13:33:11 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php:0
+[24-Jan-2017 13:33:11 Asia/Jakarta] PHP Notice:  Undefined variable: data in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php on line 56
+[24-Jan-2017 13:33:11 Asia/Jakarta] PHP Stack trace:
+[24-Jan-2017 13:33:11 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php:0
+[24-Jan-2017 13:33:11 Asia/Jakarta] PHP Notice:  Trying to get property of non-object in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php on line 56
+[24-Jan-2017 13:33:11 Asia/Jakarta] PHP Stack trace:
+[24-Jan-2017 13:33:11 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php:0
+[24-Jan-2017 13:33:11 Asia/Jakarta] PHP Notice:  Undefined index: imenu in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php on line 60
+[24-Jan-2017 13:33:11 Asia/Jakarta] PHP Stack trace:
+[24-Jan-2017 13:33:11 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php:0
+[24-Jan-2017 13:33:11 Asia/Jakarta] PHP Notice:  Undefined variable: data in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php on line 63
+[24-Jan-2017 13:33:11 Asia/Jakarta] PHP Stack trace:
+[24-Jan-2017 13:33:11 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php:0
+[24-Jan-2017 13:33:11 Asia/Jakarta] PHP Notice:  Trying to get property of non-object in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php on line 63
+[24-Jan-2017 13:33:11 Asia/Jakarta] PHP Stack trace:
+[24-Jan-2017 13:33:11 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php:0
+[24-Jan-2017 13:33:11 Asia/Jakarta] PHP Notice:  Use of undefined constant PHP_SELF - assumed 'PHP_SELF' in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php on line 73
+[24-Jan-2017 13:33:11 Asia/Jakarta] PHP Stack trace:
+[24-Jan-2017 13:33:11 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php:0
+[24-Jan-2017 13:33:11 Asia/Jakarta] PHP Notice:  Undefined variable: no in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php on line 191
+[24-Jan-2017 13:33:11 Asia/Jakarta] PHP Stack trace:
+[24-Jan-2017 13:33:11 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php:0
+[24-Jan-2017 13:33:15 Asia/Jakarta] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/soldigge/public_html/pilatus/config/koneksi.php on line 7
+[24-Jan-2017 13:33:15 Asia/Jakarta] PHP Stack trace:
+[24-Jan-2017 13:33:15 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php:0
+[24-Jan-2017 13:33:15 Asia/Jakarta] PHP   2. include() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php:6
+[24-Jan-2017 13:33:15 Asia/Jakarta] PHP   3. mysql_connect() /home/soldigge/public_html/pilatus/config/koneksi.php:7
+[24-Jan-2017 13:33:15 Asia/Jakarta] PHP Notice:  Undefined index: title in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php on line 38
+[24-Jan-2017 13:33:15 Asia/Jakarta] PHP Stack trace:
+[24-Jan-2017 13:33:15 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php:0
+[24-Jan-2017 13:33:15 Asia/Jakarta] PHP Notice:  Undefined index: business_type in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php on line 39
+[24-Jan-2017 13:33:15 Asia/Jakarta] PHP Stack trace:
+[24-Jan-2017 13:33:15 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php:0
+[24-Jan-2017 13:33:15 Asia/Jakarta] PHP Notice:  Undefined index: id_groupmodul in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php on line 43
+[24-Jan-2017 13:33:15 Asia/Jakarta] PHP Stack trace:
+[24-Jan-2017 13:33:15 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php:0
+[24-Jan-2017 13:33:15 Asia/Jakarta] PHP Notice:  Use of undefined constant PHP_SELF - assumed 'PHP_SELF' in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php on line 73
+[24-Jan-2017 13:33:15 Asia/Jakarta] PHP Stack trace:
+[24-Jan-2017 13:33:15 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php:0
+[24-Jan-2017 13:33:32 Asia/Jakarta] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/soldigge/public_html/pilatus/config/koneksi.php on line 7
+[24-Jan-2017 13:33:32 Asia/Jakarta] PHP Stack trace:
+[24-Jan-2017 13:33:32 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php:0
+[24-Jan-2017 13:33:32 Asia/Jakarta] PHP   2. include() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php:6
+[24-Jan-2017 13:33:32 Asia/Jakarta] PHP   3. mysql_connect() /home/soldigge/public_html/pilatus/config/koneksi.php:7
+[24-Jan-2017 13:33:32 Asia/Jakarta] PHP Notice:  Use of undefined constant module - assumed 'module' in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php on line 9
+[24-Jan-2017 13:33:32 Asia/Jakarta] PHP Stack trace:
+[24-Jan-2017 13:33:32 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php:0
+[24-Jan-2017 13:33:32 Asia/Jakarta] PHP Notice:  Use of undefined constant act - assumed 'act' in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php on line 10
+[24-Jan-2017 13:33:32 Asia/Jakarta] PHP Stack trace:
+[24-Jan-2017 13:33:32 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php:0
+[24-Jan-2017 13:33:32 Asia/Jakarta] PHP Notice:  Undefined index: business_type in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php on line 17
+[24-Jan-2017 13:33:32 Asia/Jakarta] PHP Stack trace:
+[24-Jan-2017 13:33:32 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php:0
+[24-Jan-2017 13:33:32 Asia/Jakarta] PHP Notice:  Undefined index: id1 in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php on line 57
+[24-Jan-2017 13:33:32 Asia/Jakarta] PHP Stack trace:
+[24-Jan-2017 13:33:32 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php:0
+[24-Jan-2017 13:33:32 Asia/Jakarta] PHP Notice:  Undefined index: id2 in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php on line 57
+[24-Jan-2017 13:33:32 Asia/Jakarta] PHP Stack trace:
+[24-Jan-2017 13:33:32 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php:0
+[24-Jan-2017 13:33:32 Asia/Jakarta] PHP Notice:  Undefined index: id3 in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php on line 57
+[24-Jan-2017 13:33:32 Asia/Jakarta] PHP Stack trace:
+[24-Jan-2017 13:33:32 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php:0
+[24-Jan-2017 13:33:32 Asia/Jakarta] PHP Notice:  Undefined index: id4 in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php on line 57
+[24-Jan-2017 13:33:32 Asia/Jakarta] PHP Stack trace:
+[24-Jan-2017 13:33:32 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php:0
+[24-Jan-2017 13:33:32 Asia/Jakarta] PHP Notice:  Undefined index: id5 in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php on line 57
+[24-Jan-2017 13:33:32 Asia/Jakarta] PHP Stack trace:
+[24-Jan-2017 13:33:32 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php:0
+[24-Jan-2017 13:33:32 Asia/Jakarta] PHP Notice:  Undefined index: id7 in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php on line 57
+[24-Jan-2017 13:33:32 Asia/Jakarta] PHP Stack trace:
+[24-Jan-2017 13:33:32 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php:0
+[24-Jan-2017 13:33:32 Asia/Jakarta] PHP Notice:  Undefined index: id8 in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php on line 57
+[24-Jan-2017 13:33:32 Asia/Jakarta] PHP Stack trace:
+[24-Jan-2017 13:33:32 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php:0
+[24-Jan-2017 13:33:32 Asia/Jakarta] PHP Notice:  Undefined index: id9 in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php on line 57
+[24-Jan-2017 13:33:32 Asia/Jakarta] PHP Stack trace:
+[24-Jan-2017 13:33:32 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php:0
+[24-Jan-2017 13:33:32 Asia/Jakarta] PHP Notice:  Undefined index: id10 in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php on line 57
+[24-Jan-2017 13:33:32 Asia/Jakarta] PHP Stack trace:
+[24-Jan-2017 13:33:32 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php:0
+[24-Jan-2017 13:49:07 Asia/Jakarta] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/soldigge/public_html/pilatus/config/koneksi.php on line 7
+[24-Jan-2017 13:49:07 Asia/Jakarta] PHP Stack trace:
+[24-Jan-2017 13:49:07 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php:0
+[24-Jan-2017 13:49:07 Asia/Jakarta] PHP   2. include() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php:6
+[24-Jan-2017 13:49:07 Asia/Jakarta] PHP   3. mysql_connect() /home/soldigge/public_html/pilatus/config/koneksi.php:7
+[24-Jan-2017 13:49:07 Asia/Jakarta] PHP Notice:  Undefined index: title in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php on line 38
+[24-Jan-2017 13:49:07 Asia/Jakarta] PHP Stack trace:
+[24-Jan-2017 13:49:07 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php:0
+[24-Jan-2017 13:49:07 Asia/Jakarta] PHP Notice:  Undefined index: business_type in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php on line 39
+[24-Jan-2017 13:49:07 Asia/Jakarta] PHP Stack trace:
+[24-Jan-2017 13:49:07 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php:0
+[24-Jan-2017 13:49:07 Asia/Jakarta] PHP Notice:  Undefined index: id_groupmodul in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php on line 43
+[24-Jan-2017 13:49:07 Asia/Jakarta] PHP Stack trace:
+[24-Jan-2017 13:49:07 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php:0
+[24-Jan-2017 13:49:07 Asia/Jakarta] PHP Notice:  Undefined index: igroup in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php on line 53
+[24-Jan-2017 13:49:07 Asia/Jakarta] PHP Stack trace:
+[24-Jan-2017 13:49:07 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php:0
+[24-Jan-2017 13:49:07 Asia/Jakarta] PHP Notice:  Undefined variable: data in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php on line 56
+[24-Jan-2017 13:49:07 Asia/Jakarta] PHP Stack trace:
+[24-Jan-2017 13:49:07 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php:0
+[24-Jan-2017 13:49:07 Asia/Jakarta] PHP Notice:  Trying to get property of non-object in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php on line 56
+[24-Jan-2017 13:49:07 Asia/Jakarta] PHP Stack trace:
+[24-Jan-2017 13:49:07 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php:0
+[24-Jan-2017 13:49:07 Asia/Jakarta] PHP Notice:  Undefined index: imenu in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php on line 60
+[24-Jan-2017 13:49:07 Asia/Jakarta] PHP Stack trace:
+[24-Jan-2017 13:49:07 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php:0
+[24-Jan-2017 13:49:07 Asia/Jakarta] PHP Notice:  Undefined variable: data in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php on line 63
+[24-Jan-2017 13:49:07 Asia/Jakarta] PHP Stack trace:
+[24-Jan-2017 13:49:07 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php:0
+[24-Jan-2017 13:49:07 Asia/Jakarta] PHP Notice:  Trying to get property of non-object in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php on line 63
+[24-Jan-2017 13:49:07 Asia/Jakarta] PHP Stack trace:
+[24-Jan-2017 13:49:07 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php:0
+[24-Jan-2017 13:49:07 Asia/Jakarta] PHP Notice:  Use of undefined constant PHP_SELF - assumed 'PHP_SELF' in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php on line 73
+[24-Jan-2017 13:49:07 Asia/Jakarta] PHP Stack trace:
+[24-Jan-2017 13:49:07 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php:0
+[24-Jan-2017 13:49:07 Asia/Jakarta] PHP Notice:  Undefined variable: no in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php on line 191
+[24-Jan-2017 13:49:07 Asia/Jakarta] PHP Stack trace:
+[24-Jan-2017 13:49:07 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php:0
+[30-Jan-2017 13:48:25 Asia/Jakarta] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/soldigge/public_html/pilatus/config/koneksi.php on line 7
+[30-Jan-2017 13:48:25 Asia/Jakarta] PHP Stack trace:
+[30-Jan-2017 13:48:25 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php:0
+[30-Jan-2017 13:48:25 Asia/Jakarta] PHP   2. include() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php:6
+[30-Jan-2017 13:48:25 Asia/Jakarta] PHP   3. mysql_connect() /home/soldigge/public_html/pilatus/config/koneksi.php:7
+[30-Jan-2017 13:48:26 Asia/Jakarta] PHP Notice:  Undefined index: title in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php on line 38
+[30-Jan-2017 13:48:26 Asia/Jakarta] PHP Stack trace:
+[30-Jan-2017 13:48:26 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php:0
+[30-Jan-2017 13:48:26 Asia/Jakarta] PHP Notice:  Undefined index: business_type in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php on line 39
+[30-Jan-2017 13:48:26 Asia/Jakarta] PHP Stack trace:
+[30-Jan-2017 13:48:26 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php:0
+[30-Jan-2017 13:48:26 Asia/Jakarta] PHP Notice:  Undefined index: igroup in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php on line 53
+[30-Jan-2017 13:48:26 Asia/Jakarta] PHP Stack trace:
+[30-Jan-2017 13:48:26 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php:0
+[30-Jan-2017 13:48:26 Asia/Jakarta] PHP Notice:  Undefined index: imenu in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php on line 60
+[30-Jan-2017 13:48:26 Asia/Jakarta] PHP Stack trace:
+[30-Jan-2017 13:48:26 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php:0
+[30-Jan-2017 13:48:26 Asia/Jakarta] PHP Notice:  Use of undefined constant PHP_SELF - assumed 'PHP_SELF' in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php on line 73
+[30-Jan-2017 13:48:26 Asia/Jakarta] PHP Stack trace:
+[30-Jan-2017 13:48:26 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php:0
+[30-Jan-2017 13:48:36 Asia/Jakarta] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/soldigge/public_html/pilatus/config/koneksi.php on line 7
+[30-Jan-2017 13:48:36 Asia/Jakarta] PHP Stack trace:
+[30-Jan-2017 13:48:36 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php:0
+[30-Jan-2017 13:48:36 Asia/Jakarta] PHP   2. include() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php:6
+[30-Jan-2017 13:48:36 Asia/Jakarta] PHP   3. mysql_connect() /home/soldigge/public_html/pilatus/config/koneksi.php:7
+[30-Jan-2017 13:48:36 Asia/Jakarta] PHP Notice:  Use of undefined constant module - assumed 'module' in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php on line 9
+[30-Jan-2017 13:48:36 Asia/Jakarta] PHP Stack trace:
+[30-Jan-2017 13:48:36 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php:0
+[30-Jan-2017 13:48:36 Asia/Jakarta] PHP Notice:  Use of undefined constant act - assumed 'act' in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php on line 10
+[30-Jan-2017 13:48:36 Asia/Jakarta] PHP Stack trace:
+[30-Jan-2017 13:48:36 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php:0
+[30-Jan-2017 13:48:36 Asia/Jakarta] PHP Notice:  Undefined index: business_type in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php on line 17
+[30-Jan-2017 13:48:36 Asia/Jakarta] PHP Stack trace:
+[30-Jan-2017 13:48:36 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php:0
+[30-Jan-2017 13:48:36 Asia/Jakarta] PHP Notice:  Undefined index: id1 in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php on line 57
+[30-Jan-2017 13:48:36 Asia/Jakarta] PHP Stack trace:
+[30-Jan-2017 13:48:36 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php:0
+[30-Jan-2017 13:48:36 Asia/Jakarta] PHP Notice:  Undefined index: id2 in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php on line 57
+[30-Jan-2017 13:48:36 Asia/Jakarta] PHP Stack trace:
+[30-Jan-2017 13:48:36 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php:0
+[30-Jan-2017 13:48:36 Asia/Jakarta] PHP Notice:  Undefined index: id3 in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php on line 57
+[30-Jan-2017 13:48:36 Asia/Jakarta] PHP Stack trace:
+[30-Jan-2017 13:48:36 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php:0
+[30-Jan-2017 13:48:36 Asia/Jakarta] PHP Notice:  Undefined index: id4 in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php on line 57
+[30-Jan-2017 13:48:36 Asia/Jakarta] PHP Stack trace:
+[30-Jan-2017 13:48:36 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php:0
+[30-Jan-2017 13:48:36 Asia/Jakarta] PHP Notice:  Undefined index: id5 in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php on line 57
+[30-Jan-2017 13:48:36 Asia/Jakarta] PHP Stack trace:
+[30-Jan-2017 13:48:36 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php:0
+[30-Jan-2017 13:48:36 Asia/Jakarta] PHP Notice:  Undefined index: id7 in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php on line 57
+[30-Jan-2017 13:48:36 Asia/Jakarta] PHP Stack trace:
+[30-Jan-2017 13:48:36 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php:0
+[30-Jan-2017 13:48:36 Asia/Jakarta] PHP Notice:  Undefined index: id8 in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php on line 57
+[30-Jan-2017 13:48:36 Asia/Jakarta] PHP Stack trace:
+[30-Jan-2017 13:48:36 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php:0
+[30-Jan-2017 13:48:36 Asia/Jakarta] PHP Notice:  Undefined index: id9 in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php on line 57
+[30-Jan-2017 13:48:36 Asia/Jakarta] PHP Stack trace:
+[30-Jan-2017 13:48:36 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php:0
+[30-Jan-2017 13:48:36 Asia/Jakarta] PHP Notice:  Undefined index: id10 in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php on line 57
+[30-Jan-2017 13:48:36 Asia/Jakarta] PHP Stack trace:
+[30-Jan-2017 13:48:36 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php:0
+[30-Jan-2017 13:49:03 Asia/Jakarta] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/soldigge/public_html/pilatus/config/koneksi.php on line 7
+[30-Jan-2017 13:49:03 Asia/Jakarta] PHP Stack trace:
+[30-Jan-2017 13:49:03 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php:0
+[30-Jan-2017 13:49:03 Asia/Jakarta] PHP   2. include() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php:6
+[30-Jan-2017 13:49:03 Asia/Jakarta] PHP   3. mysql_connect() /home/soldigge/public_html/pilatus/config/koneksi.php:7
+[30-Jan-2017 13:49:03 Asia/Jakarta] PHP Notice:  Undefined index: title in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php on line 38
+[30-Jan-2017 13:49:03 Asia/Jakarta] PHP Stack trace:
+[30-Jan-2017 13:49:03 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php:0
+[30-Jan-2017 13:49:03 Asia/Jakarta] PHP Notice:  Undefined index: business_type in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php on line 39
+[30-Jan-2017 13:49:03 Asia/Jakarta] PHP Stack trace:
+[30-Jan-2017 13:49:03 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php:0
+[30-Jan-2017 13:49:03 Asia/Jakarta] PHP Notice:  Undefined index: igroup in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php on line 53
+[30-Jan-2017 13:49:03 Asia/Jakarta] PHP Stack trace:
+[30-Jan-2017 13:49:03 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php:0
+[30-Jan-2017 13:49:03 Asia/Jakarta] PHP Notice:  Undefined index: imenu in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php on line 60
+[30-Jan-2017 13:49:03 Asia/Jakarta] PHP Stack trace:
+[30-Jan-2017 13:49:03 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php:0
+[30-Jan-2017 13:49:03 Asia/Jakarta] PHP Notice:  Use of undefined constant PHP_SELF - assumed 'PHP_SELF' in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php on line 73
+[30-Jan-2017 13:49:03 Asia/Jakarta] PHP Stack trace:
+[30-Jan-2017 13:49:03 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php:0
+[30-Jan-2017 13:49:21 Asia/Jakarta] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/soldigge/public_html/pilatus/config/koneksi.php on line 7
+[30-Jan-2017 13:49:21 Asia/Jakarta] PHP Stack trace:
+[30-Jan-2017 13:49:21 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php:0
+[30-Jan-2017 13:49:21 Asia/Jakarta] PHP   2. include() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php:6
+[30-Jan-2017 13:49:21 Asia/Jakarta] PHP   3. mysql_connect() /home/soldigge/public_html/pilatus/config/koneksi.php:7
+[30-Jan-2017 13:49:21 Asia/Jakarta] PHP Notice:  Undefined index: title in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php on line 38
+[30-Jan-2017 13:49:21 Asia/Jakarta] PHP Stack trace:
+[30-Jan-2017 13:49:21 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php:0
+[30-Jan-2017 13:49:21 Asia/Jakarta] PHP Notice:  Undefined index: business_type in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php on line 39
+[30-Jan-2017 13:49:21 Asia/Jakarta] PHP Stack trace:
+[30-Jan-2017 13:49:21 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php:0
+[30-Jan-2017 13:49:21 Asia/Jakarta] PHP Notice:  Undefined index: igroup in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php on line 53
+[30-Jan-2017 13:49:21 Asia/Jakarta] PHP Stack trace:
+[30-Jan-2017 13:49:21 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php:0
+[30-Jan-2017 13:49:21 Asia/Jakarta] PHP Notice:  Undefined index: imenu in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php on line 60
+[30-Jan-2017 13:49:21 Asia/Jakarta] PHP Stack trace:
+[30-Jan-2017 13:49:21 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php:0
+[30-Jan-2017 13:49:21 Asia/Jakarta] PHP Notice:  Use of undefined constant PHP_SELF - assumed 'PHP_SELF' in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php on line 73
+[30-Jan-2017 13:49:21 Asia/Jakarta] PHP Stack trace:
+[30-Jan-2017 13:49:21 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php:0
+[30-Jan-2017 15:54:32 Asia/Jakarta] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/soldigge/public_html/pilatus/config/koneksi.php on line 7
+[30-Jan-2017 15:54:32 Asia/Jakarta] PHP Stack trace:
+[30-Jan-2017 15:54:32 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php:0
+[30-Jan-2017 15:54:32 Asia/Jakarta] PHP   2. include() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php:6
+[30-Jan-2017 15:54:32 Asia/Jakarta] PHP   3. mysql_connect() /home/soldigge/public_html/pilatus/config/koneksi.php:7
+[30-Jan-2017 15:54:32 Asia/Jakarta] PHP Notice:  Undefined index: title in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php on line 38
+[30-Jan-2017 15:54:32 Asia/Jakarta] PHP Stack trace:
+[30-Jan-2017 15:54:32 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php:0
+[30-Jan-2017 15:54:32 Asia/Jakarta] PHP Notice:  Undefined index: business_type in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php on line 39
+[30-Jan-2017 15:54:32 Asia/Jakarta] PHP Stack trace:
+[30-Jan-2017 15:54:32 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php:0
+[30-Jan-2017 15:54:32 Asia/Jakarta] PHP Notice:  Undefined index: igroup in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php on line 53
+[30-Jan-2017 15:54:32 Asia/Jakarta] PHP Stack trace:
+[30-Jan-2017 15:54:32 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php:0
+[30-Jan-2017 15:54:32 Asia/Jakarta] PHP Notice:  Undefined index: imenu in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php on line 60
+[30-Jan-2017 15:54:32 Asia/Jakarta] PHP Stack trace:
+[30-Jan-2017 15:54:32 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php:0
+[30-Jan-2017 15:54:32 Asia/Jakarta] PHP Notice:  Use of undefined constant PHP_SELF - assumed 'PHP_SELF' in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php on line 73
+[30-Jan-2017 15:54:32 Asia/Jakarta] PHP Stack trace:
+[30-Jan-2017 15:54:32 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/form_groupmodul.php:0
+[30-Jan-2017 15:54:35 Asia/Jakarta] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/soldigge/public_html/pilatus/config/koneksi.php on line 7
+[30-Jan-2017 15:54:35 Asia/Jakarta] PHP Stack trace:
+[30-Jan-2017 15:54:35 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php:0
+[30-Jan-2017 15:54:35 Asia/Jakarta] PHP   2. include() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php:6
+[30-Jan-2017 15:54:35 Asia/Jakarta] PHP   3. mysql_connect() /home/soldigge/public_html/pilatus/config/koneksi.php:7
+[30-Jan-2017 15:54:35 Asia/Jakarta] PHP Notice:  Use of undefined constant module - assumed 'module' in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php on line 9
+[30-Jan-2017 15:54:35 Asia/Jakarta] PHP Stack trace:
+[30-Jan-2017 15:54:35 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php:0
+[30-Jan-2017 15:54:35 Asia/Jakarta] PHP Notice:  Use of undefined constant act - assumed 'act' in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php on line 10
+[30-Jan-2017 15:54:35 Asia/Jakarta] PHP Stack trace:
+[30-Jan-2017 15:54:35 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php:0
+[30-Jan-2017 15:54:35 Asia/Jakarta] PHP Notice:  Undefined index: business_type in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php on line 17
+[30-Jan-2017 15:54:35 Asia/Jakarta] PHP Stack trace:
+[30-Jan-2017 15:54:35 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php:0
+[30-Jan-2017 15:54:35 Asia/Jakarta] PHP Notice:  Undefined index: id1 in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php on line 57
+[30-Jan-2017 15:54:35 Asia/Jakarta] PHP Stack trace:
+[30-Jan-2017 15:54:35 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php:0
+[30-Jan-2017 15:54:35 Asia/Jakarta] PHP Notice:  Undefined index: id2 in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php on line 57
+[30-Jan-2017 15:54:35 Asia/Jakarta] PHP Stack trace:
+[30-Jan-2017 15:54:35 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php:0
+[30-Jan-2017 15:54:35 Asia/Jakarta] PHP Notice:  Undefined index: id3 in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php on line 57
+[30-Jan-2017 15:54:35 Asia/Jakarta] PHP Stack trace:
+[30-Jan-2017 15:54:35 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php:0
+[30-Jan-2017 15:54:35 Asia/Jakarta] PHP Notice:  Undefined index: id4 in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php on line 57
+[30-Jan-2017 15:54:35 Asia/Jakarta] PHP Stack trace:
+[30-Jan-2017 15:54:35 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php:0
+[30-Jan-2017 15:54:35 Asia/Jakarta] PHP Notice:  Undefined index: id5 in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php on line 57
+[30-Jan-2017 15:54:35 Asia/Jakarta] PHP Stack trace:
+[30-Jan-2017 15:54:35 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php:0
+[30-Jan-2017 15:54:35 Asia/Jakarta] PHP Notice:  Undefined index: id7 in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php on line 57
+[30-Jan-2017 15:54:35 Asia/Jakarta] PHP Stack trace:
+[30-Jan-2017 15:54:35 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php:0
+[30-Jan-2017 15:54:35 Asia/Jakarta] PHP Notice:  Undefined index: id8 in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php on line 57
+[30-Jan-2017 15:54:35 Asia/Jakarta] PHP Stack trace:
+[30-Jan-2017 15:54:35 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php:0
+[30-Jan-2017 15:54:35 Asia/Jakarta] PHP Notice:  Undefined index: id9 in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php on line 57
+[30-Jan-2017 15:54:35 Asia/Jakarta] PHP Stack trace:
+[30-Jan-2017 15:54:35 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php:0
+[30-Jan-2017 15:54:35 Asia/Jakarta] PHP Notice:  Undefined index: id10 in /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php on line 57
+[30-Jan-2017 15:54:35 Asia/Jakarta] PHP Stack trace:
+[30-Jan-2017 15:54:35 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_groupmodul/aksi_groupmodul.php:0

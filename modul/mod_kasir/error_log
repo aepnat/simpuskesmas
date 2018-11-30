@@ -1,0 +1,459 @@
+[31-Mar-2015 15:31:43 America/New_York] PHP Warning:  session_start(): Cannot send session cookie - headers already sent in /home/k6240433/public_html/trial/adminweb/modul/mod_banner/banner.php on line 2
+[31-Mar-2015 15:31:43 America/New_York] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent in /home/k6240433/public_html/trial/adminweb/modul/mod_banner/banner.php on line 2
+[31-Mar-2015 15:31:44 America/New_York] PHP Warning:  session_start(): Cannot send session cookie - headers already sent in /home/k6240433/public_html/trial/adminweb/modul/mod_banner/aksi_banner.php on line 2
+[31-Mar-2015 15:31:44 America/New_York] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent in /home/k6240433/public_html/trial/adminweb/modul/mod_banner/aksi_banner.php on line 2
+[26-Feb-2017 15:23:25 Asia/Krasnoyarsk] PHP Notice:  Use of undefined constant module - assumed 'module' in /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/aksi_pemesanan_barang.php on line 17
+[26-Feb-2017 15:23:25 Asia/Krasnoyarsk] PHP Stack trace:
+[26-Feb-2017 15:23:25 Asia/Krasnoyarsk] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/aksi_pemesanan_barang.php:0
+[26-Feb-2017 15:23:25 Asia/Krasnoyarsk] PHP Notice:  Use of undefined constant act - assumed 'act' in /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/aksi_pemesanan_barang.php on line 19
+[26-Feb-2017 15:23:25 Asia/Krasnoyarsk] PHP Stack trace:
+[26-Feb-2017 15:23:25 Asia/Krasnoyarsk] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/aksi_pemesanan_barang.php:0
+[26-Feb-2017 15:23:25 Asia/Krasnoyarsk] PHP Warning:  date() [<a href='function.date'>function.date</a>]: It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected 'Asia/Krasnoyarsk' for 'WIB/7.0/no DST' instead in /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/aksi_pemesanan_barang.php on line 23
+[26-Feb-2017 15:23:25 Asia/Krasnoyarsk] PHP Stack trace:
+[26-Feb-2017 15:23:25 Asia/Krasnoyarsk] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/aksi_pemesanan_barang.php:0
+[26-Feb-2017 15:23:25 Asia/Krasnoyarsk] PHP   2. date() /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/aksi_pemesanan_barang.php:23
+[26-Feb-2017 15:23:25 Asia/Krasnoyarsk] PHP Warning:  date() [<a href='function.date'>function.date</a>]: It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected 'Asia/Krasnoyarsk' for 'WIB/7.0/no DST' instead in /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/aksi_pemesanan_barang.php on line 25
+[26-Feb-2017 15:23:25 Asia/Krasnoyarsk] PHP Stack trace:
+[26-Feb-2017 15:23:25 Asia/Krasnoyarsk] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/aksi_pemesanan_barang.php:0
+[26-Feb-2017 15:23:25 Asia/Krasnoyarsk] PHP   2. date() /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/aksi_pemesanan_barang.php:25
+[26-Feb-2017 15:23:25 Asia/Krasnoyarsk] PHP Warning:  date() [<a href='function.date'>function.date</a>]: It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected 'Asia/Krasnoyarsk' for 'WIB/7.0/no DST' instead in /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/aksi_pemesanan_barang.php on line 29
+[26-Feb-2017 15:23:25 Asia/Krasnoyarsk] PHP Stack trace:
+[26-Feb-2017 15:23:25 Asia/Krasnoyarsk] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/aksi_pemesanan_barang.php:0
+[26-Feb-2017 15:23:25 Asia/Krasnoyarsk] PHP   2. date() /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/aksi_pemesanan_barang.php:29
+[26-Feb-2017 15:23:27 Asia/Krasnoyarsk] PHP Warning:  date() [<a href='function.date'>function.date</a>]: It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected 'Asia/Krasnoyarsk' for 'WIB/7.0/no DST' instead in /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/form_list_pemesanan.php on line 15
+[26-Feb-2017 15:23:27 Asia/Krasnoyarsk] PHP Stack trace:
+[26-Feb-2017 15:23:27 Asia/Krasnoyarsk] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/form_list_pemesanan.php:0
+[26-Feb-2017 15:23:27 Asia/Krasnoyarsk] PHP   2. date() /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/form_list_pemesanan.php:15
+[26-Feb-2017 15:23:27 Asia/Krasnoyarsk] PHP Notice:  Undefined index: imodule in /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/form_list_pemesanan.php on line 161
+[26-Feb-2017 15:23:27 Asia/Krasnoyarsk] PHP Stack trace:
+[26-Feb-2017 15:23:27 Asia/Krasnoyarsk] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/form_list_pemesanan.php:0
+[26-Feb-2017 15:23:27 Asia/Krasnoyarsk] PHP Notice:  Undefined index: title in /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/form_list_pemesanan.php on line 165
+[26-Feb-2017 15:23:27 Asia/Krasnoyarsk] PHP Stack trace:
+[26-Feb-2017 15:23:27 Asia/Krasnoyarsk] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/form_list_pemesanan.php:0
+[26-Feb-2017 15:23:27 Asia/Krasnoyarsk] PHP Notice:  Undefined index: prd in /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/form_list_pemesanan.php on line 177
+[26-Feb-2017 15:23:27 Asia/Krasnoyarsk] PHP Stack trace:
+[26-Feb-2017 15:23:27 Asia/Krasnoyarsk] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/form_list_pemesanan.php:0
+[26-Feb-2017 15:23:27 Asia/Krasnoyarsk] PHP Warning:  strtotime() [<a href='function.strtotime'>function.strtotime</a>]: It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected 'Asia/Krasnoyarsk' for 'WIB/7.0/no DST' instead in /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/form_list_pemesanan.php on line 366
+[26-Feb-2017 15:23:27 Asia/Krasnoyarsk] PHP Stack trace:
+[26-Feb-2017 15:23:27 Asia/Krasnoyarsk] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/form_list_pemesanan.php:0
+[26-Feb-2017 15:23:27 Asia/Krasnoyarsk] PHP   2. strtotime() /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/form_list_pemesanan.php:366
+[26-Feb-2017 15:23:27 Asia/Krasnoyarsk] PHP Warning:  date() [<a href='function.date'>function.date</a>]: It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected 'Asia/Krasnoyarsk' for 'WIB/7.0/no DST' instead in /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/form_list_pemesanan.php on line 366
+[26-Feb-2017 15:23:27 Asia/Krasnoyarsk] PHP Stack trace:
+[26-Feb-2017 15:23:27 Asia/Krasnoyarsk] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/form_list_pemesanan.php:0
+[26-Feb-2017 15:23:27 Asia/Krasnoyarsk] PHP   2. date() /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/form_list_pemesanan.php:366
+[26-Feb-2017 15:23:27 Asia/Krasnoyarsk] PHP Warning:  strtotime() [<a href='function.strtotime'>function.strtotime</a>]: It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected 'Asia/Krasnoyarsk' for 'WIB/7.0/no DST' instead in /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/form_list_pemesanan.php on line 366
+[26-Feb-2017 15:23:27 Asia/Krasnoyarsk] PHP Stack trace:
+[26-Feb-2017 15:23:27 Asia/Krasnoyarsk] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/form_list_pemesanan.php:0
+[26-Feb-2017 15:23:27 Asia/Krasnoyarsk] PHP   2. strtotime() /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/form_list_pemesanan.php:366
+[26-Feb-2017 15:23:27 Asia/Krasnoyarsk] PHP Warning:  date() [<a href='function.date'>function.date</a>]: It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected 'Asia/Krasnoyarsk' for 'WIB/7.0/no DST' instead in /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/form_list_pemesanan.php on line 366
+[26-Feb-2017 15:23:27 Asia/Krasnoyarsk] PHP Stack trace:
+[26-Feb-2017 15:23:27 Asia/Krasnoyarsk] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/form_list_pemesanan.php:0
+[26-Feb-2017 15:23:27 Asia/Krasnoyarsk] PHP   2. date() /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/form_list_pemesanan.php:366
+[26-Feb-2017 15:23:27 Asia/Krasnoyarsk] PHP Warning:  strtotime() [<a href='function.strtotime'>function.strtotime</a>]: It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected 'Asia/Krasnoyarsk' for 'WIB/7.0/no DST' instead in /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/form_list_pemesanan.php on line 366
+[26-Feb-2017 15:23:27 Asia/Krasnoyarsk] PHP Stack trace:
+[26-Feb-2017 15:23:27 Asia/Krasnoyarsk] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/form_list_pemesanan.php:0
+[26-Feb-2017 15:23:27 Asia/Krasnoyarsk] PHP   2. strtotime() /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/form_list_pemesanan.php:366
+[26-Feb-2017 15:23:27 Asia/Krasnoyarsk] PHP Warning:  date() [<a href='function.date'>function.date</a>]: It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected 'Asia/Krasnoyarsk' for 'WIB/7.0/no DST' instead in /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/form_list_pemesanan.php on line 366
+[26-Feb-2017 15:23:27 Asia/Krasnoyarsk] PHP Stack trace:
+[26-Feb-2017 15:23:27 Asia/Krasnoyarsk] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/form_list_pemesanan.php:0
+[26-Feb-2017 15:23:27 Asia/Krasnoyarsk] PHP   2. date() /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/form_list_pemesanan.php:366
+[26-Feb-2017 15:23:27 Asia/Krasnoyarsk] PHP Notice:  Undefined variable: size in /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/form_list_pemesanan.php on line 469
+[26-Feb-2017 15:23:27 Asia/Krasnoyarsk] PHP Stack trace:
+[26-Feb-2017 15:23:27 Asia/Krasnoyarsk] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/form_list_pemesanan.php:0
+[26-Feb-2017 15:23:27 Asia/Krasnoyarsk] PHP Notice:  Undefined variable: size in /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/form_list_pemesanan.php on line 481
+[26-Feb-2017 15:23:27 Asia/Krasnoyarsk] PHP Stack trace:
+[26-Feb-2017 15:23:27 Asia/Krasnoyarsk] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/form_list_pemesanan.php:0
+[26-Feb-2017 15:23:27 Asia/Krasnoyarsk] PHP Notice:  Undefined variable: size in /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/form_list_pemesanan.php on line 493
+[26-Feb-2017 15:23:27 Asia/Krasnoyarsk] PHP Stack trace:
+[26-Feb-2017 15:23:27 Asia/Krasnoyarsk] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/form_list_pemesanan.php:0
+[26-Feb-2017 15:23:27 Asia/Krasnoyarsk] PHP Notice:  Undefined variable: size in /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/form_list_pemesanan.php on line 505
+[26-Feb-2017 15:23:27 Asia/Krasnoyarsk] PHP Stack trace:
+[26-Feb-2017 15:23:27 Asia/Krasnoyarsk] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/form_list_pemesanan.php:0
+[26-Feb-2017 15:23:27 Asia/Krasnoyarsk] PHP Notice:  Undefined variable: size in /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/form_list_pemesanan.php on line 517
+[26-Feb-2017 15:23:27 Asia/Krasnoyarsk] PHP Stack trace:
+[26-Feb-2017 15:23:27 Asia/Krasnoyarsk] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/form_list_pemesanan.php:0
+[26-Feb-2017 15:23:37 Asia/Krasnoyarsk] PHP Notice:  Use of undefined constant module - assumed 'module' in /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/aksi_pemesanan_barang.php on line 17
+[26-Feb-2017 15:23:37 Asia/Krasnoyarsk] PHP Stack trace:
+[26-Feb-2017 15:23:37 Asia/Krasnoyarsk] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/aksi_pemesanan_barang.php:0
+[26-Feb-2017 15:23:37 Asia/Krasnoyarsk] PHP Notice:  Use of undefined constant act - assumed 'act' in /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/aksi_pemesanan_barang.php on line 19
+[26-Feb-2017 15:23:37 Asia/Krasnoyarsk] PHP Stack trace:
+[26-Feb-2017 15:23:37 Asia/Krasnoyarsk] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/aksi_pemesanan_barang.php:0
+[26-Feb-2017 15:23:37 Asia/Krasnoyarsk] PHP Warning:  date() [<a href='function.date'>function.date</a>]: It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected 'Asia/Krasnoyarsk' for 'WIB/7.0/no DST' instead in /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/aksi_pemesanan_barang.php on line 23
+[26-Feb-2017 15:23:37 Asia/Krasnoyarsk] PHP Stack trace:
+[26-Feb-2017 15:23:37 Asia/Krasnoyarsk] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/aksi_pemesanan_barang.php:0
+[26-Feb-2017 15:23:37 Asia/Krasnoyarsk] PHP   2. date() /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/aksi_pemesanan_barang.php:23
+[26-Feb-2017 15:23:37 Asia/Krasnoyarsk] PHP Warning:  date() [<a href='function.date'>function.date</a>]: It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected 'Asia/Krasnoyarsk' for 'WIB/7.0/no DST' instead in /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/aksi_pemesanan_barang.php on line 25
+[26-Feb-2017 15:23:37 Asia/Krasnoyarsk] PHP Stack trace:
+[26-Feb-2017 15:23:37 Asia/Krasnoyarsk] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/aksi_pemesanan_barang.php:0
+[26-Feb-2017 15:23:37 Asia/Krasnoyarsk] PHP   2. date() /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/aksi_pemesanan_barang.php:25
+[26-Feb-2017 15:23:37 Asia/Krasnoyarsk] PHP Warning:  date() [<a href='function.date'>function.date</a>]: It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected 'Asia/Krasnoyarsk' for 'WIB/7.0/no DST' instead in /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/aksi_pemesanan_barang.php on line 29
+[26-Feb-2017 15:23:37 Asia/Krasnoyarsk] PHP Stack trace:
+[26-Feb-2017 15:23:37 Asia/Krasnoyarsk] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/aksi_pemesanan_barang.php:0
+[26-Feb-2017 15:23:37 Asia/Krasnoyarsk] PHP   2. date() /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/aksi_pemesanan_barang.php:29
+[26-Feb-2017 15:23:37 Asia/Krasnoyarsk] PHP Notice:  Undefined index: ID in /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/aksi_pemesanan_barang.php on line 519
+[26-Feb-2017 15:23:37 Asia/Krasnoyarsk] PHP Stack trace:
+[26-Feb-2017 15:23:37 Asia/Krasnoyarsk] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/aksi_pemesanan_barang.php:0
+[26-Feb-2017 15:25:42 Asia/Krasnoyarsk] PHP Notice:  Use of undefined constant module - assumed 'module' in /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/aksi_pemesanan_barang.php on line 17
+[26-Feb-2017 15:25:42 Asia/Krasnoyarsk] PHP Stack trace:
+[26-Feb-2017 15:25:42 Asia/Krasnoyarsk] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/aksi_pemesanan_barang.php:0
+[26-Feb-2017 15:25:42 Asia/Krasnoyarsk] PHP Notice:  Use of undefined constant act - assumed 'act' in /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/aksi_pemesanan_barang.php on line 19
+[26-Feb-2017 15:25:42 Asia/Krasnoyarsk] PHP Stack trace:
+[26-Feb-2017 15:25:42 Asia/Krasnoyarsk] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/aksi_pemesanan_barang.php:0
+[26-Feb-2017 15:25:42 Asia/Krasnoyarsk] PHP Warning:  date() [<a href='function.date'>function.date</a>]: It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected 'Asia/Krasnoyarsk' for 'WIB/7.0/no DST' instead in /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/aksi_pemesanan_barang.php on line 23
+[26-Feb-2017 15:25:42 Asia/Krasnoyarsk] PHP Stack trace:
+[26-Feb-2017 15:25:42 Asia/Krasnoyarsk] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/aksi_pemesanan_barang.php:0
+[26-Feb-2017 15:25:42 Asia/Krasnoyarsk] PHP   2. date() /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/aksi_pemesanan_barang.php:23
+[26-Feb-2017 15:25:42 Asia/Krasnoyarsk] PHP Warning:  date() [<a href='function.date'>function.date</a>]: It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected 'Asia/Krasnoyarsk' for 'WIB/7.0/no DST' instead in /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/aksi_pemesanan_barang.php on line 25
+[26-Feb-2017 15:25:42 Asia/Krasnoyarsk] PHP Stack trace:
+[26-Feb-2017 15:25:42 Asia/Krasnoyarsk] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/aksi_pemesanan_barang.php:0
+[26-Feb-2017 15:25:42 Asia/Krasnoyarsk] PHP   2. date() /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/aksi_pemesanan_barang.php:25
+[26-Feb-2017 15:25:42 Asia/Krasnoyarsk] PHP Warning:  date() [<a href='function.date'>function.date</a>]: It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected 'Asia/Krasnoyarsk' for 'WIB/7.0/no DST' instead in /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/aksi_pemesanan_barang.php on line 29
+[26-Feb-2017 15:25:42 Asia/Krasnoyarsk] PHP Stack trace:
+[26-Feb-2017 15:25:42 Asia/Krasnoyarsk] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/aksi_pemesanan_barang.php:0
+[26-Feb-2017 15:25:42 Asia/Krasnoyarsk] PHP   2. date() /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/aksi_pemesanan_barang.php:29
+[26-Feb-2017 15:25:45 Asia/Krasnoyarsk] PHP Warning:  date() [<a href='function.date'>function.date</a>]: It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected 'Asia/Krasnoyarsk' for 'WIB/7.0/no DST' instead in /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/form_list_pemesanan.php on line 15
+[26-Feb-2017 15:25:45 Asia/Krasnoyarsk] PHP Stack trace:
+[26-Feb-2017 15:25:45 Asia/Krasnoyarsk] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/form_list_pemesanan.php:0
+[26-Feb-2017 15:25:45 Asia/Krasnoyarsk] PHP   2. date() /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/form_list_pemesanan.php:15
+[26-Feb-2017 15:25:45 Asia/Krasnoyarsk] PHP Notice:  Undefined index: imodule in /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/form_list_pemesanan.php on line 161
+[26-Feb-2017 15:25:45 Asia/Krasnoyarsk] PHP Stack trace:
+[26-Feb-2017 15:25:45 Asia/Krasnoyarsk] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/form_list_pemesanan.php:0
+[26-Feb-2017 15:25:45 Asia/Krasnoyarsk] PHP Notice:  Undefined index: title in /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/form_list_pemesanan.php on line 165
+[26-Feb-2017 15:25:45 Asia/Krasnoyarsk] PHP Stack trace:
+[26-Feb-2017 15:25:45 Asia/Krasnoyarsk] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/form_list_pemesanan.php:0
+[26-Feb-2017 15:25:45 Asia/Krasnoyarsk] PHP Notice:  Undefined index: prd in /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/form_list_pemesanan.php on line 177
+[26-Feb-2017 15:25:45 Asia/Krasnoyarsk] PHP Stack trace:
+[26-Feb-2017 15:25:45 Asia/Krasnoyarsk] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/form_list_pemesanan.php:0
+[26-Feb-2017 15:25:45 Asia/Krasnoyarsk] PHP Warning:  strtotime() [<a href='function.strtotime'>function.strtotime</a>]: It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected 'Asia/Krasnoyarsk' for 'WIB/7.0/no DST' instead in /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/form_list_pemesanan.php on line 366
+[26-Feb-2017 15:25:45 Asia/Krasnoyarsk] PHP Stack trace:
+[26-Feb-2017 15:25:45 Asia/Krasnoyarsk] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/form_list_pemesanan.php:0
+[26-Feb-2017 15:25:45 Asia/Krasnoyarsk] PHP   2. strtotime() /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/form_list_pemesanan.php:366
+[26-Feb-2017 15:25:45 Asia/Krasnoyarsk] PHP Warning:  date() [<a href='function.date'>function.date</a>]: It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected 'Asia/Krasnoyarsk' for 'WIB/7.0/no DST' instead in /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/form_list_pemesanan.php on line 366
+[26-Feb-2017 15:25:45 Asia/Krasnoyarsk] PHP Stack trace:
+[26-Feb-2017 15:25:45 Asia/Krasnoyarsk] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/form_list_pemesanan.php:0
+[26-Feb-2017 15:25:45 Asia/Krasnoyarsk] PHP   2. date() /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/form_list_pemesanan.php:366
+[26-Feb-2017 15:25:45 Asia/Krasnoyarsk] PHP Warning:  strtotime() [<a href='function.strtotime'>function.strtotime</a>]: It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected 'Asia/Krasnoyarsk' for 'WIB/7.0/no DST' instead in /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/form_list_pemesanan.php on line 366
+[26-Feb-2017 15:25:45 Asia/Krasnoyarsk] PHP Stack trace:
+[26-Feb-2017 15:25:45 Asia/Krasnoyarsk] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/form_list_pemesanan.php:0
+[26-Feb-2017 15:25:45 Asia/Krasnoyarsk] PHP   2. strtotime() /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/form_list_pemesanan.php:366
+[26-Feb-2017 15:25:45 Asia/Krasnoyarsk] PHP Warning:  date() [<a href='function.date'>function.date</a>]: It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected 'Asia/Krasnoyarsk' for 'WIB/7.0/no DST' instead in /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/form_list_pemesanan.php on line 366
+[26-Feb-2017 15:25:45 Asia/Krasnoyarsk] PHP Stack trace:
+[26-Feb-2017 15:25:45 Asia/Krasnoyarsk] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/form_list_pemesanan.php:0
+[26-Feb-2017 15:25:45 Asia/Krasnoyarsk] PHP   2. date() /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/form_list_pemesanan.php:366
+[26-Feb-2017 15:25:45 Asia/Krasnoyarsk] PHP Warning:  strtotime() [<a href='function.strtotime'>function.strtotime</a>]: It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected 'Asia/Krasnoyarsk' for 'WIB/7.0/no DST' instead in /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/form_list_pemesanan.php on line 366
+[26-Feb-2017 15:25:45 Asia/Krasnoyarsk] PHP Stack trace:
+[26-Feb-2017 15:25:45 Asia/Krasnoyarsk] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/form_list_pemesanan.php:0
+[26-Feb-2017 15:25:45 Asia/Krasnoyarsk] PHP   2. strtotime() /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/form_list_pemesanan.php:366
+[26-Feb-2017 15:25:45 Asia/Krasnoyarsk] PHP Warning:  date() [<a href='function.date'>function.date</a>]: It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected 'Asia/Krasnoyarsk' for 'WIB/7.0/no DST' instead in /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/form_list_pemesanan.php on line 366
+[26-Feb-2017 15:25:45 Asia/Krasnoyarsk] PHP Stack trace:
+[26-Feb-2017 15:25:45 Asia/Krasnoyarsk] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/form_list_pemesanan.php:0
+[26-Feb-2017 15:25:45 Asia/Krasnoyarsk] PHP   2. date() /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/form_list_pemesanan.php:366
+[26-Feb-2017 15:25:45 Asia/Krasnoyarsk] PHP Notice:  Undefined variable: size in /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/form_list_pemesanan.php on line 469
+[26-Feb-2017 15:25:45 Asia/Krasnoyarsk] PHP Stack trace:
+[26-Feb-2017 15:25:45 Asia/Krasnoyarsk] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/form_list_pemesanan.php:0
+[26-Feb-2017 15:25:45 Asia/Krasnoyarsk] PHP Notice:  Undefined variable: size in /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/form_list_pemesanan.php on line 481
+[26-Feb-2017 15:25:45 Asia/Krasnoyarsk] PHP Stack trace:
+[26-Feb-2017 15:25:45 Asia/Krasnoyarsk] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/form_list_pemesanan.php:0
+[26-Feb-2017 15:25:45 Asia/Krasnoyarsk] PHP Notice:  Undefined variable: size in /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/form_list_pemesanan.php on line 493
+[26-Feb-2017 15:25:45 Asia/Krasnoyarsk] PHP Stack trace:
+[26-Feb-2017 15:25:45 Asia/Krasnoyarsk] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/form_list_pemesanan.php:0
+[26-Feb-2017 15:25:45 Asia/Krasnoyarsk] PHP Notice:  Undefined variable: size in /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/form_list_pemesanan.php on line 505
+[26-Feb-2017 15:25:45 Asia/Krasnoyarsk] PHP Stack trace:
+[26-Feb-2017 15:25:45 Asia/Krasnoyarsk] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/form_list_pemesanan.php:0
+[26-Feb-2017 15:25:45 Asia/Krasnoyarsk] PHP Notice:  Undefined variable: size in /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/form_list_pemesanan.php on line 517
+[26-Feb-2017 15:25:45 Asia/Krasnoyarsk] PHP Stack trace:
+[26-Feb-2017 15:25:45 Asia/Krasnoyarsk] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/form_list_pemesanan.php:0
+[26-Feb-2017 15:26:00 Asia/Krasnoyarsk] PHP Notice:  Use of undefined constant module - assumed 'module' in /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/aksi_pemesanan_barang.php on line 17
+[26-Feb-2017 15:26:00 Asia/Krasnoyarsk] PHP Stack trace:
+[26-Feb-2017 15:26:00 Asia/Krasnoyarsk] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/aksi_pemesanan_barang.php:0
+[26-Feb-2017 15:26:00 Asia/Krasnoyarsk] PHP Notice:  Use of undefined constant act - assumed 'act' in /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/aksi_pemesanan_barang.php on line 19
+[26-Feb-2017 15:26:00 Asia/Krasnoyarsk] PHP Stack trace:
+[26-Feb-2017 15:26:00 Asia/Krasnoyarsk] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/aksi_pemesanan_barang.php:0
+[26-Feb-2017 15:26:00 Asia/Krasnoyarsk] PHP Warning:  date() [<a href='function.date'>function.date</a>]: It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected 'Asia/Krasnoyarsk' for 'WIB/7.0/no DST' instead in /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/aksi_pemesanan_barang.php on line 23
+[26-Feb-2017 15:26:00 Asia/Krasnoyarsk] PHP Stack trace:
+[26-Feb-2017 15:26:00 Asia/Krasnoyarsk] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/aksi_pemesanan_barang.php:0
+[26-Feb-2017 15:26:00 Asia/Krasnoyarsk] PHP   2. date() /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/aksi_pemesanan_barang.php:23
+[26-Feb-2017 15:26:00 Asia/Krasnoyarsk] PHP Warning:  date() [<a href='function.date'>function.date</a>]: It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected 'Asia/Krasnoyarsk' for 'WIB/7.0/no DST' instead in /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/aksi_pemesanan_barang.php on line 25
+[26-Feb-2017 15:26:00 Asia/Krasnoyarsk] PHP Stack trace:
+[26-Feb-2017 15:26:00 Asia/Krasnoyarsk] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/aksi_pemesanan_barang.php:0
+[26-Feb-2017 15:26:00 Asia/Krasnoyarsk] PHP   2. date() /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/aksi_pemesanan_barang.php:25
+[26-Feb-2017 15:26:00 Asia/Krasnoyarsk] PHP Warning:  date() [<a href='function.date'>function.date</a>]: It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected 'Asia/Krasnoyarsk' for 'WIB/7.0/no DST' instead in /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/aksi_pemesanan_barang.php on line 29
+[26-Feb-2017 15:26:00 Asia/Krasnoyarsk] PHP Stack trace:
+[26-Feb-2017 15:26:00 Asia/Krasnoyarsk] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/aksi_pemesanan_barang.php:0
+[26-Feb-2017 15:26:00 Asia/Krasnoyarsk] PHP   2. date() /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/aksi_pemesanan_barang.php:29
+[26-Feb-2017 15:26:00 Asia/Krasnoyarsk] PHP Notice:  Undefined index: ID in /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/aksi_pemesanan_barang.php on line 519
+[26-Feb-2017 15:26:00 Asia/Krasnoyarsk] PHP Stack trace:
+[26-Feb-2017 15:26:00 Asia/Krasnoyarsk] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/aksi_pemesanan_barang.php:0
+[26-Feb-2017 15:26:38 Asia/Krasnoyarsk] PHP Notice:  Use of undefined constant module - assumed 'module' in /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/aksi_pemesanan_barang.php on line 17
+[26-Feb-2017 15:26:38 Asia/Krasnoyarsk] PHP Stack trace:
+[26-Feb-2017 15:26:38 Asia/Krasnoyarsk] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/aksi_pemesanan_barang.php:0
+[26-Feb-2017 15:26:38 Asia/Krasnoyarsk] PHP Notice:  Use of undefined constant act - assumed 'act' in /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/aksi_pemesanan_barang.php on line 19
+[26-Feb-2017 15:26:38 Asia/Krasnoyarsk] PHP Stack trace:
+[26-Feb-2017 15:26:38 Asia/Krasnoyarsk] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/aksi_pemesanan_barang.php:0
+[26-Feb-2017 15:26:38 Asia/Krasnoyarsk] PHP Warning:  date() [<a href='function.date'>function.date</a>]: It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected 'Asia/Krasnoyarsk' for 'WIB/7.0/no DST' instead in /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/aksi_pemesanan_barang.php on line 23
+[26-Feb-2017 15:26:38 Asia/Krasnoyarsk] PHP Stack trace:
+[26-Feb-2017 15:26:38 Asia/Krasnoyarsk] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/aksi_pemesanan_barang.php:0
+[26-Feb-2017 15:26:38 Asia/Krasnoyarsk] PHP   2. date() /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/aksi_pemesanan_barang.php:23
+[26-Feb-2017 15:26:38 Asia/Krasnoyarsk] PHP Warning:  date() [<a href='function.date'>function.date</a>]: It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected 'Asia/Krasnoyarsk' for 'WIB/7.0/no DST' instead in /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/aksi_pemesanan_barang.php on line 25
+[26-Feb-2017 15:26:38 Asia/Krasnoyarsk] PHP Stack trace:
+[26-Feb-2017 15:26:38 Asia/Krasnoyarsk] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/aksi_pemesanan_barang.php:0
+[26-Feb-2017 15:26:38 Asia/Krasnoyarsk] PHP   2. date() /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/aksi_pemesanan_barang.php:25
+[26-Feb-2017 15:26:38 Asia/Krasnoyarsk] PHP Warning:  date() [<a href='function.date'>function.date</a>]: It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected 'Asia/Krasnoyarsk' for 'WIB/7.0/no DST' instead in /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/aksi_pemesanan_barang.php on line 29
+[26-Feb-2017 15:26:38 Asia/Krasnoyarsk] PHP Stack trace:
+[26-Feb-2017 15:26:38 Asia/Krasnoyarsk] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/aksi_pemesanan_barang.php:0
+[26-Feb-2017 15:26:38 Asia/Krasnoyarsk] PHP   2. date() /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/aksi_pemesanan_barang.php:29
+[26-Feb-2017 15:26:41 Asia/Krasnoyarsk] PHP Warning:  date() [<a href='function.date'>function.date</a>]: It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected 'Asia/Krasnoyarsk' for 'WIB/7.0/no DST' instead in /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/form_list_pemesanan.php on line 15
+[26-Feb-2017 15:26:41 Asia/Krasnoyarsk] PHP Stack trace:
+[26-Feb-2017 15:26:41 Asia/Krasnoyarsk] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/form_list_pemesanan.php:0
+[26-Feb-2017 15:26:41 Asia/Krasnoyarsk] PHP   2. date() /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/form_list_pemesanan.php:15
+[26-Feb-2017 15:26:41 Asia/Krasnoyarsk] PHP Notice:  Undefined index: imodule in /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/form_list_pemesanan.php on line 161
+[26-Feb-2017 15:26:41 Asia/Krasnoyarsk] PHP Stack trace:
+[26-Feb-2017 15:26:41 Asia/Krasnoyarsk] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/form_list_pemesanan.php:0
+[26-Feb-2017 15:26:41 Asia/Krasnoyarsk] PHP Notice:  Undefined index: title in /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/form_list_pemesanan.php on line 165
+[26-Feb-2017 15:26:41 Asia/Krasnoyarsk] PHP Stack trace:
+[26-Feb-2017 15:26:41 Asia/Krasnoyarsk] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/form_list_pemesanan.php:0
+[26-Feb-2017 15:26:41 Asia/Krasnoyarsk] PHP Notice:  Undefined index: prd in /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/form_list_pemesanan.php on line 177
+[26-Feb-2017 15:26:41 Asia/Krasnoyarsk] PHP Stack trace:
+[26-Feb-2017 15:26:41 Asia/Krasnoyarsk] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/form_list_pemesanan.php:0
+[26-Feb-2017 15:26:41 Asia/Krasnoyarsk] PHP Warning:  strtotime() [<a href='function.strtotime'>function.strtotime</a>]: It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected 'Asia/Krasnoyarsk' for 'WIB/7.0/no DST' instead in /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/form_list_pemesanan.php on line 366
+[26-Feb-2017 15:26:41 Asia/Krasnoyarsk] PHP Stack trace:
+[26-Feb-2017 15:26:41 Asia/Krasnoyarsk] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/form_list_pemesanan.php:0
+[26-Feb-2017 15:26:41 Asia/Krasnoyarsk] PHP   2. strtotime() /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/form_list_pemesanan.php:366
+[26-Feb-2017 15:26:41 Asia/Krasnoyarsk] PHP Warning:  date() [<a href='function.date'>function.date</a>]: It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected 'Asia/Krasnoyarsk' for 'WIB/7.0/no DST' instead in /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/form_list_pemesanan.php on line 366
+[26-Feb-2017 15:26:41 Asia/Krasnoyarsk] PHP Stack trace:
+[26-Feb-2017 15:26:41 Asia/Krasnoyarsk] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/form_list_pemesanan.php:0
+[26-Feb-2017 15:26:41 Asia/Krasnoyarsk] PHP   2. date() /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/form_list_pemesanan.php:366
+[26-Feb-2017 15:26:41 Asia/Krasnoyarsk] PHP Warning:  strtotime() [<a href='function.strtotime'>function.strtotime</a>]: It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected 'Asia/Krasnoyarsk' for 'WIB/7.0/no DST' instead in /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/form_list_pemesanan.php on line 366
+[26-Feb-2017 15:26:41 Asia/Krasnoyarsk] PHP Stack trace:
+[26-Feb-2017 15:26:41 Asia/Krasnoyarsk] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/form_list_pemesanan.php:0
+[26-Feb-2017 15:26:41 Asia/Krasnoyarsk] PHP   2. strtotime() /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/form_list_pemesanan.php:366
+[26-Feb-2017 15:26:41 Asia/Krasnoyarsk] PHP Warning:  date() [<a href='function.date'>function.date</a>]: It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected 'Asia/Krasnoyarsk' for 'WIB/7.0/no DST' instead in /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/form_list_pemesanan.php on line 366
+[26-Feb-2017 15:26:41 Asia/Krasnoyarsk] PHP Stack trace:
+[26-Feb-2017 15:26:41 Asia/Krasnoyarsk] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/form_list_pemesanan.php:0
+[26-Feb-2017 15:26:41 Asia/Krasnoyarsk] PHP   2. date() /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/form_list_pemesanan.php:366
+[26-Feb-2017 15:26:41 Asia/Krasnoyarsk] PHP Warning:  strtotime() [<a href='function.strtotime'>function.strtotime</a>]: It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected 'Asia/Krasnoyarsk' for 'WIB/7.0/no DST' instead in /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/form_list_pemesanan.php on line 366
+[26-Feb-2017 15:26:41 Asia/Krasnoyarsk] PHP Stack trace:
+[26-Feb-2017 15:26:41 Asia/Krasnoyarsk] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/form_list_pemesanan.php:0
+[26-Feb-2017 15:26:41 Asia/Krasnoyarsk] PHP   2. strtotime() /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/form_list_pemesanan.php:366
+[26-Feb-2017 15:26:41 Asia/Krasnoyarsk] PHP Warning:  date() [<a href='function.date'>function.date</a>]: It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected 'Asia/Krasnoyarsk' for 'WIB/7.0/no DST' instead in /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/form_list_pemesanan.php on line 366
+[26-Feb-2017 15:26:41 Asia/Krasnoyarsk] PHP Stack trace:
+[26-Feb-2017 15:26:41 Asia/Krasnoyarsk] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/form_list_pemesanan.php:0
+[26-Feb-2017 15:26:41 Asia/Krasnoyarsk] PHP   2. date() /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/form_list_pemesanan.php:366
+[26-Feb-2017 15:26:41 Asia/Krasnoyarsk] PHP Notice:  Undefined variable: size in /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/form_list_pemesanan.php on line 469
+[26-Feb-2017 15:26:41 Asia/Krasnoyarsk] PHP Stack trace:
+[26-Feb-2017 15:26:41 Asia/Krasnoyarsk] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/form_list_pemesanan.php:0
+[26-Feb-2017 15:26:41 Asia/Krasnoyarsk] PHP Notice:  Undefined variable: size in /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/form_list_pemesanan.php on line 481
+[26-Feb-2017 15:26:41 Asia/Krasnoyarsk] PHP Stack trace:
+[26-Feb-2017 15:26:41 Asia/Krasnoyarsk] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/form_list_pemesanan.php:0
+[26-Feb-2017 15:26:41 Asia/Krasnoyarsk] PHP Notice:  Undefined variable: size in /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/form_list_pemesanan.php on line 493
+[26-Feb-2017 15:26:41 Asia/Krasnoyarsk] PHP Stack trace:
+[26-Feb-2017 15:26:41 Asia/Krasnoyarsk] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/form_list_pemesanan.php:0
+[26-Feb-2017 15:26:41 Asia/Krasnoyarsk] PHP Notice:  Undefined variable: size in /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/form_list_pemesanan.php on line 505
+[26-Feb-2017 15:26:41 Asia/Krasnoyarsk] PHP Stack trace:
+[26-Feb-2017 15:26:41 Asia/Krasnoyarsk] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/form_list_pemesanan.php:0
+[26-Feb-2017 15:26:41 Asia/Krasnoyarsk] PHP Notice:  Undefined variable: size in /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/form_list_pemesanan.php on line 517
+[26-Feb-2017 15:26:41 Asia/Krasnoyarsk] PHP Stack trace:
+[26-Feb-2017 15:26:41 Asia/Krasnoyarsk] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/form_list_pemesanan.php:0
+[26-Feb-2017 15:26:54 Asia/Krasnoyarsk] PHP Notice:  Use of undefined constant module - assumed 'module' in /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/aksi_pemesanan_barang.php on line 17
+[26-Feb-2017 15:26:54 Asia/Krasnoyarsk] PHP Stack trace:
+[26-Feb-2017 15:26:54 Asia/Krasnoyarsk] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/aksi_pemesanan_barang.php:0
+[26-Feb-2017 15:26:54 Asia/Krasnoyarsk] PHP Notice:  Use of undefined constant act - assumed 'act' in /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/aksi_pemesanan_barang.php on line 19
+[26-Feb-2017 15:26:54 Asia/Krasnoyarsk] PHP Stack trace:
+[26-Feb-2017 15:26:54 Asia/Krasnoyarsk] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/aksi_pemesanan_barang.php:0
+[26-Feb-2017 15:26:54 Asia/Krasnoyarsk] PHP Warning:  date() [<a href='function.date'>function.date</a>]: It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected 'Asia/Krasnoyarsk' for 'WIB/7.0/no DST' instead in /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/aksi_pemesanan_barang.php on line 23
+[26-Feb-2017 15:26:54 Asia/Krasnoyarsk] PHP Stack trace:
+[26-Feb-2017 15:26:54 Asia/Krasnoyarsk] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/aksi_pemesanan_barang.php:0
+[26-Feb-2017 15:26:54 Asia/Krasnoyarsk] PHP   2. date() /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/aksi_pemesanan_barang.php:23
+[26-Feb-2017 15:26:54 Asia/Krasnoyarsk] PHP Warning:  date() [<a href='function.date'>function.date</a>]: It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected 'Asia/Krasnoyarsk' for 'WIB/7.0/no DST' instead in /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/aksi_pemesanan_barang.php on line 25
+[26-Feb-2017 15:26:54 Asia/Krasnoyarsk] PHP Stack trace:
+[26-Feb-2017 15:26:54 Asia/Krasnoyarsk] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/aksi_pemesanan_barang.php:0
+[26-Feb-2017 15:26:54 Asia/Krasnoyarsk] PHP   2. date() /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/aksi_pemesanan_barang.php:25
+[26-Feb-2017 15:26:54 Asia/Krasnoyarsk] PHP Warning:  date() [<a href='function.date'>function.date</a>]: It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected 'Asia/Krasnoyarsk' for 'WIB/7.0/no DST' instead in /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/aksi_pemesanan_barang.php on line 29
+[26-Feb-2017 15:26:54 Asia/Krasnoyarsk] PHP Stack trace:
+[26-Feb-2017 15:26:54 Asia/Krasnoyarsk] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/aksi_pemesanan_barang.php:0
+[26-Feb-2017 15:26:54 Asia/Krasnoyarsk] PHP   2. date() /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/aksi_pemesanan_barang.php:29
+[26-Feb-2017 15:26:54 Asia/Krasnoyarsk] PHP Notice:  Undefined index: ID in /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/aksi_pemesanan_barang.php on line 519
+[26-Feb-2017 15:26:54 Asia/Krasnoyarsk] PHP Stack trace:
+[26-Feb-2017 15:26:54 Asia/Krasnoyarsk] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/aksi_pemesanan_barang.php:0
+[26-Feb-2017 15:28:00 Asia/Krasnoyarsk] PHP Notice:  Use of undefined constant module - assumed 'module' in /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/aksi_pemesanan_barang.php on line 17
+[26-Feb-2017 15:28:00 Asia/Krasnoyarsk] PHP Stack trace:
+[26-Feb-2017 15:28:00 Asia/Krasnoyarsk] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/aksi_pemesanan_barang.php:0
+[26-Feb-2017 15:28:00 Asia/Krasnoyarsk] PHP Notice:  Use of undefined constant act - assumed 'act' in /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/aksi_pemesanan_barang.php on line 19
+[26-Feb-2017 15:28:00 Asia/Krasnoyarsk] PHP Stack trace:
+[26-Feb-2017 15:28:00 Asia/Krasnoyarsk] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/aksi_pemesanan_barang.php:0
+[26-Feb-2017 15:28:00 Asia/Krasnoyarsk] PHP Warning:  date() [<a href='function.date'>function.date</a>]: It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected 'Asia/Krasnoyarsk' for 'WIB/7.0/no DST' instead in /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/aksi_pemesanan_barang.php on line 23
+[26-Feb-2017 15:28:00 Asia/Krasnoyarsk] PHP Stack trace:
+[26-Feb-2017 15:28:00 Asia/Krasnoyarsk] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/aksi_pemesanan_barang.php:0
+[26-Feb-2017 15:28:00 Asia/Krasnoyarsk] PHP   2. date() /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/aksi_pemesanan_barang.php:23
+[26-Feb-2017 15:28:00 Asia/Krasnoyarsk] PHP Warning:  date() [<a href='function.date'>function.date</a>]: It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected 'Asia/Krasnoyarsk' for 'WIB/7.0/no DST' instead in /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/aksi_pemesanan_barang.php on line 25
+[26-Feb-2017 15:28:00 Asia/Krasnoyarsk] PHP Stack trace:
+[26-Feb-2017 15:28:00 Asia/Krasnoyarsk] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/aksi_pemesanan_barang.php:0
+[26-Feb-2017 15:28:00 Asia/Krasnoyarsk] PHP   2. date() /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/aksi_pemesanan_barang.php:25
+[26-Feb-2017 15:28:00 Asia/Krasnoyarsk] PHP Warning:  date() [<a href='function.date'>function.date</a>]: It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected 'Asia/Krasnoyarsk' for 'WIB/7.0/no DST' instead in /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/aksi_pemesanan_barang.php on line 29
+[26-Feb-2017 15:28:00 Asia/Krasnoyarsk] PHP Stack trace:
+[26-Feb-2017 15:28:00 Asia/Krasnoyarsk] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/aksi_pemesanan_barang.php:0
+[26-Feb-2017 15:28:00 Asia/Krasnoyarsk] PHP   2. date() /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/aksi_pemesanan_barang.php:29
+[26-Feb-2017 15:28:20 Asia/Krasnoyarsk] PHP Warning:  date() [<a href='function.date'>function.date</a>]: It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected 'Asia/Krasnoyarsk' for 'WIB/7.0/no DST' instead in /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/form_list_pemesanan.php on line 15
+[26-Feb-2017 15:28:20 Asia/Krasnoyarsk] PHP Stack trace:
+[26-Feb-2017 15:28:20 Asia/Krasnoyarsk] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/form_list_pemesanan.php:0
+[26-Feb-2017 15:28:20 Asia/Krasnoyarsk] PHP   2. date() /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/form_list_pemesanan.php:15
+[26-Feb-2017 15:28:20 Asia/Krasnoyarsk] PHP Notice:  Undefined index: imodule in /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/form_list_pemesanan.php on line 161
+[26-Feb-2017 15:28:20 Asia/Krasnoyarsk] PHP Stack trace:
+[26-Feb-2017 15:28:20 Asia/Krasnoyarsk] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/form_list_pemesanan.php:0
+[26-Feb-2017 15:28:20 Asia/Krasnoyarsk] PHP Notice:  Undefined index: title in /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/form_list_pemesanan.php on line 165
+[26-Feb-2017 15:28:20 Asia/Krasnoyarsk] PHP Stack trace:
+[26-Feb-2017 15:28:20 Asia/Krasnoyarsk] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/form_list_pemesanan.php:0
+[26-Feb-2017 15:28:20 Asia/Krasnoyarsk] PHP Notice:  Undefined index: prd in /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/form_list_pemesanan.php on line 177
+[26-Feb-2017 15:28:20 Asia/Krasnoyarsk] PHP Stack trace:
+[26-Feb-2017 15:28:20 Asia/Krasnoyarsk] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/form_list_pemesanan.php:0
+[26-Feb-2017 15:28:20 Asia/Krasnoyarsk] PHP Warning:  strtotime() [<a href='function.strtotime'>function.strtotime</a>]: It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected 'Asia/Krasnoyarsk' for 'WIB/7.0/no DST' instead in /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/form_list_pemesanan.php on line 366
+[26-Feb-2017 15:28:20 Asia/Krasnoyarsk] PHP Stack trace:
+[26-Feb-2017 15:28:20 Asia/Krasnoyarsk] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/form_list_pemesanan.php:0
+[26-Feb-2017 15:28:20 Asia/Krasnoyarsk] PHP   2. strtotime() /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/form_list_pemesanan.php:366
+[26-Feb-2017 15:28:20 Asia/Krasnoyarsk] PHP Warning:  date() [<a href='function.date'>function.date</a>]: It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected 'Asia/Krasnoyarsk' for 'WIB/7.0/no DST' instead in /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/form_list_pemesanan.php on line 366
+[26-Feb-2017 15:28:20 Asia/Krasnoyarsk] PHP Stack trace:
+[26-Feb-2017 15:28:20 Asia/Krasnoyarsk] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/form_list_pemesanan.php:0
+[26-Feb-2017 15:28:20 Asia/Krasnoyarsk] PHP   2. date() /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/form_list_pemesanan.php:366
+[26-Feb-2017 15:28:20 Asia/Krasnoyarsk] PHP Warning:  strtotime() [<a href='function.strtotime'>function.strtotime</a>]: It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected 'Asia/Krasnoyarsk' for 'WIB/7.0/no DST' instead in /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/form_list_pemesanan.php on line 366
+[26-Feb-2017 15:28:20 Asia/Krasnoyarsk] PHP Stack trace:
+[26-Feb-2017 15:28:20 Asia/Krasnoyarsk] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/form_list_pemesanan.php:0
+[26-Feb-2017 15:28:20 Asia/Krasnoyarsk] PHP   2. strtotime() /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/form_list_pemesanan.php:366
+[26-Feb-2017 15:28:20 Asia/Krasnoyarsk] PHP Warning:  date() [<a href='function.date'>function.date</a>]: It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected 'Asia/Krasnoyarsk' for 'WIB/7.0/no DST' instead in /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/form_list_pemesanan.php on line 366
+[26-Feb-2017 15:28:20 Asia/Krasnoyarsk] PHP Stack trace:
+[26-Feb-2017 15:28:20 Asia/Krasnoyarsk] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/form_list_pemesanan.php:0
+[26-Feb-2017 15:28:20 Asia/Krasnoyarsk] PHP   2. date() /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/form_list_pemesanan.php:366
+[26-Feb-2017 15:28:20 Asia/Krasnoyarsk] PHP Warning:  strtotime() [<a href='function.strtotime'>function.strtotime</a>]: It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected 'Asia/Krasnoyarsk' for 'WIB/7.0/no DST' instead in /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/form_list_pemesanan.php on line 366
+[26-Feb-2017 15:28:20 Asia/Krasnoyarsk] PHP Stack trace:
+[26-Feb-2017 15:28:20 Asia/Krasnoyarsk] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/form_list_pemesanan.php:0
+[26-Feb-2017 15:28:20 Asia/Krasnoyarsk] PHP   2. strtotime() /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/form_list_pemesanan.php:366
+[26-Feb-2017 15:28:20 Asia/Krasnoyarsk] PHP Warning:  date() [<a href='function.date'>function.date</a>]: It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected 'Asia/Krasnoyarsk' for 'WIB/7.0/no DST' instead in /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/form_list_pemesanan.php on line 366
+[26-Feb-2017 15:28:20 Asia/Krasnoyarsk] PHP Stack trace:
+[26-Feb-2017 15:28:20 Asia/Krasnoyarsk] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/form_list_pemesanan.php:0
+[26-Feb-2017 15:28:20 Asia/Krasnoyarsk] PHP   2. date() /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/form_list_pemesanan.php:366
+[26-Feb-2017 15:28:20 Asia/Krasnoyarsk] PHP Notice:  Undefined variable: size in /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/form_list_pemesanan.php on line 469
+[26-Feb-2017 15:28:20 Asia/Krasnoyarsk] PHP Stack trace:
+[26-Feb-2017 15:28:20 Asia/Krasnoyarsk] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/form_list_pemesanan.php:0
+[26-Feb-2017 15:28:20 Asia/Krasnoyarsk] PHP Notice:  Undefined variable: size in /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/form_list_pemesanan.php on line 481
+[26-Feb-2017 15:28:20 Asia/Krasnoyarsk] PHP Stack trace:
+[26-Feb-2017 15:28:20 Asia/Krasnoyarsk] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/form_list_pemesanan.php:0
+[26-Feb-2017 15:28:20 Asia/Krasnoyarsk] PHP Notice:  Undefined variable: size in /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/form_list_pemesanan.php on line 493
+[26-Feb-2017 15:28:20 Asia/Krasnoyarsk] PHP Stack trace:
+[26-Feb-2017 15:28:20 Asia/Krasnoyarsk] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/form_list_pemesanan.php:0
+[26-Feb-2017 15:28:20 Asia/Krasnoyarsk] PHP Notice:  Undefined variable: size in /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/form_list_pemesanan.php on line 505
+[26-Feb-2017 15:28:20 Asia/Krasnoyarsk] PHP Stack trace:
+[26-Feb-2017 15:28:20 Asia/Krasnoyarsk] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/form_list_pemesanan.php:0
+[26-Feb-2017 15:28:20 Asia/Krasnoyarsk] PHP Notice:  Undefined variable: size in /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/form_list_pemesanan.php on line 517
+[26-Feb-2017 15:28:20 Asia/Krasnoyarsk] PHP Stack trace:
+[26-Feb-2017 15:28:20 Asia/Krasnoyarsk] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/form_list_pemesanan.php:0
+[26-Feb-2017 15:28:30 Asia/Krasnoyarsk] PHP Notice:  Use of undefined constant module - assumed 'module' in /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/aksi_pemesanan_barang.php on line 17
+[26-Feb-2017 15:28:30 Asia/Krasnoyarsk] PHP Stack trace:
+[26-Feb-2017 15:28:30 Asia/Krasnoyarsk] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/aksi_pemesanan_barang.php:0
+[26-Feb-2017 15:28:30 Asia/Krasnoyarsk] PHP Notice:  Use of undefined constant act - assumed 'act' in /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/aksi_pemesanan_barang.php on line 19
+[26-Feb-2017 15:28:30 Asia/Krasnoyarsk] PHP Stack trace:
+[26-Feb-2017 15:28:30 Asia/Krasnoyarsk] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/aksi_pemesanan_barang.php:0
+[26-Feb-2017 15:28:30 Asia/Krasnoyarsk] PHP Warning:  date() [<a href='function.date'>function.date</a>]: It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected 'Asia/Krasnoyarsk' for 'WIB/7.0/no DST' instead in /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/aksi_pemesanan_barang.php on line 23
+[26-Feb-2017 15:28:30 Asia/Krasnoyarsk] PHP Stack trace:
+[26-Feb-2017 15:28:30 Asia/Krasnoyarsk] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/aksi_pemesanan_barang.php:0
+[26-Feb-2017 15:28:30 Asia/Krasnoyarsk] PHP   2. date() /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/aksi_pemesanan_barang.php:23
+[26-Feb-2017 15:28:30 Asia/Krasnoyarsk] PHP Warning:  date() [<a href='function.date'>function.date</a>]: It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected 'Asia/Krasnoyarsk' for 'WIB/7.0/no DST' instead in /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/aksi_pemesanan_barang.php on line 25
+[26-Feb-2017 15:28:30 Asia/Krasnoyarsk] PHP Stack trace:
+[26-Feb-2017 15:28:30 Asia/Krasnoyarsk] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/aksi_pemesanan_barang.php:0
+[26-Feb-2017 15:28:30 Asia/Krasnoyarsk] PHP   2. date() /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/aksi_pemesanan_barang.php:25
+[26-Feb-2017 15:28:30 Asia/Krasnoyarsk] PHP Warning:  date() [<a href='function.date'>function.date</a>]: It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected 'Asia/Krasnoyarsk' for 'WIB/7.0/no DST' instead in /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/aksi_pemesanan_barang.php on line 29
+[26-Feb-2017 15:28:30 Asia/Krasnoyarsk] PHP Stack trace:
+[26-Feb-2017 15:28:30 Asia/Krasnoyarsk] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/aksi_pemesanan_barang.php:0
+[26-Feb-2017 15:28:30 Asia/Krasnoyarsk] PHP   2. date() /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/aksi_pemesanan_barang.php:29
+[26-Feb-2017 15:28:30 Asia/Krasnoyarsk] PHP Notice:  Undefined index: ID in /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/aksi_pemesanan_barang.php on line 519
+[26-Feb-2017 15:28:30 Asia/Krasnoyarsk] PHP Stack trace:
+[26-Feb-2017 15:28:30 Asia/Krasnoyarsk] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/aksi_pemesanan_barang.php:0
+[26-Feb-2017 15:28:36 Asia/Krasnoyarsk] PHP Notice:  Use of undefined constant module - assumed 'module' in /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/aksi_pemesanan_barang.php on line 17
+[26-Feb-2017 15:28:36 Asia/Krasnoyarsk] PHP Stack trace:
+[26-Feb-2017 15:28:36 Asia/Krasnoyarsk] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/aksi_pemesanan_barang.php:0
+[26-Feb-2017 15:28:36 Asia/Krasnoyarsk] PHP Notice:  Use of undefined constant act - assumed 'act' in /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/aksi_pemesanan_barang.php on line 19
+[26-Feb-2017 15:28:36 Asia/Krasnoyarsk] PHP Stack trace:
+[26-Feb-2017 15:28:36 Asia/Krasnoyarsk] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/aksi_pemesanan_barang.php:0
+[26-Feb-2017 15:28:36 Asia/Krasnoyarsk] PHP Warning:  date() [<a href='function.date'>function.date</a>]: It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected 'Asia/Krasnoyarsk' for 'WIB/7.0/no DST' instead in /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/aksi_pemesanan_barang.php on line 23
+[26-Feb-2017 15:28:36 Asia/Krasnoyarsk] PHP Stack trace:
+[26-Feb-2017 15:28:36 Asia/Krasnoyarsk] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/aksi_pemesanan_barang.php:0
+[26-Feb-2017 15:28:36 Asia/Krasnoyarsk] PHP   2. date() /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/aksi_pemesanan_barang.php:23
+[26-Feb-2017 15:28:36 Asia/Krasnoyarsk] PHP Warning:  date() [<a href='function.date'>function.date</a>]: It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected 'Asia/Krasnoyarsk' for 'WIB/7.0/no DST' instead in /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/aksi_pemesanan_barang.php on line 25
+[26-Feb-2017 15:28:36 Asia/Krasnoyarsk] PHP Stack trace:
+[26-Feb-2017 15:28:36 Asia/Krasnoyarsk] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/aksi_pemesanan_barang.php:0
+[26-Feb-2017 15:28:36 Asia/Krasnoyarsk] PHP   2. date() /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/aksi_pemesanan_barang.php:25
+[26-Feb-2017 15:28:36 Asia/Krasnoyarsk] PHP Warning:  date() [<a href='function.date'>function.date</a>]: It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected 'Asia/Krasnoyarsk' for 'WIB/7.0/no DST' instead in /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/aksi_pemesanan_barang.php on line 29
+[26-Feb-2017 15:28:36 Asia/Krasnoyarsk] PHP Stack trace:
+[26-Feb-2017 15:28:36 Asia/Krasnoyarsk] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/aksi_pemesanan_barang.php:0
+[26-Feb-2017 15:28:36 Asia/Krasnoyarsk] PHP   2. date() /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/aksi_pemesanan_barang.php:29
+[26-Feb-2017 15:28:43 Asia/Krasnoyarsk] PHP Warning:  date() [<a href='function.date'>function.date</a>]: It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected 'Asia/Krasnoyarsk' for 'WIB/7.0/no DST' instead in /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/form_list_pemesanan.php on line 15
+[26-Feb-2017 15:28:43 Asia/Krasnoyarsk] PHP Stack trace:
+[26-Feb-2017 15:28:43 Asia/Krasnoyarsk] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/form_list_pemesanan.php:0
+[26-Feb-2017 15:28:43 Asia/Krasnoyarsk] PHP   2. date() /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/form_list_pemesanan.php:15
+[26-Feb-2017 15:28:43 Asia/Krasnoyarsk] PHP Notice:  Undefined index: imodule in /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/form_list_pemesanan.php on line 161
+[26-Feb-2017 15:28:43 Asia/Krasnoyarsk] PHP Stack trace:
+[26-Feb-2017 15:28:43 Asia/Krasnoyarsk] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/form_list_pemesanan.php:0
+[26-Feb-2017 15:28:43 Asia/Krasnoyarsk] PHP Notice:  Undefined index: title in /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/form_list_pemesanan.php on line 165
+[26-Feb-2017 15:28:43 Asia/Krasnoyarsk] PHP Stack trace:
+[26-Feb-2017 15:28:43 Asia/Krasnoyarsk] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/form_list_pemesanan.php:0
+[26-Feb-2017 15:28:43 Asia/Krasnoyarsk] PHP Notice:  Undefined index: prd in /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/form_list_pemesanan.php on line 177
+[26-Feb-2017 15:28:43 Asia/Krasnoyarsk] PHP Stack trace:
+[26-Feb-2017 15:28:43 Asia/Krasnoyarsk] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/form_list_pemesanan.php:0
+[26-Feb-2017 15:28:43 Asia/Krasnoyarsk] PHP Warning:  strtotime() [<a href='function.strtotime'>function.strtotime</a>]: It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected 'Asia/Krasnoyarsk' for 'WIB/7.0/no DST' instead in /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/form_list_pemesanan.php on line 366
+[26-Feb-2017 15:28:43 Asia/Krasnoyarsk] PHP Stack trace:
+[26-Feb-2017 15:28:43 Asia/Krasnoyarsk] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/form_list_pemesanan.php:0
+[26-Feb-2017 15:28:43 Asia/Krasnoyarsk] PHP   2. strtotime() /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/form_list_pemesanan.php:366
+[26-Feb-2017 15:28:43 Asia/Krasnoyarsk] PHP Warning:  date() [<a href='function.date'>function.date</a>]: It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected 'Asia/Krasnoyarsk' for 'WIB/7.0/no DST' instead in /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/form_list_pemesanan.php on line 366
+[26-Feb-2017 15:28:43 Asia/Krasnoyarsk] PHP Stack trace:
+[26-Feb-2017 15:28:43 Asia/Krasnoyarsk] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/form_list_pemesanan.php:0
+[26-Feb-2017 15:28:43 Asia/Krasnoyarsk] PHP   2. date() /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/form_list_pemesanan.php:366
+[26-Feb-2017 15:28:43 Asia/Krasnoyarsk] PHP Warning:  strtotime() [<a href='function.strtotime'>function.strtotime</a>]: It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected 'Asia/Krasnoyarsk' for 'WIB/7.0/no DST' instead in /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/form_list_pemesanan.php on line 366
+[26-Feb-2017 15:28:43 Asia/Krasnoyarsk] PHP Stack trace:
+[26-Feb-2017 15:28:43 Asia/Krasnoyarsk] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/form_list_pemesanan.php:0
+[26-Feb-2017 15:28:43 Asia/Krasnoyarsk] PHP   2. strtotime() /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/form_list_pemesanan.php:366
+[26-Feb-2017 15:28:43 Asia/Krasnoyarsk] PHP Warning:  date() [<a href='function.date'>function.date</a>]: It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected 'Asia/Krasnoyarsk' for 'WIB/7.0/no DST' instead in /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/form_list_pemesanan.php on line 366
+[26-Feb-2017 15:28:43 Asia/Krasnoyarsk] PHP Stack trace:
+[26-Feb-2017 15:28:43 Asia/Krasnoyarsk] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/form_list_pemesanan.php:0
+[26-Feb-2017 15:28:43 Asia/Krasnoyarsk] PHP   2. date() /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/form_list_pemesanan.php:366
+[26-Feb-2017 15:28:43 Asia/Krasnoyarsk] PHP Warning:  strtotime() [<a href='function.strtotime'>function.strtotime</a>]: It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected 'Asia/Krasnoyarsk' for 'WIB/7.0/no DST' instead in /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/form_list_pemesanan.php on line 366
+[26-Feb-2017 15:28:43 Asia/Krasnoyarsk] PHP Stack trace:
+[26-Feb-2017 15:28:43 Asia/Krasnoyarsk] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/form_list_pemesanan.php:0
+[26-Feb-2017 15:28:43 Asia/Krasnoyarsk] PHP   2. strtotime() /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/form_list_pemesanan.php:366
+[26-Feb-2017 15:28:43 Asia/Krasnoyarsk] PHP Warning:  date() [<a href='function.date'>function.date</a>]: It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected 'Asia/Krasnoyarsk' for 'WIB/7.0/no DST' instead in /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/form_list_pemesanan.php on line 366
+[26-Feb-2017 15:28:43 Asia/Krasnoyarsk] PHP Stack trace:
+[26-Feb-2017 15:28:43 Asia/Krasnoyarsk] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/form_list_pemesanan.php:0
+[26-Feb-2017 15:28:43 Asia/Krasnoyarsk] PHP   2. date() /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/form_list_pemesanan.php:366
+[26-Feb-2017 15:28:43 Asia/Krasnoyarsk] PHP Notice:  Undefined variable: size in /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/form_list_pemesanan.php on line 469
+[26-Feb-2017 15:28:43 Asia/Krasnoyarsk] PHP Stack trace:
+[26-Feb-2017 15:28:43 Asia/Krasnoyarsk] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/form_list_pemesanan.php:0
+[26-Feb-2017 15:28:43 Asia/Krasnoyarsk] PHP Notice:  Undefined variable: size in /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/form_list_pemesanan.php on line 481
+[26-Feb-2017 15:28:43 Asia/Krasnoyarsk] PHP Stack trace:
+[26-Feb-2017 15:28:43 Asia/Krasnoyarsk] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/form_list_pemesanan.php:0
+[26-Feb-2017 15:28:43 Asia/Krasnoyarsk] PHP Notice:  Undefined variable: size in /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/form_list_pemesanan.php on line 493
+[26-Feb-2017 15:28:43 Asia/Krasnoyarsk] PHP Stack trace:
+[26-Feb-2017 15:28:43 Asia/Krasnoyarsk] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/form_list_pemesanan.php:0
+[26-Feb-2017 15:28:43 Asia/Krasnoyarsk] PHP Notice:  Undefined variable: size in /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/form_list_pemesanan.php on line 505
+[26-Feb-2017 15:28:43 Asia/Krasnoyarsk] PHP Stack trace:
+[26-Feb-2017 15:28:43 Asia/Krasnoyarsk] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/form_list_pemesanan.php:0
+[26-Feb-2017 15:28:43 Asia/Krasnoyarsk] PHP Notice:  Undefined variable: size in /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/form_list_pemesanan.php on line 517
+[26-Feb-2017 15:28:43 Asia/Krasnoyarsk] PHP Stack trace:
+[26-Feb-2017 15:28:43 Asia/Krasnoyarsk] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/form_list_pemesanan.php:0
+[26-Feb-2017 15:28:50 Asia/Krasnoyarsk] PHP Notice:  Use of undefined constant module - assumed 'module' in /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/aksi_pemesanan_barang.php on line 17
+[26-Feb-2017 15:28:50 Asia/Krasnoyarsk] PHP Stack trace:
+[26-Feb-2017 15:28:50 Asia/Krasnoyarsk] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/aksi_pemesanan_barang.php:0
+[26-Feb-2017 15:28:50 Asia/Krasnoyarsk] PHP Notice:  Use of undefined constant act - assumed 'act' in /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/aksi_pemesanan_barang.php on line 19
+[26-Feb-2017 15:28:50 Asia/Krasnoyarsk] PHP Stack trace:
+[26-Feb-2017 15:28:50 Asia/Krasnoyarsk] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/aksi_pemesanan_barang.php:0
+[26-Feb-2017 15:28:50 Asia/Krasnoyarsk] PHP Warning:  date() [<a href='function.date'>function.date</a>]: It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected 'Asia/Krasnoyarsk' for 'WIB/7.0/no DST' instead in /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/aksi_pemesanan_barang.php on line 23
+[26-Feb-2017 15:28:50 Asia/Krasnoyarsk] PHP Stack trace:
+[26-Feb-2017 15:28:50 Asia/Krasnoyarsk] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/aksi_pemesanan_barang.php:0
+[26-Feb-2017 15:28:50 Asia/Krasnoyarsk] PHP   2. date() /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/aksi_pemesanan_barang.php:23
+[26-Feb-2017 15:28:50 Asia/Krasnoyarsk] PHP Warning:  date() [<a href='function.date'>function.date</a>]: It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected 'Asia/Krasnoyarsk' for 'WIB/7.0/no DST' instead in /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/aksi_pemesanan_barang.php on line 25
+[26-Feb-2017 15:28:50 Asia/Krasnoyarsk] PHP Stack trace:
+[26-Feb-2017 15:28:50 Asia/Krasnoyarsk] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/aksi_pemesanan_barang.php:0
+[26-Feb-2017 15:28:50 Asia/Krasnoyarsk] PHP   2. date() /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/aksi_pemesanan_barang.php:25
+[26-Feb-2017 15:28:50 Asia/Krasnoyarsk] PHP Warning:  date() [<a href='function.date'>function.date</a>]: It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected 'Asia/Krasnoyarsk' for 'WIB/7.0/no DST' instead in /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/aksi_pemesanan_barang.php on line 29
+[26-Feb-2017 15:28:50 Asia/Krasnoyarsk] PHP Stack trace:
+[26-Feb-2017 15:28:50 Asia/Krasnoyarsk] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/aksi_pemesanan_barang.php:0
+[26-Feb-2017 15:28:50 Asia/Krasnoyarsk] PHP   2. date() /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/aksi_pemesanan_barang.php:29
+[26-Feb-2017 15:28:50 Asia/Krasnoyarsk] PHP Notice:  Undefined index: ID in /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/aksi_pemesanan_barang.php on line 519
+[26-Feb-2017 15:28:50 Asia/Krasnoyarsk] PHP Stack trace:
+[26-Feb-2017 15:28:50 Asia/Krasnoyarsk] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_pemesanan_barang/aksi_pemesanan_barang.php:0

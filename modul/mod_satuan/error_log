@@ -1,0 +1,103 @@
+[31-Mar-2015 15:31:43 America/New_York] PHP Warning:  session_start(): Cannot send session cookie - headers already sent in /home/k6240433/public_html/trial/adminweb/modul/mod_banner/banner.php on line 2
+[31-Mar-2015 15:31:43 America/New_York] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent in /home/k6240433/public_html/trial/adminweb/modul/mod_banner/banner.php on line 2
+[31-Mar-2015 15:31:44 America/New_York] PHP Warning:  session_start(): Cannot send session cookie - headers already sent in /home/k6240433/public_html/trial/adminweb/modul/mod_banner/aksi_banner.php on line 2
+[31-Mar-2015 15:31:44 America/New_York] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent in /home/k6240433/public_html/trial/adminweb/modul/mod_banner/aksi_banner.php on line 2
+[23-Jan-2017 20:58:08 Asia/Jakarta] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/soldigge/public_html/pilatus/config/koneksi.php on line 7
+[23-Jan-2017 20:58:08 Asia/Jakarta] PHP Stack trace:
+[23-Jan-2017 20:58:08 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_bank/form_bank.php:0
+[23-Jan-2017 20:58:08 Asia/Jakarta] PHP   2. include() /home/soldigge/public_html/pilatus/modul/mod_bank/form_bank.php:6
+[23-Jan-2017 20:58:08 Asia/Jakarta] PHP   3. mysql_connect() /home/soldigge/public_html/pilatus/config/koneksi.php:7
+[23-Jan-2017 20:58:08 Asia/Jakarta] PHP Notice:  Undefined index: title in /home/soldigge/public_html/pilatus/modul/mod_bank/form_bank.php on line 38
+[23-Jan-2017 20:58:08 Asia/Jakarta] PHP Stack trace:
+[23-Jan-2017 20:58:08 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_bank/form_bank.php:0
+[23-Jan-2017 20:58:08 Asia/Jakarta] PHP Notice:  Undefined index: igroup in /home/soldigge/public_html/pilatus/modul/mod_bank/form_bank.php on line 54
+[23-Jan-2017 20:58:08 Asia/Jakarta] PHP Stack trace:
+[23-Jan-2017 20:58:08 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_bank/form_bank.php:0
+[23-Jan-2017 20:58:08 Asia/Jakarta] PHP Notice:  Undefined index: imenu in /home/soldigge/public_html/pilatus/modul/mod_bank/form_bank.php on line 61
+[23-Jan-2017 20:58:08 Asia/Jakarta] PHP Stack trace:
+[23-Jan-2017 20:58:08 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_bank/form_bank.php:0
+[23-Jan-2017 20:58:08 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$id_modul in /home/soldigge/public_html/pilatus/modul/mod_bank/form_bank.php on line 64
+[23-Jan-2017 20:58:08 Asia/Jakarta] PHP Stack trace:
+[23-Jan-2017 20:58:08 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_bank/form_bank.php:0
+[24-Jan-2017 12:59:25 Asia/Jakarta] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/soldigge/public_html/pilatus/config/koneksi.php on line 7
+[24-Jan-2017 12:59:25 Asia/Jakarta] PHP Stack trace:
+[24-Jan-2017 12:59:25 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_bank/form_bank.php:0
+[24-Jan-2017 12:59:25 Asia/Jakarta] PHP   2. include() /home/soldigge/public_html/pilatus/modul/mod_bank/form_bank.php:6
+[24-Jan-2017 12:59:25 Asia/Jakarta] PHP   3. mysql_connect() /home/soldigge/public_html/pilatus/config/koneksi.php:7
+[24-Jan-2017 12:59:25 Asia/Jakarta] PHP Notice:  Undefined index: title in /home/soldigge/public_html/pilatus/modul/mod_bank/form_bank.php on line 38
+[24-Jan-2017 12:59:25 Asia/Jakarta] PHP Stack trace:
+[24-Jan-2017 12:59:25 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_bank/form_bank.php:0
+[24-Jan-2017 12:59:25 Asia/Jakarta] PHP Notice:  Undefined index: igroup in /home/soldigge/public_html/pilatus/modul/mod_bank/form_bank.php on line 54
+[24-Jan-2017 12:59:25 Asia/Jakarta] PHP Stack trace:
+[24-Jan-2017 12:59:25 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_bank/form_bank.php:0
+[24-Jan-2017 12:59:25 Asia/Jakarta] PHP Notice:  Undefined index: imenu in /home/soldigge/public_html/pilatus/modul/mod_bank/form_bank.php on line 61
+[24-Jan-2017 12:59:25 Asia/Jakarta] PHP Stack trace:
+[24-Jan-2017 12:59:25 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_bank/form_bank.php:0
+[24-Jan-2017 12:59:25 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$id_modul in /home/soldigge/public_html/pilatus/modul/mod_bank/form_bank.php on line 64
+[24-Jan-2017 12:59:25 Asia/Jakarta] PHP Stack trace:
+[24-Jan-2017 12:59:25 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_bank/form_bank.php:0
+[26-Jan-2017 09:24:00 Asia/Jakarta] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/soldigge/public_html/pilatus/config/koneksi.php on line 7
+[26-Jan-2017 09:24:00 Asia/Jakarta] PHP Stack trace:
+[26-Jan-2017 09:24:00 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_bank/form_bank.php:0
+[26-Jan-2017 09:24:00 Asia/Jakarta] PHP   2. include() /home/soldigge/public_html/pilatus/modul/mod_bank/form_bank.php:6
+[26-Jan-2017 09:24:00 Asia/Jakarta] PHP   3. mysql_connect() /home/soldigge/public_html/pilatus/config/koneksi.php:7
+[26-Jan-2017 09:24:00 Asia/Jakarta] PHP Notice:  Undefined index: title in /home/soldigge/public_html/pilatus/modul/mod_bank/form_bank.php on line 38
+[26-Jan-2017 09:24:00 Asia/Jakarta] PHP Stack trace:
+[26-Jan-2017 09:24:00 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_bank/form_bank.php:0
+[26-Jan-2017 09:24:00 Asia/Jakarta] PHP Notice:  Undefined index: igroup in /home/soldigge/public_html/pilatus/modul/mod_bank/form_bank.php on line 54
+[26-Jan-2017 09:24:00 Asia/Jakarta] PHP Stack trace:
+[26-Jan-2017 09:24:00 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_bank/form_bank.php:0
+[26-Jan-2017 09:24:00 Asia/Jakarta] PHP Notice:  Undefined variable: data in /home/soldigge/public_html/pilatus/modul/mod_bank/form_bank.php on line 57
+[26-Jan-2017 09:24:00 Asia/Jakarta] PHP Stack trace:
+[26-Jan-2017 09:24:00 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_bank/form_bank.php:0
+[26-Jan-2017 09:24:00 Asia/Jakarta] PHP Notice:  Trying to get property of non-object in /home/soldigge/public_html/pilatus/modul/mod_bank/form_bank.php on line 57
+[26-Jan-2017 09:24:00 Asia/Jakarta] PHP Stack trace:
+[26-Jan-2017 09:24:00 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_bank/form_bank.php:0
+[26-Jan-2017 09:24:00 Asia/Jakarta] PHP Notice:  Undefined index: imenu in /home/soldigge/public_html/pilatus/modul/mod_bank/form_bank.php on line 61
+[26-Jan-2017 09:24:00 Asia/Jakarta] PHP Stack trace:
+[26-Jan-2017 09:24:00 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_bank/form_bank.php:0
+[26-Jan-2017 09:24:00 Asia/Jakarta] PHP Notice:  Undefined variable: data in /home/soldigge/public_html/pilatus/modul/mod_bank/form_bank.php on line 64
+[26-Jan-2017 09:24:00 Asia/Jakarta] PHP Stack trace:
+[26-Jan-2017 09:24:00 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_bank/form_bank.php:0
+[26-Jan-2017 09:24:00 Asia/Jakarta] PHP Notice:  Trying to get property of non-object in /home/soldigge/public_html/pilatus/modul/mod_bank/form_bank.php on line 64
+[26-Jan-2017 09:24:00 Asia/Jakarta] PHP Stack trace:
+[26-Jan-2017 09:24:00 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_bank/form_bank.php:0
+[26-Jan-2017 09:24:11 Asia/Jakarta] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/soldigge/public_html/pilatus/config/koneksi.php on line 7
+[26-Jan-2017 09:24:11 Asia/Jakarta] PHP Stack trace:
+[26-Jan-2017 09:24:11 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_bank/aksi_bank.php:0
+[26-Jan-2017 09:24:11 Asia/Jakarta] PHP   2. include() /home/soldigge/public_html/pilatus/modul/mod_bank/aksi_bank.php:6
+[26-Jan-2017 09:24:11 Asia/Jakarta] PHP   3. mysql_connect() /home/soldigge/public_html/pilatus/config/koneksi.php:7
+[26-Jan-2017 09:24:11 Asia/Jakarta] PHP Notice:  Use of undefined constant module - assumed 'module' in /home/soldigge/public_html/pilatus/modul/mod_bank/aksi_bank.php on line 9
+[26-Jan-2017 09:24:11 Asia/Jakarta] PHP Stack trace:
+[26-Jan-2017 09:24:11 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_bank/aksi_bank.php:0
+[26-Jan-2017 09:24:11 Asia/Jakarta] PHP Notice:  Use of undefined constant act - assumed 'act' in /home/soldigge/public_html/pilatus/modul/mod_bank/aksi_bank.php on line 10
+[26-Jan-2017 09:24:11 Asia/Jakarta] PHP Stack trace:
+[26-Jan-2017 09:24:11 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_bank/aksi_bank.php:0
+[26-Jan-2017 09:24:45 Asia/Jakarta] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/soldigge/public_html/pilatus/config/koneksi.php on line 7
+[26-Jan-2017 09:24:45 Asia/Jakarta] PHP Stack trace:
+[26-Jan-2017 09:24:45 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_bank/form_bank.php:0
+[26-Jan-2017 09:24:45 Asia/Jakarta] PHP   2. include() /home/soldigge/public_html/pilatus/modul/mod_bank/form_bank.php:6
+[26-Jan-2017 09:24:45 Asia/Jakarta] PHP   3. mysql_connect() /home/soldigge/public_html/pilatus/config/koneksi.php:7
+[26-Jan-2017 09:24:45 Asia/Jakarta] PHP Notice:  Undefined index: title in /home/soldigge/public_html/pilatus/modul/mod_bank/form_bank.php on line 38
+[26-Jan-2017 09:24:45 Asia/Jakarta] PHP Stack trace:
+[26-Jan-2017 09:24:45 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_bank/form_bank.php:0
+[26-Jan-2017 09:24:45 Asia/Jakarta] PHP Notice:  Undefined index: igroup in /home/soldigge/public_html/pilatus/modul/mod_bank/form_bank.php on line 54
+[26-Jan-2017 09:24:45 Asia/Jakarta] PHP Stack trace:
+[26-Jan-2017 09:24:45 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_bank/form_bank.php:0
+[26-Jan-2017 09:24:45 Asia/Jakarta] PHP Notice:  Undefined index: imenu in /home/soldigge/public_html/pilatus/modul/mod_bank/form_bank.php on line 61
+[26-Jan-2017 09:24:45 Asia/Jakarta] PHP Stack trace:
+[26-Jan-2017 09:24:45 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_bank/form_bank.php:0
+[26-Jan-2017 09:24:45 Asia/Jakarta] PHP Notice:  Undefined property: stdClass::$id_modul in /home/soldigge/public_html/pilatus/modul/mod_bank/form_bank.php on line 64
+[26-Jan-2017 09:24:45 Asia/Jakarta] PHP Stack trace:
+[26-Jan-2017 09:24:45 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_bank/form_bank.php:0
+[26-Jan-2017 09:24:50 Asia/Jakarta] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/soldigge/public_html/pilatus/config/koneksi.php on line 7
+[26-Jan-2017 09:24:50 Asia/Jakarta] PHP Stack trace:
+[26-Jan-2017 09:24:50 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_bank/aksi_bank.php:0
+[26-Jan-2017 09:24:50 Asia/Jakarta] PHP   2. include() /home/soldigge/public_html/pilatus/modul/mod_bank/aksi_bank.php:6
+[26-Jan-2017 09:24:50 Asia/Jakarta] PHP   3. mysql_connect() /home/soldigge/public_html/pilatus/config/koneksi.php:7
+[26-Jan-2017 09:24:50 Asia/Jakarta] PHP Notice:  Use of undefined constant module - assumed 'module' in /home/soldigge/public_html/pilatus/modul/mod_bank/aksi_bank.php on line 9
+[26-Jan-2017 09:24:50 Asia/Jakarta] PHP Stack trace:
+[26-Jan-2017 09:24:50 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_bank/aksi_bank.php:0
+[26-Jan-2017 09:24:50 Asia/Jakarta] PHP Notice:  Use of undefined constant act - assumed 'act' in /home/soldigge/public_html/pilatus/modul/mod_bank/aksi_bank.php on line 10
+[26-Jan-2017 09:24:50 Asia/Jakarta] PHP Stack trace:
+[26-Jan-2017 09:24:50 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_bank/aksi_bank.php:0

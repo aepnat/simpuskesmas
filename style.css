@@ -1,0 +1,172 @@
+	body{
+	margin: 0;
+	padding: 0;
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	background: #ccc;
+}
+
+.login-content{
+	width: 350px;
+	margin: 7% auto;
+	background: #fff;
+	border-radius: 10px;
+	height: 400px;
+	z-index: 999;
+	position: fixed;
+	margin-left: 505px;
+	box-shadow: 0 12px 16px -6px #000;
+}
+
+.header-title{
+	background: #00134d;
+	/*-webkit-linear-gradient(top, #2172a5 50%, #16699E 50%);*/
+	border-radius: 10px 10px 0 0;
+	margin-top: -20px;
+	width: 350px;
+	padding: 5px 0;
+}
+
+h3{
+	color: #fff;
+	text-align: center;
+}
+
+.ht-ht{
+	color: #2172a5;
+	background: #fff;
+	padding: 3px 9px;
+	border-radius: 10px;
+}
+
+h6{
+	margin-left: 85px;
+}
+
+form{
+	margin: 0 auto;
+	margin-left: 38px;
+	margin-top: 40px;
+}
+
+#username{
+	position: relative;
+}
+
+#username:after{
+	color: #555;
+	content: "\f007";
+	font-family: fontawesome;
+	position: absolute;
+	left: 9px;
+	top: -1px;
+	font-size: 25px;
+}
+
+#password{
+	position: relative;
+}
+
+#password:after{
+	color: #555;
+	content: "\f023";
+	font-family: fontawesome;
+	position: absolute;
+	left: 9px;
+	top: -1px;
+	font-size: 25px;
+}
+
+input{
+	width: 190px;
+	padding: 5px 40px;
+	height: 30px;
+	margin-top: 20px;
+	background: none;
+	outline: none;
+	color: #555;
+	border: 1px solid #3498DB;
+	transition:0.6s;
+	font-size: 15px;
+	font-weight: bold;
+}
+
+input:focus{
+	transition:0.6s;
+	box-shadow: 0 0 5px #16699e;
+}
+
+::-webkit-input-placeholder{
+	color: #555;
+	font-weight: 1;
+	font-weight: bold;
+	font-size: 15px;
+}
+
+::-moz-input-placeholder{
+	color: #555;
+	font-weight: 1;
+	font-weight: bold;
+	font-size: 15px;
+}
+
+::-o-input-placeholder{
+	color: #555;
+	font-weight: 1;
+	font-weight: bold;
+	font-size: 15px;
+}
+
+button{
+	outline: none;
+	background: #00134d;
+	border: 1px solid #fff;
+	color: #fff;
+	padding: 5px 10px;
+	cursor: pointer;
+	width: 273px;
+	height: 45px;
+	font-weight: bold;
+	font-size: 14px;
+}
+
+button:hover{
+	border: 1px dotted #3498DB;
+	transition: 0.6s;
+}
+
+footer{
+	background: #00134d;
+	height: 200px;
+	width: 100%;
+	margin-top: 448px;
+}
+
+.wifi{
+	color: #fff;
+	text-align: center;
+	font-size: 50px;
+}
+
+.copyright{
+	color: #fff;
+	text-align: center;
+}
+
+/*@media only screen and (max-width: 480px){
+	.login-content{
+	margin: 28% auto;
+	margin-left: 50px;
+	}*/
+
+@media only screen and (max-width: 800px){
+	.login-content{
+	margin: 5% auto;
+	margin-left: 30%;
+	}
+
+	@media only screen and (max-width: 400px){
+	.login-content{
+	margin: 5% auto;
+	}
+
+}

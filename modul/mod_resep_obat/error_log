@@ -1,0 +1,4 @@
+[31-Mar-2015 15:31:43 America/New_York] PHP Warning:  session_start(): Cannot send session cookie - headers already sent in /home/k6240433/public_html/trial/adminweb/modul/mod_banner/banner.php on line 2
+[31-Mar-2015 15:31:43 America/New_York] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent in /home/k6240433/public_html/trial/adminweb/modul/mod_banner/banner.php on line 2
+[31-Mar-2015 15:31:44 America/New_York] PHP Warning:  session_start(): Cannot send session cookie - headers already sent in /home/k6240433/public_html/trial/adminweb/modul/mod_banner/aksi_banner.php on line 2
+[31-Mar-2015 15:31:44 America/New_York] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent in /home/k6240433/public_html/trial/adminweb/modul/mod_banner/aksi_banner.php on line 2

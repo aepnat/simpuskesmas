@@ -1,0 +1,876 @@
+[17-Jan-2017 02:47:23 UTC] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/soldigge/public_html/pilatus/config/koneksi.php on line 7
+[17-Jan-2017 02:47:23 UTC] PHP Stack trace:
+[17-Jan-2017 02:47:23 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 02:47:23 UTC] PHP   2. include() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:2
+[17-Jan-2017 02:47:23 UTC] PHP   3. mysql_connect() /home/soldigge/public_html/pilatus/config/koneksi.php:7
+[17-Jan-2017 02:47:24 UTC] PHP Notice:  Use of undefined constant report_id - assumed 'report_id' in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 4
+[17-Jan-2017 02:47:24 UTC] PHP Stack trace:
+[17-Jan-2017 02:47:24 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 02:47:24 UTC] PHP Notice:  Undefined index: fa_icon in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 12
+[17-Jan-2017 02:47:24 UTC] PHP Stack trace:
+[17-Jan-2017 02:47:24 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 02:47:24 UTC] PHP Notice:  Use of undefined constant orientation - assumed 'orientation' in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 14
+[17-Jan-2017 02:47:24 UTC] PHP Stack trace:
+[17-Jan-2017 02:47:24 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 02:47:24 UTC] PHP Notice:  Undefined index: status in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 20
+[17-Jan-2017 02:47:24 UTC] PHP Stack trace:
+[17-Jan-2017 02:47:24 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 02:47:24 UTC] PHP Warning:  strtotime(): It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected the timezone 'UTC' for now, but please set date.timezone to select your timezone. in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 27
+[17-Jan-2017 02:47:24 UTC] PHP Stack trace:
+[17-Jan-2017 02:47:24 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 02:47:24 UTC] PHP   2. strtotime() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:27
+[17-Jan-2017 02:47:24 UTC] PHP Warning:  date(): It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected the timezone 'UTC' for now, but please set date.timezone to select your timezone. in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 27
+[17-Jan-2017 02:47:24 UTC] PHP Stack trace:
+[17-Jan-2017 02:47:24 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 02:47:24 UTC] PHP   2. date() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:27
+[17-Jan-2017 02:47:24 UTC] PHP Notice:  Undefined index: ldate in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 158
+[17-Jan-2017 02:47:24 UTC] PHP Stack trace:
+[17-Jan-2017 02:47:24 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 02:47:24 UTC] PHP Notice:  Undefined index: ldate in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 160
+[17-Jan-2017 02:47:24 UTC] PHP Stack trace:
+[17-Jan-2017 02:47:24 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 02:47:24 UTC] PHP Notice:  Use of undefined constant total - assumed 'total' in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 269
+[17-Jan-2017 02:47:24 UTC] PHP Stack trace:
+[17-Jan-2017 02:47:24 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 02:47:24 UTC] PHP Notice:  Use of undefined constant disc_value - assumed 'disc_value' in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 270
+[17-Jan-2017 02:47:24 UTC] PHP Stack trace:
+[17-Jan-2017 02:47:24 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 02:47:24 UTC] PHP Notice:  Use of undefined constant tax_value - assumed 'tax_value' in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 271
+[17-Jan-2017 02:47:24 UTC] PHP Stack trace:
+[17-Jan-2017 02:47:24 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 02:47:24 UTC] PHP Notice:  Use of undefined constant gtotal - assumed 'gtotal' in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 272
+[17-Jan-2017 02:47:24 UTC] PHP Stack trace:
+[17-Jan-2017 02:47:24 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 02:47:24 UTC] PHP Notice:  Use of undefined constant total - assumed 'total' in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 275
+[17-Jan-2017 02:47:24 UTC] PHP Stack trace:
+[17-Jan-2017 02:47:24 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 02:47:24 UTC] PHP Notice:  Undefined variable: total in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 275
+[17-Jan-2017 02:47:24 UTC] PHP Stack trace:
+[17-Jan-2017 02:47:24 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 02:47:24 UTC] PHP Notice:  Use of undefined constant disc_value - assumed 'disc_value' in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 276
+[17-Jan-2017 02:47:24 UTC] PHP Stack trace:
+[17-Jan-2017 02:47:24 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 02:47:24 UTC] PHP Notice:  Undefined variable: disc_value in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 276
+[17-Jan-2017 02:47:24 UTC] PHP Stack trace:
+[17-Jan-2017 02:47:24 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 02:47:24 UTC] PHP Notice:  Use of undefined constant tax_value - assumed 'tax_value' in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 277
+[17-Jan-2017 02:47:24 UTC] PHP Stack trace:
+[17-Jan-2017 02:47:24 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 02:47:24 UTC] PHP Notice:  Undefined variable: tax_value in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 277
+[17-Jan-2017 02:47:24 UTC] PHP Stack trace:
+[17-Jan-2017 02:47:24 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 02:47:24 UTC] PHP Notice:  Use of undefined constant gtotal - assumed 'gtotal' in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 278
+[17-Jan-2017 02:47:24 UTC] PHP Stack trace:
+[17-Jan-2017 02:47:24 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 02:47:24 UTC] PHP Notice:  Undefined variable: gtotal in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 278
+[17-Jan-2017 02:47:24 UTC] PHP Stack trace:
+[17-Jan-2017 02:47:24 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 02:47:51 UTC] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/soldigge/public_html/pilatus/config/koneksi.php on line 7
+[17-Jan-2017 02:47:51 UTC] PHP Stack trace:
+[17-Jan-2017 02:47:51 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 02:47:51 UTC] PHP   2. include() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:2
+[17-Jan-2017 02:47:51 UTC] PHP   3. mysql_connect() /home/soldigge/public_html/pilatus/config/koneksi.php:7
+[17-Jan-2017 02:47:51 UTC] PHP Notice:  Use of undefined constant report_id - assumed 'report_id' in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 4
+[17-Jan-2017 02:47:51 UTC] PHP Stack trace:
+[17-Jan-2017 02:47:51 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 02:47:51 UTC] PHP Notice:  Undefined index: fa_icon in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 12
+[17-Jan-2017 02:47:51 UTC] PHP Stack trace:
+[17-Jan-2017 02:47:51 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 02:47:51 UTC] PHP Notice:  Use of undefined constant orientation - assumed 'orientation' in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 14
+[17-Jan-2017 02:47:51 UTC] PHP Stack trace:
+[17-Jan-2017 02:47:51 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 02:47:51 UTC] PHP Notice:  Undefined index: status in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 20
+[17-Jan-2017 02:47:51 UTC] PHP Stack trace:
+[17-Jan-2017 02:47:51 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 02:47:51 UTC] PHP Warning:  strtotime(): It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected the timezone 'UTC' for now, but please set date.timezone to select your timezone. in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 27
+[17-Jan-2017 02:47:51 UTC] PHP Stack trace:
+[17-Jan-2017 02:47:51 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 02:47:51 UTC] PHP   2. strtotime() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:27
+[17-Jan-2017 02:47:51 UTC] PHP Warning:  date(): It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected the timezone 'UTC' for now, but please set date.timezone to select your timezone. in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 27
+[17-Jan-2017 02:47:51 UTC] PHP Stack trace:
+[17-Jan-2017 02:47:51 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 02:47:51 UTC] PHP   2. date() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:27
+[17-Jan-2017 02:47:51 UTC] PHP Notice:  Undefined index: ldate in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 158
+[17-Jan-2017 02:47:51 UTC] PHP Stack trace:
+[17-Jan-2017 02:47:51 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 02:47:51 UTC] PHP Notice:  Undefined index: ldate in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 160
+[17-Jan-2017 02:47:51 UTC] PHP Stack trace:
+[17-Jan-2017 02:47:51 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 02:47:51 UTC] PHP Notice:  Use of undefined constant total - assumed 'total' in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 269
+[17-Jan-2017 02:47:51 UTC] PHP Stack trace:
+[17-Jan-2017 02:47:51 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 02:47:51 UTC] PHP Notice:  Use of undefined constant disc_value - assumed 'disc_value' in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 270
+[17-Jan-2017 02:47:51 UTC] PHP Stack trace:
+[17-Jan-2017 02:47:51 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 02:47:51 UTC] PHP Notice:  Use of undefined constant tax_value - assumed 'tax_value' in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 271
+[17-Jan-2017 02:47:51 UTC] PHP Stack trace:
+[17-Jan-2017 02:47:51 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 02:47:51 UTC] PHP Notice:  Use of undefined constant gtotal - assumed 'gtotal' in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 272
+[17-Jan-2017 02:47:51 UTC] PHP Stack trace:
+[17-Jan-2017 02:47:51 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 02:47:51 UTC] PHP Notice:  Use of undefined constant total - assumed 'total' in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 275
+[17-Jan-2017 02:47:51 UTC] PHP Stack trace:
+[17-Jan-2017 02:47:51 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 02:47:51 UTC] PHP Notice:  Undefined variable: total in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 275
+[17-Jan-2017 02:47:51 UTC] PHP Stack trace:
+[17-Jan-2017 02:47:51 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 02:47:51 UTC] PHP Notice:  Use of undefined constant disc_value - assumed 'disc_value' in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 276
+[17-Jan-2017 02:47:51 UTC] PHP Stack trace:
+[17-Jan-2017 02:47:51 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 02:47:51 UTC] PHP Notice:  Undefined variable: disc_value in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 276
+[17-Jan-2017 02:47:51 UTC] PHP Stack trace:
+[17-Jan-2017 02:47:51 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 02:47:51 UTC] PHP Notice:  Use of undefined constant tax_value - assumed 'tax_value' in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 277
+[17-Jan-2017 02:47:51 UTC] PHP Stack trace:
+[17-Jan-2017 02:47:51 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 02:47:51 UTC] PHP Notice:  Undefined variable: tax_value in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 277
+[17-Jan-2017 02:47:51 UTC] PHP Stack trace:
+[17-Jan-2017 02:47:51 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 02:47:51 UTC] PHP Notice:  Use of undefined constant gtotal - assumed 'gtotal' in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 278
+[17-Jan-2017 02:47:51 UTC] PHP Stack trace:
+[17-Jan-2017 02:47:51 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 02:47:51 UTC] PHP Notice:  Undefined variable: gtotal in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 278
+[17-Jan-2017 02:47:51 UTC] PHP Stack trace:
+[17-Jan-2017 02:47:51 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 03:06:05 UTC] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/soldigge/public_html/pilatus/config/koneksi.php on line 7
+[17-Jan-2017 03:06:05 UTC] PHP Stack trace:
+[17-Jan-2017 03:06:05 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 03:06:05 UTC] PHP   2. include() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:2
+[17-Jan-2017 03:06:05 UTC] PHP   3. mysql_connect() /home/soldigge/public_html/pilatus/config/koneksi.php:7
+[17-Jan-2017 03:06:05 UTC] PHP Notice:  Use of undefined constant report_id - assumed 'report_id' in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 4
+[17-Jan-2017 03:06:05 UTC] PHP Stack trace:
+[17-Jan-2017 03:06:05 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 03:06:05 UTC] PHP Notice:  Undefined index: fa_icon in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 12
+[17-Jan-2017 03:06:05 UTC] PHP Stack trace:
+[17-Jan-2017 03:06:05 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 03:06:05 UTC] PHP Notice:  Use of undefined constant orientation - assumed 'orientation' in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 14
+[17-Jan-2017 03:06:05 UTC] PHP Stack trace:
+[17-Jan-2017 03:06:05 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 03:06:05 UTC] PHP Notice:  Undefined index: status in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 20
+[17-Jan-2017 03:06:05 UTC] PHP Stack trace:
+[17-Jan-2017 03:06:05 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 03:06:05 UTC] PHP Warning:  strtotime(): It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected the timezone 'UTC' for now, but please set date.timezone to select your timezone. in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 27
+[17-Jan-2017 03:06:05 UTC] PHP Stack trace:
+[17-Jan-2017 03:06:05 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 03:06:05 UTC] PHP   2. strtotime() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:27
+[17-Jan-2017 03:06:05 UTC] PHP Warning:  date(): It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected the timezone 'UTC' for now, but please set date.timezone to select your timezone. in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 27
+[17-Jan-2017 03:06:05 UTC] PHP Stack trace:
+[17-Jan-2017 03:06:05 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 03:06:05 UTC] PHP   2. date() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:27
+[17-Jan-2017 03:06:05 UTC] PHP Notice:  Undefined index: ldate in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 158
+[17-Jan-2017 03:06:05 UTC] PHP Stack trace:
+[17-Jan-2017 03:06:05 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 03:06:05 UTC] PHP Notice:  Undefined index: ldate in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 160
+[17-Jan-2017 03:06:05 UTC] PHP Stack trace:
+[17-Jan-2017 03:06:05 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 03:06:05 UTC] PHP Notice:  Use of undefined constant total - assumed 'total' in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 269
+[17-Jan-2017 03:06:05 UTC] PHP Stack trace:
+[17-Jan-2017 03:06:05 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 03:06:05 UTC] PHP Notice:  Use of undefined constant disc_value - assumed 'disc_value' in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 270
+[17-Jan-2017 03:06:05 UTC] PHP Stack trace:
+[17-Jan-2017 03:06:05 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 03:06:05 UTC] PHP Notice:  Use of undefined constant tax_value - assumed 'tax_value' in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 271
+[17-Jan-2017 03:06:05 UTC] PHP Stack trace:
+[17-Jan-2017 03:06:05 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 03:06:05 UTC] PHP Notice:  Use of undefined constant gtotal - assumed 'gtotal' in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 272
+[17-Jan-2017 03:06:05 UTC] PHP Stack trace:
+[17-Jan-2017 03:06:05 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 03:06:05 UTC] PHP Notice:  Use of undefined constant total - assumed 'total' in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 275
+[17-Jan-2017 03:06:05 UTC] PHP Stack trace:
+[17-Jan-2017 03:06:05 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 03:06:05 UTC] PHP Notice:  Undefined variable: total in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 275
+[17-Jan-2017 03:06:05 UTC] PHP Stack trace:
+[17-Jan-2017 03:06:05 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 03:06:05 UTC] PHP Notice:  Use of undefined constant disc_value - assumed 'disc_value' in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 276
+[17-Jan-2017 03:06:05 UTC] PHP Stack trace:
+[17-Jan-2017 03:06:05 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 03:06:05 UTC] PHP Notice:  Undefined variable: disc_value in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 276
+[17-Jan-2017 03:06:05 UTC] PHP Stack trace:
+[17-Jan-2017 03:06:05 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 03:06:05 UTC] PHP Notice:  Use of undefined constant tax_value - assumed 'tax_value' in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 277
+[17-Jan-2017 03:06:05 UTC] PHP Stack trace:
+[17-Jan-2017 03:06:05 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 03:06:05 UTC] PHP Notice:  Undefined variable: tax_value in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 277
+[17-Jan-2017 03:06:05 UTC] PHP Stack trace:
+[17-Jan-2017 03:06:05 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 03:06:05 UTC] PHP Notice:  Use of undefined constant gtotal - assumed 'gtotal' in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 278
+[17-Jan-2017 03:06:05 UTC] PHP Stack trace:
+[17-Jan-2017 03:06:05 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 03:06:05 UTC] PHP Notice:  Undefined variable: gtotal in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 278
+[17-Jan-2017 03:06:05 UTC] PHP Stack trace:
+[17-Jan-2017 03:06:05 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 03:27:42 UTC] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/soldigge/public_html/pilatus/config/koneksi.php on line 7
+[17-Jan-2017 03:27:42 UTC] PHP Stack trace:
+[17-Jan-2017 03:27:42 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 03:27:42 UTC] PHP   2. include() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:2
+[17-Jan-2017 03:27:42 UTC] PHP   3. mysql_connect() /home/soldigge/public_html/pilatus/config/koneksi.php:7
+[17-Jan-2017 03:27:42 UTC] PHP Notice:  Use of undefined constant report_id - assumed 'report_id' in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 4
+[17-Jan-2017 03:27:42 UTC] PHP Stack trace:
+[17-Jan-2017 03:27:42 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 03:27:42 UTC] PHP Notice:  Undefined index: fa_icon in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 12
+[17-Jan-2017 03:27:42 UTC] PHP Stack trace:
+[17-Jan-2017 03:27:42 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 03:27:42 UTC] PHP Notice:  Use of undefined constant orientation - assumed 'orientation' in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 14
+[17-Jan-2017 03:27:42 UTC] PHP Stack trace:
+[17-Jan-2017 03:27:42 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 03:27:42 UTC] PHP Notice:  Undefined index: status in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 20
+[17-Jan-2017 03:27:42 UTC] PHP Stack trace:
+[17-Jan-2017 03:27:42 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 03:27:42 UTC] PHP Warning:  strtotime(): It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected the timezone 'UTC' for now, but please set date.timezone to select your timezone. in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 27
+[17-Jan-2017 03:27:42 UTC] PHP Stack trace:
+[17-Jan-2017 03:27:42 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 03:27:42 UTC] PHP   2. strtotime() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:27
+[17-Jan-2017 03:27:42 UTC] PHP Warning:  date(): It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected the timezone 'UTC' for now, but please set date.timezone to select your timezone. in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 27
+[17-Jan-2017 03:27:42 UTC] PHP Stack trace:
+[17-Jan-2017 03:27:42 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 03:27:42 UTC] PHP   2. date() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:27
+[17-Jan-2017 03:27:42 UTC] PHP Notice:  Undefined index: ldate in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 158
+[17-Jan-2017 03:27:42 UTC] PHP Stack trace:
+[17-Jan-2017 03:27:42 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 03:27:42 UTC] PHP Notice:  Undefined index: ldate in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 160
+[17-Jan-2017 03:27:42 UTC] PHP Stack trace:
+[17-Jan-2017 03:27:42 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 03:27:42 UTC] PHP Notice:  Use of undefined constant total - assumed 'total' in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 269
+[17-Jan-2017 03:27:42 UTC] PHP Stack trace:
+[17-Jan-2017 03:27:42 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 03:27:42 UTC] PHP Notice:  Use of undefined constant disc_value - assumed 'disc_value' in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 270
+[17-Jan-2017 03:27:42 UTC] PHP Stack trace:
+[17-Jan-2017 03:27:42 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 03:27:42 UTC] PHP Notice:  Use of undefined constant tax_value - assumed 'tax_value' in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 271
+[17-Jan-2017 03:27:42 UTC] PHP Stack trace:
+[17-Jan-2017 03:27:42 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 03:27:42 UTC] PHP Notice:  Use of undefined constant gtotal - assumed 'gtotal' in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 272
+[17-Jan-2017 03:27:42 UTC] PHP Stack trace:
+[17-Jan-2017 03:27:42 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 03:27:42 UTC] PHP Notice:  Use of undefined constant total - assumed 'total' in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 275
+[17-Jan-2017 03:27:42 UTC] PHP Stack trace:
+[17-Jan-2017 03:27:42 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 03:27:42 UTC] PHP Notice:  Undefined variable: total in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 275
+[17-Jan-2017 03:27:42 UTC] PHP Stack trace:
+[17-Jan-2017 03:27:42 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 03:27:42 UTC] PHP Notice:  Use of undefined constant disc_value - assumed 'disc_value' in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 276
+[17-Jan-2017 03:27:42 UTC] PHP Stack trace:
+[17-Jan-2017 03:27:42 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 03:27:42 UTC] PHP Notice:  Undefined variable: disc_value in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 276
+[17-Jan-2017 03:27:42 UTC] PHP Stack trace:
+[17-Jan-2017 03:27:42 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 03:27:42 UTC] PHP Notice:  Use of undefined constant tax_value - assumed 'tax_value' in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 277
+[17-Jan-2017 03:27:42 UTC] PHP Stack trace:
+[17-Jan-2017 03:27:42 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 03:27:42 UTC] PHP Notice:  Undefined variable: tax_value in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 277
+[17-Jan-2017 03:27:42 UTC] PHP Stack trace:
+[17-Jan-2017 03:27:42 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 03:27:42 UTC] PHP Notice:  Use of undefined constant gtotal - assumed 'gtotal' in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 278
+[17-Jan-2017 03:27:42 UTC] PHP Stack trace:
+[17-Jan-2017 03:27:42 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 03:27:42 UTC] PHP Notice:  Undefined variable: gtotal in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 278
+[17-Jan-2017 03:27:42 UTC] PHP Stack trace:
+[17-Jan-2017 03:27:42 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 03:27:50 UTC] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/soldigge/public_html/pilatus/config/koneksi.php on line 7
+[17-Jan-2017 03:27:50 UTC] PHP Stack trace:
+[17-Jan-2017 03:27:50 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 03:27:50 UTC] PHP   2. include() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:2
+[17-Jan-2017 03:27:50 UTC] PHP   3. mysql_connect() /home/soldigge/public_html/pilatus/config/koneksi.php:7
+[17-Jan-2017 03:27:50 UTC] PHP Notice:  Use of undefined constant report_id - assumed 'report_id' in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 4
+[17-Jan-2017 03:27:50 UTC] PHP Stack trace:
+[17-Jan-2017 03:27:50 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 03:27:50 UTC] PHP Notice:  Undefined index: fa_icon in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 12
+[17-Jan-2017 03:27:50 UTC] PHP Stack trace:
+[17-Jan-2017 03:27:50 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 03:27:50 UTC] PHP Notice:  Use of undefined constant orientation - assumed 'orientation' in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 14
+[17-Jan-2017 03:27:50 UTC] PHP Stack trace:
+[17-Jan-2017 03:27:50 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 03:27:50 UTC] PHP Notice:  Undefined index: status in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 20
+[17-Jan-2017 03:27:50 UTC] PHP Stack trace:
+[17-Jan-2017 03:27:50 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 03:27:50 UTC] PHP Warning:  strtotime(): It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected the timezone 'UTC' for now, but please set date.timezone to select your timezone. in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 27
+[17-Jan-2017 03:27:50 UTC] PHP Stack trace:
+[17-Jan-2017 03:27:50 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 03:27:50 UTC] PHP   2. strtotime() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:27
+[17-Jan-2017 03:27:50 UTC] PHP Warning:  date(): It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected the timezone 'UTC' for now, but please set date.timezone to select your timezone. in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 27
+[17-Jan-2017 03:27:50 UTC] PHP Stack trace:
+[17-Jan-2017 03:27:50 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 03:27:50 UTC] PHP   2. date() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:27
+[17-Jan-2017 03:27:50 UTC] PHP Notice:  Undefined index: ldate in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 158
+[17-Jan-2017 03:27:50 UTC] PHP Stack trace:
+[17-Jan-2017 03:27:50 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 03:27:50 UTC] PHP Notice:  Undefined index: ldate in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 160
+[17-Jan-2017 03:27:50 UTC] PHP Stack trace:
+[17-Jan-2017 03:27:50 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 03:27:50 UTC] PHP Notice:  Use of undefined constant total - assumed 'total' in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 269
+[17-Jan-2017 03:27:50 UTC] PHP Stack trace:
+[17-Jan-2017 03:27:50 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 03:27:50 UTC] PHP Notice:  Use of undefined constant disc_value - assumed 'disc_value' in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 270
+[17-Jan-2017 03:27:50 UTC] PHP Stack trace:
+[17-Jan-2017 03:27:50 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 03:27:50 UTC] PHP Notice:  Use of undefined constant tax_value - assumed 'tax_value' in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 271
+[17-Jan-2017 03:27:50 UTC] PHP Stack trace:
+[17-Jan-2017 03:27:50 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 03:27:50 UTC] PHP Notice:  Use of undefined constant gtotal - assumed 'gtotal' in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 272
+[17-Jan-2017 03:27:50 UTC] PHP Stack trace:
+[17-Jan-2017 03:27:50 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 03:27:50 UTC] PHP Notice:  Use of undefined constant total - assumed 'total' in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 275
+[17-Jan-2017 03:27:50 UTC] PHP Stack trace:
+[17-Jan-2017 03:27:50 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 03:27:50 UTC] PHP Notice:  Undefined variable: total in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 275
+[17-Jan-2017 03:27:50 UTC] PHP Stack trace:
+[17-Jan-2017 03:27:50 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 03:27:50 UTC] PHP Notice:  Use of undefined constant disc_value - assumed 'disc_value' in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 276
+[17-Jan-2017 03:27:50 UTC] PHP Stack trace:
+[17-Jan-2017 03:27:50 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 03:27:50 UTC] PHP Notice:  Undefined variable: disc_value in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 276
+[17-Jan-2017 03:27:50 UTC] PHP Stack trace:
+[17-Jan-2017 03:27:50 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 03:27:50 UTC] PHP Notice:  Use of undefined constant tax_value - assumed 'tax_value' in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 277
+[17-Jan-2017 03:27:50 UTC] PHP Stack trace:
+[17-Jan-2017 03:27:50 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 03:27:50 UTC] PHP Notice:  Undefined variable: tax_value in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 277
+[17-Jan-2017 03:27:50 UTC] PHP Stack trace:
+[17-Jan-2017 03:27:50 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 03:27:50 UTC] PHP Notice:  Use of undefined constant gtotal - assumed 'gtotal' in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 278
+[17-Jan-2017 03:27:50 UTC] PHP Stack trace:
+[17-Jan-2017 03:27:50 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 03:27:50 UTC] PHP Notice:  Undefined variable: gtotal in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 278
+[17-Jan-2017 03:27:50 UTC] PHP Stack trace:
+[17-Jan-2017 03:27:50 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 09:34:26 UTC] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/soldigge/public_html/pilatus/config/koneksi.php on line 7
+[17-Jan-2017 09:34:26 UTC] PHP Stack trace:
+[17-Jan-2017 09:34:26 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 09:34:26 UTC] PHP   2. include() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:2
+[17-Jan-2017 09:34:26 UTC] PHP   3. mysql_connect() /home/soldigge/public_html/pilatus/config/koneksi.php:7
+[17-Jan-2017 09:34:26 UTC] PHP Notice:  Use of undefined constant report_id - assumed 'report_id' in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 4
+[17-Jan-2017 09:34:26 UTC] PHP Stack trace:
+[17-Jan-2017 09:34:26 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 09:34:26 UTC] PHP Notice:  Undefined index: fa_icon in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 12
+[17-Jan-2017 09:34:26 UTC] PHP Stack trace:
+[17-Jan-2017 09:34:26 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 09:34:26 UTC] PHP Notice:  Use of undefined constant orientation - assumed 'orientation' in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 14
+[17-Jan-2017 09:34:26 UTC] PHP Stack trace:
+[17-Jan-2017 09:34:26 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 09:34:26 UTC] PHP Notice:  Undefined index: status in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 20
+[17-Jan-2017 09:34:26 UTC] PHP Stack trace:
+[17-Jan-2017 09:34:26 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 09:34:26 UTC] PHP Warning:  strtotime(): It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected the timezone 'UTC' for now, but please set date.timezone to select your timezone. in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 27
+[17-Jan-2017 09:34:26 UTC] PHP Stack trace:
+[17-Jan-2017 09:34:26 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 09:34:26 UTC] PHP   2. strtotime() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:27
+[17-Jan-2017 09:34:26 UTC] PHP Warning:  date(): It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected the timezone 'UTC' for now, but please set date.timezone to select your timezone. in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 27
+[17-Jan-2017 09:34:26 UTC] PHP Stack trace:
+[17-Jan-2017 09:34:26 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 09:34:26 UTC] PHP   2. date() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:27
+[17-Jan-2017 09:34:26 UTC] PHP Notice:  Undefined index: ldate in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 158
+[17-Jan-2017 09:34:26 UTC] PHP Stack trace:
+[17-Jan-2017 09:34:26 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 09:34:26 UTC] PHP Notice:  Undefined index: ldate in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 160
+[17-Jan-2017 09:34:26 UTC] PHP Stack trace:
+[17-Jan-2017 09:34:26 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 09:34:26 UTC] PHP Notice:  Use of undefined constant total - assumed 'total' in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 269
+[17-Jan-2017 09:34:26 UTC] PHP Stack trace:
+[17-Jan-2017 09:34:26 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 09:34:26 UTC] PHP Notice:  Use of undefined constant disc_value - assumed 'disc_value' in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 270
+[17-Jan-2017 09:34:26 UTC] PHP Stack trace:
+[17-Jan-2017 09:34:26 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 09:34:26 UTC] PHP Notice:  Use of undefined constant tax_value - assumed 'tax_value' in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 271
+[17-Jan-2017 09:34:26 UTC] PHP Stack trace:
+[17-Jan-2017 09:34:26 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 09:34:26 UTC] PHP Notice:  Use of undefined constant gtotal - assumed 'gtotal' in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 272
+[17-Jan-2017 09:34:26 UTC] PHP Stack trace:
+[17-Jan-2017 09:34:26 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 09:34:26 UTC] PHP Notice:  Use of undefined constant total - assumed 'total' in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 275
+[17-Jan-2017 09:34:26 UTC] PHP Stack trace:
+[17-Jan-2017 09:34:26 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 09:34:26 UTC] PHP Notice:  Undefined variable: total in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 275
+[17-Jan-2017 09:34:26 UTC] PHP Stack trace:
+[17-Jan-2017 09:34:26 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 09:34:26 UTC] PHP Notice:  Use of undefined constant disc_value - assumed 'disc_value' in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 276
+[17-Jan-2017 09:34:26 UTC] PHP Stack trace:
+[17-Jan-2017 09:34:26 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 09:34:26 UTC] PHP Notice:  Undefined variable: disc_value in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 276
+[17-Jan-2017 09:34:26 UTC] PHP Stack trace:
+[17-Jan-2017 09:34:26 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 09:34:26 UTC] PHP Notice:  Use of undefined constant tax_value - assumed 'tax_value' in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 277
+[17-Jan-2017 09:34:26 UTC] PHP Stack trace:
+[17-Jan-2017 09:34:26 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 09:34:26 UTC] PHP Notice:  Undefined variable: tax_value in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 277
+[17-Jan-2017 09:34:26 UTC] PHP Stack trace:
+[17-Jan-2017 09:34:26 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 09:34:26 UTC] PHP Notice:  Use of undefined constant gtotal - assumed 'gtotal' in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 278
+[17-Jan-2017 09:34:26 UTC] PHP Stack trace:
+[17-Jan-2017 09:34:26 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 09:34:26 UTC] PHP Notice:  Undefined variable: gtotal in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 278
+[17-Jan-2017 09:34:26 UTC] PHP Stack trace:
+[17-Jan-2017 09:34:26 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 09:34:26 UTC] PHP Notice:  Use of undefined constant total - assumed 'total' in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 269
+[17-Jan-2017 09:34:26 UTC] PHP Stack trace:
+[17-Jan-2017 09:34:26 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 09:34:26 UTC] PHP Notice:  Use of undefined constant disc_value - assumed 'disc_value' in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 270
+[17-Jan-2017 09:34:26 UTC] PHP Stack trace:
+[17-Jan-2017 09:34:26 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 09:34:26 UTC] PHP Notice:  Use of undefined constant tax_value - assumed 'tax_value' in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 271
+[17-Jan-2017 09:34:26 UTC] PHP Stack trace:
+[17-Jan-2017 09:34:26 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 09:34:26 UTC] PHP Notice:  Use of undefined constant gtotal - assumed 'gtotal' in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 272
+[17-Jan-2017 09:34:26 UTC] PHP Stack trace:
+[17-Jan-2017 09:34:26 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 09:34:26 UTC] PHP Notice:  Use of undefined constant total - assumed 'total' in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 275
+[17-Jan-2017 09:34:26 UTC] PHP Stack trace:
+[17-Jan-2017 09:34:26 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 09:34:26 UTC] PHP Notice:  Use of undefined constant disc_value - assumed 'disc_value' in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 276
+[17-Jan-2017 09:34:26 UTC] PHP Stack trace:
+[17-Jan-2017 09:34:26 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 09:34:26 UTC] PHP Notice:  Use of undefined constant tax_value - assumed 'tax_value' in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 277
+[17-Jan-2017 09:34:26 UTC] PHP Stack trace:
+[17-Jan-2017 09:34:26 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 09:34:26 UTC] PHP Notice:  Use of undefined constant gtotal - assumed 'gtotal' in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 278
+[17-Jan-2017 09:34:26 UTC] PHP Stack trace:
+[17-Jan-2017 09:34:26 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 09:34:26 UTC] PHP Notice:  Use of undefined constant total - assumed 'total' in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 269
+[17-Jan-2017 09:34:26 UTC] PHP Stack trace:
+[17-Jan-2017 09:34:26 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 09:34:26 UTC] PHP Notice:  Use of undefined constant disc_value - assumed 'disc_value' in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 270
+[17-Jan-2017 09:34:26 UTC] PHP Stack trace:
+[17-Jan-2017 09:34:26 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 09:34:26 UTC] PHP Notice:  Use of undefined constant tax_value - assumed 'tax_value' in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 271
+[17-Jan-2017 09:34:26 UTC] PHP Stack trace:
+[17-Jan-2017 09:34:26 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 09:34:26 UTC] PHP Notice:  Use of undefined constant gtotal - assumed 'gtotal' in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 272
+[17-Jan-2017 09:34:26 UTC] PHP Stack trace:
+[17-Jan-2017 09:34:26 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 09:34:26 UTC] PHP Notice:  Use of undefined constant total - assumed 'total' in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 275
+[17-Jan-2017 09:34:26 UTC] PHP Stack trace:
+[17-Jan-2017 09:34:26 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 09:34:26 UTC] PHP Notice:  Use of undefined constant disc_value - assumed 'disc_value' in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 276
+[17-Jan-2017 09:34:26 UTC] PHP Stack trace:
+[17-Jan-2017 09:34:26 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 09:34:26 UTC] PHP Notice:  Use of undefined constant tax_value - assumed 'tax_value' in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 277
+[17-Jan-2017 09:34:26 UTC] PHP Stack trace:
+[17-Jan-2017 09:34:26 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 09:34:26 UTC] PHP Notice:  Use of undefined constant gtotal - assumed 'gtotal' in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 278
+[17-Jan-2017 09:34:26 UTC] PHP Stack trace:
+[17-Jan-2017 09:34:26 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 09:34:26 UTC] PHP Notice:  Use of undefined constant total - assumed 'total' in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 269
+[17-Jan-2017 09:34:26 UTC] PHP Stack trace:
+[17-Jan-2017 09:34:26 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 09:34:26 UTC] PHP Notice:  Use of undefined constant disc_value - assumed 'disc_value' in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 270
+[17-Jan-2017 09:34:26 UTC] PHP Stack trace:
+[17-Jan-2017 09:34:26 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 09:34:26 UTC] PHP Notice:  Use of undefined constant tax_value - assumed 'tax_value' in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 271
+[17-Jan-2017 09:34:26 UTC] PHP Stack trace:
+[17-Jan-2017 09:34:26 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 09:34:26 UTC] PHP Notice:  Use of undefined constant gtotal - assumed 'gtotal' in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 272
+[17-Jan-2017 09:34:26 UTC] PHP Stack trace:
+[17-Jan-2017 09:34:26 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 09:34:26 UTC] PHP Notice:  Use of undefined constant total - assumed 'total' in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 275
+[17-Jan-2017 09:34:26 UTC] PHP Stack trace:
+[17-Jan-2017 09:34:26 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 09:34:26 UTC] PHP Notice:  Use of undefined constant disc_value - assumed 'disc_value' in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 276
+[17-Jan-2017 09:34:26 UTC] PHP Stack trace:
+[17-Jan-2017 09:34:26 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 09:34:26 UTC] PHP Notice:  Use of undefined constant tax_value - assumed 'tax_value' in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 277
+[17-Jan-2017 09:34:26 UTC] PHP Stack trace:
+[17-Jan-2017 09:34:26 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 09:34:26 UTC] PHP Notice:  Use of undefined constant gtotal - assumed 'gtotal' in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 278
+[17-Jan-2017 09:34:26 UTC] PHP Stack trace:
+[17-Jan-2017 09:34:26 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 09:34:26 UTC] PHP Notice:  Use of undefined constant total - assumed 'total' in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 269
+[17-Jan-2017 09:34:26 UTC] PHP Stack trace:
+[17-Jan-2017 09:34:26 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 09:34:26 UTC] PHP Notice:  Use of undefined constant disc_value - assumed 'disc_value' in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 270
+[17-Jan-2017 09:34:26 UTC] PHP Stack trace:
+[17-Jan-2017 09:34:26 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 09:34:26 UTC] PHP Notice:  Use of undefined constant tax_value - assumed 'tax_value' in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 271
+[17-Jan-2017 09:34:26 UTC] PHP Stack trace:
+[17-Jan-2017 09:34:26 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 09:34:26 UTC] PHP Notice:  Use of undefined constant gtotal - assumed 'gtotal' in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 272
+[17-Jan-2017 09:34:26 UTC] PHP Stack trace:
+[17-Jan-2017 09:34:26 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 09:34:26 UTC] PHP Notice:  Use of undefined constant total - assumed 'total' in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 275
+[17-Jan-2017 09:34:26 UTC] PHP Stack trace:
+[17-Jan-2017 09:34:26 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 09:34:26 UTC] PHP Notice:  Use of undefined constant disc_value - assumed 'disc_value' in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 276
+[17-Jan-2017 09:34:26 UTC] PHP Stack trace:
+[17-Jan-2017 09:34:26 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 09:34:26 UTC] PHP Notice:  Use of undefined constant tax_value - assumed 'tax_value' in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 277
+[17-Jan-2017 09:34:26 UTC] PHP Stack trace:
+[17-Jan-2017 09:34:26 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 09:34:26 UTC] PHP Notice:  Use of undefined constant gtotal - assumed 'gtotal' in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 278
+[17-Jan-2017 09:34:26 UTC] PHP Stack trace:
+[17-Jan-2017 09:34:26 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 09:34:26 UTC] PHP Notice:  Use of undefined constant total - assumed 'total' in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 269
+[17-Jan-2017 09:34:26 UTC] PHP Stack trace:
+[17-Jan-2017 09:34:26 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 09:34:26 UTC] PHP Notice:  Use of undefined constant disc_value - assumed 'disc_value' in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 270
+[17-Jan-2017 09:34:26 UTC] PHP Stack trace:
+[17-Jan-2017 09:34:26 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 09:34:26 UTC] PHP Notice:  Use of undefined constant tax_value - assumed 'tax_value' in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 271
+[17-Jan-2017 09:34:26 UTC] PHP Stack trace:
+[17-Jan-2017 09:34:26 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 09:34:26 UTC] PHP Notice:  Use of undefined constant gtotal - assumed 'gtotal' in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 272
+[17-Jan-2017 09:34:26 UTC] PHP Stack trace:
+[17-Jan-2017 09:34:26 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 09:34:26 UTC] PHP Notice:  Use of undefined constant total - assumed 'total' in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 275
+[17-Jan-2017 09:34:26 UTC] PHP Stack trace:
+[17-Jan-2017 09:34:26 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 09:34:26 UTC] PHP Notice:  Use of undefined constant disc_value - assumed 'disc_value' in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 276
+[17-Jan-2017 09:34:26 UTC] PHP Stack trace:
+[17-Jan-2017 09:34:26 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 09:34:26 UTC] PHP Notice:  Use of undefined constant tax_value - assumed 'tax_value' in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 277
+[17-Jan-2017 09:34:26 UTC] PHP Stack trace:
+[17-Jan-2017 09:34:26 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 09:34:26 UTC] PHP Notice:  Use of undefined constant gtotal - assumed 'gtotal' in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 278
+[17-Jan-2017 09:34:26 UTC] PHP Stack trace:
+[17-Jan-2017 09:34:26 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 10:17:03 UTC] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/soldigge/public_html/pilatus/config/koneksi.php on line 7
+[17-Jan-2017 10:17:03 UTC] PHP Stack trace:
+[17-Jan-2017 10:17:03 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 10:17:03 UTC] PHP   2. include() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:2
+[17-Jan-2017 10:17:03 UTC] PHP   3. mysql_connect() /home/soldigge/public_html/pilatus/config/koneksi.php:7
+[17-Jan-2017 10:17:03 UTC] PHP Notice:  Use of undefined constant report_id - assumed 'report_id' in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 4
+[17-Jan-2017 10:17:03 UTC] PHP Stack trace:
+[17-Jan-2017 10:17:03 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 10:17:03 UTC] PHP Notice:  Undefined index: fa_icon in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 12
+[17-Jan-2017 10:17:03 UTC] PHP Stack trace:
+[17-Jan-2017 10:17:03 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 10:17:03 UTC] PHP Notice:  Use of undefined constant orientation - assumed 'orientation' in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 14
+[17-Jan-2017 10:17:03 UTC] PHP Stack trace:
+[17-Jan-2017 10:17:03 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 10:17:03 UTC] PHP Notice:  Undefined index: status in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 20
+[17-Jan-2017 10:17:03 UTC] PHP Stack trace:
+[17-Jan-2017 10:17:03 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 10:17:03 UTC] PHP Warning:  strtotime(): It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected the timezone 'UTC' for now, but please set date.timezone to select your timezone. in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 27
+[17-Jan-2017 10:17:03 UTC] PHP Stack trace:
+[17-Jan-2017 10:17:03 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 10:17:03 UTC] PHP   2. strtotime() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:27
+[17-Jan-2017 10:17:03 UTC] PHP Warning:  date(): It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected the timezone 'UTC' for now, but please set date.timezone to select your timezone. in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 27
+[17-Jan-2017 10:17:03 UTC] PHP Stack trace:
+[17-Jan-2017 10:17:03 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 10:17:03 UTC] PHP   2. date() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:27
+[17-Jan-2017 10:17:03 UTC] PHP Notice:  Undefined index: ldate in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 158
+[17-Jan-2017 10:17:03 UTC] PHP Stack trace:
+[17-Jan-2017 10:17:03 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 10:17:03 UTC] PHP Notice:  Undefined index: ldate in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 160
+[17-Jan-2017 10:17:03 UTC] PHP Stack trace:
+[17-Jan-2017 10:17:03 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 10:17:03 UTC] PHP Notice:  Use of undefined constant total - assumed 'total' in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 269
+[17-Jan-2017 10:17:03 UTC] PHP Stack trace:
+[17-Jan-2017 10:17:03 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 10:17:03 UTC] PHP Notice:  Use of undefined constant disc_value - assumed 'disc_value' in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 270
+[17-Jan-2017 10:17:03 UTC] PHP Stack trace:
+[17-Jan-2017 10:17:03 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 10:17:03 UTC] PHP Notice:  Use of undefined constant tax_value - assumed 'tax_value' in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 271
+[17-Jan-2017 10:17:03 UTC] PHP Stack trace:
+[17-Jan-2017 10:17:03 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 10:17:03 UTC] PHP Notice:  Use of undefined constant gtotal - assumed 'gtotal' in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 272
+[17-Jan-2017 10:17:03 UTC] PHP Stack trace:
+[17-Jan-2017 10:17:03 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 10:17:03 UTC] PHP Notice:  Use of undefined constant total - assumed 'total' in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 275
+[17-Jan-2017 10:17:03 UTC] PHP Stack trace:
+[17-Jan-2017 10:17:03 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 10:17:03 UTC] PHP Notice:  Undefined variable: total in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 275
+[17-Jan-2017 10:17:03 UTC] PHP Stack trace:
+[17-Jan-2017 10:17:03 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 10:17:03 UTC] PHP Notice:  Use of undefined constant disc_value - assumed 'disc_value' in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 276
+[17-Jan-2017 10:17:03 UTC] PHP Stack trace:
+[17-Jan-2017 10:17:03 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 10:17:03 UTC] PHP Notice:  Undefined variable: disc_value in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 276
+[17-Jan-2017 10:17:03 UTC] PHP Stack trace:
+[17-Jan-2017 10:17:03 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 10:17:03 UTC] PHP Notice:  Use of undefined constant tax_value - assumed 'tax_value' in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 277
+[17-Jan-2017 10:17:03 UTC] PHP Stack trace:
+[17-Jan-2017 10:17:03 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 10:17:03 UTC] PHP Notice:  Undefined variable: tax_value in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 277
+[17-Jan-2017 10:17:03 UTC] PHP Stack trace:
+[17-Jan-2017 10:17:03 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 10:17:03 UTC] PHP Notice:  Use of undefined constant gtotal - assumed 'gtotal' in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 278
+[17-Jan-2017 10:17:03 UTC] PHP Stack trace:
+[17-Jan-2017 10:17:03 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 10:17:03 UTC] PHP Notice:  Undefined variable: gtotal in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 278
+[17-Jan-2017 10:17:03 UTC] PHP Stack trace:
+[17-Jan-2017 10:17:03 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 10:17:03 UTC] PHP Notice:  Use of undefined constant total - assumed 'total' in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 269
+[17-Jan-2017 10:17:03 UTC] PHP Stack trace:
+[17-Jan-2017 10:17:03 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 10:17:03 UTC] PHP Notice:  Use of undefined constant disc_value - assumed 'disc_value' in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 270
+[17-Jan-2017 10:17:03 UTC] PHP Stack trace:
+[17-Jan-2017 10:17:03 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 10:17:03 UTC] PHP Notice:  Use of undefined constant tax_value - assumed 'tax_value' in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 271
+[17-Jan-2017 10:17:03 UTC] PHP Stack trace:
+[17-Jan-2017 10:17:03 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 10:17:03 UTC] PHP Notice:  Use of undefined constant gtotal - assumed 'gtotal' in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 272
+[17-Jan-2017 10:17:03 UTC] PHP Stack trace:
+[17-Jan-2017 10:17:03 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 10:17:03 UTC] PHP Notice:  Use of undefined constant total - assumed 'total' in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 275
+[17-Jan-2017 10:17:03 UTC] PHP Stack trace:
+[17-Jan-2017 10:17:03 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 10:17:03 UTC] PHP Notice:  Use of undefined constant disc_value - assumed 'disc_value' in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 276
+[17-Jan-2017 10:17:03 UTC] PHP Stack trace:
+[17-Jan-2017 10:17:03 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 10:17:03 UTC] PHP Notice:  Use of undefined constant tax_value - assumed 'tax_value' in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 277
+[17-Jan-2017 10:17:03 UTC] PHP Stack trace:
+[17-Jan-2017 10:17:03 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 10:17:03 UTC] PHP Notice:  Use of undefined constant gtotal - assumed 'gtotal' in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 278
+[17-Jan-2017 10:17:03 UTC] PHP Stack trace:
+[17-Jan-2017 10:17:03 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 10:17:03 UTC] PHP Notice:  Use of undefined constant total - assumed 'total' in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 269
+[17-Jan-2017 10:17:03 UTC] PHP Stack trace:
+[17-Jan-2017 10:17:03 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 10:17:03 UTC] PHP Notice:  Use of undefined constant disc_value - assumed 'disc_value' in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 270
+[17-Jan-2017 10:17:03 UTC] PHP Stack trace:
+[17-Jan-2017 10:17:03 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 10:17:03 UTC] PHP Notice:  Use of undefined constant tax_value - assumed 'tax_value' in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 271
+[17-Jan-2017 10:17:03 UTC] PHP Stack trace:
+[17-Jan-2017 10:17:03 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 10:17:03 UTC] PHP Notice:  Use of undefined constant gtotal - assumed 'gtotal' in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 272
+[17-Jan-2017 10:17:03 UTC] PHP Stack trace:
+[17-Jan-2017 10:17:03 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 10:17:03 UTC] PHP Notice:  Use of undefined constant total - assumed 'total' in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 275
+[17-Jan-2017 10:17:03 UTC] PHP Stack trace:
+[17-Jan-2017 10:17:03 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 10:17:03 UTC] PHP Notice:  Use of undefined constant disc_value - assumed 'disc_value' in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 276
+[17-Jan-2017 10:17:03 UTC] PHP Stack trace:
+[17-Jan-2017 10:17:03 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 10:17:03 UTC] PHP Notice:  Use of undefined constant tax_value - assumed 'tax_value' in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 277
+[17-Jan-2017 10:17:03 UTC] PHP Stack trace:
+[17-Jan-2017 10:17:03 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 10:17:03 UTC] PHP Notice:  Use of undefined constant gtotal - assumed 'gtotal' in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 278
+[17-Jan-2017 10:17:03 UTC] PHP Stack trace:
+[17-Jan-2017 10:17:03 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 10:17:03 UTC] PHP Notice:  Use of undefined constant total - assumed 'total' in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 269
+[17-Jan-2017 10:17:03 UTC] PHP Stack trace:
+[17-Jan-2017 10:17:03 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 10:17:03 UTC] PHP Notice:  Use of undefined constant disc_value - assumed 'disc_value' in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 270
+[17-Jan-2017 10:17:03 UTC] PHP Stack trace:
+[17-Jan-2017 10:17:03 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 10:17:03 UTC] PHP Notice:  Use of undefined constant tax_value - assumed 'tax_value' in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 271
+[17-Jan-2017 10:17:03 UTC] PHP Stack trace:
+[17-Jan-2017 10:17:03 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 10:17:03 UTC] PHP Notice:  Use of undefined constant gtotal - assumed 'gtotal' in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 272
+[17-Jan-2017 10:17:03 UTC] PHP Stack trace:
+[17-Jan-2017 10:17:03 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 10:17:03 UTC] PHP Notice:  Use of undefined constant total - assumed 'total' in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 275
+[17-Jan-2017 10:17:03 UTC] PHP Stack trace:
+[17-Jan-2017 10:17:03 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 10:17:03 UTC] PHP Notice:  Use of undefined constant disc_value - assumed 'disc_value' in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 276
+[17-Jan-2017 10:17:03 UTC] PHP Stack trace:
+[17-Jan-2017 10:17:03 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 10:17:03 UTC] PHP Notice:  Use of undefined constant tax_value - assumed 'tax_value' in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 277
+[17-Jan-2017 10:17:03 UTC] PHP Stack trace:
+[17-Jan-2017 10:17:03 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 10:17:03 UTC] PHP Notice:  Use of undefined constant gtotal - assumed 'gtotal' in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 278
+[17-Jan-2017 10:17:03 UTC] PHP Stack trace:
+[17-Jan-2017 10:17:03 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 10:17:03 UTC] PHP Notice:  Use of undefined constant total - assumed 'total' in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 269
+[17-Jan-2017 10:17:03 UTC] PHP Stack trace:
+[17-Jan-2017 10:17:03 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 10:17:03 UTC] PHP Notice:  Use of undefined constant disc_value - assumed 'disc_value' in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 270
+[17-Jan-2017 10:17:03 UTC] PHP Stack trace:
+[17-Jan-2017 10:17:03 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 10:17:03 UTC] PHP Notice:  Use of undefined constant tax_value - assumed 'tax_value' in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 271
+[17-Jan-2017 10:17:03 UTC] PHP Stack trace:
+[17-Jan-2017 10:17:03 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 10:17:03 UTC] PHP Notice:  Use of undefined constant gtotal - assumed 'gtotal' in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 272
+[17-Jan-2017 10:17:03 UTC] PHP Stack trace:
+[17-Jan-2017 10:17:03 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 10:17:03 UTC] PHP Notice:  Use of undefined constant total - assumed 'total' in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 275
+[17-Jan-2017 10:17:03 UTC] PHP Stack trace:
+[17-Jan-2017 10:17:03 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 10:17:03 UTC] PHP Notice:  Use of undefined constant disc_value - assumed 'disc_value' in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 276
+[17-Jan-2017 10:17:03 UTC] PHP Stack trace:
+[17-Jan-2017 10:17:03 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 10:17:03 UTC] PHP Notice:  Use of undefined constant tax_value - assumed 'tax_value' in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 277
+[17-Jan-2017 10:17:03 UTC] PHP Stack trace:
+[17-Jan-2017 10:17:03 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 10:17:03 UTC] PHP Notice:  Use of undefined constant gtotal - assumed 'gtotal' in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 278
+[17-Jan-2017 10:17:03 UTC] PHP Stack trace:
+[17-Jan-2017 10:17:03 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 10:17:03 UTC] PHP Notice:  Use of undefined constant total - assumed 'total' in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 269
+[17-Jan-2017 10:17:03 UTC] PHP Stack trace:
+[17-Jan-2017 10:17:03 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 10:17:03 UTC] PHP Notice:  Use of undefined constant disc_value - assumed 'disc_value' in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 270
+[17-Jan-2017 10:17:03 UTC] PHP Stack trace:
+[17-Jan-2017 10:17:03 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 10:17:03 UTC] PHP Notice:  Use of undefined constant tax_value - assumed 'tax_value' in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 271
+[17-Jan-2017 10:17:03 UTC] PHP Stack trace:
+[17-Jan-2017 10:17:03 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 10:17:03 UTC] PHP Notice:  Use of undefined constant gtotal - assumed 'gtotal' in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 272
+[17-Jan-2017 10:17:03 UTC] PHP Stack trace:
+[17-Jan-2017 10:17:03 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 10:17:03 UTC] PHP Notice:  Use of undefined constant total - assumed 'total' in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 275
+[17-Jan-2017 10:17:03 UTC] PHP Stack trace:
+[17-Jan-2017 10:17:03 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 10:17:03 UTC] PHP Notice:  Use of undefined constant disc_value - assumed 'disc_value' in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 276
+[17-Jan-2017 10:17:03 UTC] PHP Stack trace:
+[17-Jan-2017 10:17:03 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 10:17:03 UTC] PHP Notice:  Use of undefined constant tax_value - assumed 'tax_value' in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 277
+[17-Jan-2017 10:17:03 UTC] PHP Stack trace:
+[17-Jan-2017 10:17:03 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 10:17:03 UTC] PHP Notice:  Use of undefined constant gtotal - assumed 'gtotal' in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 278
+[17-Jan-2017 10:17:03 UTC] PHP Stack trace:
+[17-Jan-2017 10:17:03 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 10:18:06 UTC] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/soldigge/public_html/pilatus/config/koneksi.php on line 7
+[17-Jan-2017 10:18:06 UTC] PHP Stack trace:
+[17-Jan-2017 10:18:06 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 10:18:06 UTC] PHP   2. include() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:2
+[17-Jan-2017 10:18:06 UTC] PHP   3. mysql_connect() /home/soldigge/public_html/pilatus/config/koneksi.php:7
+[17-Jan-2017 10:18:06 UTC] PHP Notice:  Use of undefined constant report_id - assumed 'report_id' in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 4
+[17-Jan-2017 10:18:06 UTC] PHP Stack trace:
+[17-Jan-2017 10:18:06 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 10:18:06 UTC] PHP Notice:  Undefined index: fa_icon in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 12
+[17-Jan-2017 10:18:06 UTC] PHP Stack trace:
+[17-Jan-2017 10:18:06 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 10:18:06 UTC] PHP Notice:  Use of undefined constant orientation - assumed 'orientation' in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 14
+[17-Jan-2017 10:18:06 UTC] PHP Stack trace:
+[17-Jan-2017 10:18:06 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 10:18:06 UTC] PHP Notice:  Undefined index: status in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 20
+[17-Jan-2017 10:18:06 UTC] PHP Stack trace:
+[17-Jan-2017 10:18:06 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 10:18:06 UTC] PHP Warning:  strtotime(): It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected the timezone 'UTC' for now, but please set date.timezone to select your timezone. in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 27
+[17-Jan-2017 10:18:06 UTC] PHP Stack trace:
+[17-Jan-2017 10:18:06 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 10:18:06 UTC] PHP   2. strtotime() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:27
+[17-Jan-2017 10:18:06 UTC] PHP Warning:  date(): It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected the timezone 'UTC' for now, but please set date.timezone to select your timezone. in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 27
+[17-Jan-2017 10:18:06 UTC] PHP Stack trace:
+[17-Jan-2017 10:18:06 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 10:18:06 UTC] PHP   2. date() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:27
+[17-Jan-2017 10:18:06 UTC] PHP Notice:  Undefined index: ldate in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 158
+[17-Jan-2017 10:18:06 UTC] PHP Stack trace:
+[17-Jan-2017 10:18:06 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 10:18:06 UTC] PHP Notice:  Undefined index: ldate in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 160
+[17-Jan-2017 10:18:06 UTC] PHP Stack trace:
+[17-Jan-2017 10:18:06 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 10:18:06 UTC] PHP Notice:  Use of undefined constant total - assumed 'total' in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 269
+[17-Jan-2017 10:18:06 UTC] PHP Stack trace:
+[17-Jan-2017 10:18:06 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 10:18:06 UTC] PHP Notice:  Use of undefined constant disc_value - assumed 'disc_value' in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 270
+[17-Jan-2017 10:18:06 UTC] PHP Stack trace:
+[17-Jan-2017 10:18:06 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 10:18:06 UTC] PHP Notice:  Use of undefined constant tax_value - assumed 'tax_value' in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 271
+[17-Jan-2017 10:18:06 UTC] PHP Stack trace:
+[17-Jan-2017 10:18:06 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 10:18:06 UTC] PHP Notice:  Use of undefined constant gtotal - assumed 'gtotal' in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 272
+[17-Jan-2017 10:18:06 UTC] PHP Stack trace:
+[17-Jan-2017 10:18:06 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 10:18:06 UTC] PHP Notice:  Use of undefined constant total - assumed 'total' in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 275
+[17-Jan-2017 10:18:06 UTC] PHP Stack trace:
+[17-Jan-2017 10:18:06 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 10:18:06 UTC] PHP Notice:  Undefined variable: total in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 275
+[17-Jan-2017 10:18:06 UTC] PHP Stack trace:
+[17-Jan-2017 10:18:06 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 10:18:06 UTC] PHP Notice:  Use of undefined constant disc_value - assumed 'disc_value' in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 276
+[17-Jan-2017 10:18:06 UTC] PHP Stack trace:
+[17-Jan-2017 10:18:06 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 10:18:06 UTC] PHP Notice:  Undefined variable: disc_value in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 276
+[17-Jan-2017 10:18:06 UTC] PHP Stack trace:
+[17-Jan-2017 10:18:06 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 10:18:06 UTC] PHP Notice:  Use of undefined constant tax_value - assumed 'tax_value' in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 277
+[17-Jan-2017 10:18:06 UTC] PHP Stack trace:
+[17-Jan-2017 10:18:06 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 10:18:06 UTC] PHP Notice:  Undefined variable: tax_value in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 277
+[17-Jan-2017 10:18:06 UTC] PHP Stack trace:
+[17-Jan-2017 10:18:06 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 10:18:06 UTC] PHP Notice:  Use of undefined constant gtotal - assumed 'gtotal' in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 278
+[17-Jan-2017 10:18:06 UTC] PHP Stack trace:
+[17-Jan-2017 10:18:06 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 10:18:06 UTC] PHP Notice:  Undefined variable: gtotal in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 278
+[17-Jan-2017 10:18:06 UTC] PHP Stack trace:
+[17-Jan-2017 10:18:06 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 10:18:06 UTC] PHP Notice:  Use of undefined constant total - assumed 'total' in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 269
+[17-Jan-2017 10:18:06 UTC] PHP Stack trace:
+[17-Jan-2017 10:18:06 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 10:18:06 UTC] PHP Notice:  Use of undefined constant disc_value - assumed 'disc_value' in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 270
+[17-Jan-2017 10:18:06 UTC] PHP Stack trace:
+[17-Jan-2017 10:18:06 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 10:18:06 UTC] PHP Notice:  Use of undefined constant tax_value - assumed 'tax_value' in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 271
+[17-Jan-2017 10:18:06 UTC] PHP Stack trace:
+[17-Jan-2017 10:18:06 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 10:18:06 UTC] PHP Notice:  Use of undefined constant gtotal - assumed 'gtotal' in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 272
+[17-Jan-2017 10:18:06 UTC] PHP Stack trace:
+[17-Jan-2017 10:18:06 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 10:18:06 UTC] PHP Notice:  Use of undefined constant total - assumed 'total' in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 275
+[17-Jan-2017 10:18:06 UTC] PHP Stack trace:
+[17-Jan-2017 10:18:06 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 10:18:06 UTC] PHP Notice:  Use of undefined constant disc_value - assumed 'disc_value' in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 276
+[17-Jan-2017 10:18:06 UTC] PHP Stack trace:
+[17-Jan-2017 10:18:06 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 10:18:06 UTC] PHP Notice:  Use of undefined constant tax_value - assumed 'tax_value' in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 277
+[17-Jan-2017 10:18:06 UTC] PHP Stack trace:
+[17-Jan-2017 10:18:06 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[17-Jan-2017 10:18:06 UTC] PHP Notice:  Use of undefined constant gtotal - assumed 'gtotal' in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 278
+[17-Jan-2017 10:18:06 UTC] PHP Stack trace:
+[17-Jan-2017 10:18:06 UTC] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[24-Jan-2017 13:05:52 Asia/Jakarta] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/soldigge/public_html/pilatus/config/koneksi.php on line 7
+[24-Jan-2017 13:05:52 Asia/Jakarta] PHP Stack trace:
+[24-Jan-2017 13:05:52 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[24-Jan-2017 13:05:52 Asia/Jakarta] PHP   2. include() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:2
+[24-Jan-2017 13:05:52 Asia/Jakarta] PHP   3. mysql_connect() /home/soldigge/public_html/pilatus/config/koneksi.php:7
+[24-Jan-2017 13:05:52 Asia/Jakarta] PHP Notice:  Use of undefined constant report_id - assumed 'report_id' in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 4
+[24-Jan-2017 13:05:52 Asia/Jakarta] PHP Stack trace:
+[24-Jan-2017 13:05:52 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[24-Jan-2017 13:05:52 Asia/Jakarta] PHP Notice:  Undefined index: fa_icon in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 12
+[24-Jan-2017 13:05:52 Asia/Jakarta] PHP Stack trace:
+[24-Jan-2017 13:05:52 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[24-Jan-2017 13:05:52 Asia/Jakarta] PHP Notice:  Use of undefined constant orientation - assumed 'orientation' in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 14
+[24-Jan-2017 13:05:52 Asia/Jakarta] PHP Stack trace:
+[24-Jan-2017 13:05:52 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[24-Jan-2017 13:05:52 Asia/Jakarta] PHP Notice:  Undefined index: status in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 20
+[24-Jan-2017 13:05:52 Asia/Jakarta] PHP Stack trace:
+[24-Jan-2017 13:05:52 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[24-Jan-2017 13:05:52 Asia/Jakarta] PHP Notice:  Undefined index: ldate in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 158
+[24-Jan-2017 13:05:52 Asia/Jakarta] PHP Stack trace:
+[24-Jan-2017 13:05:52 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[24-Jan-2017 13:05:52 Asia/Jakarta] PHP Notice:  Undefined index: ldate in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 160
+[24-Jan-2017 13:05:52 Asia/Jakarta] PHP Stack trace:
+[24-Jan-2017 13:05:52 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[24-Jan-2017 13:05:52 Asia/Jakarta] PHP Notice:  Undefined variable: total in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 285
+[24-Jan-2017 13:05:52 Asia/Jakarta] PHP Stack trace:
+[24-Jan-2017 13:05:52 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[24-Jan-2017 13:05:52 Asia/Jakarta] PHP Notice:  Undefined variable: disc_value in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 286
+[24-Jan-2017 13:05:52 Asia/Jakarta] PHP Stack trace:
+[24-Jan-2017 13:05:52 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[24-Jan-2017 13:05:52 Asia/Jakarta] PHP Notice:  Undefined variable: tax_value in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 287
+[24-Jan-2017 13:05:52 Asia/Jakarta] PHP Stack trace:
+[24-Jan-2017 13:05:52 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[24-Jan-2017 13:05:52 Asia/Jakarta] PHP Notice:  Undefined variable: gtotal in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 288
+[24-Jan-2017 13:05:52 Asia/Jakarta] PHP Stack trace:
+[24-Jan-2017 13:05:52 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[24-Jan-2017 13:05:52 Asia/Jakarta] PHP Notice:  Undefined variable: gtotal in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 317
+[24-Jan-2017 13:05:52 Asia/Jakarta] PHP Stack trace:
+[24-Jan-2017 13:05:52 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[24-Jan-2017 13:06:20 Asia/Jakarta] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/soldigge/public_html/pilatus/config/koneksi.php on line 7
+[24-Jan-2017 13:06:20 Asia/Jakarta] PHP Stack trace:
+[24-Jan-2017 13:06:20 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[24-Jan-2017 13:06:20 Asia/Jakarta] PHP   2. include() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:2
+[24-Jan-2017 13:06:20 Asia/Jakarta] PHP   3. mysql_connect() /home/soldigge/public_html/pilatus/config/koneksi.php:7
+[24-Jan-2017 13:06:20 Asia/Jakarta] PHP Notice:  Use of undefined constant report_id - assumed 'report_id' in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 4
+[24-Jan-2017 13:06:20 Asia/Jakarta] PHP Stack trace:
+[24-Jan-2017 13:06:20 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[24-Jan-2017 13:06:20 Asia/Jakarta] PHP Notice:  Undefined index: fa_icon in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 12
+[24-Jan-2017 13:06:20 Asia/Jakarta] PHP Stack trace:
+[24-Jan-2017 13:06:20 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[24-Jan-2017 13:06:20 Asia/Jakarta] PHP Notice:  Use of undefined constant orientation - assumed 'orientation' in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 14
+[24-Jan-2017 13:06:20 Asia/Jakarta] PHP Stack trace:
+[24-Jan-2017 13:06:20 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[24-Jan-2017 13:06:20 Asia/Jakarta] PHP Notice:  Undefined index: status in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 20
+[24-Jan-2017 13:06:20 Asia/Jakarta] PHP Stack trace:
+[24-Jan-2017 13:06:20 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[24-Jan-2017 13:06:20 Asia/Jakarta] PHP Notice:  Undefined index: ldate in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 158
+[24-Jan-2017 13:06:20 Asia/Jakarta] PHP Stack trace:
+[24-Jan-2017 13:06:20 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[24-Jan-2017 13:06:20 Asia/Jakarta] PHP Notice:  Undefined index: ldate in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 160
+[24-Jan-2017 13:06:20 Asia/Jakarta] PHP Stack trace:
+[24-Jan-2017 13:06:20 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[24-Jan-2017 13:06:20 Asia/Jakarta] PHP Notice:  Undefined variable: total in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 285
+[24-Jan-2017 13:06:20 Asia/Jakarta] PHP Stack trace:
+[24-Jan-2017 13:06:20 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[24-Jan-2017 13:06:20 Asia/Jakarta] PHP Notice:  Undefined variable: disc_value in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 286
+[24-Jan-2017 13:06:20 Asia/Jakarta] PHP Stack trace:
+[24-Jan-2017 13:06:20 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[24-Jan-2017 13:06:20 Asia/Jakarta] PHP Notice:  Undefined variable: tax_value in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 287
+[24-Jan-2017 13:06:20 Asia/Jakarta] PHP Stack trace:
+[24-Jan-2017 13:06:20 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[24-Jan-2017 13:06:20 Asia/Jakarta] PHP Notice:  Undefined variable: gtotal in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 288
+[24-Jan-2017 13:06:20 Asia/Jakarta] PHP Stack trace:
+[24-Jan-2017 13:06:20 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
+[24-Jan-2017 13:06:20 Asia/Jakarta] PHP Notice:  Undefined variable: gtotal in /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php on line 317
+[24-Jan-2017 13:06:20 Asia/Jakarta] PHP Stack trace:
+[24-Jan-2017 13:06:20 Asia/Jakarta] PHP   1. {main}() /home/soldigge/public_html/pilatus/modul/mod_report_kasir/print_report_kasir.php:0
