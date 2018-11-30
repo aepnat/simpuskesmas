@@ -110,6 +110,6 @@ default:
                </div>
         </div>
 
-    <?
+    <?php
 }
 ?>

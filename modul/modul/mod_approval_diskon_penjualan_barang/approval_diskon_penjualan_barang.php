@@ -690,7 +690,7 @@ if ($_GET['istatus']) {
 
 
 
-    <?
+    <?php
 
 break;
 

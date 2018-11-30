@@ -85,6 +85,6 @@ $ldate   = date("Y-m-d");
                  </div>
         </div>
 
-    <?
+    <?php
 }
 ?>

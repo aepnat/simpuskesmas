@@ -153,6 +153,6 @@ default:
                </div>
         </div>
 
-    <?
+    <?php
 }
 ?>

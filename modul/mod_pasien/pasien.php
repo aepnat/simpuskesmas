@@ -147,6 +147,6 @@ default:
                </div>
         </div>
 
-    <?
+    <?php
 }
 ?>

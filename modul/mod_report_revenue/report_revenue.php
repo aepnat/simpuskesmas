@@ -144,7 +144,7 @@ $userid   = $_SESSION['userid'];
                  </div>
         </div>
 
-    <?
+    <?php
 }
 ?>
 
