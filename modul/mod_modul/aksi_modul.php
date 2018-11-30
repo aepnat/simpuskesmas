@@ -72,7 +72,7 @@ if (empty($_SESSION['username']) and empty($_SESSION['password'])) {
                                         '$_POST[urutan]')");
         }
 
-        //header('location:../../main.php?module='.$module.'&id_module='.$id_module); ?>
+        //header('location:../../main.php?module='.$module.'&id_module='.$id_module);?>
    
   <script language="javascript">
      window.parent.location.href = "<?php echo"./../../main.php?module=$module&id_module=$id_module"; ?>";  
@@ -95,7 +95,7 @@ if (empty($_SESSION['username']) and empty($_SESSION['password'])) {
         mysql_query("DELETE FROM modul WHERE id_modul = '$id'");
         mysql_query("DELETE FROM modul WHERE parentid = $id");
 
-        //header('location:../../main.php?module='.$module.'&id_module='.$id_module); ?>
+        //header('location:../../main.php?module='.$module.'&id_module='.$id_module);?>
    
   <script language="javascript">
      window.parent.location.href = "<?php echo"./../../main.php?module=$module&id_module=$id_module"; ?>";  
@@ -151,7 +151,7 @@ if (empty($_SESSION['username']) and empty($_SESSION['password'])) {
                                 '$_POST[urutan]')");
         }
 
-        //header('location:../../main.php?module='.$module.'&id_module='.$id_module); ?>
+        //header('location:../../main.php?module='.$module.'&id_module='.$id_module);?>
    
   <script language="javascript">
      window.parent.location.href = "<?php echo"./../../main.php?module=$module&id_module=$id_module"; ?>";  

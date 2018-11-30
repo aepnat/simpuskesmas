@@ -414,7 +414,7 @@ if ($r['gender'] == 'L') {
 <tr>
     <td width='30%'>Kategori Pasien</td>
     <td width='1%'>:</td>
-    <td><?=$r['kategori'];?></td>
+    <td><?=$r['kategori']; ?></td>
 </tr>
 </table>    
 

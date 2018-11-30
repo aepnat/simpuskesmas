@@ -948,10 +948,10 @@ if (!class_exists('QRcode', false)) {
         /**
          * Write Format Information on frame and returns the number of black bits.
          *
-         * @param int $width frame width
+         * @param int   $width frame width
          * @param array $frame frame
-         * @param array $mask masking mode
-         * @param int $level error correction level
+         * @param array $mask  masking mode
+         * @param int   $level error correction level
          *
          * @return int blacks
          */
@@ -1126,10 +1126,10 @@ if (!class_exists('QRcode', false)) {
         /**
          * makeMaskNo.
          *
-         * @param int $maskNo
-         * @param int $width
-         * @param int $s
-         * @param int $d
+         * @param int  $maskNo
+         * @param int  $width
+         * @param int  $s
+         * @param int  $d
          * @param bool $maskGenOnly
          *
          * @return int b
@@ -1158,10 +1158,10 @@ if (!class_exists('QRcode', false)) {
         /**
          * makeMask.
          *
-         * @param int $width
+         * @param int   $width
          * @param array $frame
-         * @param int $maskNo
-         * @param int $level
+         * @param int   $maskNo
+         * @param int   $level
          *
          * @return array mask
          */
@@ -1211,7 +1211,7 @@ if (!class_exists('QRcode', false)) {
         /**
          * evaluateSymbol.
          *
-         * @param int $width
+         * @param int   $width
          * @param array $frame
          *
          * @return int demerit
@@ -1276,9 +1276,9 @@ if (!class_exists('QRcode', false)) {
         /**
          * mask.
          *
-         * @param int $width
+         * @param int   $width
          * @param array $frame
-         * @param int $level
+         * @param int   $level
          *
          * @return array best mask
          */
@@ -1324,7 +1324,7 @@ if (!class_exists('QRcode', false)) {
          * Return true if the character at specified position is a number.
          *
          * @param string $str string
-         * @param int $pos characted position
+         * @param int    $pos characted position
          *
          * @return bool true of false
          */
@@ -1341,7 +1341,7 @@ if (!class_exists('QRcode', false)) {
          * Return true if the character at specified position is an alphanumeric character.
          *
          * @param string $str string
-         * @param int $pos characted position
+         * @param int    $pos characted position
          *
          * @return bool true of false
          */
@@ -1600,8 +1600,8 @@ if (!class_exists('QRcode', false)) {
         /**
          * newInputItem.
          *
-         * @param int $mode
-         * @param int $size
+         * @param int   $mode
+         * @param int   $size
          * @param array $data
          * @param array $bstream
          *
@@ -1629,7 +1629,7 @@ if (!class_exists('QRcode', false)) {
          * encodeModeNum.
          *
          * @param array $inputitem
-         * @param int $version
+         * @param int   $version
          *
          * @return array input item
          */
@@ -1662,7 +1662,7 @@ if (!class_exists('QRcode', false)) {
          * encodeModeAn.
          *
          * @param array $inputitem
-         * @param int $version
+         * @param int   $version
          *
          * @return array input item
          */
@@ -1689,7 +1689,7 @@ if (!class_exists('QRcode', false)) {
          * encodeMode8.
          *
          * @param array $inputitem
-         * @param int $version
+         * @param int   $version
          *
          * @return array input item
          */
@@ -1709,7 +1709,7 @@ if (!class_exists('QRcode', false)) {
          * encodeModeKanji.
          *
          * @param array $inputitem
-         * @param int $version
+         * @param int   $version
          *
          * @return array input item
          */
@@ -1755,7 +1755,7 @@ if (!class_exists('QRcode', false)) {
          * encodeBitStream.
          *
          * @param array $inputitem
-         * @param int $version
+         * @param int   $version
          *
          * @return array input item
          */
@@ -1828,9 +1828,9 @@ if (!class_exists('QRcode', false)) {
          * insertStructuredAppendHeader.
          *
          * @param array $items
-         * @param int $size
-         * @param int $index
-         * @param int $parity
+         * @param int   $size
+         * @param int   $index
+         * @param int   $parity
          *
          * @return array items
          */
@@ -1873,7 +1873,7 @@ if (!class_exists('QRcode', false)) {
         /**
          * checkModeNum.
          *
-         * @param int $size
+         * @param int   $size
          * @param array $data
          *
          * @return bool true or false
@@ -1932,7 +1932,7 @@ if (!class_exists('QRcode', false)) {
         /**
          * checkModeAn.
          *
-         * @param int $size
+         * @param int   $size
          * @param array $data
          *
          * @return bool true or false
@@ -1993,7 +1993,7 @@ if (!class_exists('QRcode', false)) {
         /**
          * checkModeKanji.
          *
-         * @param int $size
+         * @param int   $size
          * @param array $data
          *
          * @return bool true or false
@@ -2055,7 +2055,7 @@ if (!class_exists('QRcode', false)) {
          * estimateBitStreamSize.
          *
          * @param array $items
-         * @param int $version
+         * @param int   $version
          *
          * @return int bits
          */
@@ -2335,7 +2335,7 @@ if (!class_exists('QRcode', false)) {
          * Return new bitstream from number.
          *
          * @param int $bits number of bits
-         * @param int $num number
+         * @param int $num  number
          *
          * @return array bitstream
          */
@@ -2358,7 +2358,7 @@ if (!class_exists('QRcode', false)) {
         /**
          * Return new bitstream from bytes.
          *
-         * @param int $size size
+         * @param int   $size size
          * @param array $data bytes
          *
          * @return array bitstream
@@ -2387,7 +2387,7 @@ if (!class_exists('QRcode', false)) {
          * Append one bitstream to another.
          *
          * @param array $bitstream original bitstream
-         * @param array $append bitstream to append
+         * @param array $append    bitstream to append
          *
          * @return array bitstream
          */
@@ -2407,8 +2407,8 @@ if (!class_exists('QRcode', false)) {
          * Append one bitstream created from number to another.
          *
          * @param array $bitstream original bitstream
-         * @param int $bits number of bits
-         * @param int $num number
+         * @param int   $bits      number of bits
+         * @param int   $num       number
          *
          * @return array bitstream
          */
@@ -2426,8 +2426,8 @@ if (!class_exists('QRcode', false)) {
          * Append one bitstream created from bytes to another.
          *
          * @param array $bitstream original bitstream
-         * @param int $size size
-         * @param array $data bytes
+         * @param int   $size      size
+         * @param array $data      bytes
          *
          * @return array bitstream
          */
@@ -2486,11 +2486,11 @@ if (!class_exists('QRcode', false)) {
         /**
          * Replace a value on the array at the specified position.
          *
-         * @param array $srctab
-         * @param int $x X position
-         * @param int $y Y position
-         * @param string $repl value to replace
-         * @param int $replLen length of the repl string
+         * @param array  $srctab
+         * @param int    $x       X position
+         * @param int    $y       Y position
+         * @param string $repl    value to replace
+         * @param int    $replLen length of the repl string
          *
          * @return array srctab
          */
@@ -2690,9 +2690,9 @@ if (!class_exists('QRcode', false)) {
         /**
          * Put an alignment pattern.
          *
-         * @param int $version version
-         * @param array $fram frame
-         * @param int $width width
+         * @param int   $version version
+         * @param array $fram    frame
+         * @param int   $width   width
          *
          * @return array frame
          */
@@ -3006,10 +3006,10 @@ if (!class_exists('QRcode', false)) {
          *
          * @param int $symsize symbol size, bits
          * @param int $gfpoly  Field generator polynomial coefficients
-         * @param int $fcr  first root of RS code generator polynomial, index form
-         * @param int $prim  primitive element to generate polynomial roots
-         * @param int $nroots RS code generator polynomial degree (number of roots)
-         * @param int $pad  padding bytes at front of shortened block
+         * @param int $fcr     first root of RS code generator polynomial, index form
+         * @param int $prim    primitive element to generate polynomial roots
+         * @param int $nroots  RS code generator polynomial degree (number of roots)
+         * @param int $pad     padding bytes at front of shortened block
          *
          * @return array Array of RS values:<ul><li>mm = Bits per symbol;</li><li>nn = Symbols per block;</li><li>alpha_to = log lookup table array;</li><li>index_of = Antilog lookup table array;</li><li>genpoly = Generator polynomial array;</li><li>nroots = Number of generator;</li><li>roots = number of parity symbols;</li><li>fcr = First consecutive root, index form;</li><li>prim = Primitive element, index form;</li><li>iprim = prim-th root of 1, index form;</li><li>pad = Padding bytes in shortened block;</li><li>gfpoly</ul>.
          */
@@ -3146,8 +3146,8 @@ if (!class_exists('QRcode', false)) {
         /**
          * Encode a Reed-Solomon codec and returns the parity array.
          *
-         * @param array $rs RS values
-         * @param array $data data
+         * @param array $rs     RS values
+         * @param array $data   data
          * @param array $parity parity
          *
          * @return parity array

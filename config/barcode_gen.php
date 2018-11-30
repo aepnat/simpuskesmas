@@ -35,7 +35,7 @@ $char128wid = [
 ////Define Function
 function bar128($text)
 {						// Part 1, make list of widths
-  global $char128asc,$char128wid;
+    global $char128asc,$char128wid;
     $w = $char128wid[$sum = 104];							// START symbol
     $onChar = 1;
     for ($x = 0; $x < strlen($text); $x++) {								// GO THRU TEXT GET LETTERS

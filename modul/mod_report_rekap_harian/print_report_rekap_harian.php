@@ -613,7 +613,7 @@ function idownload(){
 
     <table width="100%">
     	<tr>
-    		<td width="70%">Bekasi, <?=$nprd;?></td>
+    		<td width="70%">Bekasi, <?=$nprd; ?></td>
     		<td width="30%">Mengetahui,</td>
     	</tr>
     	<tr>
