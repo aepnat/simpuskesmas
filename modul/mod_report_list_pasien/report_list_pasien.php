@@ -43,7 +43,7 @@ $ldate   = date("Y-m-d");
                      <select name="tipe" class="form-control">
                      <option value='%'>Semua</option>
 
-                     <? for ($x = 'A'; $x <= 'Z'; $x++) { ?>
+                     <?php for ($x = 'A'; $x <= 'Z'; $x++) { ?>
                         <option value= '<?=$x;?>'><?=$x;?></option>
                      <? } ?>
 
@@ -61,7 +61,7 @@ $ldate   = date("Y-m-d");
                     ?>                
                 </div> 
 
-             <?
+             <?php
 
              $module = '?module='.$_GET['module'];          
              $tampil=mysql_query("SELECT id_modul as id FROM modul WHERE link='".$module."'");                       
@@ -73,10 +73,10 @@ $ldate   = date("Y-m-d");
             </form>    
                    
                 </div>
-                <?for($i = 0; $i <= 20; $i++)  { 
+                <?php for($i = 0; $i <= 20; $i++)  { 
                     ?>
                     <br />
-                    <?
+                    <?php
                     }
                     ?>
                  </div>

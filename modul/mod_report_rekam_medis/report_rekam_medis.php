@@ -92,7 +92,7 @@ $userid   = $_SESSION['userid'];
                 <div class="col-md-10 col-sm-10 col-xs-10 form-group"> 
                     <select required name="pasien" class="form-control">
                      <option>--Pilih Pasien--</option>                
-                        <?
+                        <?php
                           $query = mysql_query('SELECT * FROM pasien ORDER BY nama');
                            if($query && mysql_num_rows($query) > 0){
                               while($row = mysql_fetch_object($query)){
@@ -135,7 +135,7 @@ $userid   = $_SESSION['userid'];
                  </label>             
                 </div> 
 
-             <?
+             <?php
 
              $module = '?module='.$_GET['module'];          
              $tampil=mysql_query("SELECT id_modul as id FROM modul WHERE link='".$module."'");                       
@@ -147,10 +147,10 @@ $userid   = $_SESSION['userid'];
             </form>    
                    
                 </div>
-                <?for($i = 0; $i <= 20; $i++)  { 
+                <?php for($i = 0; $i <= 20; $i++)  { 
                     ?>
                     <br />
-                    <?
+                    <?php
                     }
                     ?>
                  </div>

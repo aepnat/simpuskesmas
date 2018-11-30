@@ -113,7 +113,7 @@ $userid   = $_SESSION['userid'];
                  </label>             
                 </div> 
 
-             <?
+             <?php
 
              $module = '?module='.$_GET['module'];          
              $tampil=mysql_query("SELECT id_modul as id FROM modul WHERE link='".$module."'");                       
@@ -128,7 +128,7 @@ $userid   = $_SESSION['userid'];
                 <?for($i = 0; $i <= 20; $i++)  { 
                     ?>
                     <br />
-                    <?
+                    <?php
                     }
                     ?>
                  </div>

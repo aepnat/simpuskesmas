@@ -106,14 +106,14 @@ $userid   = $_SESSION['userid'];
                 </div> 
                 <div class="col-md-9 col-sm-9 col-xs-9 form-group"> 
                  <label class="control-label">
-                    <?
+                    <?php
                     echo"<input type=radio name='printto' value='1' class='flat' checked>&nbsp Preview &nbsp</label>";
                     echo"<input type=radio name='printto' value='2' class='flat'>&nbsp Print</label> ";
                     ?>      
                  </label>             
                 </div> 
 
-             <?
+             <?php
 
              $module = '?module='.$_GET['module'];          
              $tampil=mysql_query("SELECT id_modul as id FROM modul WHERE link='".$module."'");                       
@@ -125,10 +125,10 @@ $userid   = $_SESSION['userid'];
             </form>    
                    
                 </div>
-                <?for($i = 0; $i <= 20; $i++)  { 
+                <?php for($i = 0; $i <= 20; $i++)  { 
                     ?>
                     <br />
-                    <?
+                    <?php
                     }
                     ?>
                  </div>
