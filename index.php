@@ -1,5 +1,5 @@
 <?php
-include "config/koneksi.php";
+include 'config/koneksi.php';
 ?>
 <!DOCTYPE html>
 <html>
@@ -15,11 +15,11 @@ include "config/koneksi.php";
 
 <?php
 if ($_GET['userid']) {
-	$userid = $_GET['userid'];
-	$module = $_GET['module'];
+    $userid = $_GET['userid'];
+    $module = $_GET['module'];
 } else {
-	$userid = '';
-	$module = 'home';
+    $userid = '';
+    $module = 'home';
 }
 
 ?>
@@ -33,11 +33,15 @@ if ($_GET['userid']) {
 		<form method="post" action="cek_login.php" accept-charset="utf-8">
 		
 		<label id="username">
-			<input type="text" name="userid" value='<?php echo $userid;?>' <?php if (!$userid) { echo 'autofocus'; } ?> placeholder="Pengguna" required autofocus onKeyUp="" >
+			<input type="text" name="userid" value='<?php echo $userid; ?>' <?php if (!$userid) {
+    echo 'autofocus';
+} ?> placeholder="Pengguna" required autofocus onKeyUp="" >
 		</label>
 			<br>
 		<label id="password">	
-			<input type="password" name="password" <?php if ($userid) { echo 'autofocus'; } ?> placeholder="Sandi" required>
+			<input type="password" name="password" <?php if ($userid) {
+    echo 'autofocus';
+} ?> placeholder="Sandi" required>
 		</label>	
 			<br><br>
 			<button name="login"><i class="fa fa-sign-in"></i>&nbsp;Masuk	</button>
@@ -48,16 +52,16 @@ if ($_GET['userid']) {
 	<footer>
 	<br><br><br>
 	<?php
-	$SQL = "SELECT* FROM versi WHERE status = 'A' ";
-	$tampil=mysql_query($SQL);
-	$p = mysql_fetch_array($tampil);
+    $SQL = "SELECT* FROM versi WHERE status = 'A' ";
+    $tampil = mysql_query($SQL);
+    $p = mysql_fetch_array($tampil);
 
-	$app = $p['aplikasi'];
+    $app = $p['aplikasi'];
 
-	$versi = $p['versi'];;
-	?>
+    $versi = $p['versi'];
+    ?>
                 
-	<div class="wifi" style="font-size: 33px;"><?php echo $app;?></div>
+	<div class="wifi" style="font-size: 33px;"><?php echo $app; ?></div>
 		<!-- <p class="copyright">Version : <?php echo $versi;?></p> -->
 	</footer>
 </body>

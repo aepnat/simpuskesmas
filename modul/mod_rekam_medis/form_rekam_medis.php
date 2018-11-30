@@ -1,10 +1,9 @@
-<?
+<?php
 session_start();
-if (empty($_SESSION['username']) AND empty($_SESSION['password'])){
-  echo "<script>window.alert('Please login first.'); window.location=('../../index.php.php')</script>";
-} else{
-include "./../../config/koneksi.php";
-?>
+if (empty($_SESSION['username']) and empty($_SESSION['password'])) {
+    echo "<script>window.alert('Please login first.'); window.location=('../../index.php.php')</script>";
+} else {
+    include './../../config/koneksi.php'; ?>
 <!doctype html>
 <html>
 <head>
@@ -32,47 +31,43 @@ include "./../../config/koneksi.php";
 </head>
 
 <body style='background-color:#fff;'>
-<?
+<?php
 
 $modul = $_GET['module'];
-$title = $_GET['title'];
-$business_type = $_SESSION['business_type']; 
-$role   = $_SESSION['role'];
+    $title = $_GET['title'];
+    $business_type = $_SESSION['business_type'];
+    $role = $_SESSION['role'];
 
-$id_module = $_GET['id_module']; 
+    $id_module = $_GET['id_module'];
 
-  $id = isset($_GET['id_kunjungan_berobat']) ? intval($_GET['id_kunjungan_berobat']) : false;
-  
-  if($id){
-     $query = mysql_query('SELECT * FROM kunjungan_berobat WHERE id_kunjungan_berobat = "'.$id.'"');
-     if($query && mysql_num_rows($query) == 1){
-        $data = mysql_fetch_object($query);
-     }else 
-        die('Data modul tidak ditemukan');
-  }
-  
-if ($_GET['igroup']) {
-  $group  = $_GET['igroup'];
-} else {
-  $group  = $data->id_kunjungan_berobat;
-  
-}
+    $id = isset($_GET['id_kunjungan_berobat']) ? intval($_GET['id_kunjungan_berobat']) : false;
 
-if ($_GET['imenu']) {
-  $imenu  = $_GET['imenu'];
-} else {
-  $imenu  = $data->id_modul;  
-  
-}
+    if ($id) {
+        $query = mysql_query('SELECT * FROM kunjungan_berobat WHERE id_kunjungan_berobat = "'.$id.'"');
+        if ($query && mysql_num_rows($query) == 1) {
+            $data = mysql_fetch_object($query);
+        } else {
+            die('Data modul tidak ditemukan');
+        }
+    }
 
-if ($data->tanggal) {
-  $tanggal = $data->tanggal;
-} else {
-  $tanggal = DATE('Y-m-d');
-}
+    if ($_GET['igroup']) {
+        $group = $_GET['igroup'];
+    } else {
+        $group = $data->id_kunjungan_berobat;
+    }
 
-  
-?>
+    if ($_GET['imenu']) {
+        $imenu = $_GET['imenu'];
+    } else {
+        $imenu = $data->id_modul;
+    }
+
+    if ($data->tanggal) {
+        $tanggal = $data->tanggal;
+    } else {
+        $tanggal = date('Y-m-d');
+    } ?>
 
 
 <div class="ix_panel">
@@ -95,19 +90,19 @@ if ($data->tanggal) {
               <div class="col-md-6 col-sm-6 col-xs-12" >
                  <select required name="pasien" class="form-control" disabled>
                  <option>--Pilih Pasien--</option>                
-                    <?
+                    <?php
                       $query = mysql_query('SELECT * FROM pasien ORDER BY nama');
-                       if($query && mysql_num_rows($query) > 0){
-                          while($row = mysql_fetch_object($query)){
+    if ($query && mysql_num_rows($query) > 0) {
+        while ($row = mysql_fetch_object($query)) {
+            $pasien = $row->ktp.'-'.$row->nama;
 
-                            $pasien = $row->ktp.'-'.$row->nama;
-
-                             echo '<option value="'.$row->id_pasien.'"';
-                             if($row->id_pasien == @$data->id_pasien) echo ' selected';
-                             echo '>'.$pasien.'</option>';
-                          }
-                       }        
-                    ?>
+            echo '<option value="'.$row->id_pasien.'"';
+            if ($row->id_pasien == @$data->id_pasien) {
+                echo ' selected';
+            }
+            echo '>'.$pasien.'</option>';
+        }
+    } ?>
                     </select>
               </div>
 
@@ -116,16 +111,17 @@ if ($data->tanggal) {
               <div class="col-md-6 col-sm-6 col-xs-12" >
                  <select name="poli" class="form-control" disabled>     
                  <option>--Pilih Poliklinik --</option>                          
-                    <?
+                    <?php
                       $query = mysql_query('SELECT * FROM poli ORDER BY poli');
-                       if($query && mysql_num_rows($query) > 0){
-                          while($row = mysql_fetch_object($query)){
-                             echo '<option value="'.$row->id_poli.'"';
-                             if($row->id_poli == @$data->id_poli) echo ' selected';
-                             echo '>'.$row->poli.'</option>';
-                          }
-                       }        
-                    ?>
+    if ($query && mysql_num_rows($query) > 0) {
+        while ($row = mysql_fetch_object($query)) {
+            echo '<option value="'.$row->id_poli.'"';
+            if ($row->id_poli == @$data->id_poli) {
+                echo ' selected';
+            }
+            echo '>'.$row->poli.'</option>';
+        }
+    } ?>
                     </select>
               </div>
 
@@ -155,7 +151,8 @@ if ($data->tanggal) {
 
 
  
-                  <?php if (@$data->rujukan=='Y'){ ?>
+                  <?php if (@$data->rujukan == 'Y') {
+        ?>
               
                     <div class="form-group">
                      <label class="control-label col-md-3 col-sm-3 col-xs-12" style='padding-top:10px;'>Rujukan :</label>
@@ -164,7 +161,9 @@ if ($data->tanggal) {
                         <input type=radio name='rujukan' value='N' class="flat"> T                
                       </div>
                   </div>  
-                <?php   }else{ ?>  
+                <?php
+    } else {
+        ?>  
                   
                     <div class="form-group">
                      <label class="control-label col-md-3 col-sm-3 col-xs-12" style='padding-top:10px;'>Rujukan :</label>
@@ -173,7 +172,8 @@ if ($data->tanggal) {
                         <input type=radio name='rujukan' value='N' class="flat" checked> T          
                       </div>
                   </div>  
-                 <?php } ?>
+                 <?php
+    } ?>
 
 
 
@@ -394,6 +394,6 @@ if ($data->tanggal) {
 
 </body>
 </html>
-<?
+<?php
 }
 ?>

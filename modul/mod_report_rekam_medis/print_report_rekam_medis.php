@@ -1,31 +1,30 @@
 <?php
-include "./../../config/koneksi.php";
-include "./../../config/fungsi_indobulan.php";
+include './../../config/koneksi.php';
+include './../../config/fungsi_indobulan.php';
 
-$tampil=mysql_query("SELECT * FROM modul WHERE id_modul ='".$_GET[report_id]."'");
+$tampil = mysql_query("SELECT * FROM modul WHERE id_modul ='".$_GET[report_id]."'");
 
-$r=mysql_fetch_array($tampil);
+$r = mysql_fetch_array($tampil);
 
-$module   = $_GET['module'];
-$imodule  = ucwords($r['nama_modul']);
-$nmmodule   = ucwords($r['nama_modul']);
-$id       = $r['id_modul'];
-$fa_icon    = $r['fa_icon'];
+$module = $_GET['module'];
+$imodule = ucwords($r['nama_modul']);
+$nmmodule = ucwords($r['nama_modul']);
+$id = $r['id_modul'];
+$fa_icon = $r['fa_icon'];
 
-if($r[orientation] == 'P') {
-  $orientation = 'portrait';
+if ($r[orientation] == 'P') {
+    $orientation = 'portrait';
 } else {
-  $orientation = 'landscape';
+    $orientation = 'landscape';
 }
-
 
 $pasien = $_GET['pasien'];
 $ldate = $_GET['ldate'];
 $ldate = $_GET['ldate'];
 
-$ftgl = DATE('d/m/Y',strtotime($_GET['fdate']));
-$ltgl = DATE('d/m/Y',strtotime($_GET['ldate']));
-    
+$ftgl = date('d/m/Y', strtotime($_GET['fdate']));
+$ltgl = date('d/m/Y', strtotime($_GET['ldate']));
+
 ?>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -141,11 +140,15 @@ function icetak(){
 
 <!--<body onload="cetakspk()">-->
 
-<? if ($_GET['printto'] == '2') { ?>
+<?php if ($_GET['printto'] == '2') {
+    ?>
 <body onload="icetak()">
-<? } else { ?>
+<?php
+} else {
+        ?>
 <body>
-<? } ?>
+<?php
+    } ?>
 
 
    <div class="noprint themeborderleft themeborderright themebordertop themeborderbottom"  >
@@ -162,14 +165,14 @@ function icetak(){
 </div>
 
 
-<?
-$gtampil=mysql_query("SELECT * FROM informasi_perusahaan where id_informasi_perusahaan = '1'");
- $g=mysql_fetch_array($gtampil);
+<?php
+$gtampil = mysql_query("SELECT * FROM informasi_perusahaan where id_informasi_perusahaan = '1'");
+ $g = mysql_fetch_array($gtampil);
 
 if ($g['pict']) {
-  $pict = $g['pict'];
+    $pict = $g['pict'];
 } else {
-  $pict = '';
+    $pict = '';
 }
 
 $company = ucwords($g['company']);
@@ -178,12 +181,12 @@ $company = ucwords($g['company']);
  <table width='100%' style="padding-top:10px;">
 <tr>
 <td width='10%'>
-<!-- <img src="../../images/logo/<?=$pict;?>" width=100px> -->
+<!-- <img src="../../images/logo/<?=$pict; ?>" width=100px> -->
 </td>
 <td style="text-align:center;" width='80%'>
-<span class='h1'><?=$nmmodule;?></span><br>
-<? echo "<span class='h2'>".$g['company']."</span><br>"; ?>
-<br>Periode : <?=$ftgl;?> - <?=$ltgl;?>
+<span class='h1'><?=$nmmodule; ?></span><br>
+<?php echo "<span class='h2'>".$g['company'].'</span><br>'; ?>
+<br>Periode : <?=$ftgl; ?> - <?=$ltgl; ?>
 </td>
 <td width='10%'>
 &nbsp
@@ -192,30 +195,30 @@ $company = ucwords($g['company']);
 </table>
 <hr>
 
-<?
- $tampil=mysql_query("SELECT a.*,b.agama,c.kategori
+<?php
+ $tampil = mysql_query("SELECT a.*,b.agama,c.kategori
           FROM pasien a left join agama b 
            ON a.id_agama = b.id_agama
            left join kategori c
            ON a.id_kategori = c.id_kategori
            WHERE a.id_pasien = '$pasien' ");
-  
-$r=mysql_fetch_array($tampil); 
 
-$tgl_lahir = DATE('d/m/Y',strtotime($r[tgl_lahir]));
+$r = mysql_fetch_array($tampil);
+
+$tgl_lahir = date('d/m/Y', strtotime($r[tgl_lahir]));
 
 if ($r['gender'] == 'L') {
-    $gender    = 'Laki-laki';
+    $gender = 'Laki-laki';
 } else {
-     $gender    = 'Perempuan';
+    $gender = 'Perempuan';
 }
 ?>      
 
 <table style="width: 100%;">
-<tr><td style="width: 20%;">NIP</td><td style="width: 1%;">:</td><td><?=$r[ktp];?></td></tr>
-<tr><td style="width: 20%;">Nama Pasien</td><td style="width: 1%;">:</td><td><?=$r[nama];?></td></tr>
-<tr><td style="width: 20%;">Jenis Kelamin</td><td style="width: 1%;">:</td><td><?=$gender;?></td></tr>
-<tr><td style="width: 20%;">Tanggal Lahir</td><td style="width: 1%;">:</td><td><?=$tgl_lahir;?></td></tr>
+<tr><td style="width: 20%;">NIP</td><td style="width: 1%;">:</td><td><?=$r[ktp]; ?></td></tr>
+<tr><td style="width: 20%;">Nama Pasien</td><td style="width: 1%;">:</td><td><?=$r[nama]; ?></td></tr>
+<tr><td style="width: 20%;">Jenis Kelamin</td><td style="width: 1%;">:</td><td><?=$gender; ?></td></tr>
+<tr><td style="width: 20%;">Tanggal Lahir</td><td style="width: 1%;">:</td><td><?=$tgl_lahir; ?></td></tr>
 </table> 
 <br>
 <table style="width: 100%;" border='1'>
@@ -227,9 +230,9 @@ if ($r['gender'] == 'L') {
     <td>Tindakan</td>
   </tr>
 
-    <?
+    <?php
 
-$tampil=mysql_query("SELECT a.*,b.nama,b.tgl_lahir,b.ktp,c.poli,d.kategori          
+$tampil = mysql_query("SELECT a.*,b.nama,b.tgl_lahir,b.ktp,c.poli,d.kategori          
         FROM kunjungan_berobat a left join pasien b 
          ON a.id_pasien = b.id_pasien
          left join poli c 
@@ -238,24 +241,18 @@ $tampil=mysql_query("SELECT a.*,b.nama,b.tgl_lahir,b.ktp,c.poli,d.kategori
          ON b.id_kategori = d.id_kategori        
          WHERE a.id_pasien = '$pasien'");
 
-     
+while ($r = mysql_fetch_array($tampil)) {
+    $tgl = date('d/m/Y', strtotime($r[tanggal]));
 
-while ($r=mysql_fetch_array($tampil)){  
+    echo'<tr>';
+    echo"<td>$tgl</td>";
+    echo"<td>$r[keluhan]</td>";
+    echo"<td>$r[diagnosa]</td>";
+    echo"<td>$r[pemeriksaan]</td>";
+    echo"<td>$r[tindakan]</td>";
 
-$tgl       = DATE('d/m/Y',strtotime($r[tanggal]));
-
-echo"<tr>";
-echo"<td>$tgl</td>";
-echo"<td>$r[keluhan]</td>";
-echo"<td>$r[diagnosa]</td>";
-echo"<td>$r[pemeriksaan]</td>";
-echo"<td>$r[tindakan]</td>";
-   
-   
-echo"</td>";  
-echo"</tr>";
-     
-        
+    echo'</td>';
+    echo'</tr>';
 }
 ?>
 

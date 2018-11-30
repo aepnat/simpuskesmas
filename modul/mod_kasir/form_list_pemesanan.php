@@ -1,20 +1,15 @@
-<?
+<?php
 
 session_start();
 
-if (empty($_SESSION['username']) AND empty($_SESSION['password'])){
+if (empty($_SESSION['username']) and empty($_SESSION['password'])) {
+    echo "<script>window.alert('Please login first.'); window.location=('../../index.php.php')</script>";
+} else {
+    include './../../config/koneksi.php';
 
-  echo "<script>window.alert('Please login first.'); window.location=('../../index.php.php')</script>";
+    include './../../config/fungsi_thumb.php';
 
-} else{
-
-include "./../../config/koneksi.php";
-
-include "./../../config/fungsi_thumb.php";
-
-$idate    = date("Y-m-d");
-
-?>
+    $idate = date('Y-m-d'); ?>
 
 <!doctype html>
 
@@ -156,35 +151,25 @@ $idate    = date("Y-m-d");
 
 <body style='background-color:#fff;'>
 
-<?
+<?php
 
 $imodule = $_GET['imodule'];
 
-$modul = $_GET['module'];
+    $modul = $_GET['module'];
 
-$title = $_GET['title'];
+    $title = $_GET['title'];
 
+    $role = $_SESSION['role'];
 
+    $id_module = $_GET['id_module'];
 
-$role   = $_SESSION['role'];
+    $prd = $_GET['prd'];
 
+    $tanggal = $_GET['tanggal'];
 
+    $outlet = $_GET['outlet'];
 
-$id_module = $_GET['id_module']; 
-
-
-
-$prd = $_GET['prd']; 
-
-$tanggal = $_GET['tanggal'];
-
-$outlet = $_GET['outlet'];
-
-$notrans = $_GET['notrans'];
-
-  
-
-?>
+    $notrans = $_GET['notrans']; ?>
 
 
 
@@ -268,11 +253,10 @@ $notrans = $_GET['notrans'];
 
            
 
-        <?
+        <?php
 
-       
 
-      $SQL= "SELECT p.tanggal,a.*,c.id_unit_barang,c.unit_barang,b.kode as kode_bar,b.barang
+      $SQL = "SELECT p.tanggal,a.*,c.id_unit_barang,c.unit_barang,b.kode as kode_bar,b.barang
 
                   ,a.qty-a.qty_ps as iqty, b.id_merk, b.id_barang
                   ,ifnull((SELECT sum(saldo_akhir)
@@ -322,24 +306,17 @@ $notrans = $_GET['notrans'];
 
                  AND ifnull(d.id_pemesanan_barang_detail,0) = '0'
 
-                 ORDER BY a.notrans,a.seqno";   
+                 ORDER BY a.notrans,a.seqno";
 
+    $tampil = mysql_query($SQL);
 
+    $no = 1;
 
-        $tampil=mysql_query($SQL);
-
-         
-
-         $no = 1;
-
-         
-
-         while ($r=mysql_fetch_array($tampil)){  
+    while ($r = mysql_fetch_array($tampil)) {
 
           //selectPR(no_pr,id_permintaan_barang_detail,ibarang,id_barang,unit_barang,iqty,qty)
 
-
-          $hsql  = mysql_query("SELECT harga as last_price 
+        $hsql = mysql_query("SELECT harga as last_price 
                                 FROM pemesanan_barang_detail
                                 WHERE id_outlet = '$outlet'
                                 and id_barang = '$r[id_barang]'
@@ -349,36 +326,25 @@ $notrans = $_GET['notrans'];
 
                               ");
 
+        $h = mysql_fetch_array($hsql);
 
+        if ($h['last_price']) {
+            $last_price = $h['last_price'];
+        } else {
+            $last_price = 0;
+        }
 
-             $h         = mysql_fetch_array($hsql);
+        $tgl = date('d/m/Y', strtotime($r['tanggal']));
 
-              
+        $barang = $r['kode_bar'].' - '.$r['barang'];
 
-             if ($h['last_price']) {
-              $last_price  = $h['last_price'];
-             } else {
-              $last_price  = 0;  
-             }
+        $no_pr = $r['kode'].''.$r['notrans'];
 
-
-
-          $tgl = date("d/m/Y", strtotime($r['tanggal']));
-
-          $barang = $r['kode_bar'].' - '.$r['barang'];
-
-          $no_pr = $r['kode'].''.$r['notrans'];
-
-
-
-
-         echo"<tr>";
-
-        ?>
+        echo'<tr>'; ?>
 
         <td style='text-align:center;'> 
 
-            <a href="javascript:selectPR('<?php echo trim($no_pr)."','".trim($r['id_permintaan_barang_detail'])."','".trim($barang)."','".trim($r['id_barang'])."','".trim($r['id_merk'])."','".trim($r['id_unit_barang'])."','".number_format($r['iqty'], 2, ".", ",")."','".$r['iqty']."','".$last_price ?>')">
+            <a href="javascript:selectPR('<?php echo trim($no_pr)."','".trim($r['id_permintaan_barang_detail'])."','".trim($barang)."','".trim($r['id_barang'])."','".trim($r['id_merk'])."','".trim($r['id_unit_barang'])."','".number_format($r['iqty'], 2, '.', ',')."','".$r['iqty']."','".$last_price ?>')">
 
             <span class='icon'><i class='fa fa-check'></i></span>
 
@@ -388,35 +354,30 @@ $notrans = $_GET['notrans'];
 
 
 
-        <?
+        <?php
 
-        echo"<td>".$tgl."</td>";
+        echo'<td>'.$tgl.'</td>';
 
-        echo"<td>".$r['kode']."".$r['notrans']."</td>";
+        echo'<td>'.$r['kode'].''.$r['notrans'].'</td>';
 
-        echo"<td>".$r['kode_bar']."</td>";
+        echo'<td>'.$r['kode_bar'].'</td>';
 
-        echo"<td>".$r['barang']."</td>";
+        echo'<td>'.$r['barang'].'</td>';
 
-        echo"<td style='text-align:right;'>".number_format($r['qty'], 2, ".", ",")."</td>";  
+        echo"<td style='text-align:right;'>".number_format($r['qty'], 2, '.', ',').'</td>';
 
-        echo"<td style='text-align:right;'>".number_format($r['qty_ps'], 2, ".", ",")."</td>";  
+        echo"<td style='text-align:right;'>".number_format($r['qty_ps'], 2, '.', ',').'</td>';
 
-        echo"<td style='text-align:right;'>".number_format($r['iqty'], 2, ".", ",")."</td>";  
+        echo"<td style='text-align:right;'>".number_format($r['iqty'], 2, '.', ',').'</td>';
 
-         echo"<td style='text-align:right;'>".number_format($r['stok'], 2, ".", ",")."</td>";  
+        echo"<td style='text-align:right;'>".number_format($r['stok'], 2, '.', ',').'</td>';
 
-        echo"<td>".$r['unit_barang']."</td>";              
+        echo'<td>'.$r['unit_barang'].'</td>';
 
-         echo"</tr>";
+        echo'</tr>';
 
-         $no++;
-
-            
-
-         }
-
-         ?>
+        $no++;
+    } ?>
 
         </tbody>
 
@@ -466,63 +427,83 @@ $notrans = $_GET['notrans'];
 
               
 
-    <?php if ($size == '10') { ?>
+    <?php if ($size == '10') {
+        ?>
 
     <option value="10" selected="selected">10</option>
 
-    <?php } else { ?>
+    <?php
+    } else {
+        ?>
 
     <option value="10">10</option>
 
-    <?php  } ?>
+    <?php
+    } ?>
 
 
 
-     <?php if ($size == '15') { ?>
+     <?php if ($size == '15') {
+        ?>
 
     <option value="15" selected="selected">15</option>
 
-    <?php } else { ?>
+    <?php
+    } else {
+        ?>
 
     <option value="15">15</option>
 
-    <?php  } ?>
+    <?php
+    } ?>
 
 
 
-    <?php if ($size == '20') { ?>
+    <?php if ($size == '20') {
+        ?>
 
     <option value="20" selected="selected">20</option>
 
-    <?php } else { ?>
+    <?php
+    } else {
+        ?>
 
     <option value="20">20</option>
 
-    <?php  } ?>
+    <?php
+    } ?>
 
 
 
-    <?php if ($size == '50') { ?>
+    <?php if ($size == '50') {
+        ?>
 
     <option value="50" selected="selected">20</option>
 
-    <?php } else { ?>
+    <?php
+    } else {
+        ?>
 
     <option value="50">50</option>
 
-               <?php  } ?>
+               <?php
+    } ?>
 
 
 
-    <?php if ($size == '100') { ?>
+    <?php if ($size == '100') {
+        ?>
 
     <option value="100" selected="selected">100</option>
 
-    <?php } else { ?>
+    <?php
+    } else {
+        ?>
 
     <option value="100">100</option>
 
-     <?php  } ?>
+     <?php
+    } ?>
 
               
 
@@ -616,8 +597,7 @@ $notrans = $_GET['notrans'];
 
 </html>
 
-<?
-
+<?php
 }
 
 ?>

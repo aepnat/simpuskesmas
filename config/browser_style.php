@@ -31,7 +31,7 @@
 //       echo"<link href='css/i_style_io.css' type='text/css' rel='stylesheet'>";
 //    }
 //
-//    ?>
-	<?
+//?>
+	<?php
    echo" <link href='css/i_style.css' type='text/css' rel='stylesheet'>";
    ?>

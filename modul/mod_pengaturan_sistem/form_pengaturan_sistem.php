@@ -1,38 +1,32 @@
-<?
+<?php
 session_start();
-if (empty($_SESSION['username']) AND empty($_SESSION['password'])){
-  echo "<script>window.alert('Please login first.'); window.location=('../../index.php.php')</script>";
-} else{
-include "./../../config/koneksi.php";
-include "./../../config/fungsi_thumb.php";
-?>
-<?
-
-
+if (empty($_SESSION['username']) and empty($_SESSION['password'])) {
+    echo "<script>window.alert('Please login first.'); window.location=('../../index.php.php')</script>";
+} else {
+    include './../../config/koneksi.php';
+    include './../../config/fungsi_thumb.php'; ?>
+<?php
 
 
 $modul = $_GET['module'];
-$imodule = $_GET['imodule'];
-$title = $_GET['title'];
+    $imodule = $_GET['imodule'];
+    $title = $_GET['title'];
 
-$role   = $_SESSION['role'];
+    $role = $_SESSION['role'];
 
-$id_module = $_GET['id_module']; 
+    $id_module = $_GET['id_module'];
 
+    if ($_GET['tab']) {
+        $tab = $_GET['tab'];
+    } else {
+        $tab = 'ip';
+    }
 
- if ($_GET['tab']) {
-   $tab = $_GET['tab'];
- } else {
-   $tab = 'ip';
- }
-
- if ($_GET['stab']) {
-   $stab = $_GET['stab'];
- } else {
-   $stab = 'tunai';
- }
-
-?>
+    if ($_GET['stab']) {
+        $stab = $_GET['stab'];
+    } else {
+        $stab = 'tunai';
+    } ?>
 <!doctype html>
 <html>
 <head>
@@ -68,7 +62,7 @@ $id_module = $_GET['id_module'];
 
 <script language="javascript">
   function closeform() {
-     window.parent.location.href = "<?php echo"./../../main.php?module=$imodule&id_module=$id_module";?>";  
+     window.parent.location.href = "<?php echo"./../../main.php?module=$imodule&id_module=$id_module"; ?>";  
      window.parent.tb_remove();
   }
    </script>
@@ -116,7 +110,9 @@ $id_module = $_GET['id_module'];
 
       <ul class="nav nav-tabs">
 
-       <li <?php if ($tab == 'ip') { echo 'class="active"'; } ?> ><a data-toggle="tab" href="#home">Informasi Perusahaan</a>
+       <li <?php if ($tab == 'ip') {
+        echo 'class="active"';
+    } ?> ><a data-toggle="tab" href="#home">Informasi Perusahaan</a>
         </li>
        
         <li class="pull-right">
@@ -128,30 +124,28 @@ $id_module = $_GET['id_module'];
 
       <div class="tab-content">
 
-          <div id="home" class="tab-pane fade <?php if ($tab == 'ip') { echo 'in active primary'; } ?>">
+          <div id="home" class="tab-pane fade <?php if ($tab == 'ip') {
+        echo 'in active primary';
+    } ?>">
           <br>
 
            <div class="col-md-12 col-sm-12 col-xs-12 form-group">
               <div class="x_content">
 
-                <?
+                <?php
 
                  $id = 1; // isset($_GET['id_general_setting']) ? intval($_GET['id_general_setting']) : false;
-    
-                    if($id){
-                       $query = mysql_query('SELECT * FROM informasi_perusahaan WHERE id_informasi_perusahaan = "'.$id.'"');
-                       if($query && mysql_num_rows($query) == 1){
-                          $data = mysql_fetch_object($query);
-                       }else 
-                          die('Data general_setting tidak ditemukan');
-                    }
-                  
-                    $pict  = $data->pict;
 
-              
+    if ($id) {
+        $query = mysql_query('SELECT * FROM informasi_perusahaan WHERE id_informasi_perusahaan = "'.$id.'"');
+        if ($query && mysql_num_rows($query) == 1) {
+            $data = mysql_fetch_object($query);
+        } else {
+            die('Data general_setting tidak ditemukan');
+        }
+    }
 
-
-                ?>
+    $pict = $data->pict; ?>
                    <!-- start form for validation -->
                      <form action="<?php echo"../../modul/mod_$modul/aksi_$modul.php?module=$modul&act=ip"; ?>" method="post" name="formData" enctype="multipart/form-data"  > 
                      
@@ -229,7 +223,9 @@ $id_module = $_GET['id_module'];
 
           </div>
 
-          <div id="menu1" class="tab-pane fade <?php if ($tab == 'sa') { echo 'in active primary'; } ?>">
+          <div id="menu1" class="tab-pane fade <?php if ($tab == 'sa') {
+        echo 'in active primary';
+    } ?>">
               <br>
                   <div class="col-md-12 col-sm-12 col-xs-12 form-group">
                   <div class="x_content">
@@ -255,56 +251,51 @@ $id_module = $_GET['id_module'];
                                       </tr>
                                       </thead>
                                   <tbody>
-                                  <?
+                                  <?php
 
                                    $SQL = "SELECT* FROM pg_setoran_awal 
                                             WHERE prd = '$prd' order by id_pg_setoran_awal";
 
+    $tampil = mysql_query($SQL);
 
-                                  $tampil=mysql_query($SQL);
-                                    
-                                 $no = 1;
-            
-                                    while ($r=mysql_fetch_array($tampil)){  
+    $no = 1;
 
-                                    if ($r['nilai'] == '0') {
-                                      $disabled = 'readonly';
-                                    } else {  
-                                      $disabled = '';
-                                    }
+    while ($r = mysql_fetch_array($tampil)) {
+        if ($r['nilai'] == '0') {
+            $disabled = 'readonly';
+        } else {
+            $disabled = '';
+        }
 
-                                                                          
-                                    
-                                    echo"<tr>";
-
-                                    ?>
+        echo'<tr>'; ?>
 
                                      <form action="<?php echo"../../modul/mod_$modul/aksi_$modul.php?module=$modul&act=sa"; ?>" method="post" name="formData" enctype="multipart/form-data"  > 
                      
                                      <td>                                         
                                          <input type="text" style='padding:6px;' name="jenis" 
-                                         class="form-control" value="<?php echo $r['jenis'];?>" /> 
+                                         class="form-control" value="<?php echo $r['jenis']; ?>" /> 
                             
                                      </td>
 
                                      <td>                                         
                                          <input type="text" style='padding:6px;text-align: right;' name="nilai" 
-                                         class="form-control" <?php echo $disabled;?>  value="<?php echo $r['nilai'];?>" /> 
+                                         class="form-control" <?php echo $disabled; ?>  value="<?php echo $r['nilai']; ?>" /> 
                             
                                      </td>
 
                                       <td>
                                          <select name="jenis_posting" class="form-control" required >
-                                          <?
+                                          <?php
                                             $query = mysql_query('SELECT * FROM jenis_posting ORDER BY jenis_posting');
-                                             if($query && mysql_num_rows($query) > 0){
-                                                while($row = mysql_fetch_object($query)){
-                                                   echo '<option value="'.$row->id_jenis_posting.'"';
-                                                   if($row->id_jenis_posting == $r['id_jenis_posting']) echo ' selected';
-                                                   echo '>'.$row->jenis_posting.'</option>';
-                                                }
-                                             }        
-                                          ?>  
+        if ($query && mysql_num_rows($query) > 0) {
+            while ($row = mysql_fetch_object($query)) {
+                echo '<option value="'.$row->id_jenis_posting.'"';
+                if ($row->id_jenis_posting == $r['id_jenis_posting']) {
+                    echo ' selected';
+                }
+                echo '>'.$row->jenis_posting.'</option>';
+            }
+        } ?>  
                                           </select>       
 
                                        </td>
@@ -312,19 +303,20 @@ $id_module = $_GET['id_module'];
                                         <td>
                                          <select name="rek_debet" class="form-control" required >
                                          <option value='0'></option>
-                                          <?
+                                          <?php
                                             $query = mysql_query('SELECT * FROM rekening 
                                                                   WHERE parentid != "0" 
                                                                   
                                                                   ORDER BY norek');
-                                             if($query && mysql_num_rows($query) > 0){
-                                                while($row = mysql_fetch_object($query)){
-                                                   echo '<option value="'.$row->id_rekening.'"';
-                                                   if($row->id_rekening == $r['rek_debet']) echo ' selected';
-                                                   echo '>'.$row->norek.' - '.$row->rekening.'</option>';
-                                                }
-                                             }        
-                                          ?>  
+        if ($query && mysql_num_rows($query) > 0) {
+            while ($row = mysql_fetch_object($query)) {
+                echo '<option value="'.$row->id_rekening.'"';
+                if ($row->id_rekening == $r['rek_debet']) {
+                    echo ' selected';
+                }
+                echo '>'.$row->norek.' - '.$row->rekening.'</option>';
+            }
+        } ?>  
                                           </select>       
 
                                        </td>
@@ -332,48 +324,44 @@ $id_module = $_GET['id_module'];
                                         <td>
                                           <select name="rek_kredit" class="form-control" required >
                                          <option value='0'></option>
-                                         <?
+                                         <?php
                                             $query = mysql_query('SELECT * FROM rekening 
                                                                   WHERE parentid !=  "0"  
                                                                   
                                                                   ORDER BY norek');
-                                             if($query && mysql_num_rows($query) > 0){
-                                                while($row = mysql_fetch_object($query)){
-                                                   echo '<option value="'.$row->id_rekening.'"';
-                                                   if($row->id_rekening == $r['rek_kredit']) echo ' selected';
-                                                   echo '>'.$row->norek.' - '.$row->rekening.'</option>';
-                                                }
-                                             }        
-                                          ?>  
+        if ($query && mysql_num_rows($query) > 0) {
+            while ($row = mysql_fetch_object($query)) {
+                echo '<option value="'.$row->id_rekening.'"';
+                if ($row->id_rekening == $r['rek_kredit']) {
+                    echo ' selected';
+                }
+                echo '>'.$row->norek.' - '.$row->rekening.'</option>';
+            }
+        } ?>  
                                           </select>       
 
                                        </td>
 
 
 
-                                    <?php   
-                                    echo" <td  style='text-align:center;'>";     
-                                    ?>                               
+                                    <?php 
+                                    echo" <td  style='text-align:center;'>"; ?>                               
                                     <button type="submit"   class="btn btn-primary btn-sm">
                                                   <span class="glyphicon glyphicon-floppy-disk" aria-hidden="true"></span>
                                     </button>
-                                    <?php            
-                                    echo"</td>";              
-                                    echo"</tr>";
-                                $no++;
-                                ?>
+                                    <?php 
+                                    echo'</td>';
+        echo'</tr>';
+        $no++; ?>
 
                                 <input type="hidden" name="ID" value="<?php echo $r['id_pg_setoran_awal']?>" />
                                 <input type="hidden" name="u_tab" value="<?php echo $r['u_tab']?>" />
                                   <input type="hidden" name="id_module" value="<?php echo $id_module?>" /> 
                                   <input type="hidden" name="imodule" value="<?php echo $imodule?>" /> 
 
-                                <?
-                               echo"</form>";
-                                
-                                }
-
-                                  ?>  
+                                <?php
+                               echo'</form>';
+    } ?>  
 
 
 
@@ -387,26 +375,25 @@ $id_module = $_GET['id_module'];
 
           </div>    
 
-          <div id="menu2" class="tab-pane fade <?php if ($tab == 'pd') { echo 'in active primary'; } ?>">
+          <div id="menu2" class="tab-pane fade <?php if ($tab == 'pd') {
+        echo 'in active primary';
+    } ?>">
               <br>
                  <div class="row">
 
-                  <?
+                  <?php
 
                  $id = 1; // isset($_GET['id_general_setting']) ? intval($_GET['id_general_setting']) : false;
-    
-                    if($id){
-                       $query = mysql_query('SELECT * FROM pg_penarikan_dana
-                                             WHERE  prd = "'.$prd.'" ');
-                       if($query && mysql_num_rows($query) == 1){
-                          $data = mysql_fetch_object($query);
-                       }else 
-                          die('Data pg_penarikan_dana tidak ditemukan');
-                    }
-                  
-         
 
-                ?>
+    if ($id) {
+        $query = mysql_query('SELECT * FROM pg_penarikan_dana
+                                             WHERE  prd = "'.$prd.'" ');
+        if ($query && mysql_num_rows($query) == 1) {
+            $data = mysql_fetch_object($query);
+        } else {
+            die('Data pg_penarikan_dana tidak ditemukan');
+        }
+    } ?>
                    <!-- start form for validation -->
                      <form action="<?php echo"../../modul/mod_$modul/aksi_$modul.php?module=$modul&act=pd"; ?>"   method="post" name="formData" enctype="multipart/form-data"  > 
                      
@@ -463,19 +450,20 @@ $id_module = $_GET['id_module'];
                       <div class="col-md-4  col-sm-4 col-xs-4 form-group">
                                <select name="rek_debet" class="form-control" required >
                                 <option value='0'></option>
-                                 <?
+                                 <?php
                                    $query = mysql_query('SELECT * FROM rekening 
                                WHERE parentid != "0" 
                                
                                ORDER BY norek');
-                                    if($query && mysql_num_rows($query) > 0){
-                                       while($row = mysql_fetch_object($query)){
-                                          echo '<option value="'.$row->id_rekening.'"';
-                                          if($row->id_rekening == $data->rek_debet) echo ' selected';
-                                          echo '>'.$row->norek.' - '.$row->rekening.'</option>';
-                                       }
-                                    }        
-                                 ?>  
+    if ($query && mysql_num_rows($query) > 0) {
+        while ($row = mysql_fetch_object($query)) {
+            echo '<option value="'.$row->id_rekening.'"';
+            if ($row->id_rekening == $data->rek_debet) {
+                echo ' selected';
+            }
+            echo '>'.$row->norek.' - '.$row->rekening.'</option>';
+        }
+    } ?>  
                                  </select>      
                              </div>
                        <div class="col-md-1 col-sm-1 col-xs-1 form-group">
@@ -484,19 +472,20 @@ $id_module = $_GET['id_module'];
                       <div class="col-md-4  col-sm-4 col-xs-4 form-group">
                                <select name="rek_kredit" class="form-control" required >
                                 <option value='0'></option>
-                                 <?
+                                 <?php
                                    $query = mysql_query('SELECT * FROM rekening 
                                WHERE parentid != "0" 
                                
                                ORDER BY norek');
-                                    if($query && mysql_num_rows($query) > 0){
-                                       while($row = mysql_fetch_object($query)){
-                                          echo '<option value="'.$row->id_rekening.'"';
-                                          if($row->id_rekening == $data->rek_kredit) echo ' selected';
-                                          echo '>'.$row->norek.' - '.$row->rekening.'</option>';
-                                       }
-                                    }        
-                                 ?>  
+    if ($query && mysql_num_rows($query) > 0) {
+        while ($row = mysql_fetch_object($query)) {
+            echo '<option value="'.$row->id_rekening.'"';
+            if ($row->id_rekening == $data->rek_kredit) {
+                echo ' selected';
+            }
+            echo '>'.$row->norek.' - '.$row->rekening.'</option>';
+        }
+    } ?>  
                                  </select>      
                              </div>
                        <div class="col-md-1 col-sm-1 col-xs-1 form-group">
@@ -522,21 +511,29 @@ $id_module = $_GET['id_module'];
 
           </div>    
 
-          <div id="menu3" class="tab-pane fade <?php if ($tab == 'pm') { echo 'in active primary'; } ?>">
+          <div id="menu3" class="tab-pane fade <?php if ($tab == 'pm') {
+        echo 'in active primary';
+    } ?>">
               <br>
                  <div class="row" style="padding: 0px 10px 0px 10px;">
 
                   <ul class="nav nav-tabs" >
 
-                   <li <?php if ($stab == 'tunai') { echo 'class="active"'; } ?> ><a data-toggle="tab" href="#tunai">Dana Tunai</a>
+                   <li <?php if ($stab == 'tunai') {
+        echo 'class="active"';
+    } ?> ><a data-toggle="tab" href="#tunai">Dana Tunai</a>
                     </li>
-                    <li <?php if ($stab == 'barang') { echo 'class="active"'; } ?> ><a data-toggle="tab" href="#barang">Barang</a>
+                    <li <?php if ($stab == 'barang') {
+        echo 'class="active"';
+    } ?> ><a data-toggle="tab" href="#barang">Barang</a>
                     </li>
                   </ul>
 
                   <div class="tab-content">
 
-                      <div id="tunai" class="tab-pane fade <?php if ($stab == 'tunai') { echo 'in active primary'; } ?>">
+                      <div id="tunai" class="tab-pane fade <?php if ($stab == 'tunai') {
+        echo 'in active primary';
+    } ?>">
                       <br>
 
                      
@@ -578,27 +575,19 @@ $id_module = $_GET['id_module'];
                                       </thead>
                                   <tbody>
 
-                                   <?
+                                   <?php
 
                                   $kSQL = "SELECT* FROM pg_peminjaman_tunai WHERE tipe = 'K'  AND  prd = '$prd'";
 
+    $ktampil = mysql_query($kSQL);
 
-                                  $ktampil=mysql_query($kSQL);
-                                    
-                                        
-                                  $k=mysql_fetch_array($ktampil);
+    $k = mysql_fetch_array($ktampil);
 
+    $sSQL = "SELECT* FROM pg_peminjaman_tunai WHERE tipe = 'S'  AND  prd = '$prd'";
 
-                                  $sSQL = "SELECT* FROM pg_peminjaman_tunai WHERE tipe = 'S'  AND  prd = '$prd'";
+    $stampil = mysql_query($sSQL);
 
-
-                                  $stampil=mysql_query($sSQL);
-                                    
-                                        
-                                  $s=mysql_fetch_array($stampil);
-
-
-                                  ?>    
+    $s = mysql_fetch_array($stampil); ?>    
 
                                   <tr>
                                    <td><label class="control-label"  style="padding-top:8px;">Rekening</label></td>
@@ -611,36 +600,38 @@ $id_module = $_GET['id_module'];
                                    <td>
                                      <select name="rek_debet_k" class="form-control" required >
                                          <option value='0'></option>
-                                          <?
+                                          <?php
                                             $query = mysql_query('SELECT * FROM rekening 
                                                                   WHERE parentid != "0"         
                                                                   ORDER BY norek');
-                                             if($query && mysql_num_rows($query) > 0){
-                                                while($row = mysql_fetch_object($query)){
-                                                   echo '<option value="'.$row->id_rekening.'"';
-                                                   if($row->id_rekening == $k['rek_debet']) echo ' selected';
-                                                   echo '>'.$row->norek.' - '.$row->rekening.'</option>';
-                                                }
-                                             }        
-                                          ?>  
+    if ($query && mysql_num_rows($query) > 0) {
+        while ($row = mysql_fetch_object($query)) {
+            echo '<option value="'.$row->id_rekening.'"';
+            if ($row->id_rekening == $k['rek_debet']) {
+                echo ' selected';
+            }
+            echo '>'.$row->norek.' - '.$row->rekening.'</option>';
+        }
+    } ?>  
                                           </select>       
 
                                    </td>                                   
                                    <td> 
                                     <select name="rek_kredit_k" class="form-control" required >
                                          <option value='0'></option>
-                                          <?
+                                          <?php
                                             $query = mysql_query('SELECT * FROM rekening 
                                                                   WHERE parentid != "0" 
                                                                   ORDER BY norek');
-                                             if($query && mysql_num_rows($query) > 0){
-                                                while($row = mysql_fetch_object($query)){
-                                                   echo '<option value="'.$row->id_rekening.'"';
-                                                   if($row->id_rekening == $k['rek_kredit']) echo ' selected';
-                                                   echo '>'.$row->norek.' - '.$row->rekening.'</option>';
-                                                }
-                                             }        
-                                          ?>  
+    if ($query && mysql_num_rows($query) > 0) {
+        while ($row = mysql_fetch_object($query)) {
+            echo '<option value="'.$row->id_rekening.'"';
+            if ($row->id_rekening == $k['rek_kredit']) {
+                echo ' selected';
+            }
+            echo '>'.$row->norek.' - '.$row->rekening.'</option>';
+        }
+    } ?>  
                                           </select>       
 
 
@@ -659,36 +650,38 @@ $id_module = $_GET['id_module'];
                                    <td>
                                      <select name="rek_debet_pelunasan_k" class="form-control" required >
                                          <option value='0'></option>
-                                          <?
+                                          <?php
                                             $query = mysql_query('SELECT * FROM rekening 
                                                                   WHERE parentid != "0"         
                                                                   ORDER BY norek');
-                                             if($query && mysql_num_rows($query) > 0){
-                                                while($row = mysql_fetch_object($query)){
-                                                   echo '<option value="'.$row->id_rekening.'"';
-                                                   if($row->id_rekening == $k['rek_debet_pelunasan']) echo ' selected';
-                                                   echo '>'.$row->norek.' - '.$row->rekening.'</option>';
-                                                }
-                                             }        
-                                          ?>  
+    if ($query && mysql_num_rows($query) > 0) {
+        while ($row = mysql_fetch_object($query)) {
+            echo '<option value="'.$row->id_rekening.'"';
+            if ($row->id_rekening == $k['rek_debet_pelunasan']) {
+                echo ' selected';
+            }
+            echo '>'.$row->norek.' - '.$row->rekening.'</option>';
+        }
+    } ?>  
                                           </select>       
 
                                    </td>                                   
                                    <td> 
                                     <select name="rek_kredit_pelunasan_k" class="form-control" required >
                                          <option value='0'></option>
-                                          <?
+                                          <?php
                                             $query = mysql_query('SELECT * FROM rekening 
                                                                   WHERE parentid != "0" 
                                                                   ORDER BY norek');
-                                             if($query && mysql_num_rows($query) > 0){
-                                                while($row = mysql_fetch_object($query)){
-                                                   echo '<option value="'.$row->id_rekening.'"';
-                                                   if($row->id_rekening == $k['rek_kredit_pelunasan']) echo ' selected';
-                                                   echo '>'.$row->norek.' - '.$row->rekening.'</option>';
-                                                }
-                                             }        
-                                          ?>  
+    if ($query && mysql_num_rows($query) > 0) {
+        while ($row = mysql_fetch_object($query)) {
+            echo '<option value="'.$row->id_rekening.'"';
+            if ($row->id_rekening == $k['rek_kredit_pelunasan']) {
+                echo ' selected';
+            }
+            echo '>'.$row->norek.' - '.$row->rekening.'</option>';
+        }
+    } ?>  
                                           </select>       
 
 
@@ -703,7 +696,7 @@ $id_module = $_GET['id_module'];
                                    <td>
                                          <div class="col-md-6 col-sm-6 col-xs-6 form-group">  
                                          <input type="number" style='padding:6px;' name="min_tenor_k" 
-                                         class="form-control" value="<?php echo $k['min_tenor'];?>" /> 
+                                         class="form-control" value="<?php echo $k['min_tenor']; ?>" /> 
                                          </div>
                                           <div class="col-md-6 col-sm-6 col-xs-6 form-group">  
                                               <label class="control-label"  style="padding-top:8px;">X</label>                                           
@@ -713,7 +706,7 @@ $id_module = $_GET['id_module'];
                                     <td>
                                       <div class="col-md-6 col-sm-6 col-xs-6 form-group">  
                                          <input type="number" style='padding:6px;' name="min_tenor_s" 
-                                         class="form-control" value="<?php echo $s['min_tenor'];?>" /> 
+                                         class="form-control" value="<?php echo $s['min_tenor']; ?>" /> 
                                          </div>
                                          <div class="col-md-6 col-sm-6 col-xs-6 form-group">  
                                               <label class="control-label"  style="padding-top:8px;">X</label>                                           
@@ -732,7 +725,7 @@ $id_module = $_GET['id_module'];
                                    <td>
                                         <div class="col-md-6 col-sm-6 col-xs-6 form-group">  
                                          <input type="number" style='padding:6px;' name="max_tenor_k" 
-                                         class="form-control" value="<?php echo $k['max_tenor'];?>" /> 
+                                         class="form-control" value="<?php echo $k['max_tenor']; ?>" /> 
                                          </div>
                                           <div class="col-md-6 col-sm-6 col-xs-6 form-group">  
                                               <label class="control-label"  style="padding-top:8px;">X</label>                                           
@@ -742,7 +735,7 @@ $id_module = $_GET['id_module'];
                                     <td>
                                         <div class="col-md-6 col-sm-6 col-xs-6 form-group">  
                                          <input type="number" style='padding:6px;' name="max_tenor_s" 
-                                         class="form-control" value="<?php echo $s['max_tenor'];?>" /> 
+                                         class="form-control" value="<?php echo $s['max_tenor']; ?>" /> 
                                          </div>
                                          <div class="col-md-6 col-sm-6 col-xs-6 form-group">  
                                               <label class="control-label"  style="padding-top:8px;">X</label>                                           
@@ -761,7 +754,7 @@ $id_module = $_GET['id_module'];
                                    <td>
                                          <div class="col-md-6 col-sm-6 col-xs-6 form-group">  
                                          <input type="number" style='padding:6px;' name="max_pinjaman_k" 
-                                         class="form-control" value="<?php echo $k['max_pinjaman'];?>" /> 
+                                         class="form-control" value="<?php echo $k['max_pinjaman']; ?>" /> 
                                          </div>
                                           <div class="col-md-6 col-sm-6 col-xs-6 form-group">  
                                               <label class="control-label"  style="padding-top:8px;">X Saldo</label>                                           
@@ -771,7 +764,7 @@ $id_module = $_GET['id_module'];
                                     <td>
                                         <div class="col-md-6 col-sm-6 col-xs-6 form-group">  
                                          <input type="number" style='padding:6px;' name="max_pinjaman_s" 
-                                         class="form-control" value="<?php echo $s['max_pinjaman'];?>" /> 
+                                         class="form-control" value="<?php echo $s['max_pinjaman']; ?>" /> 
                                          </div>
                                          <div class="col-md-6 col-sm-6 col-xs-6 form-group">  
                                               <label class="control-label"  style="padding-top:8px;">X Saldo</label>                                           
@@ -790,7 +783,7 @@ $id_module = $_GET['id_module'];
                                    <td>
                                          <div class="col-md-6 col-sm-6 col-xs-6 form-group">  
                                          <input type="number" style='padding:6px;' name="max_angsuran_k" 
-                                         class="form-control" value="<?php echo $k['max_angsuran'];?>" /> 
+                                         class="form-control" value="<?php echo $k['max_angsuran']; ?>" /> 
                                          </div>
                                           <div class="col-md-6 col-sm-6 col-xs-6 form-group">
                                               <label class="control-label"  style="padding-top:8px;">Gaji</label>                                           
@@ -800,7 +793,7 @@ $id_module = $_GET['id_module'];
                                     <td>
                                          <div class="col-md-6 col-sm-6 col-xs-6 form-group">    
                                          <input type="number" style='padding:6px;' name="max_angsuran_s" 
-                                         class="form-control" value="<?php echo $s['max_angsuran'];?>" /> 
+                                         class="form-control" value="<?php echo $s['max_angsuran']; ?>" /> 
                                          </div>
                                            <div class="col-md-6 col-sm-6 col-xs-6 form-group">  
                                               <label class="control-label"  style="padding-top:8px;">Gaji</label>                                           
@@ -813,7 +806,7 @@ $id_module = $_GET['id_module'];
                                    <td>
                                          <div class="col-md-6 col-sm-6 col-xs-6 form-group">  
                                          <input type="number" style='padding:6px;' name="bunga_k" 
-                                         class="form-control" value="<?php echo $k['bunga'];?>" /> 
+                                         class="form-control" value="<?php echo $k['bunga']; ?>" /> 
                                          </div>
                                           <div class="col-md-6 col-sm-6 col-xs-6 form-group">  
                                               <label class="control-label"  style="padding-top:8px;">% / Bulan</label>                                           
@@ -823,7 +816,7 @@ $id_module = $_GET['id_module'];
                                     <td>
                                         <div class="col-md-6 col-sm-6 col-xs-6 form-group">  
                                          <input type="number" style='padding:6px;' name="bunga_s" 
-                                         class="form-control" value="<?php echo $s['bunga'];?>" /> 
+                                         class="form-control" value="<?php echo $s['bunga']; ?>" /> 
                                          </div>
                                         <div class="col-md-6 col-sm-6 col-xs-6 form-group">  
                                               <label class="control-label"  style="padding-top:8px;">% / Bulan</label>                                           
@@ -834,37 +827,39 @@ $id_module = $_GET['id_module'];
                                    <td>
                                      <select name="rek_debet_bunga_k" class="form-control" required >
                                          <option value='0'></option>
-                                          <?
+                                          <?php
                                             $query = mysql_query('SELECT * FROM rekening 
                                                                   WHERE parentid != "0" 
                                                                   
                                                                   ORDER BY norek');
-                                             if($query && mysql_num_rows($query) > 0){
-                                                while($row = mysql_fetch_object($query)){
-                                                   echo '<option value="'.$row->id_rekening.'"';
-                                                   if($row->id_rekening == $k['rek_debet_bunga']) echo ' selected';
-                                                   echo '>'.$row->norek.' - '.$row->rekening.'</option>';
-                                                }
-                                             }        
-                                          ?>  
+    if ($query && mysql_num_rows($query) > 0) {
+        while ($row = mysql_fetch_object($query)) {
+            echo '<option value="'.$row->id_rekening.'"';
+            if ($row->id_rekening == $k['rek_debet_bunga']) {
+                echo ' selected';
+            }
+            echo '>'.$row->norek.' - '.$row->rekening.'</option>';
+        }
+    } ?>  
                                           </select>       
 
                                    </td>                                   
                                    <td> 
                                     <select name="rek_kredit_bunga_k" class="form-control" required >
                                          <option value='0'></option>
-                                          <?
+                                          <?php
                                             $query = mysql_query('SELECT * FROM rekening 
                                                                   WHERE parentid != "0"                                                                   
                                                                   ORDER BY norek');
-                                             if($query && mysql_num_rows($query) > 0){
-                                                while($row = mysql_fetch_object($query)){
-                                                   echo '<option value="'.$row->id_rekening.'"';
-                                                   if($row->id_rekening == $k['rek_kredit_bunga']) echo ' selected';
-                                                   echo '>'.$row->norek.' - '.$row->rekening.'</option>';
-                                                }
-                                             }        
-                                          ?>  
+    if ($query && mysql_num_rows($query) > 0) {
+        while ($row = mysql_fetch_object($query)) {
+            echo '<option value="'.$row->id_rekening.'"';
+            if ($row->id_rekening == $k['rek_kredit_bunga']) {
+                echo ' selected';
+            }
+            echo '>'.$row->norek.' - '.$row->rekening.'</option>';
+        }
+    } ?>  
                                           </select>       
 
 
@@ -878,7 +873,7 @@ $id_module = $_GET['id_module'];
                                    <td>
                                          <div class="col-md-6 col-sm-6 col-xs-6 form-group">  
                                          <input type="text" style='padding:6px;' name="ipoint_k" 
-                                         class="form-control" value="<?php echo $k['ipoint'];?>" /> 
+                                         class="form-control" value="<?php echo $k['ipoint']; ?>" /> 
                                          </div>
                                           <div class="col-md-6 col-sm-6 col-xs-6 form-group">  
                                               <label class="control-label"  style="padding-top:8px;">% / Bulan</label>                                           
@@ -888,7 +883,7 @@ $id_module = $_GET['id_module'];
                                     <td>
                                         <div class="col-md-6 col-sm-6 col-xs-6 form-group">  
                                          <input type="text" style='padding:6px;' name="ipoint_s" 
-                                         class="form-control" value="<?php echo $s['ipoint'];?>" /> 
+                                         class="form-control" value="<?php echo $s['ipoint']; ?>" /> 
                                          </div>
                                         <div class="col-md-6 col-sm-6 col-xs-6 form-group">  
                                               <label class="control-label"  style="padding-top:8px;">% / Bulan</label>                                           
@@ -899,36 +894,38 @@ $id_module = $_GET['id_module'];
                                    <td>
                                      <select name="rek_debet_ipoint_k" class="form-control" required >
                                          <option value='0'></option>
-                                          <?
+                                          <?php
                                             $query = mysql_query('SELECT * FROM rekening 
                                                                   WHERE parentid != "0" 
                                                                   ORDER BY norek');
-                                             if($query && mysql_num_rows($query) > 0){
-                                                while($row = mysql_fetch_object($query)){
-                                                   echo '<option value="'.$row->id_rekening.'"';
-                                                   if($row->id_rekening == $k['rek_debet_ipoint']) echo ' selected';
-                                                   echo '>'.$row->norek.' - '.$row->rekening.'</option>';
-                                                }
-                                             }        
-                                          ?>  
+    if ($query && mysql_num_rows($query) > 0) {
+        while ($row = mysql_fetch_object($query)) {
+            echo '<option value="'.$row->id_rekening.'"';
+            if ($row->id_rekening == $k['rek_debet_ipoint']) {
+                echo ' selected';
+            }
+            echo '>'.$row->norek.' - '.$row->rekening.'</option>';
+        }
+    } ?>  
                                           </select>       
 
                                    </td>                                   
                                    <td> 
                                     <select name="rek_kredit_ipoint_k" class="form-control" required >
                                          <option value='0'></option>
-                                          <?
+                                          <?php
                                             $query = mysql_query('SELECT * FROM rekening 
                                                                   WHERE parentid != "0" 
                                                                   ORDER BY norek');
-                                             if($query && mysql_num_rows($query) > 0){
-                                                while($row = mysql_fetch_object($query)){
-                                                   echo '<option value="'.$row->id_rekening.'"';
-                                                   if($row->id_rekening == $k['rek_kredit_ipoint']) echo ' selected';
-                                                   echo '>'.$row->norek.' - '.$row->rekening.'</option>';
-                                                }
-                                             }        
-                                          ?>  
+    if ($query && mysql_num_rows($query) > 0) {
+        while ($row = mysql_fetch_object($query)) {
+            echo '<option value="'.$row->id_rekening.'"';
+            if ($row->id_rekening == $k['rek_kredit_ipoint']) {
+                echo ' selected';
+            }
+            echo '>'.$row->norek.' - '.$row->rekening.'</option>';
+        }
+    } ?>  
                                           </select>       
 
 
@@ -942,7 +939,7 @@ $id_module = $_GET['id_module'];
                                    <td>
                                          <div class="col-md-6 col-sm-6 col-xs-6 form-group">  
                                          <input type="number" style='padding:6px;' name="batas_sisa_angsuran_k" 
-                                         class="form-control" value="<?php echo $k['batas_sisa_angsuran'];?>" /> 
+                                         class="form-control" value="<?php echo $k['batas_sisa_angsuran']; ?>" /> 
                                          </div>
                                           <div class="col-md-6 col-sm-6 col-xs-6 form-group">  
                                               <label class="control-label"  style="padding-top:8px;">X</label>                                           
@@ -952,7 +949,7 @@ $id_module = $_GET['id_module'];
                                     <td>
                                       <div class="col-md-6 col-sm-6 col-xs-6 form-group">  
                                          <input type="number" style='padding:6px;' name="batas_sisa_angsuran_s" 
-                                         class="form-control" value="<?php echo $s['batas_sisa_angsuran'];?>" /> 
+                                         class="form-control" value="<?php echo $s['batas_sisa_angsuran']; ?>" /> 
                                          </div>
                                          <div class="col-md-6 col-sm-6 col-xs-6 form-group">  
                                               <label class="control-label"  style="padding-top:8px;">X</label>                                           
@@ -971,7 +968,7 @@ $id_module = $_GET['id_module'];
                                    <td>
                                          <div class="col-md-6 col-sm-6 col-xs-6 form-group">  
                                          <input type="number" style='padding:6px;' name="tgl_realisasi_k" 
-                                         class="form-control" value="<?php echo $k['tgl_realisasi'];?>" /> 
+                                         class="form-control" value="<?php echo $k['tgl_realisasi']; ?>" /> 
                                          </div>
                                           <div class="col-md-6 col-sm-6 col-xs-6 form-group">  
                                               <label class="control-label"  style="padding-top:8px;">Bulan Berikut</label>                                           
@@ -981,7 +978,7 @@ $id_module = $_GET['id_module'];
                                     <td>
                                       <div class="col-md-6 col-sm-6 col-xs-6 form-group">  
                                          <input type="number" style='padding:6px;' name="tgl_realisasi_s" 
-                                         class="form-control" value="<?php echo $s['tgl_realisasi'];?>" /> 
+                                         class="form-control" value="<?php echo $s['tgl_realisasi']; ?>" /> 
                                          </div>
                                          <div class="col-md-6 col-sm-6 col-xs-6 form-group">  
                                               <label class="control-label"  style="padding-top:8px;">Bulan Berikut</label>                                           
@@ -1000,7 +997,7 @@ $id_module = $_GET['id_module'];
                                    <td>
                                          <div class="col-md-6 col-sm-6 col-xs-6 form-group">  
                                          <input type="number" style='padding:6px;' name="min_keanggotaan_k" 
-                                         class="form-control" value="<?php echo $k['min_keanggotaan'];?>" /> 
+                                         class="form-control" value="<?php echo $k['min_keanggotaan']; ?>" /> 
                                          </div>
                                           <div class="col-md-6 col-sm-6 col-xs-6 form-group">  
                                               <label class="control-label"  style="padding-top:8px;">Bulan</label>                                           
@@ -1010,7 +1007,7 @@ $id_module = $_GET['id_module'];
                                     <td>
                                       <div class="col-md-6 col-sm-6 col-xs-6 form-group">  
                                          <input type="number" style='padding:6px;' name="min_keanggotaan_s" 
-                                         class="form-control" value="<?php echo $s['min_keanggotaan'];?>" /> 
+                                         class="form-control" value="<?php echo $s['min_keanggotaan']; ?>" /> 
                                          </div>
                                          <div class="col-md-6 col-sm-6 col-xs-6 form-group">  
                                               <label class="control-label"  style="padding-top:8px;">Bulan</label>                                           
@@ -1043,7 +1040,9 @@ $id_module = $_GET['id_module'];
                        
                        </div>
 
-                        <div id="barang" class="tab-pane fade <?php if ($stab == 'barang') { echo 'in active primary'; } ?>">
+                        <div id="barang" class="tab-pane fade <?php if ($stab == 'barang') {
+        echo 'in active primary';
+    } ?>">
                       <br>
 
                        <div class="col-md-12 col-sm-12 col-xs-12 form-group">
@@ -1081,27 +1080,19 @@ $id_module = $_GET['id_module'];
                                       </thead>
                                   <tbody>
 
-                                   <?
+                                   <?php
 
                                   $kSQL = "SELECT* FROM pg_peminjaman_barang WHERE tipe = 'K' AND prd = '$prd' ";
 
+    $ktampil = mysql_query($kSQL);
 
-                                  $ktampil=mysql_query($kSQL);
-                                    
-                                        
-                                  $k=mysql_fetch_array($ktampil);
+    $k = mysql_fetch_array($ktampil);
 
+    $sSQL = "SELECT* FROM pg_peminjaman_barang WHERE tipe = 'S' AND prd = '$prd' ";
 
-                                  $sSQL = "SELECT* FROM pg_peminjaman_barang WHERE tipe = 'S' AND prd = '$prd' ";
+    $stampil = mysql_query($sSQL);
 
-
-                                  $stampil=mysql_query($sSQL);
-                                    
-                                        
-                                  $s=mysql_fetch_array($stampil);
-
-
-                                  ?>    
+    $s = mysql_fetch_array($stampil); ?>    
 
                                   <tr>
                                    <td><label class="control-label"  style="padding-top:8px;">Rekening</label></td>
@@ -1114,36 +1105,38 @@ $id_module = $_GET['id_module'];
                                    <td>
                                      <select name="rek_debet_k" class="form-control" required >
                                          <option value='0'></option>
-                                          <?
+                                          <?php
                                             $query = mysql_query('SELECT * FROM rekening 
                                                                   WHERE parentid != "0"         
                                                                   ORDER BY norek');
-                                             if($query && mysql_num_rows($query) > 0){
-                                                while($row = mysql_fetch_object($query)){
-                                                   echo '<option value="'.$row->id_rekening.'"';
-                                                   if($row->id_rekening == $k['rek_debet']) echo ' selected';
-                                                   echo '>'.$row->norek.' - '.$row->rekening.'</option>';
-                                                }
-                                             }        
-                                          ?>  
+    if ($query && mysql_num_rows($query) > 0) {
+        while ($row = mysql_fetch_object($query)) {
+            echo '<option value="'.$row->id_rekening.'"';
+            if ($row->id_rekening == $k['rek_debet']) {
+                echo ' selected';
+            }
+            echo '>'.$row->norek.' - '.$row->rekening.'</option>';
+        }
+    } ?>  
                                           </select>       
 
                                    </td>                                   
                                    <td> 
                                     <select name="rek_kredit_k" class="form-control" required >
                                          <option value='0'></option>
-                                          <?
+                                          <?php
                                             $query = mysql_query('SELECT * FROM rekening 
                                                                   WHERE parentid != "0" 
                                                                   ORDER BY norek');
-                                             if($query && mysql_num_rows($query) > 0){
-                                                while($row = mysql_fetch_object($query)){
-                                                   echo '<option value="'.$row->id_rekening.'"';
-                                                   if($row->id_rekening == $k['rek_kredit']) echo ' selected';
-                                                   echo '>'.$row->norek.' - '.$row->rekening.'</option>';
-                                                }
-                                             }        
-                                          ?>  
+    if ($query && mysql_num_rows($query) > 0) {
+        while ($row = mysql_fetch_object($query)) {
+            echo '<option value="'.$row->id_rekening.'"';
+            if ($row->id_rekening == $k['rek_kredit']) {
+                echo ' selected';
+            }
+            echo '>'.$row->norek.' - '.$row->rekening.'</option>';
+        }
+    } ?>  
                                           </select>       
 
 
@@ -1163,36 +1156,38 @@ $id_module = $_GET['id_module'];
                                    <td>
                                      <select name="rek_debet_pelunasan_k" class="form-control" required >
                                          <option value='0'></option>
-                                          <?
+                                          <?php
                                             $query = mysql_query('SELECT * FROM rekening 
                                                                   WHERE parentid != "0"         
                                                                   ORDER BY norek');
-                                             if($query && mysql_num_rows($query) > 0){
-                                                while($row = mysql_fetch_object($query)){
-                                                   echo '<option value="'.$row->id_rekening.'"';
-                                                   if($row->id_rekening == $k['rek_debet_pelunasan']) echo ' selected';
-                                                   echo '>'.$row->norek.' - '.$row->rekening.'</option>';
-                                                }
-                                             }        
-                                          ?>  
+    if ($query && mysql_num_rows($query) > 0) {
+        while ($row = mysql_fetch_object($query)) {
+            echo '<option value="'.$row->id_rekening.'"';
+            if ($row->id_rekening == $k['rek_debet_pelunasan']) {
+                echo ' selected';
+            }
+            echo '>'.$row->norek.' - '.$row->rekening.'</option>';
+        }
+    } ?>  
                                           </select>       
 
                                    </td>                                   
                                    <td> 
                                     <select name="rek_kredit_pelunasan_k" class="form-control" required >
                                          <option value='0'></option>
-                                          <?
+                                          <?php
                                             $query = mysql_query('SELECT * FROM rekening 
                                                                   WHERE parentid != "0" 
                                                                   ORDER BY norek');
-                                             if($query && mysql_num_rows($query) > 0){
-                                                while($row = mysql_fetch_object($query)){
-                                                   echo '<option value="'.$row->id_rekening.'"';
-                                                   if($row->id_rekening == $k['rek_kredit_pelunasan']) echo ' selected';
-                                                   echo '>'.$row->norek.' - '.$row->rekening.'</option>';
-                                                }
-                                             }        
-                                          ?>  
+    if ($query && mysql_num_rows($query) > 0) {
+        while ($row = mysql_fetch_object($query)) {
+            echo '<option value="'.$row->id_rekening.'"';
+            if ($row->id_rekening == $k['rek_kredit_pelunasan']) {
+                echo ' selected';
+            }
+            echo '>'.$row->norek.' - '.$row->rekening.'</option>';
+        }
+    } ?>  
                                           </select>       
 
 
@@ -1207,7 +1202,7 @@ $id_module = $_GET['id_module'];
                                    <td>
                                          <div class="col-md-6 col-sm-6 col-xs-6 form-group">  
                                          <input type="number" style='padding:6px;' name="min_tenor_k" 
-                                         class="form-control" value="<?php echo $k['min_tenor'];?>" /> 
+                                         class="form-control" value="<?php echo $k['min_tenor']; ?>" /> 
                                          </div>
                                           <div class="col-md-6 col-sm-6 col-xs-6 form-group">  
                                               <label class="control-label"  style="padding-top:8px;">X</label>                                           
@@ -1217,7 +1212,7 @@ $id_module = $_GET['id_module'];
                                     <td>
                                       <div class="col-md-6 col-sm-6 col-xs-6 form-group">  
                                          <input type="number" style='padding:6px;' name="min_tenor_s" 
-                                         class="form-control" value="<?php echo $s['min_tenor'];?>" /> 
+                                         class="form-control" value="<?php echo $s['min_tenor']; ?>" /> 
                                          </div>
                                          <div class="col-md-6 col-sm-6 col-xs-6 form-group">  
                                               <label class="control-label"  style="padding-top:8px;">X</label>                                           
@@ -1236,7 +1231,7 @@ $id_module = $_GET['id_module'];
                                    <td>
                                         <div class="col-md-6 col-sm-6 col-xs-6 form-group">  
                                          <input type="number" style='padding:6px;' name="max_tenor_k" 
-                                         class="form-control" value="<?php echo $k['max_tenor'];?>" /> 
+                                         class="form-control" value="<?php echo $k['max_tenor']; ?>" /> 
                                          </div>
                                           <div class="col-md-6 col-sm-6 col-xs-6 form-group">  
                                               <label class="control-label"  style="padding-top:8px;">X</label>                                           
@@ -1246,7 +1241,7 @@ $id_module = $_GET['id_module'];
                                     <td>
                                         <div class="col-md-6 col-sm-6 col-xs-6 form-group">  
                                          <input type="number" style='padding:6px;' name="max_tenor_s" 
-                                         class="form-control" value="<?php echo $s['max_tenor'];?>" /> 
+                                         class="form-control" value="<?php echo $s['max_tenor']; ?>" /> 
                                          </div>
                                          <div class="col-md-6 col-sm-6 col-xs-6 form-group">  
                                               <label class="control-label"  style="padding-top:8px;">X</label>                                           
@@ -1265,7 +1260,7 @@ $id_module = $_GET['id_module'];
                                    <td>
                                          <div class="col-md-6 col-sm-6 col-xs-6 form-group">  
                                          <input type="number" style='padding:6px;' name="max_pinjaman_k" 
-                                         class="form-control" value="<?php echo $k['max_pinjaman'];?>" /> 
+                                         class="form-control" value="<?php echo $k['max_pinjaman']; ?>" /> 
                                          </div>
                                           <div class="col-md-6 col-sm-6 col-xs-6 form-group">  
                                               <label class="control-label"  style="padding-top:8px;">X Saldo</label>                                           
@@ -1275,7 +1270,7 @@ $id_module = $_GET['id_module'];
                                     <td>
                                         <div class="col-md-6 col-sm-6 col-xs-6 form-group">  
                                          <input type="number" style='padding:6px;' name="max_pinjaman_s" 
-                                         class="form-control" value="<?php echo $s['max_pinjaman'];?>" /> 
+                                         class="form-control" value="<?php echo $s['max_pinjaman']; ?>" /> 
                                          </div>
                                          <div class="col-md-6 col-sm-6 col-xs-6 form-group">  
                                               <label class="control-label"  style="padding-top:8px;">X Saldo</label>                                           
@@ -1294,7 +1289,7 @@ $id_module = $_GET['id_module'];
                                    <td>
                                          <div class="col-md-6 col-sm-6 col-xs-6 form-group">  
                                          <input type="number" style='padding:6px;' name="max_angsuran_k" 
-                                         class="form-control" value="<?php echo $k['max_angsuran'];?>" /> 
+                                         class="form-control" value="<?php echo $k['max_angsuran']; ?>" /> 
                                          </div>
                                           <div class="col-md-6 col-sm-6 col-xs-6 form-group">
                                               <label class="control-label"  style="padding-top:8px;">Gaji</label>                                           
@@ -1304,7 +1299,7 @@ $id_module = $_GET['id_module'];
                                     <td>
                                          <div class="col-md-6 col-sm-6 col-xs-6 form-group">    
                                          <input type="number" style='padding:6px;' name="max_angsuran_s" 
-                                         class="form-control" value="<?php echo $s['max_angsuran'];?>" /> 
+                                         class="form-control" value="<?php echo $s['max_angsuran']; ?>" /> 
                                          </div>
                                            <div class="col-md-6 col-sm-6 col-xs-6 form-group">  
                                               <label class="control-label"  style="padding-top:8px;">Gaji</label>                                           
@@ -1317,7 +1312,7 @@ $id_module = $_GET['id_module'];
                                    <td>
                                          <div class="col-md-6 col-sm-6 col-xs-6 form-group">  
                                          <input type="number" style='padding:6px;' name="bunga_k" 
-                                         class="form-control" value="<?php echo $k['bunga'];?>" /> 
+                                         class="form-control" value="<?php echo $k['bunga']; ?>" /> 
                                          </div>
                                           <div class="col-md-6 col-sm-6 col-xs-6 form-group">  
                                               <label class="control-label"  style="padding-top:8px;">% / Barang</label>                                           
@@ -1327,7 +1322,7 @@ $id_module = $_GET['id_module'];
                                     <td>
                                         <div class="col-md-6 col-sm-6 col-xs-6 form-group">  
                                          <input type="number" style='padding:6px;' name="bunga_s" 
-                                         class="form-control" value="<?php echo $s['bunga'];?>" /> 
+                                         class="form-control" value="<?php echo $s['bunga']; ?>" /> 
                                          </div>
                                         <div class="col-md-6 col-sm-6 col-xs-6 form-group">  
                                               <label class="control-label"  style="padding-top:8px;">% / Barang</label>                                           
@@ -1338,37 +1333,39 @@ $id_module = $_GET['id_module'];
                                    <td>
                                      <select name="rek_debet_bunga_k" class="form-control" required >
                                          <option value='0'></option>
-                                          <?
+                                          <?php
                                             $query = mysql_query('SELECT * FROM rekening 
                                                                   WHERE parentid != "0" 
                                                                   
                                                                   ORDER BY norek');
-                                             if($query && mysql_num_rows($query) > 0){
-                                                while($row = mysql_fetch_object($query)){
-                                                   echo '<option value="'.$row->id_rekening.'"';
-                                                   if($row->id_rekening == $k['rek_debet_bunga']) echo ' selected';
-                                                   echo '>'.$row->norek.' - '.$row->rekening.'</option>';
-                                                }
-                                             }        
-                                          ?>  
+    if ($query && mysql_num_rows($query) > 0) {
+        while ($row = mysql_fetch_object($query)) {
+            echo '<option value="'.$row->id_rekening.'"';
+            if ($row->id_rekening == $k['rek_debet_bunga']) {
+                echo ' selected';
+            }
+            echo '>'.$row->norek.' - '.$row->rekening.'</option>';
+        }
+    } ?>  
                                           </select>       
 
                                    </td>                                   
                                    <td> 
                                     <select name="rek_kredit_bunga_k" class="form-control" required >
                                          <option value='0'></option>
-                                          <?
+                                          <?php
                                             $query = mysql_query('SELECT * FROM rekening 
                                                                   WHERE parentid != "0"                                                                   
                                                                   ORDER BY norek');
-                                             if($query && mysql_num_rows($query) > 0){
-                                                while($row = mysql_fetch_object($query)){
-                                                   echo '<option value="'.$row->id_rekening.'"';
-                                                   if($row->id_rekening == $k['rek_kredit_bunga']) echo ' selected';
-                                                   echo '>'.$row->norek.' - '.$row->rekening.'</option>';
-                                                }
-                                             }        
-                                          ?>  
+    if ($query && mysql_num_rows($query) > 0) {
+        while ($row = mysql_fetch_object($query)) {
+            echo '<option value="'.$row->id_rekening.'"';
+            if ($row->id_rekening == $k['rek_kredit_bunga']) {
+                echo ' selected';
+            }
+            echo '>'.$row->norek.' - '.$row->rekening.'</option>';
+        }
+    } ?>  
                                           </select>       
 
 
@@ -1382,7 +1379,7 @@ $id_module = $_GET['id_module'];
                                    <td>
                                          <div class="col-md-6 col-sm-6 col-xs-6 form-group">  
                                          <input type="text" style='padding:6px;' name="ipoint_k" 
-                                         class="form-control" value="<?php echo $k['ipoint'];?>" /> 
+                                         class="form-control" value="<?php echo $k['ipoint']; ?>" /> 
                                          </div>
                                           <div class="col-md-6 col-sm-6 col-xs-6 form-group">  
                                               <label class="control-label"  style="padding-top:8px;">% / Barang</label>                                           
@@ -1392,7 +1389,7 @@ $id_module = $_GET['id_module'];
                                     <td>
                                         <div class="col-md-6 col-sm-6 col-xs-6 form-group">  
                                          <input type="text" style='padding:6px;' name="ipoint_s" 
-                                         class="form-control" value="<?php echo $s['ipoint'];?>" /> 
+                                         class="form-control" value="<?php echo $s['ipoint']; ?>" /> 
                                          </div>
                                         <div class="col-md-6 col-sm-6 col-xs-6 form-group">  
                                               <label class="control-label"  style="padding-top:8px;">% / Barang</label>                                           
@@ -1403,36 +1400,38 @@ $id_module = $_GET['id_module'];
                                    <td>
                                      <select name="rek_debet_ipoint_k" class="form-control" required >
                                          <option value='0'></option>
-                                          <?
+                                          <?php
                                             $query = mysql_query('SELECT * FROM rekening 
                                                                   WHERE parentid != "0" 
                                                                   ORDER BY norek');
-                                             if($query && mysql_num_rows($query) > 0){
-                                                while($row = mysql_fetch_object($query)){
-                                                   echo '<option value="'.$row->id_rekening.'"';
-                                                   if($row->id_rekening == $k['rek_debet_ipoint']) echo ' selected';
-                                                   echo '>'.$row->norek.' - '.$row->rekening.'</option>';
-                                                }
-                                             }        
-                                          ?>  
+    if ($query && mysql_num_rows($query) > 0) {
+        while ($row = mysql_fetch_object($query)) {
+            echo '<option value="'.$row->id_rekening.'"';
+            if ($row->id_rekening == $k['rek_debet_ipoint']) {
+                echo ' selected';
+            }
+            echo '>'.$row->norek.' - '.$row->rekening.'</option>';
+        }
+    } ?>  
                                           </select>       
 
                                    </td>                                   
                                    <td> 
                                     <select name="rek_kredit_ipoint_k" class="form-control" required >
                                          <option value='0'></option>
-                                          <?
+                                          <?php
                                             $query = mysql_query('SELECT * FROM rekening 
                                                                   WHERE parentid != "0" 
                                                                   ORDER BY norek');
-                                             if($query && mysql_num_rows($query) > 0){
-                                                while($row = mysql_fetch_object($query)){
-                                                   echo '<option value="'.$row->id_rekening.'"';
-                                                   if($row->id_rekening == $k['rek_kredit_ipoint']) echo ' selected';
-                                                   echo '>'.$row->norek.' - '.$row->rekening.'</option>';
-                                                }
-                                             }        
-                                          ?>  
+    if ($query && mysql_num_rows($query) > 0) {
+        while ($row = mysql_fetch_object($query)) {
+            echo '<option value="'.$row->id_rekening.'"';
+            if ($row->id_rekening == $k['rek_kredit_ipoint']) {
+                echo ' selected';
+            }
+            echo '>'.$row->norek.' - '.$row->rekening.'</option>';
+        }
+    } ?>  
                                           </select>       
 
 
@@ -1446,7 +1445,7 @@ $id_module = $_GET['id_module'];
                                    <td>
                                          <div class="col-md-6 col-sm-6 col-xs-6 form-group">  
                                          <input type="number" style='padding:6px;' name="batas_sisa_angsuran_k" 
-                                         class="form-control" value="<?php echo $k['batas_sisa_angsuran'];?>" /> 
+                                         class="form-control" value="<?php echo $k['batas_sisa_angsuran']; ?>" /> 
                                          </div>
                                           <div class="col-md-6 col-sm-6 col-xs-6 form-group">  
                                               <label class="control-label"  style="padding-top:8px;">X</label>                                           
@@ -1456,7 +1455,7 @@ $id_module = $_GET['id_module'];
                                     <td>
                                       <div class="col-md-6 col-sm-6 col-xs-6 form-group">  
                                          <input type="number" style='padding:6px;' name="batas_sisa_angsuran_s" 
-                                         class="form-control" value="<?php echo $s['batas_sisa_angsuran'];?>" /> 
+                                         class="form-control" value="<?php echo $s['batas_sisa_angsuran']; ?>" /> 
                                          </div>
                                          <div class="col-md-6 col-sm-6 col-xs-6 form-group">  
                                               <label class="control-label"  style="padding-top:8px;">X</label>                                           
@@ -1475,7 +1474,7 @@ $id_module = $_GET['id_module'];
                                    <td>
                                          <div class="col-md-6 col-sm-6 col-xs-6 form-group">  
                                          <input type="number" style='padding:6px;' name="tgl_realisasi_k" 
-                                         class="form-control" value="<?php echo $k['tgl_realisasi'];?>" /> 
+                                         class="form-control" value="<?php echo $k['tgl_realisasi']; ?>" /> 
                                          </div>
                                           <div class="col-md-6 col-sm-6 col-xs-6 form-group">  
                                               <label class="control-label"  style="padding-top:8px;">X</label>                                           
@@ -1485,7 +1484,7 @@ $id_module = $_GET['id_module'];
                                     <td>
                                       <div class="col-md-6 col-sm-6 col-xs-6 form-group">  
                                          <input type="number" style='padding:6px;' name="tgl_realisasi_s" 
-                                         class="form-control" value="<?php echo $s['tgl_realisasi'];?>" /> 
+                                         class="form-control" value="<?php echo $s['tgl_realisasi']; ?>" /> 
                                          </div>
                                          <div class="col-md-6 col-sm-6 col-xs-6 form-group">  
                                               <label class="control-label"  style="padding-top:8px;">X</label>                                           
@@ -1504,7 +1503,7 @@ $id_module = $_GET['id_module'];
                                    <td>
                                          <div class="col-md-6 col-sm-6 col-xs-6 form-group">  
                                          <input type="number" style='padding:6px;' name="min_keanggotaan_k" 
-                                         class="form-control" value="<?php echo $k['min_keanggotaan'];?>" /> 
+                                         class="form-control" value="<?php echo $k['min_keanggotaan']; ?>" /> 
                                          </div>
                                           <div class="col-md-6 col-sm-6 col-xs-6 form-group">  
                                               <label class="control-label"  style="padding-top:8px;">Bulan</label>                                           
@@ -1514,7 +1513,7 @@ $id_module = $_GET['id_module'];
                                     <td>
                                       <div class="col-md-6 col-sm-6 col-xs-6 form-group">  
                                          <input type="number" style='padding:6px;' name="min_keanggotaan_s" 
-                                         class="form-control" value="<?php echo $s['min_keanggotaan'];?>" /> 
+                                         class="form-control" value="<?php echo $s['min_keanggotaan']; ?>" /> 
                                          </div>
                                          <div class="col-md-6 col-sm-6 col-xs-6 form-group">  
                                               <label class="control-label"  style="padding-top:8px;">Bulan</label>                                           
@@ -1553,7 +1552,9 @@ $id_module = $_GET['id_module'];
 
           </div>       
 
-          <div id="menu4" class="tab-pane fade <?php if ($tab == 'pl') { echo 'in active primary'; } ?>">
+          <div id="menu4" class="tab-pane fade <?php if ($tab == 'pl') {
+        echo 'in active primary';
+    } ?>">
              <br>
 
            <div class="col-md-12 col-sm-12 col-xs-12 form-group">
@@ -1572,70 +1573,62 @@ $id_module = $_GET['id_module'];
                                       </tr>
                                       </thead>
                                   <tbody>
-                                  <?
+                                  <?php
 
                                    $SQL = "SELECT* FROM pg_plafon a inner join jenis_pinjaman b
                                             ON a.id_jenis_pinjaman = b.id_jenis_pinjaman
                                             WHERE a.prd = '$prd'";
 
+    $tampil = mysql_query($SQL);
 
-                                  $tampil=mysql_query($SQL);
-                                    
-                                 $no = 1;
-            
-                                    while ($r=mysql_fetch_array($tampil)){  
-                                    
-                                    echo"<tr>";
+    $no = 1;
 
-                                    ?>
+    while ($r = mysql_fetch_array($tampil)) {
+        echo'<tr>'; ?>
 
                                      <form action="<?php echo"../../modul/mod_$modul/aksi_$modul.php?module=$modul&act=pl"; ?>" method="post" name="formData" enctype="multipart/form-data"  > 
                      
                                     
                                       <td>
                                          <select name="jenis_pinjaman" class="form-control" disabled>
-                                          <?
+                                          <?php
                                             $query = mysql_query('SELECT * FROM jenis_pinjaman ORDER BY jenis_pinjaman');
-                                             if($query && mysql_num_rows($query) > 0){
-                                                while($row = mysql_fetch_object($query)){
-                                                   echo '<option value="'.$row->id_jenis_pinjaman.'"';
-                                                   if($row->id_jenis_pinjaman == $r['id_jenis_pinjaman']) echo ' selected';
-                                                   echo '>'.$row->jenis_pinjaman.'</option>';
-                                                }
-                                             }        
-                                          ?>  
+        if ($query && mysql_num_rows($query) > 0) {
+            while ($row = mysql_fetch_object($query)) {
+                echo '<option value="'.$row->id_jenis_pinjaman.'"';
+                if ($row->id_jenis_pinjaman == $r['id_jenis_pinjaman']) {
+                    echo ' selected';
+                }
+                echo '>'.$row->jenis_pinjaman.'</option>';
+            }
+        } ?>  
                                           </select>       
 
                                        </td>
 
                                     <td>                                         
                                          <input type="text" style='padding:6px;text-align: right;' name="plafon" 
-                                         class="form-control" value="<?php echo $r['plafon'];?>" /> 
+                                         class="form-control" value="<?php echo $r['plafon']; ?>" /> 
                             
                                      </td>
 
-                                    <?php   
-                                    echo" <td  style='text-align:center;'>";     
-                                    ?>                               
+                                    <?php 
+                                    echo" <td  style='text-align:center;'>"; ?>                               
                                     <button type="submit"   class="btn btn-primary btn-sm">
                                                   <span class="glyphicon glyphicon-floppy-disk" aria-hidden="true"></span>
                                     </button>
-                                    <?php            
-                                    echo"</td>";              
-                                    echo"</tr>";
-                                $no++;
-                                ?>
+                                    <?php 
+                                    echo'</td>';
+        echo'</tr>';
+        $no++; ?>
 
                                 <input type="hidden" name="ID" value="<?php echo $r['id_pg_plafon']?>" />
                                   <input type="hidden" name="id_module" value="<?php echo $id_module?>" /> 
                                   <input type="hidden" name="imodule" value="<?php echo $imodule?>" /> 
 
-                                <?
-                               echo"</form>";
-                                
-                                }
-
-                                  ?>  
+                                <?php
+                               echo'</form>';
+    } ?>  
 
 
 
@@ -1652,7 +1645,9 @@ $id_module = $_GET['id_module'];
 
           </div>   
 
-          <div id="menu5" class="tab-pane fade <?php if ($tab == 'jr') { echo 'in active primary'; } ?>">
+          <div id="menu5" class="tab-pane fade <?php if ($tab == 'jr') {
+        echo 'in active primary';
+    } ?>">
               <br>
                   <div class="col-md-12 col-sm-12 col-xs-12 form-group">
                   <div class="x_content">
@@ -1670,37 +1665,33 @@ $id_module = $_GET['id_module'];
                                         </tr>                                         
                                       </thead>
                                   <tbody>
-                                  <?
+                                  <?php
 
                                    $SQL = "SELECT* FROM pg_jurnal WHERE prd = '$prd' ORDER BY id_pg_jurnal";
 
+    $tampil = mysql_query($SQL);
 
-                                  $tampil=mysql_query($SQL);
-                                    
-                                 $no = 1;
-            
-                                    while ($r=mysql_fetch_array($tampil)){  
-                                                                          
-                                    
-                                    echo"<tr>";
+    $no = 1;
 
-                                    ?>
+    while ($r = mysql_fetch_array($tampil)) {
+        echo'<tr>'; ?>
 
                                      <form action="<?php echo"../../modul/mod_$modul/aksi_$modul.php?module=$modul&act=jr"; ?>" method="post" name="formData" enctype="multipart/form-data"  > 
                      
                                          
                                           <td>
                                          <select name="modul" class="form-control" required >
-                                          <?
+                                          <?php
                                             $query = mysql_query('SELECT * FROM modul WHERE jurnal = "Y" and aktif = "Y" ORDER BY nama_modul');
-                                             if($query && mysql_num_rows($query) > 0){
-                                                while($row = mysql_fetch_object($query)){
-                                                   echo '<option value="'.$row->id_modul.'"';
-                                                   if($row->id_modul == $r['id_modul']) echo ' selected';
-                                                   echo '>'.$row->nama_modul.'</option>';
-                                                }
-                                             }        
-                                          ?>  
+        if ($query && mysql_num_rows($query) > 0) {
+            while ($row = mysql_fetch_object($query)) {
+                echo '<option value="'.$row->id_modul.'"';
+                if ($row->id_modul == $r['id_modul']) {
+                    echo ' selected';
+                }
+                echo '>'.$row->nama_modul.'</option>';
+            }
+        } ?>  
                                           </select>       
 
                                        </td>
@@ -1708,47 +1699,43 @@ $id_module = $_GET['id_module'];
 
                                         <td>
                                          <select name="jenis_transaksi" class="form-control" required >
-                                          <?
+                                          <?php
                                             $query = mysql_query('SELECT a.*,b.kode,b.tipe_transaksi 
                                                                   FROM jenis_transaksi a inner join tipe_transaksi b
                                                                   ON a.id_tipe_transaksi = b.id_tipe_transaksi
                                                                   ORDER BY a.id_tipe_transaksi,a.id_jenis_transaksi');
-                                             if($query && mysql_num_rows($query) > 0){
-                                                while($row = mysql_fetch_object($query)){
-                                                   echo '<option value="'.$row->id_jenis_transaksi.'"';
-                                                   if($row->id_jenis_transaksi == $r['id_jenis_transaksi']) echo ' selected';
-                                                   echo '>'.$row->kode.' - '.$row->tipe_transaksi.' - '.$row->jenis_transaksi.'</option>';
-                                                }
-                                             }        
-                                          ?>  
+        if ($query && mysql_num_rows($query) > 0) {
+            while ($row = mysql_fetch_object($query)) {
+                echo '<option value="'.$row->id_jenis_transaksi.'"';
+                if ($row->id_jenis_transaksi == $r['id_jenis_transaksi']) {
+                    echo ' selected';
+                }
+                echo '>'.$row->kode.' - '.$row->tipe_transaksi.' - '.$row->jenis_transaksi.'</option>';
+            }
+        } ?>  
                                           </select>       
 
                                        </td>
 
                                          
 
-                                    <?php   
-                                    echo" <td  style='text-align:center;'>";     
-                                    ?>                               
+                                    <?php 
+                                    echo" <td  style='text-align:center;'>"; ?>                               
                                     <button type="submit"   class="btn btn-primary btn-sm">
                                                   <span class="glyphicon glyphicon-floppy-disk" aria-hidden="true"></span>
                                     </button>
-                                    <?php            
-                                    echo"</td>";              
-                                    echo"</tr>";
-                                $no++;
-                                ?>
+                                    <?php 
+                                    echo'</td>';
+        echo'</tr>';
+        $no++; ?>
 
                                 <input type="hidden" name="ID" value="<?php echo $r['id_pg_jurnal']?>" />
                                   <input type="hidden" name="id_module" value="<?php echo $id_module?>" /> 
                                   <input type="hidden" name="imodule" value="<?php echo $imodule?>" /> 
 
-                                <?
-                               echo"</form>";
-                                
-                                }
-
-                                  ?>  
+                                <?php
+                               echo'</form>';
+    } ?>  
 
 
 
@@ -1765,30 +1752,29 @@ $id_module = $_GET['id_module'];
 
 
 
-           <div id="menu6" class="tab-pane fade <?php if ($tab == 'ln') { echo 'in active primary'; } ?>">
+           <div id="menu6" class="tab-pane fade <?php if ($tab == 'ln') {
+        echo 'in active primary';
+    } ?>">
              <br>
 
            <div class="col-md-12 col-sm-12 col-xs-12 form-group">
               <div class="x_content">
 
-                <?
+                <?php
 
                  $id = 1; // isset($_GET['id_general_setting']) ? intval($_GET['id_general_setting']) : false;
-    
-                    if($id){
-                       $query = mysql_query('SELECT * FROM pg_lainnya 
+
+    if ($id) {
+        $query = mysql_query('SELECT * FROM pg_lainnya 
                                                 WHERE prd =  "'.$prd.'"
                                                 ');
 
-                       if($query && mysql_num_rows($query) == 1){
-                          $data = mysql_fetch_object($query);
-                       }else 
-                          die('Data general_setting tidak ditemukan');
-                    }
-                  
-
-
-                ?>
+        if ($query && mysql_num_rows($query) == 1) {
+            $data = mysql_fetch_object($query);
+        } else {
+            die('Data general_setting tidak ditemukan');
+        }
+    } ?>
                    <!-- start form for validation -->
                      <form action="<?php echo"../../modul/mod_$modul/aksi_$modul.php?module=$modul&act=ln"; ?>" method="post" name="formData" enctype="multipart/form-data"  > 
                      
@@ -1814,18 +1800,19 @@ $id_module = $_GET['id_module'];
                        <div class="col-md-9  col-sm-9 col-xs-9 form-group">
                             <select name="rek_shu" class="form-control" required >
                                          <option value='0'></option>
-                                          <?
+                                          <?php
                                             $query = mysql_query('SELECT * FROM rekening 
                                                                   WHERE parentid != "0" 
                                                                   ORDER BY norek');
-                                             if($query && mysql_num_rows($query) > 0){
-                                                while($row = mysql_fetch_object($query)){
-                                                   echo '<option value="'.$row->id_rekening.'"';
-                                                   if($row->id_rekening == $data->rek_shu) echo ' selected';
-                                                   echo '>'.$row->norek.' - '.$row->rekening.'</option>';
-                                                }
-                                             }        
-                                          ?>  
+    if ($query && mysql_num_rows($query) > 0) {
+        while ($row = mysql_fetch_object($query)) {
+            echo '<option value="'.$row->id_rekening.'"';
+            if ($row->id_rekening == $data->rek_shu) {
+                echo ' selected';
+            }
+            echo '>'.$row->norek.' - '.$row->rekening.'</option>';
+        }
+    } ?>  
                                           </select>                                         
                       </div>
 
@@ -2093,24 +2080,23 @@ $id_module = $_GET['id_module'];
          <?php 
 
          $id = 1; // isset($_GET['id_general_setting']) ? intval($_GET['id_general_setting']) : false;
-    
-                    if($id){
-                       $query = mysql_query('SELECT * FROM informasi_perusahaan WHERE id_informasi_perusahaan = "'.$id.'"');
-                       if($query && mysql_num_rows($query) == 1){
-                          $data = mysql_fetch_object($query);
-                       }else 
-                          die('Data general_setting tidak ditemukan');
-                    }
-                  
-                    $pict  = $data->pict;
 
+    if ($id) {
+        $query = mysql_query('SELECT * FROM informasi_perusahaan WHERE id_informasi_perusahaan = "'.$id.'"');
+        if ($query && mysql_num_rows($query) == 1) {
+            $data = mysql_fetch_object($query);
+        } else {
+            die('Data general_setting tidak ditemukan');
+        }
+    }
 
-         if(empty($pict)) { 
-            $ipict = 'logo.png';
-           } else { 
-            $ipict = $pict;
-           } 
-           ?>
+    $pict = $data->pict;
+
+    if (empty($pict)) {
+        $ipict = 'logo.png';
+    } else {
+        $ipict = $pict;
+    } ?>
 
         <script>
           var btnCust = '<button type="button" class="btn btn-default" title="Add picture tags" ' + 
@@ -2129,20 +2115,18 @@ $id_module = $_GET['id_module'];
               removeTitle: 'Cancel or reset changes',
               elErrorContainer: '#kv-avatar-errors',
               msgErrorClass: 'alert alert-block alert-danger',
-              defaultPreviewContent: '<img src="../../images/logo/<?php echo $ipict;?>" alt="Your Avatar" style="width:180px;">',
+              defaultPreviewContent: '<img src="../../images/logo/<?php echo $ipict; ?>" alt="Your Avatar" style="width:180px;">',
               layoutTemplates: {main2: '{preview} ' + ' {remove} {browse}'},
               allowedFileExtensions: ["jpg"]
           });
           </script>
 
           <?php 
-         if(empty($pict)) { 
-            $ipict = 'logo.png';
-           } else { 
-            $ipict = $pict;
-           } 
-
-           ?>
+         if (empty($pict)) {
+             $ipict = 'logo.png';
+         } else {
+             $ipict = $pict;
+         } ?>
 
         <script>
           var btnCust = '<button type="button" class="btn btn-default" title="Add picture tags" ' + 
@@ -2161,7 +2145,7 @@ $id_module = $_GET['id_module'];
               removeTitle: 'Cancel or reset changes',
               elErrorContainer: '#kv-avatar-errors',
               msgErrorClass: 'alert alert-block alert-danger',
-              defaultPreviewContent: '<img src="../../images/logo/<?php echo $ipict;?>" alt="Your Avatar" style="width:180px;">',
+              defaultPreviewContent: '<img src="../../images/logo/<?php echo $ipict; ?>" alt="Your Avatar" style="width:180px;">',
               layoutTemplates: {main2: '{preview} ' + ' {remove} {browse}'},
               allowedFileExtensions: ["jpg"]
           });
@@ -2169,6 +2153,6 @@ $id_module = $_GET['id_module'];
 
 </body>
 </html>
-<?
+<?php
 }
 ?>

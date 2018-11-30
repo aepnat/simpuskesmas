@@ -1,12 +1,12 @@
 <?php
   /* MySQL connection */
-	include( $_SERVER['DOCUMENT_ROOT']."/datatables/mysql.php" ); /* ;-) */
-	
-	$gaSql['link'] =  mysql_pconnect( $gaSql['server'], $gaSql['user'], $gaSql['password']  ) or
-		die( 'Could not open connection to server' );
-	
-	mysql_select_db( $gaSql['db'], $gaSql['link'] ) or 
-		die( 'Could not select database '. $gaSql['db'] );
+    include $_SERVER['DOCUMENT_ROOT'].'/datatables/mysql.php'; /* ;-) */
+
+    $gaSql['link'] = mysql_pconnect($gaSql['server'], $gaSql['user'], $gaSql['password']) or
+        die('Could not open connection to server');
+
+    mysql_select_db($gaSql['db'], $gaSql['link']) or
+        die('Could not select database '.$gaSql['db']);
 
 ?><!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html>
@@ -77,26 +77,25 @@
 	</thead>
 	<tbody>
 <?php
-	$sQuery = "
+    $sQuery = '
 		SELECT *
 		FROM   testData
 		LIMIT  2000
-	";
-	$rResult = mysql_query( $sQuery, $gaSql['link'] ) or die(mysql_error());
-	while ( $aRow = mysql_fetch_array( $rResult ) )
-	{
-		echo '<tr>';
-		echo '<td><a href="1">'.$aRow['id'].'</a></td>';
-		echo '<td>'.$aRow['name'].'</td>';
-		echo '<td>'.$aRow['phone'].'</td>';
-		echo '<td>'.$aRow['email'].'</td>';
-		echo '<td>'.$aRow['city'].'</td>';
-		echo '<td>'.$aRow['zip'].'</td>';
-		echo '<td>'.$aRow['state'].'</td>';
-		echo '<td>'.$aRow['country'].'</td>';
-		echo '<td>'.$aRow['zip2'].'</td>';
-		echo '</tr>';
-	}
+	';
+    $rResult = mysql_query($sQuery, $gaSql['link']) or die(mysql_error());
+    while ($aRow = mysql_fetch_array($rResult)) {
+        echo '<tr>';
+        echo '<td><a href="1">'.$aRow['id'].'</a></td>';
+        echo '<td>'.$aRow['name'].'</td>';
+        echo '<td>'.$aRow['phone'].'</td>';
+        echo '<td>'.$aRow['email'].'</td>';
+        echo '<td>'.$aRow['city'].'</td>';
+        echo '<td>'.$aRow['zip'].'</td>';
+        echo '<td>'.$aRow['state'].'</td>';
+        echo '<td>'.$aRow['country'].'</td>';
+        echo '<td>'.$aRow['zip2'].'</td>';
+        echo '</tr>';
+    }
 ?>
 	</tbody>
 </table>

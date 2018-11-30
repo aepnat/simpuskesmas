@@ -1,5 +1,5 @@
-<?
-include "config/koneksi.php";
+<?php
+include 'config/koneksi.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -54,32 +54,32 @@ include "config/koneksi.php";
          <?// start grid ?>
 
 
-         <?
+         <?php
 
 
         // $module = $_GET['module'];
         // $id_module = $_GET['id_module'];
         // $title = $_GET['title'];
 
-        $prd    = '2016-01';//$_GET['prd']; 
-        $kode    = 'PJ';//$_GET['kode']; 
+        $prd = '2016-01'; //$_GET['prd'];
+        $kode = 'PJ'; //$_GET['kode'];
 
-        $id_outlet  = '1';//$_GET['id_outlet'];
-        $outlet  = '';//$_GET['outlet'];
-        $tanggal = 'A44-1601-0002';//$_GET['tanggal'];
-        $notrans = '2016-09-04';//$_GET['notrans'];
-        $customer = '3';//$_GET['customer'];
+        $id_outlet = '1'; //$_GET['id_outlet'];
+        $outlet = ''; //$_GET['outlet'];
+        $tanggal = 'A44-1601-0002'; //$_GET['tanggal'];
+        $notrans = '2016-09-04'; //$_GET['notrans'];
+        $customer = '3'; //$_GET['customer'];
 
         if ($_GET['ioutlet']) {
-          $outlet = $_GET['ioutlet'];   
+            $outlet = $_GET['ioutlet'];
         } else {
-          $outlet = '1';   
+            $outlet = '1';
         }
 
         if ($_GET['itipe_barang']) {
-          $tipe_barang = $_GET['itipe_barang'];   
+            $tipe_barang = $_GET['itipe_barang'];
         } else {
-          $tipe_barang = '1';   
+            $tipe_barang = '1';
         }
 
         ?>
@@ -100,38 +100,42 @@ include "config/koneksi.php";
                                          <input type="hidden" name="module" value="<?php echo $module?>" /> 
                                          <input type="hidden" name="prd" value="<?php echo $prd?>" /> 
 
-                                          <input type="hidden" name="kode" id="kode" value="<?php echo $kode;?>">
-                                          <input type="hidden" name="id_outlet" id="id_outlet" value="<?php echo $id_outlet;?>">
-                                          <input type="hidden" name="tanggal" id="tanggal" value="<?php echo $tanggal;?>">
-                                          <input type="hidden" name="customer" id="customer" value="<?php echo $customer;?>">
-                                          <input type="hidden" name="notrans" id="notrans" value="<?php echo $notrans;?>">
+                                          <input type="hidden" name="kode" id="kode" value="<?php echo $kode; ?>">
+                                          <input type="hidden" name="id_outlet" id="id_outlet" value="<?php echo $id_outlet; ?>">
+                                          <input type="hidden" name="tanggal" id="tanggal" value="<?php echo $tanggal; ?>">
+                                          <input type="hidden" name="customer" id="customer" value="<?php echo $customer; ?>">
+                                          <input type="hidden" name="notrans" id="notrans" value="<?php echo $notrans; ?>">
                                                                   
                                          <p class="pull-right">
                                          <select name="itipe_barang" class="form-control" onChange="document.myform.submit();">
-                                            <?
+                                            <?php
                                               $query = mysql_query('SELECT * FROM tipe_barang ORDER BY id_tipe_barang');
-                                               if($query && mysql_num_rows($query) > 0){
-                                                  while($row = mysql_fetch_object($query)){
-                                                  echo '<option value="'.$row->id_tipe_barang.'"';
-                                                  if($row->id_tipe_barang == $tipe_barang) echo ' selected';
-                                                  echo '>'.$row->tipe_barang.'</option>';
-                                                  }
-                                               }        
+                                               if ($query && mysql_num_rows($query) > 0) {
+                                                   while ($row = mysql_fetch_object($query)) {
+                                                       echo '<option value="'.$row->id_tipe_barang.'"';
+                                                       if ($row->id_tipe_barang == $tipe_barang) {
+                                                           echo ' selected';
+                                                       }
+                                                       echo '>'.$row->tipe_barang.'</option>';
+                                                   }
+                                               }
                                             ?>  
                                             </select>        
                                         </p>
 
                                          <p class="pull-right">
                                          <select name="ioutlet" class="form-control" onChange="document.myform.submit();">
-                                            <?
+                                            <?php
                                               $query = mysql_query('SELECT * FROM outlet ORDER BY id_outlet');
-                                               if($query && mysql_num_rows($query) > 0){
-                                                  while($row = mysql_fetch_object($query)){
-                                                  echo '<option value="'.$row->id_outlet.'"';
-                                                  if($row->id_outlet == $outlet) echo ' selected';
-                                                  echo '>'.$row->outlet.'</option>';
-                                                  }
-                                               }        
+                                               if ($query && mysql_num_rows($query) > 0) {
+                                                   while ($row = mysql_fetch_object($query)) {
+                                                       echo '<option value="'.$row->id_outlet.'"';
+                                                       if ($row->id_outlet == $outlet) {
+                                                           echo ' selected';
+                                                       }
+                                                       echo '>'.$row->outlet.'</option>';
+                                                   }
+                                               }
                                             ?>  
                                             </select>        
                                         </p>
@@ -169,9 +173,9 @@ include "config/koneksi.php";
                         </thead>
                         <tbody>
                             
-                         <?
-                      
-                          $SQL= "SELECT b.jenis_barang
+                         <?php
+
+                          $SQL = "SELECT b.jenis_barang
                                     ,c.unit_barang
                                     ,a.kode as kode_barang
                                      ,a.id_barang
@@ -202,63 +206,53 @@ include "config/koneksi.php";
                                          ,a.kode
                                         ,a.barang   
                                         ,d.harga_jual
-                                      ORDER BY a.id_jenis_barang,a.kode";   
+                                      ORDER BY a.id_jenis_barang,a.kode";
 
+                             $tampil = mysql_query($SQL);
 
-                             $tampil=mysql_query($SQL);
-
-                                                          
                              $no = 1;
-                             
-                             while($r=mysql_fetch_array($tampil)){
 
-                                $id_barang = $r['id_barang'];
-                                $kode_barang = $r['kode_barang'];
+                             while ($r = mysql_fetch_array($tampil)) {
+                                 $id_barang = $r['id_barang'];
+                                 $kode_barang = $r['kode_barang'];
 
-                                $dsql   = mysql_query("SELECT sum(qty) as reserve
+                                 $dsql = mysql_query("SELECT sum(qty) as reserve
                                                       FROM stok_reserved
                                                       WHERE id_barang_promosi = '$id_barang'
                                                       AND id_outlet = '$outlet'
                                                       AND tipe = 'B'
                                                        and prd = '$prd'
-                                                      "); 
+                                                      ");
 
-                                 $d     = mysql_fetch_array($dsql); 
+                                 $d = mysql_fetch_array($dsql);
 
-                                if ($d['reserve']) {
-                                  $reserve = $d['reserve'];
+                                 if ($d['reserve']) {
+                                     $reserve = $d['reserve'];
                                  } else {
-                                  $reserve = 0;
+                                     $reserve = 0;
                                  }
 
-                                  $sisa_stok   = $r['stok']-$reserve;
+                                 $sisa_stok = $r['stok'] - $reserve;
 
-                                  if ($sisa_stok == '0') {
+                                 if ($sisa_stok == '0') {
+                                     echo '';
+                                 } else {
+                                     echo'<tr>';
+                                     echo" <td  style='text-align:center;'>";
+                                     echo"<a href='../../modul/mod_$module/aksi_$module.php?module=$module&act=add&barcode=$kode_barang&prd=$prd&notrans=$notrans&kode=$kode&tanggal=$tanggal&customer=$customer&outlet=$outlet&id_outlet=$id_outlet&id_module=$id_module&look=1'  title=''><span class='icon'><i class='fa fa-check'></i></span></a>";
 
-                                    echo "";
-                                  } else {
+                                     echo'</td>';
+                                     echo'<td>'.$r['jenis_barang'].'</td>';
+                                     echo'<td>'.$r['kode_barang'].'</td>';
+                                     echo'<td>'.$r['barang'].'</td>';
+                                     echo'<td>'.$r['unit_barang'].'</td>';
+                                     echo"<td style='text-align:right;'>".number_format($r['harga_jual'], 0, '.', ',').'</td>';
 
+                                     echo'</tr>';
+                                 }
 
-
-                                    echo"<tr>";
-                                    echo" <td  style='text-align:center;'>";
-                                    echo"<a href='../../modul/mod_$module/aksi_$module.php?module=$module&act=add&barcode=$kode_barang&prd=$prd&notrans=$notrans&kode=$kode&tanggal=$tanggal&customer=$customer&outlet=$outlet&id_outlet=$id_outlet&id_module=$id_module&look=1'  title=''><span class='icon'><i class='fa fa-check'></i></span></a>";
-                                    
-                                    echo"</td>";   
-                                     echo"<td>".$r['jenis_barang']."</td>";
-                                     echo"<td>".$r['kode_barang']."</td>";
-                                     echo"<td>".$r['barang']."</td>";
-                                     echo"<td>".$r['unit_barang']."</td>";
-                                     echo"<td style='text-align:right;'>".number_format($r['harga_jual'], 0, ".", ",")."</td>";
-                                                                                
-                                    echo"</tr>";
-
-                                  }
-
-                                 
-                                $no++;  
-                                
-                                }
+                                 $no++;
+                             }
                                 ?>
                          </tbody>
                     </table>

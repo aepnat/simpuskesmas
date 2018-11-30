@@ -1,11 +1,10 @@
-<?
+<?php
 session_start();
-if (empty($_SESSION['username']) AND empty($_SESSION['password'])){
-  echo "<script>window.alert('Please login first.'); window.location=('../../index.php.php')</script>";
-} else{
-include "./../../config/koneksi.php";
-include "./../../config/fungsi_thumb.php";
-?>
+if (empty($_SESSION['username']) and empty($_SESSION['password'])) {
+    echo "<script>window.alert('Please login first.'); window.location=('../../index.php.php')</script>";
+} else {
+    include './../../config/koneksi.php';
+    include './../../config/fungsi_thumb.php'; ?>
 <!doctype html>
 <html>
 <head>
@@ -66,44 +65,40 @@ include "./../../config/fungsi_thumb.php";
 </head>
 
 <body style='background-color:#fff;'>
-<?
+<?php
 
 $modul = $_GET['module'];
-$imodule = $_GET['imodule'];
-$title = $_GET['title'];
+    $imodule = $_GET['imodule'];
+    $title = $_GET['title'];
 
-$role   = $_SESSION['role'];
+    $role = $_SESSION['role'];
 
-$id_module = $_GET['id_module']; 
+    $id_module = $_GET['id_module'];
 
-  $id = 1; // isset($_GET['id_general_setting']) ? intval($_GET['id_general_setting']) : false;
-    
-    if($id){
-       $query = mysql_query('SELECT * FROM general_setting WHERE id_general_setting = "'.$id.'"');
-       if($query && mysql_num_rows($query) == 1){
-          $data = mysql_fetch_object($query);
-       }else 
-          die('Data general_setting tidak ditemukan');
+    $id = 1; // isset($_GET['id_general_setting']) ? intval($_GET['id_general_setting']) : false;
+
+    if ($id) {
+        $query = mysql_query('SELECT * FROM general_setting WHERE id_general_setting = "'.$id.'"');
+        if ($query && mysql_num_rows($query) == 1) {
+            $data = mysql_fetch_object($query);
+        } else {
+            die('Data general_setting tidak ditemukan');
+        }
     }
-  
-if ($_GET['igroup']) {
-  $group  = $_GET['igroup'];
-} else {
-  $group  = $data->id_location;
-  
-}
 
-if ($_GET['imenu']) {
-  $imenu  = $_GET['imenu'];
-} else {
-  $imenu  = $data->id_modul;  
-  
-}
+    if ($_GET['igroup']) {
+        $group = $_GET['igroup'];
+    } else {
+        $group = $data->id_location;
+    }
 
-$pict  = $data->pict;
+    if ($_GET['imenu']) {
+        $imenu = $_GET['imenu'];
+    } else {
+        $imenu = $data->id_modul;
+    }
 
-  
-?>
+    $pict = $data->pict; ?>
 
 
 <div class="ix_panel">
@@ -376,12 +371,11 @@ $pict  = $data->pict;
         <!-- /editor -->
 
          <?php 
-         if(empty($pict)) { 
-            $ipict = 'logo.png';
-           } else { 
-            $ipict = $pict;
-           } 
-           ?>
+         if (empty($pict)) {
+             $ipict = 'logo.png';
+         } else {
+             $ipict = $pict;
+         } ?>
 
         <script>
           var btnCust = '<button type="button" class="btn btn-default" title="Add picture tags" ' + 
@@ -400,7 +394,7 @@ $pict  = $data->pict;
               removeTitle: 'Cancel or reset changes',
               elErrorContainer: '#kv-avatar-errors',
               msgErrorClass: 'alert alert-block alert-danger',
-              defaultPreviewContent: '<img src="../../images/logo/<?php echo $ipict;?>" alt="Your Avatar" style="width:180px;">',
+              defaultPreviewContent: '<img src="../../images/logo/<?php echo $ipict; ?>" alt="Your Avatar" style="width:180px;">',
               layoutTemplates: {main2: '{preview} ' + ' {remove} {browse}'},
               allowedFileExtensions: ["jpg"]
           });
@@ -408,6 +402,6 @@ $pict  = $data->pict;
 
 </body>
 </html>
-<?
+<?php
 }
 ?>

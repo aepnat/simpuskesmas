@@ -24,27 +24,27 @@
 
     define('QR_IMAGE', true);
 
-    class QRimage {
-
+    class qrimage
+    {
         //----------------------------------------------------------------------
-        public static function png($frame, $filename = false, $pixelPerPoint = 4, $outerFrame = 4,$saveandprint=FALSE, $back_color, $fore_color)
+        public static function png($frame, $filename, $pixelPerPoint, $outerFrame, $saveandprint, $back_color, $fore_color)
         {
             $image = self::image($frame, $pixelPerPoint, $outerFrame, $back_color, $fore_color);
 
             if ($filename === false) {
-                Header("Content-type: image/png");
-                ImagePng($image);
+                header('Content-type: image/png');
+                imagepng($image);
             } else {
-                if($saveandprint===TRUE){
-                    ImagePng($image, $filename);
-                    header("Content-type: image/png");
-                    ImagePng($image);
-                }else{
-                    @ImagePng($image, $filename);
+                if ($saveandprint === true) {
+                    imagepng($image, $filename);
+                    header('Content-type: image/png');
+                    imagepng($image);
+                } else {
+                    @imagepng($image, $filename);
                 }
             }
 
-            ImageDestroy($image);
+            imagedestroy($image);
         }
 
         //----------------------------------------------------------------------
@@ -53,13 +53,13 @@
             $image = self::image($frame, $pixelPerPoint, $outerFrame);
 
             if ($filename === false) {
-                Header("Content-type: image/jpeg");
-                ImageJpeg($image, null, $q);
+                header('Content-type: image/jpeg');
+                imagejpeg($image, null, $q);
             } else {
-                ImageJpeg($image, $filename, $q);
+                imagejpeg($image, $filename, $q);
             }
 
-            ImageDestroy($image);
+            imagedestroy($image);
         }
 
         //----------------------------------------------------------------------
@@ -68,10 +68,10 @@
             $h = count($frame);
             $w = strlen($frame[0]);
 
-            $imgW = $w + 2*$outerFrame;
-            $imgH = $h + 2*$outerFrame;
+            $imgW = $w + 2 * $outerFrame;
+            $imgH = $h + 2 * $outerFrame;
 
-            $base_image =ImageCreate($imgW, $imgH);
+            $base_image = imagecreate($imgW, $imgH);
 
             // convert a hexadecimal color code into decimal eps format (green = 0 1 0, blue = 0 0 1, ...)
             $r1 = round((($fore_color & 0xFF0000) >> 16), 5);
@@ -83,24 +83,22 @@
             $b2 = round((($back_color & 0x00FF00) >> 8), 5);
             $g2 = round(($back_color & 0x0000FF), 5);
 
-
-
-            $col[0] = ImageColorAllocate($base_image,$r2,$b2,$g2);
-            $col[1] = ImageColorAllocate($base_image,$r1,$b1,$g1);
+            $col[0] = imagecolorallocate($base_image, $r2, $b2, $g2);
+            $col[1] = imagecolorallocate($base_image, $r1, $b1, $g1);
 
             imagefill($base_image, 0, 0, $col[0]);
 
-            for($y=0; $y<$h; $y++) {
-                for($x=0; $x<$w; $x++) {
+            for ($y = 0; $y < $h; $y++) {
+                for ($x = 0; $x < $w; $x++) {
                     if ($frame[$y][$x] == '1') {
-                        ImageSetPixel($base_image,$x+$outerFrame,$y+$outerFrame,$col[1]);
+                        imagesetpixel($base_image, $x + $outerFrame, $y + $outerFrame, $col[1]);
                     }
                 }
             }
 
-            $target_image =ImageCreate($imgW * $pixelPerPoint, $imgH * $pixelPerPoint);
-            ImageCopyResized($target_image, $base_image, 0, 0, 0, 0, $imgW * $pixelPerPoint, $imgH * $pixelPerPoint, $imgW, $imgH);
-            ImageDestroy($base_image);
+            $target_image = imagecreate($imgW * $pixelPerPoint, $imgH * $pixelPerPoint);
+            imagecopyresized($target_image, $base_image, 0, 0, 0, 0, $imgW * $pixelPerPoint, $imgH * $pixelPerPoint, $imgW, $imgH);
+            imagedestroy($base_image);
 
             return $target_image;
         }

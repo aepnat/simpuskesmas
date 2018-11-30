@@ -2,61 +2,43 @@
 
 session_start();
 
-if (empty($_SESSION['username']) AND empty($_SESSION['password'])){
+if (empty($_SESSION['username']) and empty($_SESSION['password'])) {
+    echo "<script>window.alert('Please login first.'); window.location=('../../index.php.php')</script>";
+} else {
+    include './../../config/koneksi.php';
 
-  echo "<script>window.alert('Please login first.'); window.location=('../../index.php.php')</script>";
+    include './../../config/fungsi_thumb.php';
 
-} else{
+    $module = $_GET[module];
 
-include "./../../config/koneksi.php";
+    $act = $_GET[act];
 
-include "./../../config/fungsi_thumb.php";
+    $date = date('d/m/Y');
 
+    $idate = date('Y-m-d');
 
+    $hour = time() - (1 * 1 * 60 * 60);
 
-$module=$_GET[module];
+    $datetime = date('Y-m-d G:i:s', $hour);
 
-$act=$_GET[act];
+    $userid = $_SESSION['userid'];
 
+    // Hapus modul
 
+    if ($module == 'kasir' and $act == 'hapus') {
+        $id = $_GET['id'];
 
-$date     = date("d/m/Y");  
+        $id_module = $_GET['id_module'];
 
-$idate    = date("Y-m-d");
-
-$hour = time() - (1 * 1 * 60 * 60);
-
-$datetime   = date("Y-m-d G:i:s", $hour);
-
-$userid   = $_SESSION['userid'];
-
-
-
-
-
-// Hapus modul
-
-if ($module=='kasir' AND $act=='hapus'){
-
-  $id = $_GET['id'];
-
-  $id_module = $_GET['id_module'];
-
-
-
-
-
-  mysql_query("UPDATE kasir SET status   = '4'
+        mysql_query("UPDATE kasir SET status   = '4'
 
                                 ,upddt   = '$datetime' 
 
                                 ,updby   = '$userid' 
 
-                              WHERE id_kasir = '$id'");  
+                              WHERE id_kasir = '$id'");
 
-
-
-  mysql_query("UPDATE kasir_detail SET status   = '4'
+        mysql_query("UPDATE kasir_detail SET status   = '4'
 
                                 ,upddt   = '$datetime' 
 
@@ -64,32 +46,18 @@ if ($module=='kasir' AND $act=='hapus'){
 
                             WHERE id_kasir = '$id'
 
-                              "); 
+                              ");
 
+        header('location:../../main.php?module='.$module.'&id_module='.$id_module.'&kode='.$kode.'&prd='.$prd.'&notrans='.$notrans.'&outlet='.$outlet);
+    }
 
+    // Input group
 
-  
+    elseif ($module == 'kasir' and $act == 'input') {
+        $id_module = $_POST['id_module'];
 
-  header('location:../../main.php?module='.$module.'&id_module='.$id_module.'&kode='.$kode.'&prd='.$prd.'&notrans='.$notrans.'&outlet='.$outlet);          
-   
-
- }
-
-
-
-  // Input group
-
-elseif ($module=='kasir' AND $act=='input'){
-
-
-
- $id_module = $_POST['id_module'];
-
-       
-if($_POST['ID']){
-
-
-  mysql_query("UPDATE kasir SET tanggal   = '$_POST[tanggal]'
+        if ($_POST['ID']) {
+            mysql_query("UPDATE kasir SET tanggal   = '$_POST[tanggal]'
 
                                     ,id_shift   = '$_POST[shift]'
 
@@ -99,14 +67,9 @@ if($_POST['ID']){
 
                                     ,updby   = '$userid' 
 
-                                  WHERE id_kasir = '$_POST[ID]'");            
-
-  
-                          
-
-       } else {
-
-       mysql_query("INSERT INTO kasir (tanggal
+                                  WHERE id_kasir = '$_POST[ID]'");
+        } else {
+            mysql_query("INSERT INTO kasir (tanggal
 
                             , id_shift
 
@@ -139,54 +102,32 @@ if($_POST['ID']){
 
                         ,'$datetime'
 
-                        ,'$userid')");  
-
-                    
-
+                        ,'$userid')");
         }
 
+        $sql = mysql_query('SELECT max(id_kasir) as id FROM kasir');
 
-         $sql  = mysql_query("SELECT max(id_kasir) as id FROM kasir");
-      
+        $r = mysql_fetch_array($sql);
 
-         $r    = mysql_fetch_array($sql); 
-         
-       
-         $k_ID= $r['id'];
-       
-
-  ?>
+        $k_ID = $r['id']; ?>
 
    
 
   <script language="javascript">
 
-     window.parent.location.href = "<?php echo"./../../main.php?module=$module&id_module=$id_module&act=save&ID=$k_ID";?>";  
+     window.parent.location.href = "<?php echo"./../../main.php?module=$module&id_module=$id_module&act=save&ID=$k_ID"; ?>";  
 
    </script>
 
   
 
-  <?php                               
+  <?php
+    } elseif ($module == 'kasir' and $act == 'add') {
+        $id_module = $_POST['id_module'];
 
- 
+        $k_ID = $_POST['k_ID'];
 
-
-
-}
-
-
-
-elseif ($module=='kasir' AND $act=='add'){
-
-
-
- $id_module = $_POST['id_module'];
-
- $k_ID        = $_POST['k_ID'];
-
-
- $detil  = mysql_query("SELECT max(seqno) as seqno 
+        $detil = mysql_query("SELECT max(seqno) as seqno 
 
                               FROM kasir_detail 
 
@@ -196,32 +137,18 @@ elseif ($module=='kasir' AND $act=='add'){
 
                               ");
 
+        $d = mysql_fetch_array($detil);
 
+        $seqno = $d['seqno'];
 
- $d         = mysql_fetch_array($detil);
+        if (empty($seqno)) {
+            $iseqno = '1';
+        } else {
+            $iseqno = $seqno + 1;
+        }
 
-  
-
- $seqno  = $d['seqno'];
-
-  
-
-  if (empty($seqno)) {
-
-  $iseqno = '1';  
-
-  } else {
-
-  $iseqno = $seqno+1;     
-
-  }
-
- 
-
-   if($_POST['ID']){
-
-
-         mysql_query("UPDATE kasir_detail SET notrans ='$_POST[notrans]' 
+        if ($_POST['ID']) {
+            mysql_query("UPDATE kasir_detail SET notrans ='$_POST[notrans]' 
 
                                 , pasien ='$_POST[pasien]' 
 
@@ -241,14 +168,9 @@ elseif ($module=='kasir' AND $act=='add'){
 
                               WHERE id_kasir_detail = '$_POST[ID]'
 
-                              ");  
-
-
-                                                                           
-
-       } else {
-
-       mysql_query("INSERT INTO kasir_detail (
+                              ");
+        } else {
+            mysql_query("INSERT INTO kasir_detail (
 
                               id_kasir
 
@@ -306,96 +228,52 @@ elseif ($module=='kasir' AND $act=='add'){
 
                         ,'$datetime'
 
-                        ,'$userid')");  
-
-
-
-
-                             
-
-   }
-
-       
-
-  ?>
+                        ,'$userid')");
+        } ?>
 
    
 
   <script language="javascript">
 
-       window.parent.location.href = "<?php echo"./../../main.php?module=$module&id_module=$id_module&act=save&ID=$k_ID";?>";  
+       window.parent.location.href = "<?php echo"./../../main.php?module=$module&id_module=$id_module&act=save&ID=$k_ID"; ?>";  
 
    </script>
 
   
 
-  <?php                               
+  <?php
+    } elseif ($module == 'kasir' and $act == 'dhapus') {
+        $id = $_GET['id'];
 
- 
+        $id_module = $_GET['id_module'];
 
+        $k_ID = $_GET['k_ID'];
 
-
-}
-
-
-
-elseif ($module=='kasir' AND $act=='dhapus'){
-
-  $id = $_GET['id'];
-
-  $id_module = $_GET['id_module'];
-
-  $k_ID        = $_GET['k_ID'];
-
-
-
-   mysql_query("UPDATE kasir_detail SET status   = '4'
+        mysql_query("UPDATE kasir_detail SET status   = '4'
 
                                 ,upddt   = '$datetime' 
 
                                 ,updby   = '$userid' 
 
-                              WHERE id_kasir_detail = '$id'");     
+                              WHERE id_kasir_detail = '$id'");
 
-                                                            
+        header('location:../../main.php?module='.$module.'&id_module='.$id_module.'&act=save&ID='.$k_ID);
+    } elseif ($module == 'kasir' and $act == 'verified') {
+        $id = $_GET['id'];
 
+        $id_module = $_GET['id_module'];
 
+        $notrans = $_GET['notrans'];
 
+        $kode = $_GET['kode'];
 
+        $prd = $_GET['prd'];
 
-  header('location:../../main.php?module='.$module.'&id_module='.$id_module.'&act=save&ID='.$k_ID);          
+        $outlet = $_GET['outlet'];
 
+        $istatus = '1';
 
-
-   
-
- }
-
-
-
-elseif ($module=='kasir' AND $act=='verified'){
-
-  $id = $_GET['id'];
-
-  $id_module = $_GET['id_module'];
-
-  $notrans   = $_GET['notrans'];
-
-  $kode      = $_GET['kode'];
-
-  $prd      = $_GET['prd'];
-
-  $outlet      = $_GET['outlet'];
-
-
-
-
-
-  $istatus = '1';
-
-   
-
-   mysql_query("UPDATE kasir SET status   = '$istatus'
+        mysql_query("UPDATE kasir SET status   = '$istatus'
 
                                 ,upddt   = '$datetime' 
 
@@ -411,11 +289,9 @@ elseif ($module=='kasir' AND $act=='verified'){
 
                               AND id_outlet = '$outlet'
 
-                              ");    
+                              ");
 
-
-
-   mysql_query("UPDATE kasir_detail SET status   = '$istatus'
+        mysql_query("UPDATE kasir_detail SET status   = '$istatus'
 
                                 ,upddt   = '$datetime' 
 
@@ -431,43 +307,23 @@ elseif ($module=='kasir' AND $act=='verified'){
 
                               and status != '4'
 
-                              ");        
+                              ");
 
+        header('location:../../main.php?module='.$module.'&id_module='.$id_module.'&act=save&notrans='.$notrans.'&prd='.$prd.'&kode='.$kode.'&outlet='.$outlet);
+    } elseif ($module == 'kasir' and $act == 'reset') {
+        $id = $_GET['id'];
 
+        $id_module = $_GET['id_module'];
 
+        $notrans = $_GET['notrans'];
 
+        $kode = $_GET['kode'];
 
-  header('location:../../main.php?module='.$module.'&id_module='.$id_module.'&act=save&notrans='.$notrans.'&prd='.$prd.'&kode='.$kode.'&outlet='.$outlet);  
+        $prd = $_GET['prd'];
 
+        $outlet = $_GET['outlet'];
 
-
-
-
-   
-
- }
-
-
-
- elseif ($module=='kasir' AND $act=='reset'){
-
-  $id = $_GET['id'];
-
-  $id_module = $_GET['id_module'];
-
-  $notrans   = $_GET['notrans'];
-
-  $kode      = $_GET['kode'];
-
-  $prd      = $_GET['prd'];
-
-  $outlet      = $_GET['outlet'];
-
-
-
-
-
-   mysql_query("UPDATE kasir SET status   = '0'
+        mysql_query("UPDATE kasir SET status   = '0'
 
                                 ,upddt   = '$datetime' 
 
@@ -483,11 +339,9 @@ elseif ($module=='kasir' AND $act=='verified'){
 
                               AND status in ('1')
 
-                              ");       
+                              ");
 
-
-
-   mysql_query("UPDATE kasir_detail SET status   = '0'
+        mysql_query("UPDATE kasir_detail SET status   = '0'
 
                                 ,upddt   = '$datetime' 
 
@@ -503,28 +357,10 @@ elseif ($module=='kasir' AND $act=='verified'){
 
                               AND status  in ('1')
 
-                              ");        
+                              ");
 
-
-
-  header('location:../../main.php?module='.$module.'&id_module='.$id_module.'&act=save&notrans='.$notrans.'&prd='.$prd.'&kode='.$kode.'&outlet='.$outlet);           
-
-
-
-   
-
- }
-
-
-
-
-
-
-
-
-
- 
-
+        header('location:../../main.php?module='.$module.'&id_module='.$id_module.'&act=save&notrans='.$notrans.'&prd='.$prd.'&kode='.$kode.'&outlet='.$outlet);
+    }
 }
 
 ?>

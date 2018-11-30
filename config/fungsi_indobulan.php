@@ -1,194 +1,184 @@
 <?php
 
-	function tgl_indo($tgl){
+    function tgl_indo($tgl)
+    {
+        $tanggal = substr($tgl, 8, 2);
 
-			$tanggal = substr($tgl,8,2);
+        $bulan = getBulan(substr($tgl, 5, 2));
 
-			$bulan = getBulan(substr($tgl,5,2));
+        $tahun = substr($tgl, 0, 4);
 
-			$tahun = substr($tgl,0,4);
+        return $tanggal.'/'.$bulan.'/'.$tahun;
+    }
 
-			return $tanggal.'/'.$bulan.'/'.$tahun;		 
+    function getBulan($bln)
+    {
+        switch ($bln) {
 
-	}	
+                    case 1:
 
+                        return '01';
 
+                        break;
 
-	function getBulan($bln){
+                    case 2:
 
-				switch ($bln){
+                        return '02';
 
-					case 1: 
+                        break;
 
-						return "01";
+                    case 3:
 
-						break;
+                        return '03';
 
-					case 2:
+                        break;
 
-						return "02";
+                    case 4:
 
-						break;
+                        return '04';
 
-					case 3:
+                        break;
 
-						return "03";
+                    case 5:
 
-						break;
+                        return '05';
 
-					case 4:
+                        break;
 
-						return "04";
+                    case 6:
 
-						break;
+                        return '06';
 
-					case 5:
+                        break;
 
-						return "05";
+                    case 7:
 
-						break;
+                        return '07';
 
-					case 6:
+                        break;
 
-						return "06";
+                    case 8:
 
-						break;
+                        return '08';
 
-					case 7:
+                        break;
 
-						return "07";
+                    case 9:
 
-						break;
+                        return '09';
 
-					case 8:
+                        break;
 
-						return "08";
+                    case 10:
 
-						break;
+                        return '10';
 
-					case 9:
+                        break;
 
-						return "09";
+                    case 11:
 
-						break;
+                        return '11';
 
-					case 10:
+                        break;
 
-						return "10";
+                    case 12:
 
-						break;
+                        return '12';
 
-					case 11:
+                        break;
 
-						return "11";
+                }
+    }
 
-						break;
+            function tgl_indo1($tgl1)
+            {
+                $tanggal1 = substr($tgl1, 8, 2);
 
-					case 12:
+                $bulan1 = getBulan1(substr($tgl1, 5, 2));
 
-						return "12";
+                $tahun1 = substr($tgl1, 0, 4);
 
-						break;
+                return $tanggal1.' '.$bulan1.' '.$tahun1;
+            }
 
-				}
+    function getBulan1($bln1)
+    {
+        switch ($bln1) {
 
-			} 
+                    case 1:
 
-			
+                        return 'Januari';
 
-			function tgl_indo1($tgl1){
+                        break;
 
-			$tanggal1 = substr($tgl1,8,2);
+                    case 2:
 
-			$bulan1 = getBulan1(substr($tgl1,5,2));
+                        return 'Februari';
 
-			$tahun1 = substr($tgl1,0,4);
+                        break;
 
-			return $tanggal1.' '.$bulan1.' '.$tahun1;		 
+                    case 3:
 
-	}	
+                        return 'Maret';
 
+                        break;
 
+                    case 4:
 
-	function getBulan1($bln1){
+                        return 'April';
 
-				switch ($bln1){
+                        break;
 
-					case 1: 
+                    case 5:
 
-						return "Januari";
+                        return 'Mei';
 
-						break;
+                        break;
 
-					case 2:
+                    case 6:
 
-						return "Februari";
+                        return 'Juni';
 
-						break;
+                        break;
 
-					case 3:
+                    case 7:
 
-						return "Maret";
+                        return 'Juli';
 
-						break;
+                        break;
 
-					case 4:
+                    case 8:
 
-						return "April";
+                        return 'Agustus';
 
-						break;
+                        break;
 
-					case 5:
+                    case 9:
 
-						return "Mei";
+                        return 'September';
 
-						break;
+                        break;
 
-					case 6:
+                    case 10:
 
-						return "Juni";
+                        return 'Oktober';
 
-						break;
+                        break;
 
-					case 7:
+                    case 11:
 
-						return "Juli";
+                        return 'November';
 
-						break;
+                        break;
 
-					case 8:
+                    case 12:
 
-						return "Agustus";
+                        return 'Desember';
 
-						break;
+                        break;
 
-					case 9:
-
-						return "September";
-
-						break;
-
-					case 10:
-
-						return "Oktober";
-
-						break;
-
-					case 11:
-
-						return "November";
-
-						break;
-
-					case 12:
-
-						return "Desember";
-
-						break;
-
-				}
-
-			} 
+                }
+    }
 
 ?>
 

@@ -1,9 +1,9 @@
 <?php
-	header( 'Expires: Sat, 26 Jul 1997 05:00:00 GMT' ); 
-	header( 'Last-Modified: ' . gmdate( 'D, d M Y H:i:s' ) . ' GMT' ); 
-	header( 'Cache-Control: no-store, no-cache, must-revalidate' ); 
-	header( 'Cache-Control: post-check=0, pre-check=0', false ); 
-	header( 'Pragma: no-cache' ); 
+    header('Expires: Sat, 26 Jul 1997 05:00:00 GMT');
+    header('Last-Modified: '.gmdate('D, d M Y H:i:s').' GMT');
+    header('Cache-Control: no-store, no-cache, must-revalidate');
+    header('Cache-Control: post-check=0, pre-check=0', false);
+    header('Pragma: no-cache');
 ?><!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html>
 	<head>
@@ -24,12 +24,11 @@
 			} );
 		</script>
 		<?php
-			$aScripts = explode( ":", $_GET['scripts'] );
-			for ( $i=0 ; $i<count($aScripts) ; $i++ )
-			{
-				echo '<script type="text/javascript" src="../'.$aScripts[$i].'?rand='.rand().'"></script>'."\n";
-			}
-		?>
+            $aScripts = explode(':', $_GET['scripts']);
+            for ($i = 0; $i < count($aScripts); $i++) {
+                echo '<script type="text/javascript" src="../'.$aScripts[$i].'?rand='.rand().'"></script>'."\n";
+            }
+        ?>
 	</head>
 	<body id="dt_example">
 		<div id="container">

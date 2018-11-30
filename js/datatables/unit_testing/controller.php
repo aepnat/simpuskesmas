@@ -1,9 +1,9 @@
 <?php
-	header( 'Expires: Sat, 26 Jul 1997 05:00:00 GMT' ); 
-	header( 'Last-Modified: ' . gmdate( 'D, d M Y H:i:s' ) . ' GMT' ); 
-	header( 'Cache-Control: no-store, no-cache, must-revalidate' ); 
-	header( 'Cache-Control: post-check=0, pre-check=0', false ); 
-	header( 'Pragma: no-cache' ); 
+    header('Expires: Sat, 26 Jul 1997 05:00:00 GMT');
+    header('Last-Modified: '.gmdate('D, d M Y H:i:s').' GMT');
+    header('Cache-Control: no-store, no-cache, must-revalidate');
+    header('Cache-Control: post-check=0, pre-check=0', false);
+    header('Pragma: no-cache');
 ?><!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
 	"http://www.w3.org/TR/html4/strict.dtd">
 <html>
@@ -44,47 +44,40 @@
 		<script type="text/javascript" charset="utf-8">
 			var gaoTest = [
 			<?php
-				function fnReadDir( &$aReturn, $path )
-				{
-					$rDir = opendir( $path );
-        	while ( ($file = readdir($rDir)) !== false )
-					{
-						if ( $file == "." || $file == ".." || $file == ".DS_Store" )
-						{
-							continue;
-						}
-						else if ( is_dir( $path.'/'.$file ) )
-						{
-							fnReadDir( $aReturn, $path.'/'.$file );
-						}
-						else
-						{
-							array_push( $aReturn, $path.'/'.$file );
-						}
-					}
-					closedir($rDir);
-				}
-				
-				/* Get the tests dynamically from the 'tests' directory, and their templates */
-				$aFiles = array();
-				fnReadDir( $aFiles, "tests" );
-				
-				for ( $i=0 ; $i<count($aFiles) ; $i++ )
-				{
-					$sTemplate;
-					$fp = fopen( $aFiles[$i], "r" );
-					fscanf( $fp, "// DATA_TEMPLATE: %s", $sTemplate );
-					fclose( $fp );
-					
-					$aPath = explode('/', $aFiles[$i]);
-					
-					echo '{ '.
-						'"sTemplate": "'.$sTemplate.'", '.
-						'"sTest": "'.$aFiles[$i].'", '.
-						'"sGroup": "'.$aPath[1].'"},'."\n";
-				}
-				
-			?>
+                function fnReadDir(&$aReturn, $path)
+                {
+                    $rDir = opendir($path);
+                    while (($file = readdir($rDir)) !== false) {
+                        if ($file == '.' || $file == '..' || $file == '.DS_Store') {
+                            continue;
+                        } elseif (is_dir($path.'/'.$file)) {
+                            fnReadDir($aReturn, $path.'/'.$file);
+                        } else {
+                            array_push($aReturn, $path.'/'.$file);
+                        }
+                    }
+                    closedir($rDir);
+                }
+
+                /* Get the tests dynamically from the 'tests' directory, and their templates */
+                $aFiles = [];
+                fnReadDir($aFiles, 'tests');
+
+                for ($i = 0; $i < count($aFiles); $i++) {
+                    $sTemplate;
+                    $fp = fopen($aFiles[$i], 'r');
+                    fscanf($fp, '// DATA_TEMPLATE: %s', $sTemplate);
+                    fclose($fp);
+
+                    $aPath = explode('/', $aFiles[$i]);
+
+                    echo '{ '.
+                        '"sTemplate": "'.$sTemplate.'", '.
+                        '"sTest": "'.$aFiles[$i].'", '.
+                        '"sGroup": "'.$aPath[1].'"},'."\n";
+                }
+
+            ?>
 			null ];
 			gaoTest.pop(); /* No interest in the null */
 		</script>

@@ -1,41 +1,39 @@
 <?php
+
 session_start();
-if (empty($_SESSION['username']) AND empty($_SESSION['password'])){
-  echo "<script>window.alert('Please login first.'); window.location=('../../index.php.php')</script>";
-} else{
-include "./../../config/koneksi.php";
-include "./../../config/fungsi_thumb.php";
+if (empty($_SESSION['username']) and empty($_SESSION['password'])) {
+    echo "<script>window.alert('Please login first.'); window.location=('../../index.php.php')</script>";
+} else {
+    include './../../config/koneksi.php';
+    include './../../config/fungsi_thumb.php';
 
-$imodule=$_POST[imodule];
-$module=$_GET[module];
-$act=$_GET[act];
+    $imodule = $_POST[imodule];
+    $module = $_GET[module];
+    $act = $_GET[act];
 
-$date     = date("d/m/Y");  
-$idate    = date("Y-m-d");
-$hour = time() - (1 * 1 * 60 * 60);
-$datetime   = date("Y-m-d G:i:s", $hour);
-$userid   = $_SESSION['userid'];
+    $date = date('d/m/Y');
+    $idate = date('Y-m-d');
+    $hour = time() - (1 * 1 * 60 * 60);
+    $datetime = date('Y-m-d G:i:s', $hour);
+    $userid = $_SESSION['userid'];
 
-$SQL = "SELECT* FROM periode ";
-$tampil=mysql_query($SQL);
-$p=mysql_fetch_array($tampil);
+    $SQL = 'SELECT* FROM periode ';
+    $tampil = mysql_query($SQL);
+    $p = mysql_fetch_array($tampil);
 
-$prd = $p['periode'];
+    $prd = $p['periode'];
 
+    if ($module == 'pengaturan_sistem' and $act == 'ip') {
+        $id_module = $_POST['id_module'];
 
-if ($module=='pengaturan_sistem' AND $act=='ip'){
+        $lokasi_file = $_FILES['fupload']['tmp_name'];
+        $tipe_file = $_FILES['fupload']['type'];
+        $nama_file = $_FILES['fupload']['name'];
+        $acak = rand(1, 99);
+        $nama_file_unik = $acak.$nama_file;
 
-  $id_module = $_POST['id_module'];
-
-  $lokasi_file    = $_FILES['fupload']['tmp_name'];
-  $tipe_file      = $_FILES['fupload']['type'];
-  $nama_file      = $_FILES['fupload']['name'];
-  $acak           = rand(1,99);
-  $nama_file_unik = $acak.$nama_file; 
-
-    
-      if (empty($lokasi_file)){
-          mysql_query("UPDATE informasi_perusahaan SET company    = '$_POST[company]'
+        if (empty($lokasi_file)) {
+            mysql_query("UPDATE informasi_perusahaan SET company    = '$_POST[company]'
                           ,address   = '$_POST[address]'
                           ,city      = '$_POST[city]'
                           ,zip       = '$_POST[zip]'      
@@ -45,10 +43,9 @@ if ($module=='pengaturan_sistem' AND $act=='ip'){
                          ,upddt     = '$datetime' 
                          ,updby     = '$userid'    
                        WHERE id_informasi_perusahaan     = '$_POST[ID]'");
-       } else {
-
-           LogoImage($nama_file_unik);
-           mysql_query("UPDATE informasi_perusahaan SET company    = '$_POST[company]'
+        } else {
+            LogoImage($nama_file_unik);
+            mysql_query("UPDATE informasi_perusahaan SET company    = '$_POST[company]'
                           ,address   = '$_POST[address]'
                           ,city      = '$_POST[city]'
                           ,zip       = '$_POST[zip]'      
@@ -60,20 +57,13 @@ if ($module=='pengaturan_sistem' AND $act=='ip'){
                          ,upddt     = '$datetime' 
                          ,updby     = '$userid'   
                        WHERE id_informasi_perusahaan      = '$_POST[ID]'");
+        }
 
+        $id = $_POST['ID'];
 
-       }   
-
-  $id = $_POST['ID'];       
-                       
-   header('location:form_'.$module.'.php?id='.$id.'&module='.$module.'&id_module='.$id_module.'&tab='.$act.'&imodule='.$imodule);          
-
-}
-
-elseif ($module=='pengaturan_sistem' AND $act=='sa'){
-
-
-   mysql_query("UPDATE pg_setoran_awal SET jenis    = '$_POST[jenis]'
+        header('location:form_'.$module.'.php?id='.$id.'&module='.$module.'&id_module='.$id_module.'&tab='.$act.'&imodule='.$imodule);
+    } elseif ($module == 'pengaturan_sistem' and $act == 'sa') {
+        mysql_query("UPDATE pg_setoran_awal SET jenis    = '$_POST[jenis]'
                           ,nilai   = '$_POST[nilai]'
                           ,id_jenis_posting      = '$_POST[jenis_posting]'
                           ,rek_debet       = '$_POST[rek_debet]'      
@@ -84,22 +74,21 @@ elseif ($module=='pengaturan_sistem' AND $act=='sa'){
                        AND prd = '$prd'
                        ");
 
-   if ($_POST['u_tab'] == '1') {
-
-        mysql_query("DELETE FROM pembukaan_tabungan 
+        if ($_POST['u_tab'] == '1') {
+            mysql_query("DELETE FROM pembukaan_tabungan 
                        WHERE id_pg_setoran_awal     = '$_POST[ID]'
                        AND status    = '2' 
-                       ");  
+                       ");
 
-       mysql_query("UPDATE pembukaan_tabungan SET status    = '2' 
+            mysql_query("UPDATE pembukaan_tabungan SET status    = '2' 
                          ,upddt     = '$datetime' 
                          ,updby     = '$userid'    
                        WHERE id_pg_setoran_awal     = '$_POST[ID]'
                        AND status = '0'
                        AND posting = '0'
-                       ");  
+                       ");
 
-       mysql_query("INSERT INTO pembukaan_tabungan (
+            mysql_query("INSERT INTO pembukaan_tabungan (
                           nik
                         , tanggal
                         , id_pg_setoran_awal
@@ -124,24 +113,23 @@ elseif ($module=='pengaturan_sistem' AND $act=='sa'){
                           from anggota
                           where tipe = 'A'
                           AND tab = '1'
-                          ");                    
-   }
+                          ");
+        }
 
-   if ($_POST['u_tab'] == '2') {
-
-        mysql_query("DELETE FROM pembukaan_tabungan 
+        if ($_POST['u_tab'] == '2') {
+            mysql_query("DELETE FROM pembukaan_tabungan 
                        WHERE id_pg_setoran_awal     = '$_POST[ID]'
                        AND status    = '2' 
-                       ");  
+                       ");
 
-       mysql_query("UPDATE pembukaan_tabungan SET status    = '2' 
+            mysql_query("UPDATE pembukaan_tabungan SET status    = '2' 
                          ,upddt     = '$datetime' 
                          ,updby     = '$userid'    
                        WHERE id_pg_setoran_awal     = '$_POST[ID]'
                        AND status = '0'
-                       ");  
+                       ");
 
-       mysql_query("INSERT INTO pembukaan_tabungan (
+            mysql_query("INSERT INTO pembukaan_tabungan (
                           nik
                         , tanggal
                         , id_pg_setoran_awal
@@ -166,20 +154,13 @@ elseif ($module=='pengaturan_sistem' AND $act=='sa'){
                           from anggota
                           where tipe = 'A'
                           AND tab = '1'
-                          ");                    
-   }
+                          ");
+        }
 
-
-
-$id = $_POST['ID'];     
-header('location:form_'.$module.'.php?id='.$id.'&module='.$module.'&id_module='.$id_module.'&tab='.$act.'&imodule='.$imodule);    
-
-}
-
-elseif ($module=='pengaturan_sistem' AND $act=='pd'){
-
-
-   mysql_query("UPDATE pg_penarikan_dana SET max_pencairan   = '$_POST[max_pencairan]'
+        $id = $_POST['ID'];
+        header('location:form_'.$module.'.php?id='.$id.'&module='.$module.'&id_module='.$id_module.'&tab='.$act.'&imodule='.$imodule);
+    } elseif ($module == 'pengaturan_sistem' and $act == 'pd') {
+        mysql_query("UPDATE pg_penarikan_dana SET max_pencairan   = '$_POST[max_pencairan]'
                                       ,max_penarikan         = '$_POST[max_penarikan]'
                                       ,jeda_waktu      = '$_POST[jeda_waktu]'
                                       ,rek_debet       = '$_POST[rek_debet]'      
@@ -191,19 +172,11 @@ elseif ($module=='pengaturan_sistem' AND $act=='pd'){
                        AND prd = '$prd'
                        ");
 
-
-$id = $_POST['ID'];     
-header('location:form_'.$module.'.php?id='.$id.'&module='.$module.'&id_module='.$id_module.'&tab='.$act.'&imodule='.$imodule);    
-
-}  
-
-elseif ($module=='pengaturan_sistem' AND $act=='pm'){
-
-
-   if ($_POST[stab] == 'tunai') {
-
-
-       mysql_query("UPDATE pg_peminjaman_tunai SET min_tenor     = '$_POST[min_tenor_k]'
+        $id = $_POST['ID'];
+        header('location:form_'.$module.'.php?id='.$id.'&module='.$module.'&id_module='.$id_module.'&tab='.$act.'&imodule='.$imodule);
+    } elseif ($module == 'pengaturan_sistem' and $act == 'pm') {
+        if ($_POST[stab] == 'tunai') {
+            mysql_query("UPDATE pg_peminjaman_tunai SET min_tenor     = '$_POST[min_tenor_k]'
                                                 ,max_tenor     = '$_POST[max_tenor_k]'
                                                 ,max_pinjaman  = '$_POST[max_pinjaman_k]'      
                                                 ,max_angsuran  = '$_POST[max_angsuran_k]'  
@@ -226,7 +199,7 @@ elseif ($module=='pengaturan_sistem' AND $act=='pm'){
                                                   AND prd = '$prd'
                                                   ");
 
-       mysql_query("UPDATE pg_peminjaman_tunai SET min_tenor     = '$_POST[min_tenor_s]'
+            mysql_query("UPDATE pg_peminjaman_tunai SET min_tenor     = '$_POST[min_tenor_s]'
                                                 ,max_tenor     = '$_POST[max_tenor_s]'
                                                 ,max_pinjaman  = '$_POST[max_pinjaman_s]'      
                                                 ,max_angsuran  = '$_POST[max_angsuran_s]'  
@@ -248,12 +221,8 @@ elseif ($module=='pengaturan_sistem' AND $act=='pm'){
                                                   WHERE tipe     = 'S'
                                                   AND prd = '$prd'
                                                   ");
-
-   }    else {
-
-
-
-       mysql_query("UPDATE pg_peminjaman_barang SET min_tenor     = '$_POST[min_tenor_k]'
+        } else {
+            mysql_query("UPDATE pg_peminjaman_barang SET min_tenor     = '$_POST[min_tenor_k]'
                                                 ,max_tenor     = '$_POST[max_tenor_k]'
                                                 ,max_pinjaman  = '$_POST[max_pinjaman_k]'      
                                                 ,max_angsuran  = '$_POST[max_angsuran_k]'  
@@ -276,7 +245,7 @@ elseif ($module=='pengaturan_sistem' AND $act=='pm'){
                                                   AND prd = '$prd'
                                                   ");
 
-       mysql_query("UPDATE pg_peminjaman_barang SET min_tenor     = '$_POST[min_tenor_s]'
+            mysql_query("UPDATE pg_peminjaman_barang SET min_tenor     = '$_POST[min_tenor_s]'
                                                 ,max_tenor     = '$_POST[max_tenor_s]'
                                                 ,max_pinjaman  = '$_POST[max_pinjaman_s]'      
                                                 ,max_angsuran  = '$_POST[max_angsuran_s]'  
@@ -298,21 +267,13 @@ elseif ($module=='pengaturan_sistem' AND $act=='pm'){
                                                   WHERE tipe     = 'S'
                                                   AND prd = '$prd'
                                                   ");
+        }
 
+        $stab = $_POST['stab'];
 
-
-   }
-
-   $stab = $_POST['stab'];
-
-    header('location:form_'.$module.'.php?id='.$id.'&module='.$module.'&id_module='.$id_module.'&tab='.$act.'&imodule='.$imodule.'&stab='.$stab);    
-
-}  
-
-elseif ($module=='pengaturan_sistem' AND $act=='ln'){
-
-
-   mysql_query("UPDATE pg_lainnya SET harga_saham    = '$_POST[harga_saham]'
+        header('location:form_'.$module.'.php?id='.$id.'&module='.$module.'&id_module='.$id_module.'&tab='.$act.'&imodule='.$imodule.'&stab='.$stab);
+    } elseif ($module == 'pengaturan_sistem' and $act == 'ln') {
+        mysql_query("UPDATE pg_lainnya SET harga_saham    = '$_POST[harga_saham]'
                                      ,rek_shu        = '$_POST[rek_shu]'
                                      ,ftgl           = '$_POST[ftgl]'
                                      ,fbln           = '$_POST[fbln]'
@@ -324,16 +285,10 @@ elseif ($module=='pengaturan_sistem' AND $act=='ln'){
                                    AND prd = '$prd'
                        ");
 
-
-$id = $_POST['ID'];     
-header('location:form_'.$module.'.php?id='.$id.'&module='.$module.'&id_module='.$id_module.'&tab='.$act.'&imodule='.$imodule);    
-
-}
-
-elseif ($module=='pengaturan_sistem' AND $act=='jr'){
-
-
-   mysql_query("UPDATE pg_jurnal SET id_jenis_transaksi    = '$_POST[jenis_transaksi]'
+        $id = $_POST['ID'];
+        header('location:form_'.$module.'.php?id='.$id.'&module='.$module.'&id_module='.$id_module.'&tab='.$act.'&imodule='.$imodule);
+    } elseif ($module == 'pengaturan_sistem' and $act == 'jr') {
+        mysql_query("UPDATE pg_jurnal SET id_jenis_transaksi    = '$_POST[jenis_transaksi]'
                           ,id_modul      = '$_POST[modul]'
                          ,upddt     = '$datetime' 
                          ,updby     = '$userid'    
@@ -341,27 +296,17 @@ elseif ($module=='pengaturan_sistem' AND $act=='jr'){
                        AND prd = '$prd'
                        ");
 
-
-$id = $_POST['ID'];     
-header('location:form_'.$module.'.php?id='.$id.'&module='.$module.'&id_module='.$id_module.'&tab='.$act.'&imodule='.$imodule);    
-
-}
-
-elseif ($module=='pengaturan_sistem' AND $act=='pl'){
-
-
-   mysql_query("UPDATE pg_plafon SET plafon    = '$_POST[plafon]'
+        $id = $_POST['ID'];
+        header('location:form_'.$module.'.php?id='.$id.'&module='.$module.'&id_module='.$id_module.'&tab='.$act.'&imodule='.$imodule);
+    } elseif ($module == 'pengaturan_sistem' and $act == 'pl') {
+        mysql_query("UPDATE pg_plafon SET plafon    = '$_POST[plafon]'
                                      ,upddt     = '$datetime' 
                                      ,updby     = '$userid'    
                                    WHERE id_pg_plafon     = '$_POST[ID]'
                                    AND prd = '$prd'
                        ");
 
-
-$id = $_POST['ID'];     
-header('location:form_'.$module.'.php?id='.$id.'&module='.$module.'&id_module='.$id_module.'&tab='.$act.'&imodule='.$imodule);    
-
+        $id = $_POST['ID'];
+        header('location:form_'.$module.'.php?id='.$id.'&module='.$module.'&id_module='.$id_module.'&tab='.$act.'&imodule='.$imodule);
+    }
 }
-
-}
-?>

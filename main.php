@@ -1,126 +1,106 @@
 <?php
 session_start();
-if (empty($_SESSION['userid']) AND empty($_SESSION['password'])){
-
- echo "<script>window.alert('Login first.'); window.location=('index.php')</script>";
- 
-
+if (empty($_SESSION['userid']) and empty($_SESSION['password'])) {
+    echo "<script>window.alert('Login first.'); window.location=('index.php')</script>";
 } else {
-date_default_timezone_set('Asia/Jakarta');
-include "config/koneksi.php";
-//include "config/koneksi_odbc.php";
-include "config/fungsi_indobulan.php";
-include "config/browser_detection.php";
+    date_default_timezone_set('Asia/Jakarta');
+    include 'config/koneksi.php';
+    //include "config/koneksi_odbc.php";
+    include 'config/fungsi_indobulan.php';
+    include 'config/browser_detection.php';
 
+    $userid = $_SESSION['userid'];
+    $username = $_SESSION['iusername'];
+    $role = $_SESSION['role'];
+    $groups = $_SESSION['groups'];
+    $outlet = $_SESSION['outlet'];
+    $df_outlet = $_SESSION['outlet'];
 
-$userid   = $_SESSION['userid'];  
-$username = $_SESSION['iusername'];  
-$role     = $_SESSION['role'];  
-$groups   = $_SESSION['groups'];  
-$outlet   = $_SESSION['outlet'];  
-$df_outlet   = $_SESSION['outlet'];  
+    $tipe_sales = $_SESSION['tipe_sales'];
 
-$tipe_sales   = $_SESSION['tipe_sales'];  
+    $r_input = $_SESSION['r_input'];
+    $r_edit = $_SESSION['r_edit'];
+    $r_delete = $_SESSION['r_delete'];
+    $r_admin = $_SESSION['r_admin'];
+    $r_department = $_SESSION['r_department'];
 
-$r_input = $_SESSION['r_input'];  
-$r_edit = $_SESSION['r_edit'];
-$r_delete = $_SESSION['r_delete'];
-$r_admin = $_SESSION['r_admin'];
-$r_department = $_SESSION['r_department'];
-
-
-
-
- $gsql=mysql_query("SELECT a.main_page,b.id_modul FROM groups a inner join modul b
+    $gsql = mysql_query("SELECT a.main_page,b.id_modul FROM groups a inner join modul b
                     on a.main_page = b.link
                     WHERE id_groups ='$groups'");
 
- $g=mysql_fetch_array($gsql);
+    $g = mysql_fetch_array($gsql);
 
+    if ($g['main_page']) {
+        $lmodule = $g['main_page'].'&id_module='.$g['id_modul'];
+    } else {
+        $lmodule = 'main.php?module=home&id_module=11';
+    }
 
-  if ($g['main_page']) {
-    $lmodule = $g['main_page'].'&id_module='.$g['id_modul'];
-  } else {
-     $lmodule = 'main.php?module=home&id_module=11';
-  }
+    $SQL = "SELECT * FROM informasi_perusahaan WHERE id_informasi_perusahaan = '1'";
 
+    $tampil = mysql_query($SQL);
 
-$SQL=   "SELECT * FROM informasi_perusahaan WHERE id_informasi_perusahaan = '1'";   
+    $r = mysql_fetch_array($tampil);
 
-$tampil=mysql_query($SQL);
-                         
-$r=mysql_fetch_array($tampil);
+    $company = $r[company];
 
-$company = $r[company];
+    $logo_hotel = $r[pict];
+    $module = trim($_GET[module]);
 
-$logo_hotel = $r[pict];
-$module = trim($_GET[module]);
+    $uSQL = "SELECT pict FROM user where id_user = '$userid' ";
 
+    $utampil = mysql_query($uSQL);
 
-$uSQL=   "SELECT pict FROM user where id_user = '$userid' ";   
+    $u = mysql_fetch_array($utampil);
 
-$utampil=mysql_query($uSQL);
-                         
-$u=mysql_fetch_array($utampil);
+    $pict = $u['pict'];
 
-$pict     = $u['pict'];  
+    $id_module = $_GET['id_module'];
 
+    $sql = mysql_query("select * from modul where id_modul = '$_GET[id_module]'");
+    $r = mysql_fetch_array($sql);
 
+    $imodule = $_GET['module'];
+    $nmmodule = ucwords($r['nama_modul']);
+    $id = $r['id_modul'];
 
-$id_module = $_GET['id_module'];
+    $fa_icon = $r['ficon'];
 
+    $psql = mysql_query("select * from modul where id_modul = '$r[parentid]'");
+    $p = mysql_fetch_array($psql);
 
-$sql=mysql_query("select * from modul where id_modul = '$_GET[id_module]'");
-$r=mysql_fetch_array($sql);
+    $p_imodule = $p['nama_modul'];
+    $p_id = $p['id_modul'];
+    $p_fa_icon = $p['fa_icon'];
 
-$imodule    = $_GET['module'];
-$nmmodule   = ucwords($r['nama_modul']);
-$id         = $r['id_modul'];
+    $kode = $_GET['kode'];
 
-$fa_icon    = $r['ficon'];
+    if ($_GET['fdate']) {
+        $fdate = $_GET['fdate'];
+        $ifdate = $_GET['fdate'];
+    } else {
+        $hour = time() - (1 * 1 * 60 * 60);
+        $fdate = date('Y-m-d', $hour);
+        $ifdate = date('Y-m-d', $hour);
+    }
 
-$psql=mysql_query("select * from modul where id_modul = '$r[parentid]'");
-$p=mysql_fetch_array($psql);
-
-$p_imodule   = $p['nama_modul'];
-$p_id        = $p['id_modul'];
-$p_fa_icon   = $p['fa_icon'];
-
-$kode = $_GET['kode'];
-
-
-if($_GET['fdate']) {
-    $fdate  = $_GET['fdate'];
-    $ifdate = $_GET['fdate'];
-} else {
-    $hour = time() - (1 * 1 * 60 * 60);
-    $fdate  = date("Y-m-d", $hour);
-    $ifdate = date("Y-m-d", $hour);
-}
-
-if($_GET['ldate']) {
-    $ldate  = $_GET['ldate'];
-    $ildate = $_GET['ldate'];
-} else {
-    $hour = time() - (1 * 1 * 60 * 60) + (168 * 1 * 60 * 60);
-    $ldate  = date("Y-m-d",$hour);
-    $ildate = date("Y-m-d",$hour);
-}
-
-
-
-
-?>
+    if ($_GET['ldate']) {
+        $ldate = $_GET['ldate'];
+        $ildate = $_GET['ldate'];
+    } else {
+        $hour = time() - (1 * 1 * 60 * 60) + (168 * 1 * 60 * 60);
+        $ldate = date('Y-m-d', $hour);
+        $ildate = date('Y-m-d', $hour);
+    } ?>
 
 <?php
     $SQL = "SELECT* FROM versi WHERE status = 'A' ";
-    $tampil=mysql_query($SQL);
+    $tampil = mysql_query($SQL);
     $p = mysql_fetch_array($tampil);
 
     $app = $p['aplikasi'];
 
-    $versi = $p['versi'];;
-?>
+    $versi = $p['versi']; ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -131,7 +111,7 @@ if($_GET['ldate']) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title><?=$app;?></title>
+    <title><?=$app; ?></title>
 
     
     <!-- Bootstrap core CSS -->
@@ -210,12 +190,12 @@ if($_GET['ldate']) {
 
 
 <?php
-$mod = '?module='.$_GET['module'];          
-$tampil=mysql_query("SELECT orientation FROM modul WHERE link='".$mod."'");                     
-$r=mysql_fetch_array($tampil);
+$mod = '?module='.$_GET['module'];
+    $tampil = mysql_query("SELECT orientation FROM modul WHERE link='".$mod."'");
+    $r = mysql_fetch_array($tampil);
 
-if ($r[orientation] == 'P') {
-?>
+    if ($r[orientation] == 'P') {
+        ?>
         
 <SCRIPT TYPE="text/javascript">
 <!--
@@ -229,7 +209,9 @@ return true;
 //-->
 </SCRIPT>
 
-<?php } elseif ($r[orientation] == 'A') { ?>
+<?php
+    } elseif ($r[orientation] == 'A') {
+        ?>
 
 <SCRIPT TYPE="text/javascript">
 <!--
@@ -243,7 +225,9 @@ return true;
 //-->
 </SCRIPT>
 
-<?php } else { ?>
+<?php
+    } else {
+        ?>
 
 <SCRIPT TYPE="text/javascript">
 <!--
@@ -258,7 +242,8 @@ return true;
 </SCRIPT>
 
 
-<?php } ?>
+<?php
+    } ?>
   
 
 </head>
@@ -269,13 +254,12 @@ return true;
 <?php
 
 $SQL = "SELECT* FROM versi WHERE status = 'A' ";
-$tampil=mysql_query($SQL);
-$p = mysql_fetch_array($tampil);
+    $tampil = mysql_query($SQL);
+    $p = mysql_fetch_array($tampil);
 
-$app = $p['aplikasi'];
+    $app = $p['aplikasi'];
 
-$versi = $p['versi'];
-?>
+    $versi = $p['versi']; ?>
 
 <div id="dhtmltooltip"></div>
 <script language="javascript" src="js/dhtml.tooltips.js"></script>
@@ -291,7 +275,7 @@ $versi = $p['versi'];
 
                     <div class="navbar nav_title" style="border: 0;text-align:center;">
                        <!--  <a href="#" class="site_title">
-                           <span style='font-size:14px' class="btn btn-success"><?php echo $app;?></span>
+                           <span style='font-size:14px' class="btn btn-success"><?php echo $app; ?></span>
                         </a> -->
 
                     </div>
@@ -300,11 +284,11 @@ $versi = $p['versi'];
                    
                     <div class="profile">
                         <div class="profile_pic">
-                            <img src="images/profile/<?php echo $pict;?>" alt="..." class="img-circle profile_img">
+                            <img src="images/profile/<?php echo $pict; ?>" alt="..." class="img-circle profile_img">
                         </div>
                         <div class="profile_info">                      
                             <span>Hallo,</span>                       
-                            <h2><?php echo $username;?></h2>
+                            <h2><?php echo $username; ?></h2>
                         </div>
                     </div>
                     <!-- /menu prile quick info -->
@@ -320,7 +304,7 @@ $versi = $p['versi'];
                           <h3>&nbsp </h3> 
                             <ul class="nav side-menu">
 
-                           <?php include "menu.php"; ?> 
+                           <?php include 'menu.php'; ?> 
 
                              </ul>           
                         </div>
@@ -361,7 +345,7 @@ $versi = $p['versi'];
                        <!--  <ul class="nav navbar-nav navbar-right">
                             <li class="">
                                 <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                                    <img src="images/profile/<?php echo $pict;?>" alt=""><?php echo $userid;?>
+                                    <img src="images/profile/<?php echo $pict; ?>" alt=""><?php echo $userid; ?>
                                     <span class=" fa fa-angle-down"></span>
                                 </a>
                                 <ul class="dropdown-menu dropdown-usermenu animated fadeInDown pull-right">
@@ -380,7 +364,7 @@ $versi = $p['versi'];
             <!-- page content -->
             <div class="right_col" role="main">
 
-                 <?php include "content.php"; ?>
+                 <?php include 'content.php'; ?>
                                 
                 <!-- footer content -->
           
@@ -392,13 +376,12 @@ $versi = $p['versi'];
 
                     <?php
                     $SQL = "SELECT* FROM versi WHERE status = 'A' ";
-                    $tampil=mysql_query($SQL);
-                    $p = mysql_fetch_array($tampil);
+    $tampil = mysql_query($SQL);
+    $p = mysql_fetch_array($tampil);
 
-                    $app = $p['aplikasi'];
+    $app = $p['aplikasi'];
 
-                    $versi = $p['versi'];;
-                    ?>
+    $versi = $p['versi']; ?>
                 
                         <div class="col-md-3 col-sm-12 col-xs-12 form-group" >
                         </div>

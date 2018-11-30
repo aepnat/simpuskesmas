@@ -1,42 +1,37 @@
 <?php
 
-header("Content-Type: application/octet-stream");
-header("Content-Type: application/download");
-header("Content-Type: application/vnd.ms-excel");
-header("Content-Disposition: attachment;filename=laporan_harian_kasir.xls "); 
-header("Content-Transfer-Encoding: binary ");
-
+header('Content-Type: application/octet-stream');
+header('Content-Type: application/download');
+header('Content-Type: application/vnd.ms-excel');
+header('Content-Disposition: attachment;filename=laporan_harian_kasir.xls ');
+header('Content-Transfer-Encoding: binary ');
 
 ?>
 
 <?php
 
 
-include "./../../config/koneksi.php";
-
+include './../../config/koneksi.php';
 
 $report_id = $_GET[report_id];
-$tampil=mysql_query("SELECT * FROM modul WHERE id_modul ='".$report_id."'");
+$tampil = mysql_query("SELECT * FROM modul WHERE id_modul ='".$report_id."'");
 
-            
-
-$r=mysql_fetch_array($tampil);
+$r = mysql_fetch_array($tampil);
 
 //module=$module&report_id=$report_id&k_ID=$k_ID
 
-$module   = $_GET['module'];
+$module = $_GET['module'];
 
-$imodule  = ucwords($r['nama_modul']);
+$imodule = ucwords($r['nama_modul']);
 
-$nmmodule   = ucwords($r['nama_modul']);
+$nmmodule = ucwords($r['nama_modul']);
 
-$id       = $r['id_modul'];
+$id = $r['id_modul'];
 
-$fa_icon    = $r['fa_icon'];
+$fa_icon = $r['fa_icon'];
 
+$k_ID = $_GET['k_ID'];
 
-$k_ID  = $_GET['k_ID'];
- 
 ?>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -44,7 +39,7 @@ $k_ID  = $_GET['k_ID'];
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <link rel="shortcut icon" type="image/x-icon" href="../images/favicon.png">
-<title><?php echo $imodule ;?> </title>
+<title><?php echo $imodule; ?> </title>
 
 </head>
 
@@ -52,61 +47,49 @@ $k_ID  = $_GET['k_ID'];
 
 
   
-      <?
+      <?php
 
-       $gtampil=mysql_query("SELECT * FROM informasi_perusahaan where id_informasi_perusahaan = '1'");
+       $gtampil = mysql_query("SELECT * FROM informasi_perusahaan where id_informasi_perusahaan = '1'");
 
-       $g=mysql_fetch_array($gtampil);
-
-
+       $g = mysql_fetch_array($gtampil);
 
       if ($g['pict']) {
-
-        $pict = $g['pict'];
-
+          $pict = $g['pict'];
       } else {
-
-        $pict = '';
-
+          $pict = '';
       }
-
 
       $company = ucwords($g['company']);
 
-
-
-      $sql   = mysql_query("SELECT a.*,b.shift FROM kasir  a LEFT JOIN shift b 
+      $sql = mysql_query("SELECT a.*,b.shift FROM kasir  a LEFT JOIN shift b 
                             ON a.id_shift = b.id_shift
                             WHERE a.id_kasir = '$k_ID' 
 
                            ");
 
+      $r = mysql_fetch_array($sql);
 
+      $penjualan_barang = $r['id_kasir'];
 
-      $r     = mysql_fetch_array($sql); 
+      $shift = $r['shift'];
 
+      $petugas = $r['petugas'];
 
-      $penjualan_barang   = $r['id_kasir'];  
+      $status = $r['status'];
 
-      $shift   = $r['shift'];  
-
-      $petugas   = $r['petugas'];  
-
-      $status   = $r['status']; 
-
-      $tanggal   = DATE('d/m/Y',strtotime($r['tanggal']));  
+      $tanggal = date('d/m/Y', strtotime($r['tanggal']));
 
       ?>
 
       <table width="100%">
       <tr>
-      <td style="text-align: center;" colspan="12"><h4 ><?=$company;?><br><?=$nmmodule;?></h4></td>
+      <td style="text-align: center;" colspan="12"><h4 ><?=$company; ?><br><?=$nmmodule; ?></h4></td>
       </tr>
        <tr><td>&nbsp</td></tr>
        <tr>
-        <td width="20%" style="font-size: 11px;" colspan="2">Tanggal : <?=$tanggal;?></td>
+        <td width="20%" style="font-size: 11px;" colspan="2">Tanggal : <?=$tanggal; ?></td>
         <td width="2%">&nbsp&nbsp</td>
-        <td style="font-size: 11px;">Shift : <?=$shift;?></td>
+        <td style="font-size: 11px;">Shift : <?=$shift; ?></td>
         <td width="7%">&nbsp&nbsp</td>
         </tr>
         <tr><td>&nbsp</td></tr>
@@ -126,25 +109,21 @@ $k_ID  = $_GET['k_ID'];
             </tr> 
 
             <tr>
-               <?
+               <?php
 
-                $itampil=mysql_query("SELECT * FROM jenis_transaksi where aktif = 'Y' ORDER BY id_jenis_transaksi");
-          
-                while ($i=mysql_fetch_array($itampil)){  
+                $itampil = mysql_query("SELECT * FROM jenis_transaksi where aktif = 'Y' ORDER BY id_jenis_transaksi");
 
-                  echo "<th>$i[jenis_transaksi]</th>";
-
+                while ($i = mysql_fetch_array($itampil)) {
+                    echo "<th>$i[jenis_transaksi]</th>";
                 }
                ?>
 
-               <?
+               <?php
 
-                $itampil=mysql_query("SELECT * FROM jenis_pembayaran where aktif = 'Y' ORDER BY id_jenis_pembayaran");
-          
-                while ($i=mysql_fetch_array($itampil)){  
+                $itampil = mysql_query("SELECT * FROM jenis_pembayaran where aktif = 'Y' ORDER BY id_jenis_pembayaran");
 
-                  echo "<th>$i[jenis_pembayaran]</th>";
-
+                while ($i = mysql_fetch_array($itampil)) {
+                    echo "<th>$i[jenis_pembayaran]</th>";
                 }
                ?>
 
@@ -181,84 +160,68 @@ $k_ID  = $_GET['k_ID'];
 
                      ";
 
+            $dtampil = mysql_query($dSQL);
 
+            $no = 1;
 
-            $dtampil=mysql_query($dSQL);
+            while ($d = mysql_fetch_array($dtampil)) {
+                $d_id = $d['id_kasir_detail'];
 
-            $no = 1;                        
+                $ijumlah = number_format($d['jumlah'], 0, '.', ',');
 
-            while ($d=mysql_fetch_array($dtampil)){  
+                $jumlah = number_format($d['jumlah'], 0, '.', ',');
 
-             
+                $total = $total + $d['jumlah'];
 
-             $d_id    = $d['id_kasir_detail'];    
+                $itotal = number_format($total, 0, '.', ',');
 
+                echo'<tr>';
 
+                echo' <td>';
 
-             $ijumlah = number_format($d['jumlah'], 0, ".", ",");
+                echo $no;
 
-             $jumlah = number_format($d['jumlah'], 0, ".", ",");
+                echo'</td>';
 
-             $total =  $total+$d['jumlah'];
+                echo' <td>';
 
-             $itotal = number_format($total, 0, ".", ",");
+                echo $d['notrans'];
 
+                echo'</td>';
 
-             echo"<tr>";
+                echo' <td>';
 
-             echo" <td>"; 
+                echo $d['pasien'];
 
-             echo $no ;
+                echo'</td>';
 
-             echo"</td>";  
+                $itampil = mysql_query("SELECT * FROM jenis_transaksi where aktif = 'Y' ORDER BY id_jenis_transaksi");
 
-
-             echo" <td>"; 
-
-             echo $d['notrans'] ;
-
-             echo"</td>";  
-
-             echo" <td>"; 
-
-             echo $d['pasien'] ;
-
-             echo"</td>"; 
-
-
-              $itampil=mysql_query("SELECT * FROM jenis_transaksi where aktif = 'Y' ORDER BY id_jenis_transaksi");
-          
-                while ($i=mysql_fetch_array($itampil)){  
-
-                  $jtampil=mysql_query("SELECT b.jumlah FROM kasir a INNER JOIN kasir_detail b 
+                while ($i = mysql_fetch_array($itampil)) {
+                    $jtampil = mysql_query("SELECT b.jumlah FROM kasir a INNER JOIN kasir_detail b 
                                          ON a.id_kasir = b.id_kasir 
                                          where a.tanggal = '$r[tanggal]'
                                          AND a.id_shift  = '$r[id_shift]'
                                          AND b.notrans  = '$d[notrans]'
                                          AND b.id_jenis_transaksi  = '$i[id_jenis_transaksi]'
                                          AND b.status <> '4'
-                                         "); 
+                                         ");
 
-                  $j=mysql_fetch_array($jtampil);
+                    $j = mysql_fetch_array($jtampil);
 
-                  if ($j[jumlah]) {
-                    $jml = number_format($j['jumlah'], 0, ".", ",");
-                  } else {
-                    $jml = 0;
-                  }
-                  
-                  echo "<td  style='text-align:right;'>$jml</td>";
+                    if ($j[jumlah]) {
+                        $jml = number_format($j['jumlah'], 0, '.', ',');
+                    } else {
+                        $jml = 0;
+                    }
 
-             }
+                    echo "<td  style='text-align:right;'>$jml</td>";
+                }
 
-             
-               $itampil=mysql_query("SELECT * FROM jenis_pembayaran where aktif = 'Y' ORDER BY id_jenis_pembayaran");
-          
-                while ($i=mysql_fetch_array($itampil)){  
+                $itampil = mysql_query("SELECT * FROM jenis_pembayaran where aktif = 'Y' ORDER BY id_jenis_pembayaran");
 
-                
-
-                  $pSQL = "SELECT  sum(a.jumlah) as jumlah 
+                while ($i = mysql_fetch_array($itampil)) {
+                    $pSQL = "SELECT  sum(a.jumlah) as jumlah 
 
                          FROM kasir_detail a LEFT JOIN jenis_transaksi b
 
@@ -288,50 +251,42 @@ $k_ID  = $_GET['k_ID'];
 
                          ";
 
+                    $ptampil = mysql_query($pSQL);
 
+                    $p = mysql_fetch_array($ptampil);
 
-                $ptampil=mysql_query($pSQL);
-
-                               
-                $p=mysql_fetch_array($ptampil);
-
-                     if ($p[jumlah]) {
-                        $jml = number_format($p['jumlah'], 0, ".", ",");
-                     } else {
+                    if ($p[jumlah]) {
+                        $jml = number_format($p['jumlah'], 0, '.', ',');
+                    } else {
                         $jml = 0;
-                     }
+                    }
 
-                     echo"<td  style='text-align:right;'>$jml </td>"; 
+                    echo"<td  style='text-align:right;'>$jml </td>";
+                }
 
-                
+                echo' <td>';
 
-             }    
-             
-           
-             echo" <td>"; 
-
-              $jtampil=mysql_query("SELECT b.ket  FROM kasir a INNER JOIN kasir_detail b 
+                $jtampil = mysql_query("SELECT b.ket  FROM kasir a INNER JOIN kasir_detail b 
                                          ON a.id_kasir = b.id_kasir 
                                          where a.tanggal = '$r[tanggal]'
                                          AND a.id_shift  = '$r[id_shift]'
                                          AND b.notrans  = '$d[notrans]'
-                                         "); 
+                                         ");
 
-                $j=mysql_fetch_array($jtampil);
+                $j = mysql_fetch_array($jtampil);
 
-              echo $j[ket];
+                echo $j[ket];
 
-              if ($d['penjamin']) {
-                echo'<br>'.'('.$d['penjamin'].')';
-              }
-                
-             echo"</td>";    
+                if ($d['penjamin']) {
+                    echo'<br>'.'('.$d['penjamin'].')';
+                }
 
+                echo'</td>';
 
-                 echo "</tr>";  
-               
-               $no++;
-               } 
+                echo '</tr>';
+
+                $no++;
+            }
              ?>
              </tbody> 
 
@@ -343,43 +298,37 @@ $k_ID  = $_GET['k_ID'];
                <th>Total</th>  
                <th></th> 
 
-               <?
+               <?php
 
-                          $itampil=mysql_query("SELECT * FROM jenis_transaksi where aktif = 'Y' ORDER BY id_jenis_transaksi");
-                      
-                            while ($i=mysql_fetch_array($itampil)){  
+                          $itampil = mysql_query("SELECT * FROM jenis_transaksi where aktif = 'Y' ORDER BY id_jenis_transaksi");
 
-                              $jtampil=mysql_query("SELECT sum(b.jumlah) as jumlah FROM kasir a INNER JOIN kasir_detail b 
+                            while ($i = mysql_fetch_array($itampil)) {
+                                $jtampil = mysql_query("SELECT sum(b.jumlah) as jumlah FROM kasir a INNER JOIN kasir_detail b 
                                                      ON a.id_kasir = b.id_kasir 
                                                      where a.tanggal = '$r[tanggal]'
                                                      AND a.id_shift  = '$r[id_shift]'
                                                      AND b.id_jenis_transaksi  = '$i[id_jenis_transaksi]'
                                                      AND b.status <> '4'
-                                                     "); 
+                                                     ");
 
-                              $j=mysql_fetch_array($jtampil);
+                                $j = mysql_fetch_array($jtampil);
 
-                              if ($j[jumlah]) {
-                                $jml = number_format($j['jumlah'], 0, ".", ",");
-                              } else {
-                                $jml = 0;
-                              }
-                              
-                              echo "<th  style='text-align:right;'>$jml</th>";
+                                if ($j[jumlah]) {
+                                    $jml = number_format($j['jumlah'], 0, '.', ',');
+                                } else {
+                                    $jml = 0;
+                                }
 
-                         }
+                                echo "<th  style='text-align:right;'>$jml</th>";
+                            }
 
-                
                 ?>        
 
-                 <?
-                 $itampil=mysql_query("SELECT * FROM jenis_pembayaran where aktif = 'Y' ORDER BY id_jenis_pembayaran");
-            
-                  while ($i=mysql_fetch_array($itampil)){  
+                 <?php
+                 $itampil = mysql_query("SELECT * FROM jenis_pembayaran where aktif = 'Y' ORDER BY id_jenis_pembayaran");
 
-                  
-
-                    $pSQL = "SELECT  sum(a.jumlah) as jumlah 
+                  while ($i = mysql_fetch_array($itampil)) {
+                      $pSQL = "SELECT  sum(a.jumlah) as jumlah 
 
                            FROM kasir_detail a LEFT JOIN jenis_transaksi b
 
@@ -407,25 +356,19 @@ $k_ID  = $_GET['k_ID'];
 
                            ";
 
+                      $ptampil = mysql_query($pSQL);
 
+                      $p = mysql_fetch_array($ptampil);
 
-                  $ptampil=mysql_query($pSQL);
-
-                                 
-                  $p=mysql_fetch_array($ptampil);
-
-                       if ($p[jumlah]) {
-                          $jml = number_format($p['jumlah'], 0, ".", ",");
-                       } else {
+                      if ($p[jumlah]) {
+                          $jml = number_format($p['jumlah'], 0, '.', ',');
+                      } else {
                           $jml = 0;
-                       }
+                      }
 
-                       echo"<th  style='text-align:right;'>$jml </th>"; 
+                      echo"<th  style='text-align:right;'>$jml </th>";
+                  }
 
-                  
-
-               }    
-               
                ?> 
        
                <th></th> 
@@ -444,31 +387,27 @@ $k_ID  = $_GET['k_ID'];
 
             <tr><td colspan="12">&nbsp</td></tr>  
 
-            <?    
+            <?php 
 
-                 if($r[id_shift] == '1') {
-                  $id_shift = '1';
+                 if ($r[id_shift] == '1') {
+                     $id_shift = '1';
                  } else {
-                  $id_shift = '%';
+                     $id_shift = '%';
                  }
 
-    
-                 $itampil=mysql_query("SELECT * FROM shift where aktif = 'Y' and id_shift LIKE '$id_shift' ORDER BY id_shift");
-            
-                  while ($i=mysql_fetch_array($itampil)){  
+                 $itampil = mysql_query("SELECT * FROM shift where aktif = 'Y' and id_shift LIKE '$id_shift' ORDER BY id_shift");
 
-                  $shift = $i['shift'];
-
-             ?>       
+                  while ($i = mysql_fetch_array($itampil)) {
+                      $shift = $i['shift']; ?>       
 
                     <tr>
                     <th></th>
                     <th></th>
                     <th colspan="3" style="text-align: left;">Total Seluruh Omzet 
-                    <span style='text-transform: capitalize;'><? echo ucfirst(strtolower(($shift)));?></span></th>
+                    <span style='text-transform: capitalize;'><?php echo ucfirst(strtolower(($shift))); ?></span></th>
                     <th style="text-align: left;">Cash</th>
-                    <?
-                            
+                    <?php
+
 
                     $pSQL = "SELECT  sum(a.jumlah) as jumlah 
 
@@ -498,25 +437,20 @@ $k_ID  = $_GET['k_ID'];
 
                            ";
 
+                      $ptampil = mysql_query($pSQL);
 
+                      $p = mysql_fetch_array($ptampil);
 
-                        $ptampil=mysql_query($pSQL);
-
-                                       
-                        $p=mysql_fetch_array($ptampil);
-
-                             if ($p[jumlah]) {
-                                $cash = number_format($p['jumlah'], 0, ".", ",");
-                             } else {
-                                $cash = 0;
-                             }
-
-                        ?>
-                    <th style="text-align: right;"><?=$cash;?></th>
+                      if ($p[jumlah]) {
+                          $cash = number_format($p['jumlah'], 0, '.', ',');
+                      } else {
+                          $cash = 0;
+                      } ?>
+                    <th style="text-align: right;"><?=$cash; ?></th>
                     <th style="text-align: left;">Credit</th>
 
-                    <?
-                            
+                    <?php
+
 
                     $pSQL = "SELECT  sum(a.jumlah) as jumlah 
 
@@ -546,41 +480,35 @@ $k_ID  = $_GET['k_ID'];
 
                            ";
 
+                      $ptampil = mysql_query($pSQL);
 
+                      $p = mysql_fetch_array($ptampil);
 
-                        $ptampil=mysql_query($pSQL);
+                      if ($p[jumlah]) {
+                          $credit = number_format($p['jumlah'], 0, '.', ',');
+                      } else {
+                          $credit = 0;
+                      } ?>
 
-                                       
-                        $p=mysql_fetch_array($ptampil);
-
-                             if ($p[jumlah]) {
-                                $credit = number_format($p['jumlah'], 0, ".", ",");
-                             } else {
-                                $credit= 0;
-                             }
-
-                        ?>
-
-                    <th style="text-align: right;"><?=$credit;?></th>
+                    <th style="text-align: right;"><?=$credit; ?></th>
                     <th colspan="4"></th>
                     </tr> 
 
 
-               <?     
-                  
+               <?php
+                  }
 
-               }    
-               
                ?> 
 
-               <? if ($id_shift == '%') { ?>
+               <?php if ($id_shift == '%') {
+                   ?>
                <tr>
                     <th></th>
                     <th></th>
-                    <th colspan="3" style="text-align: left;">Total Omzet Tgl. <?=$tanggal;?>  </th>
+                    <th colspan="3" style="text-align: left;">Total Omzet Tgl. <?=$tanggal; ?>  </th>
                     <th style="text-align: left;">Cash</th>
-                    <?
-                            
+                    <?php
+
 
                     $pSQL = "SELECT  sum(a.jumlah) as jumlah 
 
@@ -609,25 +537,20 @@ $k_ID  = $_GET['k_ID'];
 
                            ";
 
+                   $ptampil = mysql_query($pSQL);
 
+                   $p = mysql_fetch_array($ptampil);
 
-                        $ptampil=mysql_query($pSQL);
-
-                                       
-                        $p=mysql_fetch_array($ptampil);
-
-                             if ($p[jumlah]) {
-                                $cash = number_format($p['jumlah'], 0, ".", ",");
-                             } else {
-                                $cash = 0;
-                             }
-
-                        ?>
-                    <th style="text-align: right;"><?=$cash;?></th>
+                   if ($p[jumlah]) {
+                       $cash = number_format($p['jumlah'], 0, '.', ',');
+                   } else {
+                       $cash = 0;
+                   } ?>
+                    <th style="text-align: right;"><?=$cash; ?></th>
                     <th style="text-align: left;">Credit</th>
 
-                    <?
-                            
+                    <?php
+
 
                     $pSQL = "SELECT  sum(a.jumlah) as jumlah 
 
@@ -655,26 +578,22 @@ $k_ID  = $_GET['k_ID'];
 
                            ";
 
+                   $ptampil = mysql_query($pSQL);
 
+                   $p = mysql_fetch_array($ptampil);
 
-                        $ptampil=mysql_query($pSQL);
+                   if ($p[jumlah]) {
+                       $credit = number_format($p['jumlah'], 0, '.', ',');
+                   } else {
+                       $credit = 0;
+                   } ?>
 
-                                       
-                        $p=mysql_fetch_array($ptampil);
-
-                             if ($p[jumlah]) {
-                                $credit = number_format($p['jumlah'], 0, ".", ",");
-                             } else {
-                                $credit= 0;
-                             }
-
-                        ?>
-
-                    <th style="text-align: right;"><?=$credit;?></th>
+                    <th style="text-align: right;"><?=$credit; ?></th>
                     <th colspan="4"></th>
                     </tr> 
 
-                <? } ?>
+                <?php
+               } ?>
 
                  <tr><td colspan="12">&nbsp</td></tr>  
 
@@ -692,8 +611,8 @@ $k_ID  = $_GET['k_ID'];
                      <th style="" colspan="6">&nbsp</th>  
                 </tr>   
 
-                <?
-                            
+                <?php
+
 
                     $pSQL = "SELECT  sum(a.jumlah) as jumlah 
 
@@ -721,17 +640,14 @@ $k_ID  = $_GET['k_ID'];
 
                            ";
 
+                        $ptampil = mysql_query($pSQL);
 
-
-                        $ptampil=mysql_query($pSQL);
-
-                                       
-                        $p=mysql_fetch_array($ptampil);
+                        $p = mysql_fetch_array($ptampil);
 
                              if ($p[jumlah]) {
-                                $total = number_format($p['jumlah'], 0, ".", ",");
+                                 $total = number_format($p['jumlah'], 0, '.', ',');
                              } else {
-                                $total = 0;
+                                 $total = 0;
                              }
 
               ?>

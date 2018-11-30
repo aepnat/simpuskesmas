@@ -1,140 +1,102 @@
 <?php
 
-class Paging
-
+class paging
 {
+    // Fungsi untuk mencek halaman dan posisi data
 
-// Fungsi untuk mencek halaman dan posisi data
+    public function cariPosisi($batas)
+    {
+        if (empty($_GET[halaman])) {
+            $posisi = 0;
 
-function cariPosisi($batas)
+            $_GET[halaman] = 1;
+        } else {
+            $posisi = ($_GET[halaman] - 1) * $batas;
+        }
 
-{
+        return $posisi;
+    }
 
-if(empty($_GET[halaman])){
+    // Fungsi untuk menghitung total halaman
 
-	$posisi=0;
+    public function jumlahHalaman($jmldata, $batas)
+    {
+        $jmlhalaman = ceil($jmldata / $batas);
 
-	$_GET[halaman]=1;
+        return $jmlhalaman;
+    }
 
-}
+    // Fungsi untuk link halaman 1,2,3 ... Next, Prev, First, Last
 
-else{
+    public function navHalaman($halaman_aktif, $jmlhalaman)
+    {
+        $link_halaman = '';
 
-	$posisi = ($_GET[halaman]-1) * $batas;
+        if (($halaman_aktif - 1) > 0) {
+            $previous = $halaman_aktif - 1;
 
-}
+            $link_halaman .= "<a href=$_SERVER[PHP_SELF]?module=$_GET[module]&halaman=$previous title=Previous><<</a>&nbsp;";
+        }
 
-return $posisi;
+        // Link halaman 1,2,3, ...
 
-}
-
-
-
-// Fungsi untuk menghitung total halaman
-
-function jumlahHalaman($jmldata, $batas)
-
-{
-
-$jmlhalaman = ceil($jmldata/$batas);
-
-return $jmlhalaman;
-
-}
-
-
-
-// Fungsi untuk link halaman 1,2,3 ... Next, Prev, First, Last
-
-function navHalaman($halaman_aktif, $jmlhalaman)
-
-{
-
-$link_halaman = "";
-
-
-
-
-
-if (($halaman_aktif-1) > 0)
-
-{
-
-$previous = $halaman_aktif-1;
-
-$link_halaman .= "<a href=$_SERVER[PHP_SELF]?module=$_GET[module]&halaman=$previous title=Previous><<</a>&nbsp;";
-
-}
-
-
-
-// Link halaman 1,2,3, ...
-
-//for ($i=1; $i<=$jmlhalaman; $i++)
+        //for ($i=1; $i<=$jmlhalaman; $i++)
 //
-//{
+        //{
 //
-//if ($i == $halaman_aktif)
+        //if ($i == $halaman_aktif)
 //
-//{
+        //{
 //
-//$link_halaman .= "<b class='currenthalaman'>$i</b>";
+        //$link_halaman .= "<b class='currenthalaman'>$i</b>";
 //
-//}
+        //}
 //
-//else
+        //else
 //
-//{
+        //{
 //
-//$link_halaman .= "<a href=$_SERVER[PHP_SELF]?module=$_GET[module]&halaman=$i>$i</a>";
+        //$link_halaman .= "<a href=$_SERVER[PHP_SELF]?module=$_GET[module]&halaman=$i>$i</a>";
 //
-//}
+        //}
 //
-//$link_halaman .= " ";
+        //$link_halaman .= " ";
 //
-//}
+        //}
 
-///
+        ///
 
-$angka=($halaman > 3 ? " ... " : " ");
-for($i=$halaman-2;$i<$halaman;$i++)
-{
-  if ($i < 1) 
-      continue;
-  $angka .= "<a href=$_SERVER[PHP_SELF]?halaman=$i>$i</A> ";
-}
+        $angka = ($halaman > 3 ? ' ... ' : ' ');
+        for ($i = $halaman - 2; $i < $halaman; $i++) {
+            if ($i < 1) {
+                continue;
+            }
+            $angka .= "<a href=$_SERVER[PHP_SELF]?halaman=$i>$i</A> ";
+        }
 
-$angka .= " <b>$halaman</b> ";
-for($i=$halaman+1;$i<($halaman+3);$i++)
-{
-  if ($i > $jmlhalaman) 
-      break;
-  $angka .= "<a href=$_SERVER[PHP_SELF]?module=$_GET[module]&halaman=$i>$i</A> ";
-}
+        $angka .= " <b>$halaman</b> ";
+        for ($i = $halaman + 1; $i < ($halaman + 3); $i++) {
+            if ($i > $jmlhalaman) {
+                break;
+            }
+            $angka .= "<a href=$_SERVER[PHP_SELF]?module=$_GET[module]&halaman=$i>$i</A> ";
+        }
 
-$angka .= ($halaman+2<$jmlhalaman ? " ...  
-          <a href=$_SERVER[PHP_SELF]?module=$_GET[module]&halaman=$jmlhalaman>$jmlhalaman</A> " : " ");
+        $angka .= ($halaman + 2 < $jmlhalaman ? " ...  
+          <a href=$_SERVER[PHP_SELF]?module=$_GET[module]&halaman=$jmlhalaman>$jmlhalaman</A> " : ' ');
 
-echo "$angka";
+        echo "$angka";
 
-// Link Next dan Last
+        // Link Next dan Last
 
-if ($halaman_aktif < $jmlhalaman)
+        if ($halaman_aktif < $jmlhalaman) {
+            $next = $halaman_aktif + 1;
 
-{
+            $link_halaman .= " <a href=$_SERVER[PHP_SELF]?module=$_GET[module]&halaman=$next title=Next>>></a> ";
+        }
 
-$next=$halaman_aktif+1;
-
-$link_halaman .= " <a href=$_SERVER[PHP_SELF]?module=$_GET[module]&halaman=$next title=Next>>></a> ";
-
-}
-
-
-
-return $link_halaman;
-
-}
-
+        return $link_halaman;
+    }
 }
 
 ?>
@@ -157,15 +119,15 @@ function cariPosisi($batas)
 
 if(empty($_GET[halaman])){
 
-	$posisi=0;
+    $posisi=0;
 
-	$_GET[halaman]=1;
+    $_GET[halaman]=1;
 
 }
 
 else{
 
-	$posisi = ($_GET[halaman]-1) * $batas;
+    $posisi = ($_GET[halaman]-1) * $batas;
 
 }
 
