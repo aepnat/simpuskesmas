@@ -121,7 +121,7 @@ if($_GET['ldate']) {
 							             <div class="col-md-6 col-sm-6 col-xs-12" >
 							                 <select name="room_type" class="form-control1" required onChange="document.myform.submit();">
 							                 	<option value="">--------- Room Type ---------</option>
-							                    <?
+							                    <?php
 							                      $query = mysql_query('SELECT * FROM room_type ORDER BY room_type');
 							                       if($query && mysql_num_rows($query) > 0){
 							                          while($row = mysql_fetch_object($query)){
@@ -154,7 +154,7 @@ if($_GET['ldate']) {
                            <tr>                            
 		                            <th style='text-align:center;' width='17%' ><h3 style='font-size:12px;'>Room</h3></th>
 
-		                        	<?
+		                        	<?php
 		                        	$col = (83/$jcol);
 
 
@@ -754,7 +754,7 @@ if($_GET['ldate']) {
 									<table style='text-align:right;'>
 										<tr>
 										<td style='padding-right:3px;'>Room Status : </td>	
-										<?
+										<?php
 											 $SQL=	"SELECT * FROM room_status where aktif ='Y' ORDER BY id_room_status";	
 											 $tampil=mysql_query($SQL);
 					             						 
@@ -776,7 +776,7 @@ if($_GET['ldate']) {
 									<table style='text-align:right;'>
 										<tr>
 										<td style='padding-right:3px;'>Day Status : </td>	
-										<?
+										<?php
 																					 	
 											 echo"<td style='width:20px;background-color:#eba51c;'>&nbsp</td>";
 											 echo"<td style='padding-left:3px;'>Spesial Day&nbsp</td>";
@@ -796,6 +796,6 @@ if($_GET['ldate']) {
                </div>
         </div>
 
-    <?
+    <?php
 }
 ?>
