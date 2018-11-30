@@ -1,8 +1,8 @@
   
 <?php
-switch($_GET[act]){
+switch ($_GET[act]) {
 
-default:  
+default:
   ?>
 
  <div class="">
@@ -12,8 +12,8 @@ default:
                         <div class="col-md-12 col-sm-12 col-xs-12">
                             <div class="x_panel">
                                 <div class="x_title">
-                                    <h2><?php echo $nmmodule;?></h2>
-                                      <p class="pull-right"><a href='<?php echo"modul/mod_$module/form_$module.php?width=720&height=560&module=$module&id_module=$id_module&TB_iframe=true";?>' title='<?php echo $nmmodule;?> Baru' class='thickbox btn btn-sm btn-success'><i class="fa fa-plus"></i> Baru</a></p>
+                                    <h2><?php echo $nmmodule; ?></h2>
+                                      <p class="pull-right"><a href='<?php echo"modul/mod_$module/form_$module.php?width=720&height=560&module=$module&id_module=$id_module&TB_iframe=true"; ?>' title='<?php echo $nmmodule; ?> Baru' class='thickbox btn btn-sm btn-success'><i class="fa fa-plus"></i> Baru</a></p>
                                     <div class="clearfix"></div>
                                 </div>
                                 <div class="x_content">
@@ -41,32 +41,29 @@ default:
                         </thead>
                         <tbody>
                             
-                         <?
-                        
-            $tampil=mysql_query("SELECT * FROM poli ORDER BY id_poli");
-            
+                         <?php
+
+            $tampil = mysql_query('SELECT * FROM poli ORDER BY id_poli');
+
             $no = 1;
-            
-            while ($r=mysql_fetch_array($tampil)){  
-            
-            echo"<tr>";
-            echo"<td>$r[poli]</td>";
-            echo"<td style='text-align:center;'>$r[aktif]</td>";  
-            echo" <td  style='text-align:center;'>";
 
-            if($r_edit == 'Y') {
-               echo"<a class='thickbox' href='modul/mod_$module/form_$module.php?id_poli=$r[id_poli]&id_module=$id&width=720&height=560&module=$module&TB_iframe=true' title='Update $nmmodule'><span class='icon'><i class='fa fa-pencil'></i></span></a>";
-               }
+            while ($r = mysql_fetch_array($tampil)) {
+                echo'<tr>';
+                echo"<td>$r[poli]</td>";
+                echo"<td style='text-align:center;'>$r[aktif]</td>";
+                echo" <td  style='text-align:center;'>";
 
-               
-               // if($r_delete == 'Y') {
-               // echo"<a href='modul/mod_$module/aksi_$module.php?module=$module&act=hapus&id=$r[id_poli]&id_module=$id' onClick=\"return confirm('Hapus data ?')\" title='Delete $nmmodule'><span class='icon'><i class='fa fa-trash'></i></span></a>";
-               // }  
-            echo"</td>";              
-                                echo"</tr>";
-                                $no++;
-                                
-                                }
+                if ($r_edit == 'Y') {
+                    echo"<a class='thickbox' href='modul/mod_$module/form_$module.php?id_poli=$r[id_poli]&id_module=$id&width=720&height=560&module=$module&TB_iframe=true' title='Update $nmmodule'><span class='icon'><i class='fa fa-pencil'></i></span></a>";
+                }
+
+                // if($r_delete == 'Y') {
+                // echo"<a href='modul/mod_$module/aksi_$module.php?module=$module&act=hapus&id=$r[id_poli]&id_module=$id' onClick=\"return confirm('Hapus data ?')\" title='Delete $nmmodule'><span class='icon'><i class='fa fa-trash'></i></span></a>";
+                // }
+                echo'</td>';
+                echo'</tr>';
+                $no++;
+            }
                                 ?>
                          </tbody>
                     </table>

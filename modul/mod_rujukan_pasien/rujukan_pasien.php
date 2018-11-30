@@ -1,7 +1,7 @@
 <?php
-switch($_GET[act]){
+switch ($_GET[act]) {
 
-default:  
+default:
   ?>
 
  <div class="">
@@ -11,7 +11,7 @@ default:
                         <div class="col-md-12 col-sm-12 col-xs-12">
                             <div class="x_panel">
                                 <div class="x_title">
-                                    <h2><?php echo $nmmodule;?></h2>
+                                    <h2><?php echo $nmmodule; ?></h2>
                                      <div class="clearfix"></div>
                                 </div>
                                 <div class="x_content">
@@ -44,9 +44,9 @@ default:
                         </thead>
                         <tbody>
                             
-                         <?
-                        
-            $tampil=mysql_query("SELECT a.*,b.nama,b.tgl_lahir,b.ktp,c.poli,d.kategori    
+                         <?php
+
+            $tampil = mysql_query("SELECT a.*,b.nama,b.tgl_lahir,b.ktp,c.poli,d.kategori    
                                     ,e.rujukan as rujukan_rs
                                     ,f.rujukan as rujukan_lab                              
                                 FROM kunjungan_berobat a left join pasien b 
@@ -61,35 +61,31 @@ default:
                                  ON a.id_rujukan_lab = f.id_rujukan    
                                  WHERE a.rujukan = 'Y'                    
                                  ORDER BY a.tanggal,a.id_poli,a.no_urut ASC");
-            
+
             $no = 1;
-            
-            while ($r=mysql_fetch_array($tampil)){  
 
-            $tgl       = DATE('d/m/Y',strtotime($r[tanggal]));
-            $tgl_lahir = DATE('d/m/Y',strtotime($r[tgl_lahir]));
+            while ($r = mysql_fetch_array($tampil)) {
+                $tgl = date('d/m/Y', strtotime($r[tanggal]));
+                $tgl_lahir = date('d/m/Y', strtotime($r[tgl_lahir]));
 
-            echo"<tr>";
-            echo"<td>$tgl</td>";
-            echo"<td>$r[poli]</td>";
-            echo"<td>$r[no_urut]</td>";            
-            echo"<td>$r[nama]</td>";
-            echo"<td>$r[kategori]</td>";
-            echo"<td>$r[rujukan_rs]</td>";
-            echo"<td>$r[rujukan_lab]</td>";
-            echo" <td  style='text-align:center;'>";
+                echo'<tr>';
+                echo"<td>$tgl</td>";
+                echo"<td>$r[poli]</td>";
+                echo"<td>$r[no_urut]</td>";
+                echo"<td>$r[nama]</td>";
+                echo"<td>$r[kategori]</td>";
+                echo"<td>$r[rujukan_rs]</td>";
+                echo"<td>$r[rujukan_lab]</td>";
+                echo" <td  style='text-align:center;'>";
 
-            if($r_edit == 'Y') {
-               echo"<a class='thickbox' href='modul/mod_$module/form_$module.php?id_kunjungan_berobat=$r[id_kunjungan_berobat]&id_module=$id&width=720&height=560&module=$module&TB_iframe=true' title='Update $nmmodule'><span class='icon'><i class='fa fa-pencil'></i></span></a>";
-               }
+                if ($r_edit == 'Y') {
+                    echo"<a class='thickbox' href='modul/mod_$module/form_$module.php?id_kunjungan_berobat=$r[id_kunjungan_berobat]&id_module=$id&width=720&height=560&module=$module&TB_iframe=true' title='Update $nmmodule'><span class='icon'><i class='fa fa-pencil'></i></span></a>";
+                }
 
-               
-               
-            echo"</td>";              
-                                echo"</tr>";
-                                $no++;
-                                
-                                }
+                echo'</td>';
+                echo'</tr>';
+                $no++;
+            }
                                 ?>
                          </tbody>
                     </table>

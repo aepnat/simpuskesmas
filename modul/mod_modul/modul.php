@@ -1,8 +1,8 @@
   
 <?php
-switch($_GET[act]){
+switch ($_GET[act]) {
 
-default:  
+default:
   ?>
 
  <div class="">
@@ -12,8 +12,8 @@ default:
                         <div class="col-md-12 col-sm-12 col-xs-12">
                             <div class="x_panel">
                                 <div class="x_title">
-                                    <h2><?php echo $nmmodule;?></h2>
-                                      <p class="pull-right"><a href='<?php echo"modul/mod_$module/form_$module.php?width=720&height=560&module=$module&id_module=$id_module&TB_iframe=true";?>' title='<?php echo $nmmodule;?> Baru' class='thickbox btn btn-sm btn-success'><i class="fa fa-plus"></i> Baru</a></p>
+                                    <h2><?php echo $nmmodule; ?></h2>
+                                      <p class="pull-right"><a href='<?php echo"modul/mod_$module/form_$module.php?width=720&height=560&module=$module&id_module=$id_module&TB_iframe=true"; ?>' title='<?php echo $nmmodule; ?> Baru' class='thickbox btn btn-sm btn-success'><i class="fa fa-plus"></i> Baru</a></p>
                                     <div class="clearfix"></div>
                                 </div>
                                 <div class="x_content">
@@ -42,63 +42,56 @@ default:
                         </thead>
                         <tbody>
                             
-                         <?
-                        
-            $tampil=mysql_query("SELECT * FROM modul WHERE status_menu = 'M' ORDER BY urutan ASC");
-            
+                         <?php
+
+            $tampil = mysql_query("SELECT * FROM modul WHERE status_menu = 'M' ORDER BY urutan ASC");
+
                 $no = 1;
-                                while ($r=mysql_fetch_array($tampil)){  
-                                echo"<tr>";
-                                echo"<td><b>$r[nama_modul]</b></td>";
-                echo"<td>$r[link]</td>";
+                                while ($r = mysql_fetch_array($tampil)) {
+                                    echo'<tr>';
+                                    echo"<td><b>$r[nama_modul]</b></td>";
+                                    echo"<td>$r[link]</td>";
 
-                
-                echo"<td style='text-align:center;'>$r[aktif]</td>";  
-                echo"<td style='text-align:center;'>";
-  if($r_input == 'Y') {             
-  echo"<a class='thickbox' href='modul/mod_$module/form_sub$module.php?parentid=$r[id_modul]&id_module=$id&width=720&height=560&module=$module&TB_iframe=true' title='Sub $nmmodule Baru'><span class='icon'><i class='fa fa-pencil-square-o'></i></span></a>"; 
-  }
+                                    echo"<td style='text-align:center;'>$r[aktif]</td>";
+                                    echo"<td style='text-align:center;'>";
+                                    if ($r_input == 'Y') {
+                                        echo"<a class='thickbox' href='modul/mod_$module/form_sub$module.php?parentid=$r[id_modul]&id_module=$id&width=720&height=560&module=$module&TB_iframe=true' title='Sub $nmmodule Baru'><span class='icon'><i class='fa fa-pencil-square-o'></i></span></a>";
+                                    }
 
-   if($r_edit == 'Y') {
-   echo"<a class='thickbox' href='modul/mod_$module/form_$module.php?id_modul=$r[id_modul]&id_module=$id&width=720&height=560&module=$module&TB_iframe=true' title='Update $nmmodule '><span class='icon'><i class='fa fa-pencil'></i></span></a>";
-   }
+                                    if ($r_edit == 'Y') {
+                                        echo"<a class='thickbox' href='modul/mod_$module/form_$module.php?id_modul=$r[id_modul]&id_module=$id&width=720&height=560&module=$module&TB_iframe=true' title='Update $nmmodule '><span class='icon'><i class='fa fa-pencil'></i></span></a>";
+                                    }
 
-   
-   if($r_delete == 'Y') {
-   echo"<a href='modul/mod_$module/aksi_$module.php?module=$module&act=hapusmod&id=$r[id_modul]&id_module=$id' onClick=\"return confirm('Hapus data ?')\"><span class='icon'><i class='fa fa-trash'></i></span></a>";
-   }  
-    echo"</td>";
-          
-            echo"</tr>";
-                
-                $dtampil=mysql_query("SELECT * FROM modul
+                                    if ($r_delete == 'Y') {
+                                        echo"<a href='modul/mod_$module/aksi_$module.php?module=$module&act=hapusmod&id=$r[id_modul]&id_module=$id' onClick=\"return confirm('Hapus data ?')\"><span class='icon'><i class='fa fa-trash'></i></span></a>";
+                                    }
+                                    echo'</td>';
+
+                                    echo'</tr>';
+
+                                    $dtampil = mysql_query("SELECT * FROM modul
                             WHERE status_menu = 'c'
                             AND parentid = '$r[id_modul]' and aktif = 'Y' ORDER BY urutan ASC");
-            
-            
-                                while ($d=mysql_fetch_array($dtampil)){ 
-                
 
-                                echo"<tr>";
-                echo"<td style='padding-left:15px;'>$d[nama_modul]</td>";
-                echo"<td style='text-transform:lowercase;'>$d[link]</td>";
-              
-                echo"<td style='text-align:center;'>$d[aktif]</td>";
-                echo" <td style='text-align:right;'>";
-   if($r_edit == 'Y') {
-   echo"<a class='thickbox' href='modul/mod_$module/form_sub$module.php?id_modul=$d[id_modul]&id_module=$id&width=720&height=560&module=$module&TB_iframe=true' title='Update Sub $imodule'><span class='icon'><i class='fa fa-pencil'></i></span></a>";
-   }
-  
-   if($r_delete == 'Y') {
-   echo"<a href='modul/mod_$module/aksi_$module.php?module=$module&act=hapus&id=$d[id_modul]&id_module=$id' onClick=\"return confirm('Hapus data ?')\"><span class='icon'><i class='fa fa-trash'></i></span></a>";
-   }
-   echo"</td>";             
-                                echo"</tr>";
-                
-                }
-                
-                                $no++;
-                                
+                                    while ($d = mysql_fetch_array($dtampil)) {
+                                        echo'<tr>';
+                                        echo"<td style='padding-left:15px;'>$d[nama_modul]</td>";
+                                        echo"<td style='text-transform:lowercase;'>$d[link]</td>";
+
+                                        echo"<td style='text-align:center;'>$d[aktif]</td>";
+                                        echo" <td style='text-align:right;'>";
+                                        if ($r_edit == 'Y') {
+                                            echo"<a class='thickbox' href='modul/mod_$module/form_sub$module.php?id_modul=$d[id_modul]&id_module=$id&width=720&height=560&module=$module&TB_iframe=true' title='Update Sub $imodule'><span class='icon'><i class='fa fa-pencil'></i></span></a>";
+                                        }
+
+                                        if ($r_delete == 'Y') {
+                                            echo"<a href='modul/mod_$module/aksi_$module.php?module=$module&act=hapus&id=$d[id_modul]&id_module=$id' onClick=\"return confirm('Hapus data ?')\"><span class='icon'><i class='fa fa-trash'></i></span></a>";
+                                        }
+                                        echo'</td>';
+                                        echo'</tr>';
+                                    }
+
+                                    $no++;
                                 }
                                 ?>
                          </tbody>
