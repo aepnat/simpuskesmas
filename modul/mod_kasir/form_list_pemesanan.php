@@ -256,7 +256,7 @@ $imodule = $_GET['imodule'];
         <?php
 
 
-      $SQL = "SELECT p.tanggal,a.*,c.id_unit_barang,c.unit_barang,b.kode as kode_bar,b.barang
+        $SQL = "SELECT p.tanggal,a.*,c.id_unit_barang,c.unit_barang,b.kode as kode_bar,b.barang
 
                   ,a.qty-a.qty_ps as iqty, b.id_merk, b.id_barang
                   ,ifnull((SELECT sum(saldo_akhir)
@@ -314,7 +314,7 @@ $imodule = $_GET['imodule'];
 
     while ($r = mysql_fetch_array($tampil)) {
 
-          //selectPR(no_pr,id_permintaan_barang_detail,ibarang,id_barang,unit_barang,iqty,qty)
+            //selectPR(no_pr,id_permintaan_barang_detail,ibarang,id_barang,unit_barang,iqty,qty)
 
         $hsql = mysql_query("SELECT harga as last_price 
                                 FROM pemesanan_barang_detail

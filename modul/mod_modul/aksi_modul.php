@@ -82,7 +82,7 @@ if (empty($_SESSION['username']) and empty($_SESSION['password'])) {
   <?php
     } elseif ($module == 'modul' and $act == 'hapusmod') {
         // membaca ID dari data yang akan dihapus
-  $id = $_GET['id'];
+    $id = $_GET['id'];
         $id_module = $_GET['id_module'];
 
         mysql_query("DELETE a
@@ -161,4 +161,4 @@ if (empty($_SESSION['username']) and empty($_SESSION['password'])) {
   <?php
     }
 }
-?>
+    ?>

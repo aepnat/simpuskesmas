@@ -32,7 +32,7 @@ $SQL = 'SELECT * FROM general_setting ';
 
     $user = $_SESSION['userid'];
 
-          $sql = mysql_query("select * from modul where aktif='Y' order by urutan");
+            $sql = mysql_query("select * from modul where aktif='Y' order by urutan");
 
     while ($r = mysql_fetch_array($sql)) {
         if ($r[status_menu] == 'M' and !empty($r[link])) {
@@ -56,7 +56,7 @@ $SQL = 'SELECT * FROM general_setting ';
         echo'</ul>';
     }
 
-  ?>
+    ?>
   
   
   

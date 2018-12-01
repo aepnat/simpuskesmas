@@ -166,7 +166,7 @@ function icetak(){
 
 <?php
 $gtampil = mysql_query("SELECT * FROM informasi_perusahaan where id_informasi_perusahaan = '1'");
- $g = mysql_fetch_array($gtampil);
+    $g = mysql_fetch_array($gtampil);
 
 if ($g['pict']) {
     $pict = $g['pict'];
@@ -184,8 +184,8 @@ $company = ucwords($g['company']);
 </td>
 <td style="text-align:center;" width='80%'>
 <span class='h1'><?=$nmmodule; ?></span>
-<?php echo "<span class='h2'>".$g['company'].'</span><br>'; ?>
-<br>Periode : <?=$ftgl; ?> - <?=$ltgl; ?>
+    <?php echo "<span class='h2'>".$g['company'].'</span><br>'; ?>
+    <br>Periode : <?=$ftgl; ?> - <?=$ltgl; ?>
 </td>
 <td width='10%'>
 &nbsp
@@ -206,11 +206,11 @@ $company = ucwords($g['company']);
 
                                 <?php
                                 $tampil = mysql_query('SELECT * FROM poli ORDER BY id_poli');
-                                 while ($r = mysql_fetch_array($tampil)) {
-                                     ?>  
+                                    while ($r = mysql_fetch_array($tampil)) {
+                                        ?>  
                                 <th><h3 style='font-size:12px;'><?=$r[poli]; ?></h3></th>   
                                 <?php
-                                 }
+                                    }
                                 ?>
 
                             </tr>
@@ -219,7 +219,7 @@ $company = ucwords($g['company']);
                             
                          <?php
 
-             $tampil = mysql_query("SELECT DISTINCT b.id_pasien,b.ktp,b.nama,d.kategori 
+                $tampil = mysql_query("SELECT DISTINCT b.id_pasien,b.ktp,b.nama,d.kategori 
                                 FROM kunjungan_berobat a left join pasien b 
                                  ON a.id_pasien = b.id_pasien
                                  left join poli c 
@@ -231,20 +231,20 @@ $company = ucwords($g['company']);
                                  AND a.status = '1'
                                  ");
 
-            $no = 1;
+                $no = 1;
 
-            while ($r = mysql_fetch_array($tampil)) {
-                $tgl = date('d/m/Y', strtotime($r[tanggal]));
+                while ($r = mysql_fetch_array($tampil)) {
+                    $tgl = date('d/m/Y', strtotime($r[tanggal]));
 
-                $id_pasien = $r[id_pasien];
+                    $id_pasien = $r[id_pasien];
 
-                echo'<tr>';
-                echo"<td style='text-align:center;'>$no</td>";
-                echo"<td>$r[ktp]</td>";
-                echo"<td>$r[nama]</td>";
-                echo"<td>$r[kategori]</td>";
+                    echo'<tr>';
+                    echo"<td style='text-align:center;'>$no</td>";
+                    echo"<td>$r[ktp]</td>";
+                    echo"<td>$r[nama]</td>";
+                    echo"<td>$r[kategori]</td>";
 
-                $dtampil = mysql_query("SELECT a.poli,COUNT(b.id_pasien) as jml 
+                    $dtampil = mysql_query("SELECT a.poli,COUNT(b.id_pasien) as jml 
                                   FROM poli a LEFT JOIN kunjungan_berobat b
                                   ON a.id_poli = b.id_poli
                                   AND b.tanggal >= '$fdate'
@@ -255,21 +255,21 @@ $company = ucwords($g['company']);
                                   ORDER BY a.id_poli
                                  ");
 
-                while ($d = mysql_fetch_array($dtampil)) {
-                    echo"<td>$d[jml]</td>";
-                }
+                    while ($d = mysql_fetch_array($dtampil)) {
+                        echo"<td>$d[jml]</td>";
+                    }
 
-                echo'</tr>';
-                $no++;
-            }
-            ?>
+                    echo'</tr>';
+                    $no++;
+                }
+                ?>
 
             <tfoot>
                             <tr>                               
                                 <th colspan= '4'>TOTAL KUNJUNGAN</th>
 
                                 <?php
-                                $dtampil = mysql_query("SELECT a.poli,COUNT(b.id_pasien) as jml 
+                                    $dtampil = mysql_query("SELECT a.poli,COUNT(b.id_pasien) as jml 
                                   FROM poli a LEFT JOIN kunjungan_berobat b
                                   ON a.id_poli = b.id_poli
                                   AND b.tanggal >= '$fdate'
@@ -279,10 +279,10 @@ $company = ucwords($g['company']);
                                   ORDER BY a.id_poli
                                  ");
 
-                                while ($d = mysql_fetch_array($dtampil)) {
-                                    echo"<td>$d[jml]</td>";
-                                }
-                                ?>
+                                    while ($d = mysql_fetch_array($dtampil)) {
+                                        echo"<td>$d[jml]</td>";
+                                    }
+                                    ?>
 
                             </tr>
                         </tfoot>

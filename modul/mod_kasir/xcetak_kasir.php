@@ -1,48 +1,48 @@
-<?php
+    <?php
 
-session_start();
+    session_start();
 
-include './../../config/koneksi.php';
+    include './../../config/koneksi.php';
 
-include './../../config/fungsi_indobulan.php';
+    include './../../config/fungsi_indobulan.php';
 
-$SQL = 'SELECT* FROM periode ';
+    $SQL = 'SELECT* FROM periode ';
 
-$tampil = mysql_query($SQL);
+    $tampil = mysql_query($SQL);
 
-$p = mysql_fetch_array($tampil);
+    $p = mysql_fetch_array($tampil);
 
-$prd = $_GET['prd'];
+    $prd = $_GET['prd'];
 
-$tampil = mysql_query("SELECT * FROM modul WHERE id_modul ='".$_GET[report_id]."'");
+    $tampil = mysql_query("SELECT * FROM modul WHERE id_modul ='".$_GET[report_id]."'");
 
-$r = mysql_fetch_array($tampil);
+    $r = mysql_fetch_array($tampil);
 
-$module = $_GET['module'];
+    $module = $_GET['module'];
 
-$imodule = ucwords($r['nama_modul']);
+    $imodule = ucwords($r['nama_modul']);
 
-$nmmodule = ucwords($r['nama_modul']);
+    $nmmodule = ucwords($r['nama_modul']);
 
-$id = $r['id_modul'];
+    $id = $r['id_modul'];
 
-$fa_icon = $r['fa_icon'];
+    $fa_icon = $r['fa_icon'];
 
-// if($r[orientation] == 'P') {
+    // if($r[orientation] == 'P') {
 
-// 	$orientation = 'portrait';
+    // 	$orientation = 'portrait';
 
-// } else {
+    // } else {
 
-// 	$orientation = 'landscape';
+    // 	$orientation = 'landscape';
 
-// }
+    // }
 
-$orientation = 'portrait';
+    $orientation = 'portrait';
 
-$status = $_GET['status'];
+    $status = $_GET['status'];
 
-?>
+    ?>
 
 
 
@@ -282,30 +282,30 @@ function icetak(){
 <?php
 
 
-function Terbilang($x)
-{
-    $abil = ['', 'satu', 'dua', 'tiga', 'empat', 'lima', 'enam', 'tujuh', 'delapan', 'sembilan', 'sepuluh', 'sebelas'];
+    function Terbilang($x)
+    {
+        $abil = ['', 'satu', 'dua', 'tiga', 'empat', 'lima', 'enam', 'tujuh', 'delapan', 'sembilan', 'sepuluh', 'sebelas'];
 
-    if ($x < 12) {
-        return ' '.$abil[$x];
-    } elseif ($x < 20) {
-        return Terbilang($x - 10).'belas';
-    } elseif ($x < 100) {
-        return Terbilang($x / 10).' puluh'.Terbilang($x % 10);
-    } elseif ($x < 200) {
-        return ' seratus'.Terbilang($x - 100);
-    } elseif ($x < 1000) {
-        return Terbilang($x / 100).' ratus'.Terbilang($x % 100);
-    } elseif ($x < 2000) {
-        return ' seribu'.Terbilang($x - 1000);
-    } elseif ($x < 1000000) {
-        return Terbilang($x / 1000).' ribu'.Terbilang($x % 1000);
-    } elseif ($x < 1000000000) {
-        return Terbilang($x / 1000000).' juta'.Terbilang($x % 1000000);
+        if ($x < 12) {
+            return ' '.$abil[$x];
+        } elseif ($x < 20) {
+            return Terbilang($x - 10).'belas';
+        } elseif ($x < 100) {
+            return Terbilang($x / 10).' puluh'.Terbilang($x % 10);
+        } elseif ($x < 200) {
+            return ' seratus'.Terbilang($x - 100);
+        } elseif ($x < 1000) {
+            return Terbilang($x / 100).' ratus'.Terbilang($x % 100);
+        } elseif ($x < 2000) {
+            return ' seribu'.Terbilang($x - 1000);
+        } elseif ($x < 1000000) {
+            return Terbilang($x / 1000).' ribu'.Terbilang($x % 1000);
+        } elseif ($x < 1000000000) {
+            return Terbilang($x / 1000000).' juta'.Terbilang($x % 1000000);
+        }
     }
-}
 
-?>
+    ?>
 
 
 
@@ -359,9 +359,9 @@ $tgl = tgl_indo(date('Y-m-d', $time));
 
 $outlet = $_GET['outlet'];
 
- $gtampil = mysql_query("SELECT * FROM informasi_perusahaan where id_informasi_perusahaan = '1'");
+    $gtampil = mysql_query("SELECT * FROM informasi_perusahaan where id_informasi_perusahaan = '1'");
 
- $g = mysql_fetch_array($gtampil);
+    $g = mysql_fetch_array($gtampil);
 
 if ($g['pict']) {
     $pict = $g['pict'];
@@ -371,11 +371,11 @@ if ($g['pict']) {
 
 $company = ucwords($g['company']);
 
- $otampil = mysql_query("SELECT * FROM  outlet where id_outlet = '$outlet'");
+    $otampil = mysql_query("SELECT * FROM  outlet where id_outlet = '$outlet'");
 
- $o = mysql_fetch_array($otampil);
+    $o = mysql_fetch_array($otampil);
 
- ?>
+    ?>
 
 
 
@@ -396,8 +396,8 @@ $company = ucwords($g['company']);
 <td style="text-align:center;" width='100%'>
 
 <?php echo "<br><span class='h1'>".$nmmodule.'</span><br>'; ?>
-
-<?php //echo "<span class='h3'>".$g['address']."<br>".$g['city']."</span>";?>
+    
+    <?php //echo "<span class='h3'>".$g['address']."<br>".$g['city']."</span>";?>
 
 </td>
 
@@ -419,15 +419,15 @@ $company = ucwords($g['company']);
 
 <?php
 
-$prd = $_GET['prd'];
+    $prd = $_GET['prd'];
 
-$notrans = $_GET['notrans'];
+    $notrans = $_GET['notrans'];
 
-$kode = $_GET['kode'];
+    $kode = $_GET['kode'];
 
-$Outlet = $_GET['outlet'];
+    $Outlet = $_GET['outlet'];
 
-$SQL = 'SELECT a.*,b.outlet,c.supplier,d.mata_uang,d.ket as cnote 
+    $SQL = 'SELECT a.*,b.outlet,c.supplier,d.mata_uang,d.ket as cnote 
 
 	 FROM pemesanan_barang a left join outlet b
 
@@ -457,31 +457,31 @@ $SQL = 'SELECT a.*,b.outlet,c.supplier,d.mata_uang,d.ket as cnote
 
      ';
 
-$tampil = mysql_query($SQL);
+    $tampil = mysql_query($SQL);
 
-$r = mysql_fetch_array($tampil);
+    $r = mysql_fetch_array($tampil);
 
-$curr = $r['mata_uang'];
+    $curr = $r['mata_uang'];
 
-$mata_uang = $r['id_mata_uang'];
+    $mata_uang = $r['id_mata_uang'];
 
-$cnote = $r['cnote'];
+    $cnote = $r['cnote'];
 
-$tgl = date('d/m/Y', strtotime($r['tanggal']));
+    $tgl = date('d/m/Y', strtotime($r['tanggal']));
 
-if ($r['status'] == '0') {
-    $istatus = 'Baru';
-} elseif ($r['status'] == '1') {
-    $istatus = 'Disetujui';
-} elseif ($r['status'] == '2') {
-    $istatus = 'Ditolak';
-} elseif ($r['status'] == '9') {
-    $istatus = 'Posting';
-} else {
-    $istatus = 'Dibatalkan';
-}
+    if ($r['status'] == '0') {
+        $istatus = 'Baru';
+    } elseif ($r['status'] == '1') {
+        $istatus = 'Disetujui';
+    } elseif ($r['status'] == '2') {
+        $istatus = 'Ditolak';
+    } elseif ($r['status'] == '9') {
+        $istatus = 'Posting';
+    } else {
+        $istatus = 'Dibatalkan';
+    }
 
-?>
+    ?>
 
 
 
@@ -492,14 +492,14 @@ if ($r['status'] == '0') {
 <td rowspan='4' valign="top" width="50%">
 
 <?php echo "<span style='padding-top:4px;font-weight:bold;'>".$g['company'].'</span><br>'; ?>
-
-<?php echo "<span style='padding-top:8px;'>".$g['address'].' '.$g['city'].'</span><br>'; ?>
-
-<?php echo "<span style='padding-top:4px;'>".$g['state'].' - '.$g['zip'].'</span><br>'; ?>
-
-<?php echo "<span style='padding-top:4px;'>Telepon : ".$g['Telepon'].' | Fax : '.$g['fax'].'</span><br>'; ?>
-
-<?php echo "<span style='padding-top:4px;'>NPWP : ".$g['npwp'].'</span><br>'; ?>
+    
+    <?php echo "<span style='padding-top:8px;'>".$g['address'].' '.$g['city'].'</span><br>'; ?>
+    
+    <?php echo "<span style='padding-top:4px;'>".$g['state'].' - '.$g['zip'].'</span><br>'; ?>
+    
+    <?php echo "<span style='padding-top:4px;'>Telepon : ".$g['Telepon'].' | Fax : '.$g['fax'].'</span><br>'; ?>
+    
+    <?php echo "<span style='padding-top:4px;'>NPWP : ".$g['npwp'].'</span><br>'; ?>
 
 <td>
 
@@ -507,21 +507,21 @@ if ($r['status'] == '0') {
 
 <?php
 
-    echo"<table width='100%' border=0 cellpadding=0 cellspacing=0>";
+        echo"<table width='100%' border=0 cellpadding=0 cellspacing=0>";
 
-    echo'<tr>';
+        echo'<tr>';
 
-    echo"<td width='72%' style='text-align:right;'>No. Pemesanan</td>";
+        echo"<td width='72%' style='text-align:right;'>No. Pemesanan</td>";
 
-    echo"<td width='1%'>:</td>";
+        echo"<td width='1%'>:</td>";
 
-    echo"<td width='27%' style='text-align:left;'>".$r['kode'].''.$r['notrans'].'</td>';
+        echo"<td width='27%' style='text-align:left;'>".$r['kode'].''.$r['notrans'].'</td>';
 
-    echo'</tr>';
+        echo'</tr>';
 
-    echo'</table>';
+        echo'</table>';
 
-?>	
+    ?>	
 
 </td>
 
@@ -531,21 +531,21 @@ if ($r['status'] == '0') {
 
  <?php
 
-    echo"<table width='100%' border=0 cellpadding=0 cellspacing=0>";
+        echo"<table width='100%' border=0 cellpadding=0 cellspacing=0>";
 
-    echo'<tr>';
+        echo'<tr>';
 
-    echo"<td width='72%' style='text-align:right;'>Tanggal</td>";
+        echo"<td width='72%' style='text-align:right;'>Tanggal</td>";
 
-    echo"<td width='1%'>:</td>";
+        echo"<td width='1%'>:</td>";
 
-    echo"<td width='27%' style='text-align:left;'>".$tgl.'</td>';
+        echo"<td width='27%' style='text-align:left;'>".$tgl.'</td>';
 
-    echo'</tr>';
+        echo'</tr>';
 
-    echo'</table>';
+        echo'</table>';
 
-?>	
+    ?>	
 
 </td>
 
@@ -559,21 +559,21 @@ if ($r['status'] == '0') {
 
 <?php
 
-    echo"<table width='100%' border=0 cellpadding=0 cellspacing=0>";
+        echo"<table width='100%' border=0 cellpadding=0 cellspacing=0>";
 
-    echo'<tr>';
+        echo'<tr>';
 
-    echo"<td width='72%' style='text-align:right;'>Term</td>";
+        echo"<td width='72%' style='text-align:right;'>Term</td>";
 
-    echo"<td width='1%'>:</td>";
+        echo"<td width='1%'>:</td>";
 
-    echo"<td width='27%' style='text-align:left;'>".$r['term'].' Hari</td>';
+        echo"<td width='27%' style='text-align:left;'>".$r['term'].' Hari</td>';
 
-    echo'</tr>';
+        echo'</tr>';
 
-    echo'</table>';
+        echo'</table>';
 
-?>	
+    ?>	
 
 </td>
 
@@ -595,7 +595,7 @@ if ($r['status'] == '0') {
 
 <?php
 
-$sSQL = 'SELECT c.*
+    $sSQL = 'SELECT c.*
 
 	 FROM pemesanan_barang a left join outlet b
 
@@ -625,11 +625,11 @@ $sSQL = 'SELECT c.*
 
      ';
 
-$stampil = mysql_query($sSQL);
+    $stampil = mysql_query($sSQL);
 
-$s = mysql_fetch_array($stampil);
+    $s = mysql_fetch_array($stampil);
 
-?>
+    ?>
 
  <table width="100%" cellpadding='0' cellspacing='0' border="0">
 
@@ -651,7 +651,7 @@ $s = mysql_fetch_array($stampil);
 
 <?php
 
-$cSQL = 'SELECT b.*
+    $cSQL = 'SELECT b.*
 
 	 FROM pemesanan_barang a left join outlet b
 
@@ -681,11 +681,11 @@ $cSQL = 'SELECT b.*
 
      ';
 
-$ctampil = mysql_query($cSQL);
+    $ctampil = mysql_query($cSQL);
 
-$c = mysql_fetch_array($ctampil);
+    $c = mysql_fetch_array($ctampil);
 
-?>
+    ?>
 
  <table width="100%" cellpadding='0' cellspacing='0'>
 
@@ -740,12 +740,12 @@ $c = mysql_fetch_array($ctampil);
      <th width='15%'  class="iborder" style="text-align: right">Harga</th> 
 
      <?php if ($mata_uang == '1') {
-    ?> 
+        ?> 
 
      <th width='15%'  class="lborder" style="text-align: right">Total</th>
 
      <?php
-} else {
+    } else {
         ?>
 
      <th width='10%'  class="iborder" style="text-align: right">Total (<?php echo $curr; ?>)</th>
@@ -763,7 +763,7 @@ $c = mysql_fetch_array($ctampil);
 <?php
 
 
-$dSQL = "SELECT a.*,c.unit_barang,b.kode as kode_bar,b.barang
+    $dSQL = "SELECT a.*,c.unit_barang,b.kode as kode_bar,b.barang
 
          FROM pemesanan_barang_detail a inner join barang b
 
@@ -949,7 +949,7 @@ TOTAL
 
 <?php
 
-$pg_sql = mysql_query('SELECT * FROM pg_lainnya');
+    $pg_sql = mysql_query('SELECT * FROM pg_lainnya');
 
         $pg = mysql_fetch_array($pg_sql);
 
@@ -1022,7 +1022,7 @@ GRAND TOTAL
 	<?php
 
 
-    $tanda_tangan = mysql_query("SELECT a.judul,a.penanda_tangan FROM tanda_tangan a LEFT JOIN kode_transaksi b 
+        $tanda_tangan = mysql_query("SELECT a.judul,a.penanda_tangan FROM tanda_tangan a LEFT JOIN kode_transaksi b 
 
 							ON a.id_kode_transaksi = b.id_kode_transaksi
 
@@ -1074,19 +1074,19 @@ GRAND TOTAL
 
     <?php
 
-    $tanda_tangan = mysql_query("SELECT a.judul,a.penanda_tangan FROM tanda_tangan a LEFT JOIN kode_transaksi b 
+        $tanda_tangan = mysql_query("SELECT a.judul,a.penanda_tangan FROM tanda_tangan a LEFT JOIN kode_transaksi b 
 
 							ON a.id_kode_transaksi = b.id_kode_transaksi
 
 							WHERE b.kode = '$kode' AND a.aktif = 'Y'"); ?>    
 
     <?php while ($s = mysql_fetch_array($tanda_tangan)) {
-        ?>
+            ?>
 
     <td align="center" width="<?php echo $ps?>%" valign="bottom" style="padding-top:60px;">(<span style="padding-left:10px; padding-right:10px;";><?php echo $s['penanda_tangan']?></span>)</td>
 
     <?php
-    } ?>
+        } ?>
 
     </tr>
 

@@ -166,7 +166,7 @@ function icetak(){
 
 <?php
 $gtampil = mysql_query("SELECT * FROM informasi_perusahaan where id_informasi_perusahaan = '1'");
- $g = mysql_fetch_array($gtampil);
+    $g = mysql_fetch_array($gtampil);
 
 if ($g['pict']) {
     $pict = $g['pict'];
@@ -184,8 +184,8 @@ $company = ucwords($g['company']);
 </td>
 <td style="text-align:center;" width='80%'>
 <span class='h1'><?=$nmmodule; ?></span>
-<?php echo "<span class='h2'>".$g['company'].'</span><br>'; ?>
-<br>Periode : <?=$ftgl; ?> - <?=$ltgl; ?>
+    <?php echo "<span class='h2'>".$g['company'].'</span><br>'; ?>
+    <br>Periode : <?=$ftgl; ?> - <?=$ltgl; ?>
 </td>
 <td width='10%'>
 &nbsp
@@ -213,7 +213,7 @@ $company = ucwords($g['company']);
                          <?php
 
 
-                         $tampil = mysql_query("SELECT a.*,b.nama,b.tgl_lahir,b.ktp,c.poli,d.kategori    
+                            $tampil = mysql_query("SELECT a.*,b.nama,b.tgl_lahir,b.ktp,c.poli,d.kategori    
                                                 ,e.rujukan as rujukan_rs
                                                 ,f.rujukan as rujukan_lab                              
                                             FROM kunjungan_berobat a left join pasien b 
@@ -232,24 +232,24 @@ $company = ucwords($g['company']);
                                              AND a.rujukan = 'Y'                    
                                              ORDER BY a.tanggal,a.id_poli,a.no_urut ASC");
 
-                        $no = 1;
+                            $no = 1;
 
-                        while ($r = mysql_fetch_array($tampil)) {
-                            $tgl = date('d/m/Y', strtotime($r[tanggal]));
-                            $tgl_lahir = date('d/m/Y', strtotime($r[tgl_lahir]));
+                            while ($r = mysql_fetch_array($tampil)) {
+                                $tgl = date('d/m/Y', strtotime($r[tanggal]));
+                                $tgl_lahir = date('d/m/Y', strtotime($r[tgl_lahir]));
 
-                            echo'<tr>';
-                            echo"<td>$tgl</td>";
-                            echo"<td>$r[poli]</td>";
-                            echo"<td>$r[nama]</td>";
-                            echo"<td>$r[kategori]</td>";
-                            echo"<td>$r[rujukan_rs]</td>";
-                            echo"<td>$r[rujukan_lab]</td>";
+                                echo'<tr>';
+                                echo"<td>$tgl</td>";
+                                echo"<td>$r[poli]</td>";
+                                echo"<td>$r[nama]</td>";
+                                echo"<td>$r[kategori]</td>";
+                                echo"<td>$r[rujukan_rs]</td>";
+                                echo"<td>$r[rujukan_lab]</td>";
 
-                            echo'</tr>';
-                            $no++;
-                        }
-                        ?>
+                                echo'</tr>';
+                                $no++;
+                            }
+                            ?>
 
                       
 

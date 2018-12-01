@@ -371,11 +371,11 @@ $modul = $_GET['module'];
         <!-- /editor -->
 
          <?php 
-         if (empty($pict)) {
-             $ipict = 'logo.png';
-         } else {
-             $ipict = $pict;
-         } ?>
+            if (empty($pict)) {
+                $ipict = 'logo.png';
+            } else {
+                $ipict = $pict;
+            } ?>
 
         <script>
           var btnCust = '<button type="button" class="btn btn-default" title="Add picture tags" ' + 

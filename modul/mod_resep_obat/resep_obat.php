@@ -1,8 +1,8 @@
-<?php
+    <?php
 switch ($_GET[act]) {
 
-default:
-  ?>
+        default:
+          ?>
 
  <div class="">
                    
@@ -47,7 +47,7 @@ default:
                             
                          <?php
 
-            $tampil = mysql_query('SELECT a.*,b.nama,b.tgl_lahir,b.ktp,c.poli,d.kategori                                  
+                    $tampil = mysql_query('SELECT a.*,b.nama,b.tgl_lahir,b.ktp,c.poli,d.kategori                                  
                                 FROM kunjungan_berobat a left join pasien b 
                                  ON a.id_pasien = b.id_pasien
                                  left join poli c 
@@ -56,24 +56,24 @@ default:
                                  ON b.id_kategori = d.id_kategori                                
                                  ORDER BY a.tanggal,a.id_poli,a.no_urut ASC');
 
-            $no = 1;
+                    $no = 1;
 
-            while ($r = mysql_fetch_array($tampil)) {
-                $id = $r[id_kunjungan_berobat];
-                $tgl = date('d/m/Y', strtotime($r[tanggal]));
-                $tgl_lahir = date('d/m/Y', strtotime($r[tgl_lahir]));
+                    while ($r = mysql_fetch_array($tampil)) {
+                        $id = $r[id_kunjungan_berobat];
+                        $tgl = date('d/m/Y', strtotime($r[tanggal]));
+                        $tgl_lahir = date('d/m/Y', strtotime($r[tgl_lahir]));
 
-                echo'<tr>';
-                echo"<td>$tgl</td>";
-                echo"<td>$r[poli]</td>";
-                echo"<td>$r[no_urut]</td>";
-                echo"<td>$r[nama]</td>";
-                echo"<td>$r[kategori]</td>";
-                echo"<td>$r[keluhan]</td>";
-                echo"<td>$r[diagnosa]</td>";
-                echo'<td>';
+                        echo'<tr>';
+                        echo"<td>$tgl</td>";
+                        echo"<td>$r[poli]</td>";
+                        echo"<td>$r[no_urut]</td>";
+                        echo"<td>$r[nama]</td>";
+                        echo"<td>$r[kategori]</td>";
+                        echo"<td>$r[keluhan]</td>";
+                        echo"<td>$r[diagnosa]</td>";
+                        echo'<td>';
 
-                $dtampil = mysql_query("SELECT a.*,b.obat,c.satuan
+                        $dtampil = mysql_query("SELECT a.*,b.obat,c.satuan
                                       FROM kunjungan_berobat_detail  a LEFT JOIN obat b
                                       ON a.id_obat = b.id_obat  
                                       LEFT JOIN satuan c
@@ -81,26 +81,26 @@ default:
                                       WHERE a.id_kunjungan_berobat = '$id' 
                                       order by a.id_kunjungan_berobat_detail");
 
-                while ($d = mysql_fetch_array($dtampil)) {
-                    echo"<table width='100%'>";
-                    echo'<tr>';
-                    echo"<td width='70%'>$d[obat]</td>";
-                    echo"<td width='30%'>$d[qty] $d[satuan]</td>";
-                    echo'</tr>';
-                    echo'</table>';
-                }
+                        while ($d = mysql_fetch_array($dtampil)) {
+                            echo"<table width='100%'>";
+                            echo'<tr>';
+                            echo"<td width='70%'>$d[obat]</td>";
+                            echo"<td width='30%'>$d[qty] $d[satuan]</td>";
+                            echo'</tr>';
+                            echo'</table>';
+                        }
 
-                echo'</td>';
-                echo" <td  style='text-align:center;'>";
+                        echo'</td>';
+                        echo" <td  style='text-align:center;'>";
 
-                if ($r_edit == 'Y') {
-                    echo"<a class='thickbox' href='modul/mod_$module/form_$module.php?id_kunjungan_berobat=$r[id_kunjungan_berobat]&id_module=$id&width=720&height=620&module=$module&TB_iframe=true' title='Tambah $nmmodule'><span class='icon'><i class='fa fa-pencil'></i></span></a>";
-                }
+                        if ($r_edit == 'Y') {
+                            echo"<a class='thickbox' href='modul/mod_$module/form_$module.php?id_kunjungan_berobat=$r[id_kunjungan_berobat]&id_module=$id&width=720&height=620&module=$module&TB_iframe=true' title='Tambah $nmmodule'><span class='icon'><i class='fa fa-pencil'></i></span></a>";
+                        }
 
-                echo'</td>';
-                echo'</tr>';
-                $no++;
-            }
+                        echo'</td>';
+                        echo'</tr>';
+                        $no++;
+                    }
                                 ?>
                          </tbody>
                     </table>
@@ -146,4 +146,4 @@ default:
 
     <?php
 }
-?>
+    ?>

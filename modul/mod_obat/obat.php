@@ -1,9 +1,9 @@
-  
-<?php
+      
+    <?php
 switch ($_GET[act]) {
 
-default:
-  ?>
+        default:
+          ?>
 
  <div class="">
                    

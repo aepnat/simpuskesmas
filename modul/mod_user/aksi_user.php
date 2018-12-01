@@ -94,7 +94,7 @@ if (empty($_SESSION['username']) and empty($_SESSION['password'])) {
             // Apabila password diubah
             else {
 
-    //$pass=md5($_POST[password]);
+        //$pass=md5($_POST[password]);
                 $pass = $_POST[password];
 
                 if (empty($lokasi_file)) {
@@ -205,4 +205,4 @@ if (empty($_SESSION['username']) and empty($_SESSION['password'])) {
   <?php
     }
 }
-?>
+    ?>

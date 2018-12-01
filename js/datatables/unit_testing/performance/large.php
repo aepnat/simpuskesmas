@@ -1,5 +1,5 @@
 <?php
-  /* MySQL connection */
+    /* MySQL connection */
     include $_SERVER['DOCUMENT_ROOT'].'/datatables/mysql.php'; /* ;-) */
 
     $gaSql['link'] = mysql_pconnect($gaSql['server'], $gaSql['user'], $gaSql['password']) or

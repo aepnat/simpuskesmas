@@ -1,11 +1,11 @@
-<?php
+    <?php
 
-$outlet = $df_outlet;
+    $outlet = $df_outlet;
 
 switch ($_GET[act]) {
 
-default:
-  ?>
+        default:
+          ?>
 
  <div class="">
                    

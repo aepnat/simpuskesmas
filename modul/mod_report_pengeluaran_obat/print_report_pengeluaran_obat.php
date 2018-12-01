@@ -166,7 +166,7 @@ function icetak(){
 
 <?php
 $gtampil = mysql_query("SELECT * FROM informasi_perusahaan where id_informasi_perusahaan = '1'");
- $g = mysql_fetch_array($gtampil);
+    $g = mysql_fetch_array($gtampil);
 
 if ($g['pict']) {
     $pict = $g['pict'];
@@ -210,7 +210,7 @@ $company = ucwords($g['company']);
                             
                          <?php
 
-             $tampil = mysql_query("SELECT b.obat
+                $tampil = mysql_query("SELECT b.obat
                                   , c.satuan
                                   , sum(a.qty) as jumlah
                                 FROM kunjungan_berobat h inner join kunjungan_berobat_detail  a 

@@ -119,16 +119,16 @@ if ($_GET['ldate']) {
 							                 <select name="room_type" class="form-control1" required onChange="document.myform.submit();">
 							                 	<option value="">--------- Room Type ---------</option>
 							                    <?php
-                                                  $query = mysql_query('SELECT * FROM room_type ORDER BY room_type');
-                                                   if ($query && mysql_num_rows($query) > 0) {
-                                                       while ($row = mysql_fetch_object($query)) {
-                                                           echo '<option value="'.$row->id_room_type.'"';
-                                                           if ($row->id_room_type == $_GET['room_type']) {
-                                                               echo ' selected';
-                                                           }
-                                                           echo '>'.$row->room_type.'</option>';
-                                                       }
-                                                   }
+                                                    $query = mysql_query('SELECT * FROM room_type ORDER BY room_type');
+                                                    if ($query && mysql_num_rows($query) > 0) {
+                                                        while ($row = mysql_fetch_object($query)) {
+                                                            echo '<option value="'.$row->id_room_type.'"';
+                                                            if ($row->id_room_type == $_GET['room_type']) {
+                                                                echo ' selected';
+                                                            }
+                                                            echo '>'.$row->room_type.'</option>';
+                                                        }
+                                                    }
                                                 ?>
 							                    </select>
 							              </div>   
@@ -270,110 +270,110 @@ if ($_GET['ldate']) {
 									
                             
                          <?php	
-                                 $tSQL = 'SELECT * FROM room_type ';
+                                    $tSQL = 'SELECT * FROM room_type ';
 
-                                 if ($_GET['room_type']) {
-                                     $tSQL .= "WHERE id_room_type = '$_GET[room_type]'";
-                                 }
+                                    if ($_GET['room_type']) {
+                                        $tSQL .= "WHERE id_room_type = '$_GET[room_type]'";
+                                    }
 
-                                 $tSQL .= 'ORDER BY room_type';
+                                    $tSQL .= 'ORDER BY room_type';
 
-                                 $type = mysql_query($tSQL);
+                                    $type = mysql_query($tSQL);
 
-                                 while ($t = mysql_fetch_array($type)) {
-                                     $id_room_type = $t['id_room_type'];
+                                    while ($t = mysql_fetch_array($type)) {
+                                        $id_room_type = $t['id_room_type'];
 
-                                     echo'<tr>';
-                                     echo"<td style='background-color: #1ABB9C;color: #E7E7E7;'>".$t['room_type'].'</td>';
+                                        echo'<tr>';
+                                        echo"<td style='background-color: #1ABB9C;color: #E7E7E7;'>".$t['room_type'].'</td>';
 
-                                     if ($lmonth == $fmonth and $lyear == $fyear) {
-                                         for ($i = $fday; $i <= $lday; $i++) {
-                                             if (strlen($i) == '1') {
-                                                 $tgl = '0'.$i;
-                                             } else {
-                                                 $tgl = $i;
-                                             }
+                                        if ($lmonth == $fmonth and $lyear == $fyear) {
+                                            for ($i = $fday; $i <= $lday; $i++) {
+                                                if (strlen($i) == '1') {
+                                                    $tgl = '0'.$i;
+                                                } else {
+                                                    $tgl = $i;
+                                                }
 
-                                             $tanggal = $fyear.'-'.$fmonth.'-'.$tgl;
+                                                $tanggal = $fyear.'-'.$fmonth.'-'.$tgl;
 
-                                             echo"<td style='background-color: #1ABB9C;color: #E7E7E7;'>
+                                                echo"<td style='background-color: #1ABB9C;color: #E7E7E7;'>
 										</td>";
-                                         }
-                                     } else {
-                                         for ($i = $fday; $i <= $f_lastday; $i++) {
-                                             if (strlen($i) == '1') {
-                                                 $tgl = '0'.$i;
-                                             } else {
-                                                 $tgl = $i;
-                                             }
+                                            }
+                                        } else {
+                                            for ($i = $fday; $i <= $f_lastday; $i++) {
+                                                if (strlen($i) == '1') {
+                                                    $tgl = '0'.$i;
+                                                } else {
+                                                    $tgl = $i;
+                                                }
 
-                                             $tanggal = $fyear.'-'.$fmonth.'-'.$tgl;
+                                                $tanggal = $fyear.'-'.$fmonth.'-'.$tgl;
 
-                                             $DayName = date('D', strtotime($tanggal));
+                                                $DayName = date('D', strtotime($tanggal));
 
-                                             echo"<td style='background-color: #1ABB9C;color: #E7E7E7;'>
+                                                echo"<td style='background-color: #1ABB9C;color: #E7E7E7;'>
 										</td>";
-                                         }
+                                            }
 
-                                         for ($i = 1; $i <= $lday; $i++) {
-                                             if (strlen($i) == '1') {
-                                                 $tgl = '0'.$i;
-                                             } else {
-                                                 $tgl = $i;
-                                             }
+                                            for ($i = 1; $i <= $lday; $i++) {
+                                                if (strlen($i) == '1') {
+                                                    $tgl = '0'.$i;
+                                                } else {
+                                                    $tgl = $i;
+                                                }
 
-                                             $tanggal = $lyear.'-'.$lmonth.'-'.$tgl;
+                                                $tanggal = $lyear.'-'.$lmonth.'-'.$tgl;
 
-                                             $DayName = date('D', strtotime($tanggal));
+                                                $DayName = date('D', strtotime($tanggal));
 
-                                             echo"<td style='background-color: #1ABB9C;color: #E7E7E7;'>
+                                                echo"<td style='background-color: #1ABB9C;color: #E7E7E7;'>
 										</td>";
-                                         }
-                                     }
+                                            }
+                                        }
 
-                                     echo'</tr>';
+                                        echo'</tr>';
 
-                                     $rSQL = "SELECT * FROM room WHERE id_room_type = '$id_room_type' ORDER BY room_no";
+                                        $rSQL = "SELECT * FROM room WHERE id_room_type = '$id_room_type' ORDER BY room_no";
 
-                                     $room = mysql_query($rSQL);
+                                        $room = mysql_query($rSQL);
 
-                                     $no = 1;
-                                     while ($r = mysql_fetch_array($room)) {
-                                         $aktif = $r['aktif'];
+                                        $no = 1;
+                                        while ($r = mysql_fetch_array($room)) {
+                                            $aktif = $r['aktif'];
 
-                                         if (($no % 2) == 0) {
-                                             $sty = 'ftd';
-                                         } else {
-                                             $sty = 'ltd';
-                                         }
+                                            if (($no % 2) == 0) {
+                                                $sty = 'ftd';
+                                            } else {
+                                                $sty = 'ltd';
+                                            }
 
-                                         $id_room = $r['id_room'];
+                                            $id_room = $r['id_room'];
 
-                                         echo'<tr>';
-                                         echo"<td style='padding-left:20px;text-align:left;' class=$sty>".$r['room_no'].'</td>';
+                                            echo'<tr>';
+                                            echo"<td style='padding-left:20px;text-align:left;' class=$sty>".$r['room_no'].'</td>';
 
-                                         if ($lmonth == $fmonth and $lyear == $fyear) {
-                                             for ($i = $fday; $i <= $lday; $i++) {
-                                                 if (strlen($i) == '1') {
-                                                     $tgl = '0'.$i;
-                                                 } else {
-                                                     $tgl = $i;
-                                                 }
+                                            if ($lmonth == $fmonth and $lyear == $fyear) {
+                                                for ($i = $fday; $i <= $lday; $i++) {
+                                                    if (strlen($i) == '1') {
+                                                        $tgl = '0'.$i;
+                                                    } else {
+                                                        $tgl = $i;
+                                                    }
 
-                                                 $tanggal = $fyear.'-'.$fmonth.'-'.$tgl;
+                                                    $tanggal = $fyear.'-'.$fmonth.'-'.$tgl;
 
-                                                 echo"<td class=$sty style='padding:0;'>";
+                                                    echo"<td class=$sty style='padding:0;'>";
 
-                                                 if ($aktif == 'T') {
-                                                     echo"
+                                                    if ($aktif == 'T') {
+                                                        echo"
 												<i class='fa fa-warning' style='color: red;font-size:18px' onMouseover=\"ddrivetip('Out of Order')\"; onMouseout=\"hideddrivetip()\"></i>
 												";
-                                                 }
+                                                    }
 
-                                                 echo"<table cellpadding='0' cellspacing='0' border='0' width='100%'>";
-                                                 echo'<tr>';
+                                                    echo"<table cellpadding='0' cellspacing='0' border='0' width='100%'>";
+                                                    echo'<tr>';
 
-                                                 $cSQL = "SELECT a.id_room,a.room_no,b.rdate,b.status,a.aktif,c.guest,c.initial,d.legend
+                                                    $cSQL = "SELECT a.id_room,a.room_no,b.rdate,b.status,a.aktif,c.guest,c.initial,d.legend
 													FROM room a left join room_reservation b
 													 ON a.id_room = b.id_room
 													 and b.status in ('0','1')
@@ -385,131 +385,131 @@ if ($_GET['ldate']) {
 													 AND b.rdate = '$tanggal'												
 													 ORDER BY a.room_no,b.id_reservation";
 
-                                                 $croom = mysql_query($cSQL);
+                                                    $croom = mysql_query($cSQL);
 
-                                                 $jml = mysql_num_rows($croom);
+                                                    $jml = mysql_num_rows($croom);
 
-                                                 //$c=mysql_fetch_array($croom);
-                                                 while ($c = mysql_fetch_array($croom)) {
-                                                     $rdate = $c['rdate'];
+                                                    //$c=mysql_fetch_array($croom);
+                                                    while ($c = mysql_fetch_array($croom)) {
+                                                        $rdate = $c['rdate'];
 
-                                                     $lSQL = "SELECT '$rdate' - INTERVAL 1 DAY as ldate, '$rdate' + INTERVAL 1 DAY as ndate ";
-                                                     //echo $lSQL;
-                                                     $ld = mysql_query($lSQL);
+                                                        $lSQL = "SELECT '$rdate' - INTERVAL 1 DAY as ldate, '$rdate' + INTERVAL 1 DAY as ndate ";
+                                                        //echo $lSQL;
+                                                        $ld = mysql_query($lSQL);
 
-                                                     $l = mysql_fetch_array($ld);
+                                                        $l = mysql_fetch_array($ld);
 
-                                                     $ldate = $l['ldate'];
+                                                        $ldate = $l['ldate'];
 
-                                                     $ndate = $l['ndate'];
+                                                        $ndate = $l['ndate'];
 
-                                                     $cSQL1 = "SELECT * from room_reservation 
+                                                        $cSQL1 = "SELECT * from room_reservation 
 													 WHERE id_room = '$id_room' 
 													 AND rdate = '$ldate'";
 
-                                                     $lroom = mysql_query($cSQL1);
+                                                        $lroom = mysql_query($cSQL1);
 
-                                                     if ($ldate) {
-                                                         $ljml = mysql_num_rows($lroom);
-                                                     } else {
-                                                         $ljml = '0';
-                                                     }
+                                                        if ($ldate) {
+                                                            $ljml = mysql_num_rows($lroom);
+                                                        } else {
+                                                            $ljml = '0';
+                                                        }
 
-                                                     $cSQL2 = "SELECT * from room_reservation 
+                                                        $cSQL2 = "SELECT * from room_reservation 
 													 WHERE id_room = '$id_room' 
 													 AND rdate = '$ndate'";
 
-                                                     $nroom = mysql_query($cSQL2);
+                                                        $nroom = mysql_query($cSQL2);
 
-                                                     $njml = mysql_num_rows($nroom);
+                                                        $njml = mysql_num_rows($nroom);
 
-                                                     if ($ndate) {
-                                                         $njml = mysql_num_rows($nroom);
-                                                     } else {
-                                                         $njml = '0';
-                                                     }
+                                                        if ($ndate) {
+                                                            $njml = mysql_num_rows($nroom);
+                                                        } else {
+                                                            $njml = '0';
+                                                        }
 
-                                                     $guest = $c['guest'];
+                                                        $guest = $c['guest'];
 
-                                                     $legend = $c['legend'];
-                                                     $status = $c['status'];
+                                                        $legend = $c['legend'];
+                                                        $status = $c['status'];
 
-                                                     if ($status == 0) {
-                                                         $icolor = '#fff';
-                                                     } else {
-                                                         $icolor = '#fff';
-                                                     }
+                                                        if ($status == 0) {
+                                                            $icolor = '#fff';
+                                                        } else {
+                                                            $icolor = '#fff';
+                                                        }
 
-                                                     if ($status == 0) {
-                                                         $istatus = 'Reserved';
-                                                     } elseif ($status == 1) {
-                                                         $istatus = 'Check In';
-                                                     } else {
-                                                         $istatus = 'Check Out';
-                                                     }
+                                                        if ($status == 0) {
+                                                            $istatus = 'Reserved';
+                                                        } elseif ($status == 1) {
+                                                            $istatus = 'Check In';
+                                                        } else {
+                                                            $istatus = 'Check Out';
+                                                        }
 
-                                                     $iguest = trim($c['initial']).'. '.trim($c['guest']).' | '.$istatus;
+                                                        $iguest = trim($c['initial']).'. '.trim($c['guest']).' | '.$istatus;
 
-                                                     if ($c['initial'] == 'Mr ') {
-                                                         $icon = 'fa fa-male';
-                                                     } else {
-                                                         $icon = 'fa fa-female';
-                                                     }
+                                                        if ($c['initial'] == 'Mr ') {
+                                                            $icon = 'fa fa-male';
+                                                        } else {
+                                                            $icon = 'fa fa-female';
+                                                        }
 
-                                                     echo $ljml.'-'.$jml.'-'.$njml;
+                                                        echo $ljml.'-'.$jml.'-'.$njml;
 
-                                                     //if ($jml == '1') {
+                                                        //if ($jml == '1') {
 
-                                                     if ($ljml == '0' and $jml == '1' and $njml == '1') {
-                                                         echo"<td width='50%'>
+                                                        if ($ljml == '0' and $jml == '1' and $njml == '1') {
+                                                            echo"<td width='50%'>
 														</td>";
-                                                     }
+                                                        }
 
-                                                     if ($guest) {
-                                                         if ($guest) {
-                                                             echo"<td style='background-color:$legend;'  width='50%'>
+                                                        if ($guest) {
+                                                            if ($guest) {
+                                                                echo"<td style='background-color:$legend;'  width='50%'>
 														<a href='' onMouseover=\"ddrivetip('$iguest')\"; onMouseout=\"hideddrivetip()\" title=''><i class='$icon' style='color: $icolor;font-size:15px'></i></a>
 														</td>";
-                                                         } else {
-                                                             echo"<td style='background-color:$legend;'  width='50%'>
+                                                            } else {
+                                                                echo"<td style='background-color:$legend;'  width='50%'>
 														</td>";
-                                                         }
-                                                     }
-                                                 }
+                                                            }
+                                                        }
+                                                    }
 
-                                                 if ($ljml != '0' and $jml == '1') {
-                                                     echo"<td width='50%'>
+                                                    if ($ljml != '0' and $jml == '1') {
+                                                        echo"<td width='50%'>
 														</td>";
-                                                 }
+                                                    }
 
-                                                 //}
+                                                    //}
 
-                                                 echo'</tr>';
-                                                 echo'</table>';
-                                                 echo'</td>';
-                                             }
-                                         } else {
-                                             for ($i = $fday; $i <= $f_lastday; $i++) {
-                                                 if (strlen($i) == '1') {
-                                                     $tgl = '0'.$i;
-                                                 } else {
-                                                     $tgl = $i;
-                                                 }
+                                                    echo'</tr>';
+                                                    echo'</table>';
+                                                    echo'</td>';
+                                                }
+                                            } else {
+                                                for ($i = $fday; $i <= $f_lastday; $i++) {
+                                                    if (strlen($i) == '1') {
+                                                        $tgl = '0'.$i;
+                                                    } else {
+                                                        $tgl = $i;
+                                                    }
 
-                                                 $tanggal = $fyear.'-'.$fmonth.'-'.$tgl;
+                                                    $tanggal = $fyear.'-'.$fmonth.'-'.$tgl;
 
-                                                 echo"<td class=$sty style='padding:0;'>";
+                                                    echo"<td class=$sty style='padding:0;'>";
 
-                                                 if ($aktif == 'T') {
-                                                     echo"
+                                                    if ($aktif == 'T') {
+                                                        echo"
 												<i class='fa fa-warning' style='color: red;font-size:18px' onMouseover=\"ddrivetip('Out of Order')\"; onMouseout=\"hideddrivetip()\"></i>
 												";
-                                                 }
+                                                    }
 
-                                                 echo"<table cellpadding='0' cellspacing='0' border='0' width='100%'>";
-                                                 echo'<tr>';
+                                                    echo"<table cellpadding='0' cellspacing='0' border='0' width='100%'>";
+                                                    echo'<tr>';
 
-                                                 $cSQL = "SELECT a.id_room,a.room_no,b.rdate,b.status,a.aktif,c.guest,c.initial,d.legend
+                                                    $cSQL = "SELECT a.id_room,a.room_no,b.rdate,b.status,a.aktif,c.guest,c.initial,d.legend
 													FROM room a left join room_reservation b
 													 ON a.id_room = b.id_room
 													 and b.status in ('0','1')
@@ -521,82 +521,82 @@ if ($_GET['ldate']) {
 													 AND b.rdate = '$tanggal'												
 													 ORDER BY a.room_no";
 
-                                                 $croom = mysql_query($cSQL);
+                                                    $croom = mysql_query($cSQL);
 
-                                                 $jml = mysql_num_rows($croom);
+                                                    $jml = mysql_num_rows($croom);
 
-                                                 //$c=mysql_fetch_array($croom);
-                                                 while ($c = mysql_fetch_array($croom)) {
-                                                     $guest = $c['guest'];
+                                                    //$c=mysql_fetch_array($croom);
+                                                    while ($c = mysql_fetch_array($croom)) {
+                                                        $guest = $c['guest'];
 
-                                                     $legend = $c['legend'];
-                                                     $status = $c['status'];
+                                                        $legend = $c['legend'];
+                                                        $status = $c['status'];
 
-                                                     if ($status == 0) {
-                                                         $icolor = '#fff';
-                                                     } else {
-                                                         $icolor = '#fff';
-                                                     }
+                                                        if ($status == 0) {
+                                                            $icolor = '#fff';
+                                                        } else {
+                                                            $icolor = '#fff';
+                                                        }
 
-                                                     if ($status == 0) {
-                                                         $istatus = 'Reserved';
-                                                     } elseif ($status == 1) {
-                                                         $istatus = 'Check In';
-                                                     } else {
-                                                         $istatus = 'Check Out';
-                                                     }
+                                                        if ($status == 0) {
+                                                            $istatus = 'Reserved';
+                                                        } elseif ($status == 1) {
+                                                            $istatus = 'Check In';
+                                                        } else {
+                                                            $istatus = 'Check Out';
+                                                        }
 
-                                                     $iguest = trim($c['initial']).'. '.trim($c['guest']).' | '.$istatus;
+                                                        $iguest = trim($c['initial']).'. '.trim($c['guest']).' | '.$istatus;
 
-                                                     if ($c['initial'] == 'Mr ') {
-                                                         $icon = 'fa fa-male';
-                                                     } else {
-                                                         $icon = 'fa fa-female';
-                                                     }
+                                                        if ($c['initial'] == 'Mr ') {
+                                                            $icon = 'fa fa-male';
+                                                        } else {
+                                                            $icon = 'fa fa-female';
+                                                        }
 
-                                                     if ($guest) {
-                                                         if ($guest) {
-                                                             echo"<td style='background-color:$legend;'  width='50%'>
+                                                        if ($guest) {
+                                                            if ($guest) {
+                                                                echo"<td style='background-color:$legend;'  width='50%'>
 												<a href='' onMouseover=\"ddrivetip('$iguest')\"; onMouseout=\"hideddrivetip()\" title=''><i class='$icon' style='color: $icolor;font-size:15px'></i></a>
 												</td>";
-                                                         } else {
-                                                             echo"<td style='background-color:$legend;'  width='50%'>
+                                                            } else {
+                                                                echo"<td style='background-color:$legend;'  width='50%'>
 												</td>";
-                                                         }
-                                                     }
-                                                 }
+                                                            }
+                                                        }
+                                                    }
 
-                                                 if ($jml == '1') {
-                                                     echo"<td width='50%'>
+                                                    if ($jml == '1') {
+                                                        echo"<td width='50%'>
 												</td>";
-                                                 }
+                                                    }
 
-                                                 echo'</tr>';
-                                                 echo'</table>';
-                                                 echo'</td>';
-                                             }
+                                                    echo'</tr>';
+                                                    echo'</table>';
+                                                    echo'</td>';
+                                                }
 
-                                             for ($i = 1; $i <= $lday; $i++) {
-                                                 if (strlen($i) == '1') {
-                                                     $tgl = '0'.$i;
-                                                 } else {
-                                                     $tgl = $i;
-                                                 }
+                                                for ($i = 1; $i <= $lday; $i++) {
+                                                    if (strlen($i) == '1') {
+                                                        $tgl = '0'.$i;
+                                                    } else {
+                                                        $tgl = $i;
+                                                    }
 
-                                                 $tanggal = $lyear.'-'.$lmonth.'-'.$tgl;
+                                                    $tanggal = $lyear.'-'.$lmonth.'-'.$tgl;
 
-                                                 echo"<td class=$sty style='padding:0;'>";
+                                                    echo"<td class=$sty style='padding:0;'>";
 
-                                                 if ($aktif == 'T') {
-                                                     echo"
+                                                    if ($aktif == 'T') {
+                                                        echo"
 												<i class='fa fa-warning' style='color: red;font-size:18px' onMouseover=\"ddrivetip('Out of Order')\"; onMouseout=\"hideddrivetip()\"></i>
 												";
-                                                 }
+                                                    }
 
-                                                 echo"<table cellpadding='0' cellspacing='0' border='0' width='100%'>";
-                                                 echo'<tr>';
+                                                    echo"<table cellpadding='0' cellspacing='0' border='0' width='100%'>";
+                                                    echo'<tr>';
 
-                                                 $cSQL = "SELECT a.id_room,a.room_no,b.rdate,b.status,a.aktif,c.guest,c.initial,d.legend
+                                                    $cSQL = "SELECT a.id_room,a.room_no,b.rdate,b.status,a.aktif,c.guest,c.initial,d.legend
 													FROM room a left join room_reservation b
 													 ON a.id_room = b.id_room
 													 and b.status in ('0','1')
@@ -608,66 +608,66 @@ if ($_GET['ldate']) {
 													 AND b.rdate = '$tanggal'												
 													 ORDER BY a.room_no";
 
-                                                 $croom = mysql_query($cSQL);
+                                                    $croom = mysql_query($cSQL);
 
-                                                 $jml = mysql_num_rows($croom);
+                                                    $jml = mysql_num_rows($croom);
 
-                                                 //$c=mysql_fetch_array($croom);
-                                                 while ($c = mysql_fetch_array($croom)) {
-                                                     $guest = $c['guest'];
+                                                    //$c=mysql_fetch_array($croom);
+                                                    while ($c = mysql_fetch_array($croom)) {
+                                                        $guest = $c['guest'];
 
-                                                     $legend = $c['legend'];
-                                                     $status = $c['status'];
+                                                        $legend = $c['legend'];
+                                                        $status = $c['status'];
 
-                                                     if ($status == 0) {
-                                                         $icolor = '#fff';
-                                                     } else {
-                                                         $icolor = '#fff';
-                                                     }
+                                                        if ($status == 0) {
+                                                            $icolor = '#fff';
+                                                        } else {
+                                                            $icolor = '#fff';
+                                                        }
 
-                                                     if ($status == 0) {
-                                                         $istatus = 'Reserved';
-                                                     } elseif ($status == 1) {
-                                                         $istatus = 'Check In';
-                                                     } else {
-                                                         $istatus = 'Check Out';
-                                                     }
+                                                        if ($status == 0) {
+                                                            $istatus = 'Reserved';
+                                                        } elseif ($status == 1) {
+                                                            $istatus = 'Check In';
+                                                        } else {
+                                                            $istatus = 'Check Out';
+                                                        }
 
-                                                     $iguest = trim($c['initial']).'. '.trim($c['guest']).' | '.$istatus;
+                                                        $iguest = trim($c['initial']).'. '.trim($c['guest']).' | '.$istatus;
 
-                                                     if ($c['initial'] == 'Mr ') {
-                                                         $icon = 'fa fa-male';
-                                                     } else {
-                                                         $icon = 'fa fa-female';
-                                                     }
+                                                        if ($c['initial'] == 'Mr ') {
+                                                            $icon = 'fa fa-male';
+                                                        } else {
+                                                            $icon = 'fa fa-female';
+                                                        }
 
-                                                     if ($guest) {
-                                                         if ($guest) {
-                                                             echo"<td style='background-color:$legend;'  width='50%'>
+                                                        if ($guest) {
+                                                            if ($guest) {
+                                                                echo"<td style='background-color:$legend;'  width='50%'>
 												<a href='' onMouseover=\"ddrivetip('$iguest')\"; onMouseout=\"hideddrivetip()\" title=''><i class='$icon' style='color: $icolor;font-size:15px'></i></a>
 												</td>";
-                                                         } else {
-                                                             echo"<td style='background-color:$legend;'  width='50%'>
+                                                            } else {
+                                                                echo"<td style='background-color:$legend;'  width='50%'>
 												</td>";
-                                                         }
-                                                     }
-                                                 }
+                                                            }
+                                                        }
+                                                    }
 
-                                                 if ($jml == '1') {
-                                                     echo"<td width='50%'>
+                                                    if ($jml == '1') {
+                                                        echo"<td width='50%'>
 												</td>";
-                                                 }
+                                                    }
 
-                                                 echo'</tr>';
-                                                 echo'</table>';
-                                                 echo'</td>';
-                                             }
-                                         }
-                                         echo'</tr>';
+                                                    echo'</tr>';
+                                                    echo'</table>';
+                                                    echo'</td>';
+                                                }
+                                            }
+                                            echo'</tr>';
 
-                                         $no++;
-                                     }
-                                 }
+                                            $no++;
+                                        }
+                                    }
                                 ?>
 
 					                         </tbody>
@@ -682,13 +682,13 @@ if ($_GET['ldate']) {
 										<tr>
 										<td style='padding-right:3px;'>Room Status : </td>	
 										<?php
-                                             $SQL = "SELECT * FROM room_status where aktif ='Y' ORDER BY id_room_status";
-                                             $tampil = mysql_query($SQL);
+                                                $SQL = "SELECT * FROM room_status where aktif ='Y' ORDER BY id_room_status";
+                                                $tampil = mysql_query($SQL);
 
-                                             while ($r = mysql_fetch_array($tampil)) {
-                                                 echo"<td style='width:20px;background-color:".$r['legend'].";'>&nbsp</td>";
-                                                 echo"<td style='padding-left:3px;'>".$r['room_status'].'&nbsp</td>';
-                                             }
+                                                while ($r = mysql_fetch_array($tampil)) {
+                                                    echo"<td style='width:20px;background-color:".$r['legend'].";'>&nbsp</td>";
+                                                    echo"<td style='padding-left:3px;'>".$r['room_status'].'&nbsp</td>';
+                                                }
 
                                         ?>
 										</tr>
@@ -701,12 +701,12 @@ if ($_GET['ldate']) {
 										<td style='padding-right:3px;'>Day Status : </td>	
 										<?php
 
-                                             echo"<td style='width:20px;background-color:#eba51c;'>&nbsp</td>";
-                                             echo"<td style='padding-left:3px;'>Spesial Day&nbsp</td>";
-                                             echo"<td style='width:20px;background-color:#eb1c41;'>&nbsp</td>";
-                                             echo"<td style='padding-left:3px;'>Weekend&nbsp</td>";
-                                             echo"<td style='width:20px;background-color:#2A3F54;;'>&nbsp</td>";
-                                             echo"<td style='padding-left:3px;'>Weekday&nbsp</td>";
+                                                echo"<td style='width:20px;background-color:#eba51c;'>&nbsp</td>";
+                                                echo"<td style='padding-left:3px;'>Spesial Day&nbsp</td>";
+                                                echo"<td style='width:20px;background-color:#eb1c41;'>&nbsp</td>";
+                                                echo"<td style='padding-left:3px;'>Weekend&nbsp</td>";
+                                                echo"<td style='width:20px;background-color:#2A3F54;;'>&nbsp</td>";
+                                                echo"<td style='padding-left:3px;'>Weekday&nbsp</td>";
 
                                         ?>
 										</tr>

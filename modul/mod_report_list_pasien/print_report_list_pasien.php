@@ -162,7 +162,7 @@ function icetak(){
 
 <?php
 $gtampil = mysql_query("SELECT * FROM informasi_perusahaan where id_informasi_perusahaan = '1'");
- $g = mysql_fetch_array($gtampil);
+    $g = mysql_fetch_array($gtampil);
 
 if ($g['pict']) {
     $pict = $g['pict'];
@@ -172,7 +172,7 @@ if ($g['pict']) {
 
 $company = ucwords($g['company']);
 
- ?>
+    ?>
 
  <table width='100%' style="padding-top:10px;">
 <tr>
@@ -181,7 +181,7 @@ $company = ucwords($g['company']);
 </td>
 <td style="text-align:center;" width='80%'>
 <span class='h1'><?=$nmmodule; ?></span>
-<?php echo "<span class='h2'>".$g['company'].'</span><br>'; ?>
+    <?php echo "<span class='h2'>".$g['company'].'</span><br>'; ?>
 </td>
 <td width='10%'>
 &nbsp

@@ -176,7 +176,7 @@
 
                 return true;
             } catch (Exception $e) {
-                echo 'Exception reçue : ',  $e->getMessage(), "\n";
+                echo 'Exception reçue : ', $e->getMessage(), "\n";
             }
         }
     }

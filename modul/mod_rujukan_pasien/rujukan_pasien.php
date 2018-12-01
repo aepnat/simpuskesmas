@@ -1,8 +1,8 @@
-<?php
+    <?php
 switch ($_GET[act]) {
 
-default:
-  ?>
+        default:
+          ?>
 
  <div class="">
                    
@@ -46,7 +46,7 @@ default:
                             
                          <?php
 
-            $tampil = mysql_query("SELECT a.*,b.nama,b.tgl_lahir,b.ktp,c.poli,d.kategori    
+                    $tampil = mysql_query("SELECT a.*,b.nama,b.tgl_lahir,b.ktp,c.poli,d.kategori    
                                     ,e.rujukan as rujukan_rs
                                     ,f.rujukan as rujukan_lab                              
                                 FROM kunjungan_berobat a left join pasien b 
@@ -131,4 +131,4 @@ default:
 
     <?php
 }
-?>
+    ?>

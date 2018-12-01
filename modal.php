@@ -109,16 +109,16 @@ include 'config/koneksi.php';
                                          <p class="pull-right">
                                          <select name="itipe_barang" class="form-control" onChange="document.myform.submit();">
                                             <?php
-                                              $query = mysql_query('SELECT * FROM tipe_barang ORDER BY id_tipe_barang');
-                                               if ($query && mysql_num_rows($query) > 0) {
-                                                   while ($row = mysql_fetch_object($query)) {
-                                                       echo '<option value="'.$row->id_tipe_barang.'"';
-                                                       if ($row->id_tipe_barang == $tipe_barang) {
-                                                           echo ' selected';
-                                                       }
-                                                       echo '>'.$row->tipe_barang.'</option>';
-                                                   }
-                                               }
+                                                $query = mysql_query('SELECT * FROM tipe_barang ORDER BY id_tipe_barang');
+                                                if ($query && mysql_num_rows($query) > 0) {
+                                                    while ($row = mysql_fetch_object($query)) {
+                                                        echo '<option value="'.$row->id_tipe_barang.'"';
+                                                        if ($row->id_tipe_barang == $tipe_barang) {
+                                                            echo ' selected';
+                                                        }
+                                                        echo '>'.$row->tipe_barang.'</option>';
+                                                    }
+                                                }
                                             ?>  
                                             </select>        
                                         </p>
@@ -126,16 +126,16 @@ include 'config/koneksi.php';
                                          <p class="pull-right">
                                          <select name="ioutlet" class="form-control" onChange="document.myform.submit();">
                                             <?php
-                                              $query = mysql_query('SELECT * FROM outlet ORDER BY id_outlet');
-                                               if ($query && mysql_num_rows($query) > 0) {
-                                                   while ($row = mysql_fetch_object($query)) {
-                                                       echo '<option value="'.$row->id_outlet.'"';
-                                                       if ($row->id_outlet == $outlet) {
-                                                           echo ' selected';
-                                                       }
-                                                       echo '>'.$row->outlet.'</option>';
-                                                   }
-                                               }
+                                                $query = mysql_query('SELECT * FROM outlet ORDER BY id_outlet');
+                                                if ($query && mysql_num_rows($query) > 0) {
+                                                    while ($row = mysql_fetch_object($query)) {
+                                                        echo '<option value="'.$row->id_outlet.'"';
+                                                        if ($row->id_outlet == $outlet) {
+                                                            echo ' selected';
+                                                        }
+                                                        echo '>'.$row->outlet.'</option>';
+                                                    }
+                                                }
                                             ?>  
                                             </select>        
                                         </p>
@@ -175,7 +175,7 @@ include 'config/koneksi.php';
                             
                          <?php
 
-                          $SQL = "SELECT b.jenis_barang
+                            $SQL = "SELECT b.jenis_barang
                                     ,c.unit_barang
                                     ,a.kode as kode_barang
                                      ,a.id_barang
@@ -208,15 +208,15 @@ include 'config/koneksi.php';
                                         ,d.harga_jual
                                       ORDER BY a.id_jenis_barang,a.kode";
 
-                             $tampil = mysql_query($SQL);
+                                $tampil = mysql_query($SQL);
 
-                             $no = 1;
+                                $no = 1;
 
-                             while ($r = mysql_fetch_array($tampil)) {
-                                 $id_barang = $r['id_barang'];
-                                 $kode_barang = $r['kode_barang'];
+                                while ($r = mysql_fetch_array($tampil)) {
+                                    $id_barang = $r['id_barang'];
+                                    $kode_barang = $r['kode_barang'];
 
-                                 $dsql = mysql_query("SELECT sum(qty) as reserve
+                                    $dsql = mysql_query("SELECT sum(qty) as reserve
                                                       FROM stok_reserved
                                                       WHERE id_barang_promosi = '$id_barang'
                                                       AND id_outlet = '$outlet'
@@ -224,35 +224,35 @@ include 'config/koneksi.php';
                                                        and prd = '$prd'
                                                       ");
 
-                                 $d = mysql_fetch_array($dsql);
+                                    $d = mysql_fetch_array($dsql);
 
-                                 if ($d['reserve']) {
-                                     $reserve = $d['reserve'];
-                                 } else {
-                                     $reserve = 0;
-                                 }
+                                    if ($d['reserve']) {
+                                        $reserve = $d['reserve'];
+                                    } else {
+                                        $reserve = 0;
+                                    }
 
-                                 $sisa_stok = $r['stok'] - $reserve;
+                                    $sisa_stok = $r['stok'] - $reserve;
 
-                                 if ($sisa_stok == '0') {
-                                     echo '';
-                                 } else {
-                                     echo'<tr>';
-                                     echo" <td  style='text-align:center;'>";
-                                     echo"<a href='../../modul/mod_$module/aksi_$module.php?module=$module&act=add&barcode=$kode_barang&prd=$prd&notrans=$notrans&kode=$kode&tanggal=$tanggal&customer=$customer&outlet=$outlet&id_outlet=$id_outlet&id_module=$id_module&look=1'  title=''><span class='icon'><i class='fa fa-check'></i></span></a>";
+                                    if ($sisa_stok == '0') {
+                                        echo '';
+                                    } else {
+                                        echo'<tr>';
+                                        echo" <td  style='text-align:center;'>";
+                                        echo"<a href='../../modul/mod_$module/aksi_$module.php?module=$module&act=add&barcode=$kode_barang&prd=$prd&notrans=$notrans&kode=$kode&tanggal=$tanggal&customer=$customer&outlet=$outlet&id_outlet=$id_outlet&id_module=$id_module&look=1'  title=''><span class='icon'><i class='fa fa-check'></i></span></a>";
 
-                                     echo'</td>';
-                                     echo'<td>'.$r['jenis_barang'].'</td>';
-                                     echo'<td>'.$r['kode_barang'].'</td>';
-                                     echo'<td>'.$r['barang'].'</td>';
-                                     echo'<td>'.$r['unit_barang'].'</td>';
-                                     echo"<td style='text-align:right;'>".number_format($r['harga_jual'], 0, '.', ',').'</td>';
+                                        echo'</td>';
+                                        echo'<td>'.$r['jenis_barang'].'</td>';
+                                        echo'<td>'.$r['kode_barang'].'</td>';
+                                        echo'<td>'.$r['barang'].'</td>';
+                                        echo'<td>'.$r['unit_barang'].'</td>';
+                                        echo"<td style='text-align:right;'>".number_format($r['harga_jual'], 0, '.', ',').'</td>';
 
-                                     echo'</tr>';
-                                 }
+                                        echo'</tr>';
+                                    }
 
-                                 $no++;
-                             }
+                                    $no++;
+                                }
                                 ?>
                          </tbody>
                     </table>

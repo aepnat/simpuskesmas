@@ -1,9 +1,9 @@
-<?php
-session_start();
-if (empty($_SESSION['username']) and empty($_SESSION['password'])) {
-    echo "<script>window.alert('Please login first.'); window.location=('../../index.php.php')</script>";
-} else {
-    include './../../config/koneksi.php'; ?>
+    <?php
+    session_start();
+    if (empty($_SESSION['username']) and empty($_SESSION['password'])) {
+        echo "<script>window.alert('Please login first.'); window.location=('../../index.php.php')</script>";
+    } else {
+        include './../../config/koneksi.php'; ?>
 <!doctype html>
 <html>
 <head>
@@ -34,34 +34,34 @@ if (empty($_SESSION['username']) and empty($_SESSION['password'])) {
 <?php
 
 $modul = $_GET['module'];
-    $title = $_GET['title'];
-    $business_type = $_SESSION['business_type'];
-    $role = $_SESSION['role'];
+        $title = $_GET['title'];
+        $business_type = $_SESSION['business_type'];
+        $role = $_SESSION['role'];
 
-    $id_module = $_GET['id_module'];
+        $id_module = $_GET['id_module'];
 
-    $id = isset($_GET['id_obat']) ? intval($_GET['id_obat']) : false;
+        $id = isset($_GET['id_obat']) ? intval($_GET['id_obat']) : false;
 
-    if ($id) {
-        $query = mysql_query('SELECT * FROM obat WHERE id_obat = "'.$id.'"');
-        if ($query && mysql_num_rows($query) == 1) {
-            $data = mysql_fetch_object($query);
-        } else {
-            die('Data modul tidak ditemukan');
+        if ($id) {
+            $query = mysql_query('SELECT * FROM obat WHERE id_obat = "'.$id.'"');
+            if ($query && mysql_num_rows($query) == 1) {
+                $data = mysql_fetch_object($query);
+            } else {
+                die('Data modul tidak ditemukan');
+            }
         }
-    }
 
-    if ($_GET['igroup']) {
-        $group = $_GET['igroup'];
-    } else {
-        $group = $data->id_obat;
-    }
+        if ($_GET['igroup']) {
+            $group = $_GET['igroup'];
+        } else {
+            $group = $data->id_obat;
+        }
 
-    if ($_GET['imenu']) {
-        $imenu = $_GET['imenu'];
-    } else {
-        $imenu = $data->id_modul;
-    } ?>
+        if ($_GET['imenu']) {
+            $imenu = $_GET['imenu'];
+        } else {
+            $imenu = $data->id_modul;
+        } ?>
 
 
 <div class="ix_panel">
@@ -84,16 +84,16 @@ $modul = $_GET['module'];
               <div class="col-md-6 col-sm-6 col-xs-12" >
                  <select name="satuan" class="form-control">                
                     <?php
-                      $query = mysql_query('SELECT * FROM satuan ORDER BY satuan');
-    if ($query && mysql_num_rows($query) > 0) {
-        while ($row = mysql_fetch_object($query)) {
-            echo '<option value="'.$row->id_satuan.'"';
-            if ($row->id_satuan == @$data->id_satuan) {
-                echo ' selected';
+                        $query = mysql_query('SELECT * FROM satuan ORDER BY satuan');
+        if ($query && mysql_num_rows($query) > 0) {
+            while ($row = mysql_fetch_object($query)) {
+                echo '<option value="'.$row->id_satuan.'"';
+                if ($row->id_satuan == @$data->id_satuan) {
+                    echo ' selected';
+                }
+                echo '>'.$row->satuan.'</option>';
             }
-            echo '>'.$row->satuan.'</option>';
-        }
-    } ?>
+        } ?>
                     </select>
               </div>
 
@@ -106,10 +106,10 @@ $modul = $_GET['module'];
 
         
           <?php if ($id) {
-        ?>  
+            ?>  
     
             <?php if (@$data->aktif == 'Y') {
-            ?>
+                ?>
               
                 <div class="form-group">
 	               <label class="control-label col-md-3 col-sm-3 col-xs-12" style='padding-top:10px;'>Aktif:</label>
@@ -119,8 +119,8 @@ $modul = $_GET['module'];
                   </div>
               </div>  
             <?php
-        } else {
-            ?>  
+            } else {
+                ?>  
               
                 <div class="form-group">
 	               <label class="control-label col-md-3 col-sm-3 col-xs-12" style='padding-top:10px;'>Aktif:</label>
@@ -130,11 +130,11 @@ $modul = $_GET['module'];
                   </div>
               </div>  
              <?php
-        } ?>
-
+            } ?>
+    
         <?php
-    } else {
-        ?>  
+        } else {
+            ?>  
 
            
                 <div class="form-group">
@@ -146,7 +146,7 @@ $modul = $_GET['module'];
               </div>  
 
         <?php
-    } ?>
+        } ?>
 
 
 
@@ -366,5 +366,5 @@ $modul = $_GET['module'];
 </body>
 </html>
 <?php
-}
+    }
 ?>
