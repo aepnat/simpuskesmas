@@ -12,7 +12,7 @@ $nmmodule = ucwords($r['nama_modul']);
 $id = $r['id_modul'];
 $fa_icon = $r['fa_icon'];
 
-if ($r[orientation]=='P') {
+if ($r[orientation] == 'P') {
     $orientation = 'portrait';
 } else {
     $orientation = 'landscape';
@@ -139,7 +139,7 @@ function icetak(){
 
 <!--<body onload="cetakspk()">-->
 
-<?php if ($_GET['printto']=='2') {
+<?php if ($_GET['printto'] == '2') {
     ?>
 <body onload="icetak()">
 <?php

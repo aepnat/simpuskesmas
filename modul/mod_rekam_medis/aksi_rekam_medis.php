@@ -16,7 +16,7 @@ if (empty($_SESSION['username']) and empty($_SESSION['password'])) {
     $userid = $_SESSION['userid'];
     $business_type = $_SESSION['business_type'];
 
-    if ($module=='rekam_medis' and $act=='update') {
+    if ($module == 'rekam_medis' and $act == 'update') {
         $id_module = $_POST['id_module'];
 
         mysql_query("UPDATE kunjungan_berobat SET keluhan   = '$_POST[keluhan]'

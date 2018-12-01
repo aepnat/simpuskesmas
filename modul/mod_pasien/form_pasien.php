@@ -44,7 +44,7 @@ $modul = $_GET['module'];
 
         if ($id) {
             $query = mysql_query('SELECT * FROM pasien WHERE id_pasien = "'.$id.'"');
-            if ($query && mysql_num_rows($query)==1) {
+            if ($query && mysql_num_rows($query) == 1) {
                 $data = mysql_fetch_object($query);
             } else {
                 die('Data modul tidak ditemukan');
@@ -94,7 +94,7 @@ $modul = $_GET['module'];
           <?php if ($id) {
             ?>  
 
-            <?php if (@$data->gender=='L') {
+            <?php if (@$data->gender == 'L') {
                 ?>
               
                 <div class="form-group">
@@ -143,10 +143,10 @@ $modul = $_GET['module'];
                  <select name="agama" class="form-control">                
                     <?php
                         $query = mysql_query('SELECT * FROM agama ORDER BY agama');
-        if ($query && mysql_num_rows($query)>0) {
+        if ($query && mysql_num_rows($query) > 0) {
             while ($row = mysql_fetch_object($query)) {
                 echo '<option value="'.$row->id_agama.'"';
-                if ($row->id_agama==@$data->id_agama) {
+                if ($row->id_agama == @$data->id_agama) {
                     echo ' selected';
                 }
                 echo '>'.$row->agama.'</option>';
@@ -161,10 +161,10 @@ $modul = $_GET['module'];
                  <select name="kategori" class="form-control">                
                     <?php
                         $query = mysql_query('SELECT * FROM kategori ORDER BY kategori');
-        if ($query && mysql_num_rows($query)>0) {
+        if ($query && mysql_num_rows($query) > 0) {
             while ($row = mysql_fetch_object($query)) {
                 echo '<option value="'.$row->id_kategori.'"';
-                if ($row->id_kategori==@$data->id_kategori) {
+                if ($row->id_kategori == @$data->id_kategori) {
                     echo ' selected';
                 }
                 echo '>'.$row->kategori.'</option>';
@@ -191,7 +191,7 @@ $modul = $_GET['module'];
           <?php if ($id) {
             ?>  
     
-            <?php if (@$data->aktif=='Y') {
+            <?php if (@$data->aktif == 'Y') {
                 ?>
               
                 <div class="form-group">

@@ -79,7 +79,7 @@ $modul = $_GET['module'];
 
     if ($id) {
         $query = mysql_query('SELECT * FROM general_setting WHERE id_general_setting = "'.$id.'"');
-        if ($query && mysql_num_rows($query)==1) {
+        if ($query && mysql_num_rows($query) == 1) {
             $data = mysql_fetch_object($query);
         } else {
             die('Data general_setting tidak ditemukan');

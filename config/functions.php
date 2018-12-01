@@ -13,7 +13,7 @@ function uploadImage($inputName, $uploadDir)
     $thumbnailPath = '';
 
     // if a file is given
-    if (trim($image['tmp_name'])!='') {
+    if (trim($image['tmp_name']) != '') {
         $ext = substr(strrchr($image['name'], '.'), 1);
 
         // generate a random new file name to avoid name conflict
@@ -72,11 +72,11 @@ function copyImage($srcFile, $destFile, $w, $h, $quality = 100)
     $tmpDest = pathinfo(strtolower($destFile));
     $size = getimagesize($srcFile);
 
-    if ($tmpDest['extension']=='gif' || $tmpDest['extension']=='jpg') {
+    if ($tmpDest['extension'] == 'gif' || $tmpDest['extension'] == 'jpg') {
         $destFile = substr_replace($destFile, 'jpg', -3);
         $dest = imagecreatetruecolor($w, $h);
     //imageantialias($dest, TRUE);
-    } elseif ($tmpDest['extension']=='png') {
+    } elseif ($tmpDest['extension'] == 'png') {
         $dest = imagecreatetruecolor($w, $h);
     //imageantialias($dest, TRUE);
     } else {

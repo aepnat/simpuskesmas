@@ -53,7 +53,7 @@ switch ($_GET[act]) {
                     echo"<td style='text-align:center;'>$r[aktif]</td>";
                     echo" <td  style='text-align:center;'>";
 
-                    if ($r_edit=='Y') {
+                    if ($r_edit == 'Y') {
                         echo"<a class='thickbox' href='modul/mod_$module/form_$module.php?id_kategori=$r[id_kategori]&id_module=$id&width=720&height=560&module=$module&TB_iframe=true' title='Update $nmmodule'><span class='icon'><i class='fa fa-pencil'></i></span></a>";
                     }
 

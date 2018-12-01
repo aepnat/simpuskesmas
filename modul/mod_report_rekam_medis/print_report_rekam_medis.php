@@ -12,7 +12,7 @@ $nmmodule = ucwords($r['nama_modul']);
 $id = $r['id_modul'];
 $fa_icon = $r['fa_icon'];
 
-if ($r[orientation]=='P') {
+if ($r[orientation] == 'P') {
     $orientation = 'portrait';
 } else {
     $orientation = 'landscape';
@@ -140,7 +140,7 @@ function icetak(){
 
 <!--<body onload="cetakspk()">-->
 
-<?php if ($_GET['printto']=='2') {
+<?php if ($_GET['printto'] == '2') {
     ?>
 <body onload="icetak()">
 <?php
@@ -207,7 +207,7 @@ $r = mysql_fetch_array($tampil);
 
 $tgl_lahir = date('d/m/Y', strtotime($r[tgl_lahir]));
 
-if ($r['gender']=='L') {
+if ($r['gender'] == 'L') {
     $gender = 'Laki-laki';
 } else {
     $gender = 'Perempuan';

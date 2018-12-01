@@ -94,12 +94,12 @@ $userid = $_SESSION['userid'];
                      <option>--Pilih Pasien--</option>                
                         <?php
                             $query = mysql_query('SELECT * FROM pasien ORDER BY nama');
-                            if ($query && mysql_num_rows($query)>0) {
+                            if ($query && mysql_num_rows($query) > 0) {
                                 while ($row = mysql_fetch_object($query)) {
                                     $pasien = $row->ktp.'-'.$row->nama;
 
                                     echo '<option value="'.$row->id_pasien.'"';
-                                    if ($row->id_pasien==@$data->id_pasien) {
+                                    if ($row->id_pasien == @$data->id_pasien) {
                                         echo ' selected';
                                     }
                                     echo '>'.$pasien.'</option>';
@@ -148,7 +148,7 @@ $userid = $_SESSION['userid'];
             </form>    
                    
                 </div>
-                <?php for ($i = 0; $i<=20; $i++) {
+                <?php for ($i = 0; $i <= 20; $i++) {
                 ?>
                     <br />
                     <?php

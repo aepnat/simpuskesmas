@@ -6,7 +6,7 @@
 
 <script type="text/javascript">
 
-<?php for ($i = 1; $i<=100; $i++) {
+<?php for ($i = 1; $i <= 100; $i++) {
     ?>  
 
 function Getstatus<?php echo $i; ?>(str) {
@@ -26,7 +26,7 @@ function Getstatus<?php echo $i; ?>(str) {
 
 
 
-<?php for ($i = 1; $i<=100; $i++) {
+<?php for ($i = 1; $i <= 100; $i++) {
         ?>  
 
 <script>
@@ -90,7 +90,7 @@ switch ($_GET[act]) {
 
     default:
 
-    if ($_SESSION['outlet']=='0') {
+    if ($_SESSION['outlet'] == '0') {
         $d_outlet = '%';
     } else {
         $d_outlet = $_SESSION['outlet'];
@@ -99,7 +99,7 @@ switch ($_GET[act]) {
     if ($_GET['ioutlet']) {
         $outlet = $_GET['ioutlet'];
     } else {
-        if ($_SESSION['outlet']=='0') {
+        if ($_SESSION['outlet'] == '0') {
             $outlet = '1';
         } else {
             $outlet = $_SESSION['outlet'];
@@ -108,7 +108,7 @@ switch ($_GET[act]) {
 
     $query = mysql_query('SELECT * FROM periode ');
 
-    if ($query && mysql_num_rows($query)==1) {
+    if ($query && mysql_num_rows($query) == 1) {
         $data = mysql_fetch_object($query);
     }
 
@@ -182,11 +182,11 @@ switch ($_GET[act]) {
 
                 $query = mysql_query("SELECT * FROM outlet where id_outlet like '$d_outlet' ORDER BY id_outlet");
 
-                if ($query && mysql_num_rows($query)>0) {
+                if ($query && mysql_num_rows($query) > 0) {
                     while ($row = mysql_fetch_object($query)) {
                         echo '<option value="'.$row->id_outlet.'"';
 
-                        if ($row->id_outlet==$outlet) {
+                        if ($row->id_outlet == $outlet) {
                             echo ' selected';
                         }
 
@@ -210,11 +210,11 @@ switch ($_GET[act]) {
 
                 $query = mysql_query('SELECT * FROM status ORDER BY id_status');
 
-                if ($query && mysql_num_rows($query)>0) {
+                if ($query && mysql_num_rows($query) > 0) {
                     while ($row = mysql_fetch_object($query)) {
                         echo '<option value="'.$row->id_status.'"';
 
-                        if ($row->id_status==$status) {
+                        if ($row->id_status == $status) {
                             echo ' selected';
                         }
 
@@ -287,13 +287,13 @@ switch ($_GET[act]) {
 
         $pj = mysql_num_rows($pjSQL);
 
-        if ($iprd==$prd) {
+        if ($iprd == $prd) {
             $disabled = '';
         } else {
             $disabled = 'disabled';
         }
 
-        if ($pj==0) {
+        if ($pj == 0) {
             $disabled1 = 'disabled';
         } else {
             $disabled1 = '';
@@ -443,11 +443,11 @@ switch ($_GET[act]) {
 
                 $query = mysql_query('SELECT * FROM status ORDER BY id_status');
 
-                    if ($query && mysql_num_rows($query)>0) {
+                    if ($query && mysql_num_rows($query) > 0) {
                         while ($row = mysql_fetch_object($query)) {
                             echo '<option value="'.$row->id_status.'"';
 
-                            if ($row->id_status==$r[status_diskon]) {
+                            if ($row->id_status == $r[status_diskon]) {
                                 echo ' selected';
                             }
 
