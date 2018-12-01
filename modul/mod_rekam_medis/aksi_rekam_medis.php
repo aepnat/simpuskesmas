@@ -20,10 +20,11 @@ if (empty($_SESSION['username']) and empty($_SESSION['password'])) {
         $id_module = $_POST['id_module'];
 
         mysql_query("UPDATE kunjungan_berobat SET keluhan   = '$_POST[keluhan]'
+                    ,id_penyakit   = '$_POST[penyakit]'
                     ,diagnosa   = '$_POST[diagnosa]'
-                    ,pemeriksaan   = '$_POST[pemeriksaan]'    
-                    ,tindakan   = '$_POST[tindakan]'    
-                    ,rujukan   = '$_POST[rujukan]'    
+                    ,pemeriksaan   = '$_POST[pemeriksaan]'
+                    ,tindakan   = '$_POST[tindakan]'
+                    ,rujukan   = '$_POST[rujukan]'
                     ,upddt   = '$datetime' 
                     ,updby   = '$userid' 
                     ,status     = '1'  

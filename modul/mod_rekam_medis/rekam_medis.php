@@ -35,6 +35,7 @@ switch ($_GET[act]) {
                                 <th><h3 style='font-size:12px;'>No.</h3></th>
                                 <th><h3 style='font-size:12px;'>Nama Pasien</h3></th>
                                 <th><h3 style='font-size:12px;'>Kategori</h3></th>  
+                                <th><h3 style='font-size:12px;'>Penyakit</h3></th>  
                                 <th><h3 style='font-size:12px;'>Keluhan</h3></th>  
                                 <th><h3 style='font-size:12px;'>Diagnosa</h3></th>  
                                 <th><h3 style='font-size:12px;'>Pemeriksaan</h3></th>     
@@ -48,13 +49,15 @@ switch ($_GET[act]) {
                             
                          <?php
 
-                    $tampil = mysql_query('SELECT a.*,b.nama,b.tgl_lahir,b.ktp,c.poli,d.kategori                                  
+                    $tampil = mysql_query('SELECT a.*,b.nama,b.tgl_lahir,b.ktp,c.poli,d.kategori,e.penyakit
                                 FROM kunjungan_berobat a left join pasien b 
                                  ON a.id_pasien = b.id_pasien
                                  left join poli c 
                                  ON a.id_poli = c.id_poli
                                  left join kategori d
-                                 ON b.id_kategori = d.id_kategori                                
+                                 ON b.id_kategori = d.id_kategori
+                                 left join penyakit e
+                                 ON a.id_penyakit = e.id_penyakit
                                  ORDER BY a.tanggal,a.id_poli,a.no_urut ASC');
 
             $no = 1;
@@ -69,6 +72,7 @@ switch ($_GET[act]) {
                 echo"<td>$r[no_urut]</td>";
                 echo"<td>$r[nama]</td>";
                 echo"<td>$r[kategori]</td>";
+                echo"<td>$r[penyakit]</td>";
                 echo"<td>$r[keluhan]</td>";
                 echo"<td>$r[diagnosa]</td>";
                 echo"<td>$r[pemeriksaan]</td>";
