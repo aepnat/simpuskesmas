@@ -1,9 +1,9 @@
-<?php
-session_start();
-if (empty($_SESSION['username']) and empty($_SESSION['password'])) {
-    echo "<script>window.alert('Please login first.'); window.location=('../../index.php.php')</script>";
+    <?php
+    session_start();
+    if (empty($_SESSION['username']) and empty($_SESSION['password'])) {
+        echo "<script>window.alert('Please login first.'); window.location=('../../index.php.php')</script>";
 } else {
-    include './../../config/koneksi.php'; ?>
+        include './../../config/koneksi.php'; ?>
 <!doctype html>
 <html>
 <head>
@@ -44,7 +44,7 @@ $modul = $_GET['module'];
 
     if ($id) {
         $query = mysql_query('SELECT * FROM pasien WHERE id_pasien = "'.$id.'"');
-        if ($query && mysql_num_rows($query) == 1) {
+        if ($query && mysql_num_rows($query)==1) {
             $data = mysql_fetch_object($query);
         } else {
             die('Data modul tidak ditemukan');
@@ -94,7 +94,7 @@ $modul = $_GET['module'];
           <?php if ($id) {
         ?>  
 
-            <?php if (@$data->gender == 'L') {
+            <?php if (@$data->gender=='L') {
             ?>
               
                 <div class="form-group">
@@ -105,8 +105,8 @@ $modul = $_GET['module'];
                   </div>
               </div>  
             <?php
-        } else {
-            ?>  
+            } else {
+                ?>  
               
                 <div class="form-group">
                  <label class="control-label col-md-3 col-sm-3 col-xs-12" style='padding-top:10px;'>Jenis Kelamin</label>
@@ -116,11 +116,11 @@ $modul = $_GET['module'];
                   </div>
               </div>  
              <?php
-        } ?>
-
+            } ?>
+    
         <?php
-    } else {
-        ?>  
+        } else {
+            ?>  
 
            
                 <div class="form-group">
@@ -132,7 +132,7 @@ $modul = $_GET['module'];
               </div>  
 
         <?php
-    } ?>
+        } ?>
 
 
        
@@ -142,7 +142,7 @@ $modul = $_GET['module'];
               <div class="col-md-6 col-sm-6 col-xs-12" >
                  <select name="agama" class="form-control">                
                     <?php
-                      $query = mysql_query('SELECT * FROM agama ORDER BY agama');
+                        $query = mysql_query('SELECT * FROM agama ORDER BY agama');
     if ($query && mysql_num_rows($query) > 0) {
         while ($row = mysql_fetch_object($query)) {
             echo '<option value="'.$row->id_agama.'"';
@@ -160,7 +160,7 @@ $modul = $_GET['module'];
               <div class="col-md-6 col-sm-6 col-xs-12" >
                  <select name="kategori" class="form-control">                
                     <?php
-                      $query = mysql_query('SELECT * FROM kategori ORDER BY kategori');
+                        $query = mysql_query('SELECT * FROM kategori ORDER BY kategori');
     if ($query && mysql_num_rows($query) > 0) {
         while ($row = mysql_fetch_object($query)) {
             echo '<option value="'.$row->id_kategori.'"';
@@ -191,7 +191,7 @@ $modul = $_GET['module'];
           <?php if ($id) {
         ?>  
     
-            <?php if (@$data->aktif == 'Y') {
+            <?php if (@$data->aktif=='Y') {
             ?>
               
                 <div class="form-group">
@@ -202,8 +202,8 @@ $modul = $_GET['module'];
                   </div>
               </div>  
             <?php
-        } else {
-            ?>  
+            } else {
+                ?>  
               
                 <div class="form-group">
 	               <label class="control-label col-md-3 col-sm-3 col-xs-12" style='padding-top:10px;'>Aktif:</label>
@@ -213,11 +213,11 @@ $modul = $_GET['module'];
                   </div>
               </div>  
              <?php
-        } ?>
-
+            } ?>
+    
         <?php
-    } else {
-        ?>  
+        } else {
+            ?>  
 
            
                 <div class="form-group">
@@ -229,7 +229,7 @@ $modul = $_GET['module'];
               </div>  
 
         <?php
-    } ?>
+        } ?>
 
 
 

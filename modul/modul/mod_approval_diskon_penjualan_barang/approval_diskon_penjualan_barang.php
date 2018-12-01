@@ -6,7 +6,7 @@
 
 <script type="text/javascript">
 
-<?php for ($i = 1; $i <= 100; $i++) {
+<?php for ($i = 1; $i<=100; $i++) {
     ?>  
 
 function Getstatus<?php echo $i; ?>(str) {
@@ -26,7 +26,7 @@ function Getstatus<?php echo $i; ?>(str) {
 
 
 
-<?php for ($i = 1; $i <= 100; $i++) {
+<?php for ($i = 1; $i<=100; $i++) {
         ?>  
 
 <script>
@@ -90,7 +90,7 @@ switch ($_GET[act]) {
 
 default:
 
-if ($_SESSION['outlet'] == '0') {
+if ($_SESSION['outlet']=='0') {
     $d_outlet = '%';
 } else {
     $d_outlet = $_SESSION['outlet'];
@@ -99,7 +99,7 @@ if ($_SESSION['outlet'] == '0') {
 if ($_GET['ioutlet']) {
     $outlet = $_GET['ioutlet'];
 } else {
-    if ($_SESSION['outlet'] == '0') {
+    if ($_SESSION['outlet']=='0') {
         $outlet = '1';
     } else {
         $outlet = $_SESSION['outlet'];
@@ -108,7 +108,7 @@ if ($_GET['ioutlet']) {
 
 $query = mysql_query('SELECT * FROM periode ');
 
-if ($query && mysql_num_rows($query) == 1) {
+if ($query && mysql_num_rows($query)==1) {
     $data = mysql_fetch_object($query);
 }
 
@@ -126,7 +126,7 @@ if ($_GET['istatus']) {
     $status = '0';
 }
 
-  ?>
+    ?>
 
 
 
@@ -180,21 +180,21 @@ if ($_GET['istatus']) {
 
        <?php
 
-         $query = mysql_query("SELECT * FROM outlet where id_outlet like '$d_outlet' ORDER BY id_outlet");
+            $query = mysql_query("SELECT * FROM outlet where id_outlet like '$d_outlet' ORDER BY id_outlet");
 
-          if ($query && mysql_num_rows($query) > 0) {
-              while ($row = mysql_fetch_object($query)) {
-                  echo '<option value="'.$row->id_outlet.'"';
+            if ($query && mysql_num_rows($query) > 0) {
+                while ($row = mysql_fetch_object($query)) {
+                    echo '<option value="'.$row->id_outlet.'"';
 
-                  if ($row->id_outlet == $outlet) {
-                      echo ' selected';
-                  }
+                    if ($row->id_outlet == $outlet) {
+                        echo ' selected';
+                    }
 
-                  echo '>'.$row->outlet.'</option>';
-              }
-          }
+                    echo '>'.$row->outlet.'</option>';
+                }
+            }
 
-       ?>  
+        ?>  
 
        </select>        
 
@@ -208,19 +208,19 @@ if ($_GET['istatus']) {
 
         <?php
 
-          $query = mysql_query('SELECT * FROM status ORDER BY id_status');
+            $query = mysql_query('SELECT * FROM status ORDER BY id_status');
 
-           if ($query && mysql_num_rows($query) > 0) {
-               while ($row = mysql_fetch_object($query)) {
-                   echo '<option value="'.$row->id_status.'"';
+            if ($query && mysql_num_rows($query) > 0) {
+                while ($row = mysql_fetch_object($query)) {
+                    echo '<option value="'.$row->id_status.'"';
 
-                   if ($row->id_status == $status) {
-                       echo ' selected';
-                   }
+                    if ($row->id_status == $status) {
+                        echo ' selected';
+                    }
 
-                   echo '>'.$row->status.'</option>';
-               }
-           }
+                    echo '>'.$row->status.'</option>';
+                }
+            }
 
         ?>  
 
@@ -277,7 +277,7 @@ if ($_GET['istatus']) {
    <?php
 
 
-    $pjSQL = mysql_query("SELECT * FROM penjualan_barang_detail 
+        $pjSQL = mysql_query("SELECT * FROM penjualan_barang_detail 
 
                           WHERE status_diskon = '$status' and prd = '$prd' and disc1 > 0
 
@@ -285,13 +285,13 @@ if ($_GET['istatus']) {
 
                           ");
 
-   $pj = mysql_num_rows($pjSQL);
+    $pj = mysql_num_rows($pjSQL);
 
-   if ($iprd == $prd) {
-       $disabled = '';
-   } else {
-       $disabled = 'disabled';
-   }
+    if ($iprd == $prd) {
+        $disabled = '';
+    } else {
+        $disabled = 'disabled';
+    }
 
     if ($pj == 0) {
         $disabled1 = 'disabled';
@@ -346,7 +346,7 @@ if ($_GET['istatus']) {
                   <button type="submit"   class="btn btn-success btn-sm   "
 
                   <?php echo $disabled?>
-
+    
                 <?php echo $disabled1?>
 
                   >
@@ -374,7 +374,7 @@ if ($_GET['istatus']) {
         <?php
 
 
-         $tampil = mysql_query("SELECT b.*,c.customer,a.tanggal 
+            $tampil = mysql_query("SELECT b.*,c.customer,a.tanggal 
 
                                 , case when b.id_barang = '0' then e.paket else d.barang end as barang 
 
@@ -416,44 +416,44 @@ if ($_GET['istatus']) {
 
                               ");
 
-         $no = 1;
+            $no = 1;
 
-         while ($r = mysql_fetch_array($tampil)) {
-             $tgl = date('d/m/y', strtotime($r['tanggal']));
+            while ($r = mysql_fetch_array($tampil)) {
+                $tgl = date('d/m/y', strtotime($r['tanggal']));
 
-             echo'<tr>';
+                echo'<tr>';
 
-             echo"<td>$tgl </td>";
+                echo"<td>$tgl </td>";
 
-             echo"<td>$r[notrans]</td>";
+                echo"<td>$r[notrans]</td>";
 
-             echo"<td>$r[customer]</td>";
+                echo"<td>$r[customer]</td>";
 
-             echo"<td>$r[barang]</td>";
+                echo"<td>$r[barang]</td>";
 
-             echo"<td  style='text-align:right;'>".number_format($r[total], '0', '.', ',').'</td>';
+                echo"<td  style='text-align:right;'>".number_format($r[total], '0', '.', ',').'</td>';
 
-             echo"<td  style='text-align:right;'>".number_format($r[disc1], '2', '.', ',').' % | Rp. '.number_format($r[disc_value1], '0', '.', ',').'</td>';
+                echo"<td  style='text-align:right;'>".number_format($r[disc1], '2', '.', ',').' % | Rp. '.number_format($r[disc_value1], '0', '.', ',').'</td>';
 
-             echo'<td>'; ?>
+                echo'<td>'; ?>
 
          <select name="status<?php echo $no; ?>" class="form-control" onchange="Getstatus<?php echo $no; ?>(this.value)">
 
         <?php
 
-          $query = mysql_query('SELECT * FROM status ORDER BY id_status');
+            $query = mysql_query('SELECT * FROM status ORDER BY id_status');
 
-             if ($query && mysql_num_rows($query) > 0) {
-                 while ($row = mysql_fetch_object($query)) {
-                     echo '<option value="'.$row->id_status.'"';
+                if ($query && mysql_num_rows($query) > 0) {
+                    while ($row = mysql_fetch_object($query)) {
+                        echo '<option value="'.$row->id_status.'"';
 
-                     if ($row->id_status == $r[status_diskon]) {
-                         echo ' selected';
-                     }
+                        if ($row->id_status == $r[status_diskon]) {
+                            echo ' selected';
+                        }
 
-                     echo '>'.$row->status.'</option>';
-                 }
-             } ?>  
+                        echo '>'.$row->status.'</option>';
+                    }
+                } ?>  
 
         </select>        
 
@@ -463,30 +463,30 @@ if ($_GET['istatus']) {
 
          <?php
 
-         echo'</td>';
+            echo'</td>';
 
-             echo"<td style='text-align:center;'>";
+                echo"<td style='text-align:center;'>";
 
-             echo"<input type='hidden' name='id".$no."' value = '$r[id_penjualan_barang_detail]'>";
+                echo"<input type='hidden' name='id".$no."' value = '$r[id_penjualan_barang_detail]'>";
 
-             echo"<input type='hidden' name='prd".$no."' value = '$r[prd]'>";
+                echo"<input type='hidden' name='prd".$no."' value = '$r[prd]'>";
 
-             echo"<input type='hidden' name='notrans".$no."' value = '$r[notrans]'>";
+                echo"<input type='hidden' name='notrans".$no."' value = '$r[notrans]'>";
 
-             echo"<input type='hidden' name='outlet".$no."' value = '$r[id_outlet]'>";
+                echo"<input type='hidden' name='outlet".$no."' value = '$r[id_outlet]'>";
 
-             echo"<input type='hidden' name='p_status".$no."' id='p_status".$no."' value = '$status'>";
+                echo"<input type='hidden' name='p_status".$no."' id='p_status".$no."' value = '$status'>";
 
-             // echo"<a class='btn btn-default btn-sm' href='?module=$module&id_module=$id_module&id_pemesanan_barang=$r[id_pemesanan_barang]&prd=$prd&outlet=$outlet&act=detail' title='Detail Penarikan Simpanan'><span class='icon'><i class='fa fa-pencil-square-o'></i></span></a>";
+                // echo"<a class='btn btn-default btn-sm' href='?module=$module&id_module=$id_module&id_pemesanan_barang=$r[id_pemesanan_barang]&prd=$prd&outlet=$outlet&act=detail' title='Detail Penarikan Simpanan'><span class='icon'><i class='fa fa-pencil-square-o'></i></span></a>";
 
-             echo'</td>';
+                echo'</td>';
 
-             echo'</tr>';
+                echo'</tr>';
 
-             $no++;
-         }
+                $no++;
+            }
 
-         ?>
+            ?>
 
 
 
@@ -584,7 +584,7 @@ if ($_GET['istatus']) {
 
     <?php
 
-break;
+    break;
 
 }
 

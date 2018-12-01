@@ -1,13 +1,13 @@
 <?php
 
-  session_start();
+    session_start();
 
-  session_destroy();
+    session_destroy();
 
-  $userid = $_GET['userid'];
-  $module = $_GET['module'];
+    $userid = $_GET['userid'];
+    $module = $_GET['module'];
 
-  header('location:index.php?userid='.$userid.'&module='.$module.'');
+    header('location:index.php?userid='.$userid.'&module='.$module.'');
 
 // Apabila setelah logout langsung menuju halaman utama website, aktifkan baris di bawah ini:
 

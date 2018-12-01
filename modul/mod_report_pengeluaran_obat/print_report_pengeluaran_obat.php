@@ -12,7 +12,7 @@ $nmmodule = ucwords($r['nama_modul']);
 $id = $r['id_modul'];
 $fa_icon = $r['fa_icon'];
 
-if ($r[orientation] == 'P') {
+if ($r[orientation]=='P') {
     $orientation = 'portrait';
 } else {
     $orientation = 'landscape';
@@ -139,7 +139,7 @@ function icetak(){
 
 <!--<body onload="cetakspk()">-->
 
-<?php if ($_GET['printto'] == '2') {
+<?php if ($_GET['printto']=='2') {
     ?>
 <body onload="icetak()">
 <?php
@@ -166,7 +166,7 @@ function icetak(){
 
 <?php
 $gtampil = mysql_query("SELECT * FROM informasi_perusahaan where id_informasi_perusahaan = '1'");
- $g = mysql_fetch_array($gtampil);
+    $g = mysql_fetch_array($gtampil);
 
 if ($g['pict']) {
     $pict = $g['pict'];
@@ -210,7 +210,7 @@ $company = ucwords($g['company']);
                             
                          <?php
 
-             $tampil = mysql_query("SELECT b.obat
+                $tampil = mysql_query("SELECT b.obat
                                   , c.satuan
                                   , sum(a.qty) as jumlah
                                 FROM kunjungan_berobat h inner join kunjungan_berobat_detail  a 

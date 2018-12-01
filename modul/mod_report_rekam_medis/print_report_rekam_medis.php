@@ -12,7 +12,7 @@ $nmmodule = ucwords($r['nama_modul']);
 $id = $r['id_modul'];
 $fa_icon = $r['fa_icon'];
 
-if ($r[orientation] == 'P') {
+if ($r[orientation]=='P') {
     $orientation = 'portrait';
 } else {
     $orientation = 'landscape';
@@ -140,7 +140,7 @@ function icetak(){
 
 <!--<body onload="cetakspk()">-->
 
-<?php if ($_GET['printto'] == '2') {
+<?php if ($_GET['printto']=='2') {
     ?>
 <body onload="icetak()">
 <?php
@@ -167,7 +167,7 @@ function icetak(){
 
 <?php
 $gtampil = mysql_query("SELECT * FROM informasi_perusahaan where id_informasi_perusahaan = '1'");
- $g = mysql_fetch_array($gtampil);
+    $g = mysql_fetch_array($gtampil);
 
 if ($g['pict']) {
     $pict = $g['pict'];
@@ -185,8 +185,8 @@ $company = ucwords($g['company']);
 </td>
 <td style="text-align:center;" width='80%'>
 <span class='h1'><?=$nmmodule; ?></span><br>
-<?php echo "<span class='h2'>".$g['company'].'</span><br>'; ?>
-<br>Periode : <?=$ftgl; ?> - <?=$ltgl; ?>
+    <?php echo "<span class='h2'>".$g['company'].'</span><br>'; ?>
+    <br>Periode : <?=$ftgl; ?> - <?=$ltgl; ?>
 </td>
 <td width='10%'>
 &nbsp
@@ -196,7 +196,7 @@ $company = ucwords($g['company']);
 <hr>
 
 <?php
- $tampil = mysql_query("SELECT a.*,b.agama,c.kategori
+    $tampil = mysql_query("SELECT a.*,b.agama,c.kategori
           FROM pasien a left join agama b 
            ON a.id_agama = b.id_agama
            left join kategori c
@@ -207,7 +207,7 @@ $r = mysql_fetch_array($tampil);
 
 $tgl_lahir = date('d/m/Y', strtotime($r[tgl_lahir]));
 
-if ($r['gender'] == 'L') {
+if ($r['gender']=='L') {
     $gender = 'Laki-laki';
 } else {
     $gender = 'Perempuan';
@@ -232,7 +232,7 @@ if ($r['gender'] == 'L') {
 
     <?php
 
-$tampil = mysql_query("SELECT a.*,b.nama,b.tgl_lahir,b.ktp,c.poli,d.kategori          
+    $tampil = mysql_query("SELECT a.*,b.nama,b.tgl_lahir,b.ktp,c.poli,d.kategori          
         FROM kunjungan_berobat a left join pasien b 
          ON a.id_pasien = b.id_pasien
          left join poli c 
@@ -241,20 +241,20 @@ $tampil = mysql_query("SELECT a.*,b.nama,b.tgl_lahir,b.ktp,c.poli,d.kategori
          ON b.id_kategori = d.id_kategori        
          WHERE a.id_pasien = '$pasien'");
 
-while ($r = mysql_fetch_array($tampil)) {
-    $tgl = date('d/m/Y', strtotime($r[tanggal]));
+    while ($r = mysql_fetch_array($tampil)) {
+        $tgl = date('d/m/Y', strtotime($r[tanggal]));
 
-    echo'<tr>';
-    echo"<td>$tgl</td>";
-    echo"<td>$r[keluhan]</td>";
-    echo"<td>$r[diagnosa]</td>";
-    echo"<td>$r[pemeriksaan]</td>";
-    echo"<td>$r[tindakan]</td>";
+        echo'<tr>';
+        echo"<td>$tgl</td>";
+        echo"<td>$r[keluhan]</td>";
+        echo"<td>$r[diagnosa]</td>";
+        echo"<td>$r[pemeriksaan]</td>";
+        echo"<td>$r[tindakan]</td>";
 
-    echo'</td>';
-    echo'</tr>';
+        echo'</td>';
+        echo'</tr>';
 }
-?>
+    ?>
 
  
     

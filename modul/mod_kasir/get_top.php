@@ -1,5 +1,5 @@
-<?php
+    <?php
 
-$q = intval($_GET['q']);
+    $q = intval($_GET['q']);
 
-echo $q;
+    echo $q;

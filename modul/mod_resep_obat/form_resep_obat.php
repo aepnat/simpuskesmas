@@ -1,9 +1,9 @@
-<?php
-session_start();
-if (empty($_SESSION['username']) and empty($_SESSION['password'])) {
-    echo "<script>window.alert('Please login first.'); window.location=('../../index.php.php')</script>";
+    <?php
+    session_start();
+    if (empty($_SESSION['username']) and empty($_SESSION['password'])) {
+        echo "<script>window.alert('Please login first.'); window.location=('../../index.php.php')</script>";
 } else {
-    include './../../config/koneksi.php'; ?>
+        include './../../config/koneksi.php'; ?>
 <!doctype html>
 <html>
 <head>
@@ -44,7 +44,7 @@ $modul = $_GET['module'];
 
     if ($id) {
         $query = mysql_query('SELECT * FROM kunjungan_berobat WHERE id_kunjungan_berobat = "'.$id.'"');
-        if ($query && mysql_num_rows($query) == 1) {
+        if ($query && mysql_num_rows($query)==1) {
             $data = mysql_fetch_object($query);
         } else {
             die('Data modul tidak ditemukan');
@@ -100,7 +100,7 @@ $modul = $_GET['module'];
                  <select required name="pasien" class="form-control" disabled>
                  <option>--Pilih Pasien--</option>                
                     <?php
-                      $query = mysql_query('SELECT * FROM pasien ORDER BY nama');
+                        $query = mysql_query('SELECT * FROM pasien ORDER BY nama');
     if ($query && mysql_num_rows($query) > 0) {
         while ($row = mysql_fetch_object($query)) {
             $pasien = $row->ktp.'-'.$row->nama;
@@ -127,7 +127,7 @@ $modul = $_GET['module'];
                  <select name="poli" class="form-control" disabled>     
                  <option>--Pilih Poliklinik --</option>                          
                     <?php
-                      $query = mysql_query('SELECT * FROM poli ORDER BY poli');
+                        $query = mysql_query('SELECT * FROM poli ORDER BY poli');
     if ($query && mysql_num_rows($query) > 0) {
         while ($row = mysql_fetch_object($query)) {
             echo '<option value="'.$row->id_poli.'"';
@@ -190,7 +190,7 @@ $modul = $_GET['module'];
                                           <select name="obat" id="obat" class="form-control" required>
                                          <option value='0'></option>
                                             <?php
-                                              $query = mysql_query('SELECT * FROM obat ORDER BY obat');
+                                                $query = mysql_query('SELECT * FROM obat ORDER BY obat');
     if ($query && mysql_num_rows($query) > 0) {
         while ($row = mysql_fetch_object($query)) {
             echo '<option value="'.$row->id_obat.'"';
@@ -231,11 +231,11 @@ $modul = $_GET['module'];
                                   <input type="hidden" name="imodule" value="<?php echo $imodule?>" /> 
 
                                 <?php
-                               echo'</form>'; ?>
+                                echo'</form>'; ?>
 
                                   <?php
 
-                                   $SQL = "SELECT a.*,b.obat
+                                    $SQL = "SELECT a.*,b.obat
                                              FROM kunjungan_berobat_detail  a LEFT JOIN obat b
                                             ON a.id_obat = b.id_obat  
                                             WHERE a.id_kunjungan_berobat = '$id' 
@@ -262,7 +262,7 @@ $modul = $_GET['module'];
                                         <select name="obat" id="obat<?php echo $no; ?>" class="form-control" required>
                                          <option value='0'></option>
                                             <?php
-                                              $query = mysql_query('SELECT * FROM obat ORDER BY obat');
+                                                $query = mysql_query('SELECT * FROM obat ORDER BY obat');
         if ($query && mysql_num_rows($query) > 0) {
             while ($row = mysql_fetch_object($query)) {
                 echo '<option value="'.$row->id_obat.'"';
@@ -276,12 +276,12 @@ $modul = $_GET['module'];
                                        </td>
 
                                       <td>
-                                          <input type="number" required name='qty' id='iqty<?php echo $no; ?>' min = '0' value="<?php if ($jml > 0) {
+                                          <input type="number" required name='qty' id='iqty<?php echo $no; ?>' min = '0' value="<?php if ($jml>0) {
             echo number_format($r['qty'], 0, '.', '');
         } else {
             echo 1;
         } ?>" style='text-align:right;' class="form-control col-md-7 col-xs-12">  
-                                          <input type="hidden" name='eqty' id='eiqty<?php echo $no; ?>' min = '0' value="<?php if ($jml > 0) {
+                                          <input type="hidden" name='eqty' id='eiqty<?php echo $no; ?>' min = '0' value="<?php if ($jml>0) {
             echo number_format($r['qty'], 0, '.', '');
         } else {
             echo 1;
@@ -315,7 +315,7 @@ $modul = $_GET['module'];
                                   <input type="hidden" name="imodule" value="<?php echo $imodule?>" /> 
 
                                 <?php
-                               echo'</form>';
+                                echo'</form>';
     } ?>  
 
 

@@ -177,9 +177,9 @@ function cektgl() {
 
 switch ($_GET[act]):
 
-default:
+    default:
 
-  ?>
+      ?>
 
 
 
@@ -311,7 +311,7 @@ default:
         <?php
 
 
-         $tampil = mysql_query("SELECT a.*,b.shift
+            $tampil = mysql_query("SELECT a.*,b.shift
 
                              FROM kasir a left join shift b
 
@@ -325,57 +325,57 @@ default:
 
                             ORDER BY a.tanggal");
 
-         $no = 1;
+            $no = 1;
 
-         while ($r = mysql_fetch_array($tampil)) {
-             $tgl = date('d/m/Y', strtotime($r['tanggal']));
+            while ($r = mysql_fetch_array($tampil)) {
+                $tgl = date('d/m/Y', strtotime($r['tanggal']));
 
-             if ($r['status'] == '0') {
-                 $istatus = 'Baru';
-             } elseif ($r['status'] == '1') {
-                 $istatus = 'Disetujui';
-             } elseif ($r['status'] == '2') {
-                 $istatus = 'Ditolak';
-             } elseif ($r['status'] == '9') {
-                 $istatus = 'Posting';
-             } else {
-                 $istatus = 'Dibatalkan';
-             }
+                if ($r['status'] == '0') {
+                    $istatus = 'Baru';
+                } elseif ($r['status'] == '1') {
+                    $istatus = 'Disetujui';
+                } elseif ($r['status'] == '2') {
+                    $istatus = 'Ditolak';
+                } elseif ($r['status'] == '9') {
+                    $istatus = 'Posting';
+                } else {
+                    $istatus = 'Dibatalkan';
+                }
 
-             $ID = $r[id_kasir];
+                $ID = $r[id_kasir];
 
-             echo'<tr>';
+                echo'<tr>';
 
-             echo"<td>$tgl </td>";
+                echo"<td>$tgl </td>";
 
-             echo"<td>$r[shift]</td>";
+                echo"<td>$r[shift]</td>";
 
-             echo"<td>$r[petugas]</td>";
+                echo"<td>$r[petugas]</td>";
 
-             echo"<td>$r[note]</td>";
+                echo"<td>$r[note]</td>";
 
-             // echo"<td>$istatus</td>";
+                // echo"<td>$istatus</td>";
 
-             echo"<td style='text-align:center;'>";
+                echo"<td style='text-align:center;'>";
 
-             if ($r_edit == 'Y') {
-                 echo"<a href='?module=$module&id_module=$id&act=save&ID=$ID' title='Update'><span class='icon'><i class='fa fa-pencil'></i></span></a>";
-             }
+                if ($r_edit == 'Y') {
+                    echo"<a href='?module=$module&id_module=$id&act=save&ID=$ID' title='Update'><span class='icon'><i class='fa fa-pencil'></i></span></a>";
+                }
 
-             if ($r_delete == 'Y' and $r['status'] == '0') {
-                 echo"<a href='modul/mod_$module/aksi_$module.php?module=$module&act=hapus&id=$ID&id_module=$id&id_module=$id' onClick=\"return confirm('Hapus Data ?')\" title='Hapus $nmmodule'><span class='icon'><i class='fa fa-trash'></i></span></a>";
-             } else {
-                 echo"<i class='fa fa-trash'></i></span>";
-             }
+                if ($r_delete == 'Y' and $r['status'] == '0') {
+                    echo"<a href='modul/mod_$module/aksi_$module.php?module=$module&act=hapus&id=$ID&id_module=$id&id_module=$id' onClick=\"return confirm('Hapus Data ?')\" title='Hapus $nmmodule'><span class='icon'><i class='fa fa-trash'></i></span></a>";
+                } else {
+                    echo"<i class='fa fa-trash'></i></span>";
+                }
 
-             echo'</td>';
+                echo'</td>';
 
-             echo'</tr>';
+                echo'</tr>';
 
-             $no++;
-         }
+                $no++;
+            }
 
-         ?>
+            ?>
 
         </tbody>
 
@@ -463,17 +463,17 @@ default:
 
 <?php
 
-break;
+    break;
 
-case 'baru':
+    case 'baru':
 
-$hour = time() + (30 * 25 * 60 * 60);
+    $hour = time() + (30 * 25 * 60 * 60);
 
-$idate = date('Y-m-d');
+    $idate = date('Y-m-d');
 
-$idate = $idate;
+    $idate = $idate;
 
-?>
+    ?>
 
 
 
@@ -503,27 +503,27 @@ $idate = $idate;
 
           <button  type="button" onClick="location.href='<?php echo"?module=$module&id_module=$id_module&act=ubah&prd=$prd&notrans=$notrans&kode=$kode&outlet=$outlet"; ?>'" 
 
-          class="btn btn-success" <?php if ($status != '0') {
+          class="btn btn-success" <?php if ($status!='0') {
     echo 'disabled';
 } ?>>Ubah</button>
 
 
 
-           <?php if ($status == '0') {
+           <?php if ($status=='0') {
     ?>
 
             <?php
 
-          echo"<a href='modul/mod_$module/aksi_$module.php?module=$module&act=batal&id=$ID&id_module=$id&notrans=$notrans&prd=$prd&kode=$kodee&outlet=$outlet' onClick=\"return confirm('Hapus transaksi ?')\" title='Hapus $nmmodule'><span class='btn btn-danger'><span style='color:white;'>Hapus</span></a>"; ?>
+            echo"<a href='modul/mod_$module/aksi_$module.php?module=$module&act=batal&id=$ID&id_module=$id&notrans=$notrans&prd=$prd&kode=$kodee&outlet=$outlet' onClick=\"return confirm('Hapus transaksi ?')\" title='Hapus $nmmodule'><span class='btn btn-danger'><span style='color:white;'>Hapus</span></a>"; ?>
 
         <?php
 } else {
-              ?>
+                ?>
 
             <button type="button" class="btn btn-danger" disabled>Hapus</button>
 
            <?php
-          } ?>  
+            } ?>  
 
 
 
@@ -589,13 +589,13 @@ $idate = $idate;
 
  <?php
 
-   $query = mysql_query('SELECT * FROM shift WHERE  aktif = "Y" ORDER BY id_shift');
+    $query = mysql_query('SELECT * FROM shift WHERE  aktif = "Y" ORDER BY id_shift');
 
-    if ($query && mysql_num_rows($query) > 0) {
+    if ($query && mysql_num_rows($query)>0) {
         while ($row = mysql_fetch_object($query)) {
             echo '<option value="'.$row->id_shift.'"';
 
-            if ($row->id_shift == $shift) {
+            if ($row->id_shift==$shift) {
                 echo ' selected';
             }
 
@@ -603,7 +603,7 @@ $idate = $idate;
         }
     }
 
- ?>  
+    ?>  
 
  </select>         
 
@@ -692,33 +692,33 @@ $idate = $idate;
 
 <?php
 
-break;
+    break;
 
-case 'save':
+    case 'save':
 
-$k_ID = $_GET['ID'];
+    $k_ID = $_GET['ID'];
 
-$sql = mysql_query("SELECT * FROM kasir 
+    $sql = mysql_query("SELECT * FROM kasir 
 
                         WHERE id_kasir = '$k_ID' 
 
                         ");
 
-$r = mysql_fetch_array($sql);
+    $r = mysql_fetch_array($sql);
 
-$penjualan_barang = $r['id_kasir'];
+    $penjualan_barang = $r['id_kasir'];
 
-$shift = $r['id_shift'];
+    $shift = $r['id_shift'];
 
-$petugas = $r['petugas'];
+    $petugas = $r['petugas'];
 
-$status = $r['status'];
+    $status = $r['status'];
 
-$tanggal = $r['tanggal'];
+    $tanggal = $r['tanggal'];
 
-//$ID   = $r['id_kasir'];
+    //$ID   = $r['id_kasir'];
 
-?>
+    ?>
 
 
 
@@ -749,7 +749,7 @@ $tanggal = $r['tanggal'];
           <button  type="button" onClick="location.href='<?php echo"?module=$module&id_module=$id_module&act=ubah&k_ID=$k_ID"; ?>'" 
 
           class="btn btn-success" <?php if ($status != '0') {
-    echo 'disabled';
+        echo 'disabled';
 } ?>>Ubah</button>
 
 
@@ -813,13 +813,13 @@ $tanggal = $r['tanggal'];
 
  <?php
 
-   $query = mysql_query('SELECT * FROM shift WHERE aktif = "Y" ORDER BY shift');
+    $query = mysql_query('SELECT * FROM shift WHERE aktif = "Y" ORDER BY shift');
 
-    if ($query && mysql_num_rows($query) > 0) {
+    if ($query && mysql_num_rows($query)>0) {
         while ($row = mysql_fetch_object($query)) {
             echo '<option value="'.$row->id_shift.'"';
 
-            if ($row->id_shift == $shift) {
+            if ($row->id_shift==$shift) {
                 echo ' selected';
             }
 
@@ -827,7 +827,7 @@ $tanggal = $r['tanggal'];
         }
     }
 
- ?>  
+    ?>  
 
  </select>         
 
@@ -923,13 +923,13 @@ $tanggal = $r['tanggal'];
 
      <?php
 
-       $query = mysql_query('SELECT * FROM jenis_transaksi WHERE aktif = "Y" ORDER BY id_jenis_transaksi');
+        $query = mysql_query('SELECT * FROM jenis_transaksi WHERE aktif = "Y" ORDER BY id_jenis_transaksi');
 
-        if ($query && mysql_num_rows($query) > 0) {
+        if ($query && mysql_num_rows($query)>0) {
             while ($row = mysql_fetch_object($query)) {
                 echo '<option value="'.$row->id_jenis_transaksi.'"';
 
-                if ($row->id_jenis_transaksi == @$data->id_jenis_transaksi) {
+                if ($row->id_jenis_transaksi==@$data->id_jenis_transaksi) {
                     echo ' selected';
                 }
 
@@ -937,7 +937,7 @@ $tanggal = $r['tanggal'];
             }
         }
 
-     ?>
+        ?>
 
      </select>
 
@@ -968,13 +968,13 @@ onFocus="mask_clear_jumlah()"
   
      <?php
 
-       $query = mysql_query('SELECT * FROM jenis_pembayaran WHERE aktif = "Y" ORDER BY id_jenis_pembayaran');
+        $query = mysql_query('SELECT * FROM jenis_pembayaran WHERE aktif = "Y" ORDER BY id_jenis_pembayaran');
 
-        if ($query && mysql_num_rows($query) > 0) {
+        if ($query && mysql_num_rows($query)>0) {
             while ($row = mysql_fetch_object($query)) {
                 echo '<option value="'.$row->id_jenis_pembayaran.'"';
 
-                if ($row->id_jenis_pembayaran == @$data->id_jenis_pembayaran) {
+                if ($row->id_jenis_pembayaran==@$data->id_jenis_pembayaran) {
                     echo ' selected';
                 }
 
@@ -982,7 +982,7 @@ onFocus="mask_clear_jumlah()"
             }
         }
 
-     ?>
+        ?>
 
      </select>
 
@@ -995,13 +995,13 @@ onFocus="mask_clear_jumlah()"
   
      <?php
 
-       $query = mysql_query('SELECT * FROM penjamin WHERE aktif = "Y" ORDER BY id_penjamin');
+        $query = mysql_query('SELECT * FROM penjamin WHERE aktif = "Y" ORDER BY id_penjamin');
 
-        if ($query && mysql_num_rows($query) > 0) {
+        if ($query && mysql_num_rows($query)>0) {
             while ($row = mysql_fetch_object($query)) {
                 echo '<option value="'.$row->id_penjamin.'"';
 
-                if ($row->id_penjamin == @$data->id_penjamin) {
+                if ($row->id_penjamin==@$data->id_penjamin) {
                     echo ' selected';
                 }
 
@@ -1009,7 +1009,7 @@ onFocus="mask_clear_jumlah()"
             }
         }
 
-     ?>
+        ?>
 
      </select>
 
@@ -1043,13 +1043,13 @@ onFocus="mask_clear_jumlah()"
 
 
 <?php //}?>
-
+    
 
 
  <?php
 
 
-$dSQL = "SELECT a.*,b.jenis_transaksi,c.penjamin,d.jenis_pembayaran
+    $dSQL = "SELECT a.*,b.jenis_transaksi,c.penjamin,d.jenis_pembayaran
 
 
          FROM kasir_detail a LEFT JOIN jenis_transaksi b
@@ -1072,81 +1072,81 @@ $dSQL = "SELECT a.*,b.jenis_transaksi,c.penjamin,d.jenis_pembayaran
 
          ";
 
-$dtampil = mysql_query($dSQL);
+    $dtampil = mysql_query($dSQL);
 
-$no = 1;
+    $no = 1;
 
-while ($d = mysql_fetch_array($dtampil)) {
-    $d_id = $d['id_kasir_detail'];
+    while ($d = mysql_fetch_array($dtampil)) {
+        $d_id = $d['id_kasir_detail'];
 
-    $ijumlah = number_format($d['jumlah'], 0, '.', ',');
+        $ijumlah = number_format($d['jumlah'], 0, '.', ',');
 
-    $jumlah = number_format($d['jumlah'], 0, '.', '');
+        $jumlah = number_format($d['jumlah'], 0, '.', '');
 
-    $total = $total + $d['jumlah'];
+        $total = $total + $d['jumlah'];
 
-    $itotal = number_format($total, 0, '.', ',');
+        $itotal = number_format($total, 0, '.', ',');
 
-    echo'<tr>';
+        echo'<tr>';
 
-    echo' <td>';
+        echo' <td>';
 
-    echo $d['notrans'];
+        echo $d['notrans'];
 
-    echo'</td>';
+        echo'</td>';
 
-    echo' <td>';
+        echo' <td>';
 
-    echo $d['pasien'];
+        echo $d['pasien'];
 
-    echo'</td>';
+        echo'</td>';
 
-    echo' <td>';
+        echo' <td>';
 
-    echo $d['jenis_transaksi'];
+        echo $d['jenis_transaksi'];
 
-    echo'</td>';
+        echo'</td>';
 
-    echo" <td  style='text-align:right;'>";
+        echo" <td  style='text-align:right;'>";
 
-    echo $ijumlah;
+        echo $ijumlah;
 
-    echo'</td>';
+        echo'</td>';
 
-    echo' <td>';
+        echo' <td>';
 
-    echo $d['jenis_pembayaran'];
+        echo $d['jenis_pembayaran'];
 
-    echo'</td>';
+        echo'</td>';
 
-    echo' <td>';
+        echo' <td>';
 
-    echo $d['penjamin'];
+        echo $d['penjamin'];
 
-    echo'</td>';
+        echo'</td>';
 
-    echo' <td>';
+        echo' <td>';
 
-    echo $d['ket'];
+        echo $d['ket'];
 
-    echo'</td>';
+        echo'</td>';
 
-    echo" <td  style='text-align:center;'>";
+        echo" <td  style='text-align:center;'>";
 
-    if ($r_edit == 'Y') {
-        echo"<a href='?module=$module&id_module=$_GET[id_module]&act=edit&k_ID=$k_ID&d_id=$d_id' title='Update'><span class='btn btn-success btn-xs'><i class='fa fa-pencil'></i></span></a>";
-    }
+        if ($r_edit == 'Y') {
+            echo"<a href='?module=$module&id_module=$_GET[id_module]&act=edit&k_ID=$k_ID&d_id=$d_id' title='Update'><span class='btn btn-success btn-xs'><i class='fa fa-pencil'></i></span></a>";
+        }
 
-    if ($r_delete == 'Y') {
-        echo"<a href='modul/mod_$module/aksi_$module.php?module=$module&id_module=$_GET[id_module]&act=dhapus&id=$d_id&k_ID=$k_ID' onClick=\"return confirm('Hapus Data ?')\" title='Hapus $nmmodule'><span class='btn btn-danger btn-xs'><i class='fa fa-trash'></i></span></a>";
-    }
+        if ($r_delete == 'Y') {
+            echo"<a href='modul/mod_$module/aksi_$module.php?module=$module&id_module=$_GET[id_module]&act=dhapus&id=$d_id&k_ID=$k_ID' onClick=\"return confirm('Hapus Data ?')\" title='Hapus $nmmodule'><span class='btn btn-danger btn-xs'><i class='fa fa-trash'></i></span></a>";
+        }
 
-    echo'</td>';
+        echo'</td>';
 
-    echo'</tr>';
+        echo'</tr>';
 }
 
-?>
+    ?>
 
 
  <tr>
@@ -1217,9 +1217,9 @@ $dsql = mysql_query("SELECT * FROM kasir_detail
 
 $jml = mysql_num_rows($dsql);
 
-if ($jml > 0) {
+if ($jml>0) {
 
-  // $readonly = 'readonly';
+    // $readonly = 'readonly';
 
     // $disabled = 'disabled';
 
@@ -1339,13 +1339,13 @@ if ($jml > 0) {
 
  <?php
 
-   $query = mysql_query('SELECT * FROM shift WHERE aktif = "Y" ORDER BY shift');
+    $query = mysql_query('SELECT * FROM shift WHERE aktif = "Y" ORDER BY shift');
 
-    if ($query && mysql_num_rows($query) > 0) {
+    if ($query && mysql_num_rows($query)>0) {
         while ($row = mysql_fetch_object($query)) {
             echo '<option value="'.$row->id_shift.'"';
 
-            if ($row->id_shift == $shift) {
+            if ($row->id_shift==$shift) {
                 echo ' selected';
             }
 
@@ -1353,7 +1353,7 @@ if ($jml > 0) {
         }
     }
 
- ?>  
+    ?>  
 
  </select>         
 
@@ -1410,7 +1410,7 @@ if ($jml > 0) {
  <?php
 
 
-$dSQL = "SELECT a.*,b.jenis_transaksi,c.penjamin,d.jenis_pembayaran
+    $dSQL = "SELECT a.*,b.jenis_transaksi,c.penjamin,d.jenis_pembayaran
 
 
          FROM kasir_detail a LEFT JOIN jenis_transaksi b
@@ -1433,69 +1433,69 @@ $dSQL = "SELECT a.*,b.jenis_transaksi,c.penjamin,d.jenis_pembayaran
 
          ";
 
-$dtampil = mysql_query($dSQL);
+    $dtampil = mysql_query($dSQL);
 
-$no = 1;
+    $no = 1;
 
-while ($d = mysql_fetch_array($dtampil)) {
-    $d_id = $d['id_kasir_detail'];
+    while ($d = mysql_fetch_array($dtampil)) {
+        $d_id = $d['id_kasir_detail'];
 
-    $ijumlah = number_format($d['jumlah'], 0, '.', ',');
+        $ijumlah = number_format($d['jumlah'], 0, '.', ',');
 
-    $jumlah = number_format($d['jumlah'], 0, '.', '');
+        $jumlah = number_format($d['jumlah'], 0, '.', '');
 
-    $total = $total + $d['jumlah'];
+        $total = $total + $d['jumlah'];
 
-    $itotal = number_format($total, 0, '.', ',');
+        $itotal = number_format($total, 0, '.', ',');
 
-    echo'<tr>';
+        echo'<tr>';
 
-    echo' <td>';
+        echo' <td>';
 
-    echo $d['notrans'];
+        echo $d['notrans'];
 
-    echo'</td>';
+        echo'</td>';
 
-    echo' <td>';
+        echo' <td>';
 
-    echo $d['pasien'];
+        echo $d['pasien'];
 
-    echo'</td>';
+        echo'</td>';
 
-    echo' <td>';
+        echo' <td>';
 
-    echo $d['jenis_transaksi'];
+        echo $d['jenis_transaksi'];
 
-    echo'</td>';
+        echo'</td>';
 
-    echo" <td  style='text-align:right;'>";
+        echo" <td  style='text-align:right;'>";
 
-    echo $ijumlah;
+        echo $ijumlah;
 
-    echo'</td>';
+        echo'</td>';
 
-    echo' <td>';
+        echo' <td>';
 
-    echo $d['jenis_pembayaran'];
+        echo $d['jenis_pembayaran'];
 
-    echo'</td>';
+        echo'</td>';
 
-    echo' <td>';
+        echo' <td>';
 
-    echo $d['penjamin'];
+        echo $d['penjamin'];
 
-    echo'</td>';
+        echo'</td>';
 
-    echo' <td>';
+        echo' <td>';
 
-    echo $d['ket'];
+        echo $d['ket'];
 
-    echo'</td>';
+        echo'</td>';
 
-    echo'</tr>';
+        echo'</tr>';
 }
 
-?>
+    ?>
 
 
 </table> 
@@ -1519,33 +1519,33 @@ while ($d = mysql_fetch_array($dtampil)) {
 
 <?php
 
-break;
+    break;
 
-case 'edit':
+    case 'edit':
 
-$k_ID = $_GET['k_ID'];
+    $k_ID = $_GET['k_ID'];
 
-$sql = mysql_query("SELECT * FROM kasir 
+    $sql = mysql_query("SELECT * FROM kasir 
 
                         WHERE id_kasir = '$k_ID' 
 
                         ");
 
-$r = mysql_fetch_array($sql);
+    $r = mysql_fetch_array($sql);
 
-$penjualan_barang = $r['id_kasir'];
+    $penjualan_barang = $r['id_kasir'];
 
-$shift = $r['id_shift'];
+    $shift = $r['id_shift'];
 
-$petugas = $r['petugas'];
+    $petugas = $r['petugas'];
 
-$status = $r['status'];
+    $status = $r['status'];
 
-$tanggal = $r['tanggal'];
+    $tanggal = $r['tanggal'];
 
-//$ID   = $r['id_kasir'];
+    //$ID   = $r['id_kasir'];
 
-?>
+    ?>
 
 
 
@@ -1633,13 +1633,13 @@ $tanggal = $r['tanggal'];
 
  <?php
 
-   $query = mysql_query('SELECT * FROM shift WHERE aktif = "Y" ORDER BY shift');
+    $query = mysql_query('SELECT * FROM shift WHERE aktif = "Y" ORDER BY shift');
 
-    if ($query && mysql_num_rows($query) > 0) {
+    if ($query && mysql_num_rows($query)>0) {
         while ($row = mysql_fetch_object($query)) {
             echo '<option value="'.$row->id_shift.'"';
 
-            if ($row->id_shift == $shift) {
+            if ($row->id_shift==$shift) {
                 echo ' selected';
             }
 
@@ -1647,7 +1647,7 @@ $tanggal = $r['tanggal'];
         }
     }
 
- ?>  
+    ?>  
 
  </select>         
 
@@ -1712,7 +1712,7 @@ $tanggal = $r['tanggal'];
 
  <?php
 
- $d_id = $_GET['d_id'];
+    $d_id = $_GET['d_id'];
 
 $dSQL = "SELECT a.*,b.jenis_transaksi,c.penjamin,d.jenis_pembayaran
 
@@ -1737,185 +1737,185 @@ $dSQL = "SELECT a.*,b.jenis_transaksi,c.penjamin,d.jenis_pembayaran
 
          ";
 
-$dtampil = mysql_query($dSQL);
+    $dtampil = mysql_query($dSQL);
 
-$no = 1;
+    $no = 1;
 
-while ($d = mysql_fetch_array($dtampil)) {
-    $jid = $d['id_kasir_detail'];
+    while ($d = mysql_fetch_array($dtampil)) {
+        $jid = $d['id_kasir_detail'];
 
-    $ijumlah = number_format($d['jumlah'], 0, '.', ',');
+        $ijumlah = number_format($d['jumlah'], 0, '.', ',');
 
-    $jumlah = number_format($d['jumlah'], 0, '.', '');
+        $jumlah = number_format($d['jumlah'], 0, '.', '');
 
-    if ($jid == $d_id) {
-        echo '<form action="modul/mod_'.$module.'/aksi_'.$module.'.php?module='.$module.'&act=add method="post" name="formData" enctype="multipart/form-data">';
+        if ($jid == $d_id) {
+            echo '<form action="modul/mod_'.$module.'/aksi_'.$module.'.php?module='.$module.'&act=add method="post" name="formData" enctype="multipart/form-data">';
 
-        echo '<input type="hidden" name="module" value="'.$module.'" />';
+            echo '<input type="hidden" name="module" value="'.$module.'" />';
 
-        echo '<input type="hidden" name="id_module" value=" '.$id_module.'" />';
+            echo '<input type="hidden" name="id_module" value=" '.$id_module.'" />';
 
-        echo '<input type="hidden" name="imodule" value="'.$imodule.'" />';
+            echo '<input type="hidden" name="imodule" value="'.$imodule.'" />';
 
-        echo '<input type="hidden" name="k_ID" value="'.$k_ID.'" />';
+            echo '<input type="hidden" name="k_ID" value="'.$k_ID.'" />';
 
-        echo  '<input type="hidden" name="ID" value="'.$jid.'" />';
+            echo  '<input type="hidden" name="ID" value="'.$jid.'" />';
 
-        echo '<tr>';
+            echo '<tr>';
 
-        echo '<td>';
+            echo '<td>';
 
-        echo '<input type="text" name="notrans" id="notrans" value=" '.$d['notrans'].'" autofocus required="required"  class="form-control">';
+            echo '<input type="text" name="notrans" id="notrans" value=" '.$d['notrans'].'" autofocus required="required"  class="form-control">';
 
-        echo '</td>';
+            echo '</td>';
 
-        echo '<td>';
+            echo '<td>';
 
-        echo '<input type="text" name="pasien" id="pasien" value="'.$d['pasien'].'" class="form-control">';
+            echo '<input type="text" name="pasien" id="pasien" value="'.$d['pasien'].'" class="form-control">';
 
-        echo '</td>';
+            echo '</td>';
 
-        echo '<td>';
+            echo '<td>';
 
-        echo '<select name="jenis_transaksi" id="jenis_transaksi" class="form-control">';
+            echo '<select name="jenis_transaksi" id="jenis_transaksi" class="form-control">';
 
-        $query = mysql_query('SELECT * FROM jenis_transaksi WHERE aktif = "Y" ORDER BY id_jenis_transaksi');
+            $query = mysql_query('SELECT * FROM jenis_transaksi WHERE aktif = "Y" ORDER BY id_jenis_transaksi');
 
-        if ($query && mysql_num_rows($query) > 0) {
-            while ($row = mysql_fetch_object($query)) {
-                $selected = ($row->id_jenis_transaksi == @$d['id_jenis_transaksi']) ? 'selected' : '';
-                printf('<option value="%s" %s>%s</option>', $row->id_jenis_transaksi, $selected, $row->jenis_transaksi);
+            if ($query && mysql_num_rows($query) > 0) {
+                while ($row = mysql_fetch_object($query)) {
+                    $selected = ($row->id_jenis_transaksi == @$d['id_jenis_transaksi']) ? 'selected' : '';
+                    printf('<option value="%s" %s>%s</option>', $row->id_jenis_transaksi, $selected, $row->jenis_transaksi);
+                }
             }
-        }
 
-        echo '</select>';
+            echo '</select>';
 
-        echo '</td>';
+            echo '</td>';
 
-        echo '<td>';
+            echo '<td>';
 
-        echo '<input type="text" name="ijumlah" id="ijumlah" min="1" value="'.$ijumlah.'" style="text-align:right;" required="required" class="form-control col-md-7 col-xs-12" onBlur="mask_jumlah()" onFocus="mask_clear_jumlah()"/>';
+            echo '<input type="text" name="ijumlah" id="ijumlah" min="1" value="'.$ijumlah.'" style="text-align:right;" required="required" class="form-control col-md-7 col-xs-12" onBlur="mask_jumlah()" onFocus="mask_clear_jumlah()"/>';
 
-        echo '<input type="hidden" name="jumlah" id="jumlah" value="'.$jumlah.'" style="text-align:right;" required="required" class="form-control col-md-7 col-xs-12">';
+            echo '<input type="hidden" name="jumlah" id="jumlah" value="'.$jumlah.'" style="text-align:right;" required="required" class="form-control col-md-7 col-xs-12">';
 
-        echo '</td>';
+            echo '</td>';
 
-        echo '<td>';
+            echo '<td>';
 
-        echo '<select name="jenis_pembayaran" id="jenis_pembayaran" class="form-control">';
+            echo '<select name="jenis_pembayaran" id="jenis_pembayaran" class="form-control">';
 
-        $query = mysql_query('SELECT * FROM jenis_pembayaran WHERE aktif = "Y" ORDER BY id_jenis_pembayaran');
+            $query = mysql_query('SELECT * FROM jenis_pembayaran WHERE aktif = "Y" ORDER BY id_jenis_pembayaran');
 
-        if ($query && mysql_num_rows($query) > 0) {
-            while ($row = mysql_fetch_object($query)) {
-                $selected = ($row->id_jenis_pembayaran == @$d['id_jenis_pembayaran']) ? 'selected' : '';
-                printf('<option value="%s" %s>%s</option>', $row->id_jenis_pembayaran, $selected, $row->jenis_pembayaran);
+            if ($query && mysql_num_rows($query) > 0) {
+                while ($row = mysql_fetch_object($query)) {
+                    $selected = ($row->id_jenis_pembayaran == @$d['id_jenis_pembayaran']) ? 'selected' : '';
+                    printf('<option value="%s" %s>%s</option>', $row->id_jenis_pembayaran, $selected, $row->jenis_pembayaran);
+                }
             }
-        }
 
-        echo '</select>';
+            echo '</select>';
 
-        echo '</td>';
+            echo '</td>';
 
-        echo '<td>';
+            echo '<td>';
 
-        echo '<select name="penjamin" id="penjamin" class="form-control">';
-        echo '<option value="0"></option>';
+            echo '<select name="penjamin" id="penjamin" class="form-control">';
+            echo '<option value="0"></option>';
 
-        $query = mysql_query('SELECT * FROM penjamin WHERE aktif = "Y" ORDER BY id_penjamin');
+            $query = mysql_query('SELECT * FROM penjamin WHERE aktif = "Y" ORDER BY id_penjamin');
 
-        if ($query && mysql_num_rows($query) > 0) {
-            while ($row = mysql_fetch_object($query)) {
-                $selected = ($row->id_penjamin == @$d['id_penjamin']) ? 'selected' : '';
-                printf('<option value="%s" %s>%s</option>', $row->id_penjamin, $selected, $row->penjamin);
+            if ($query && mysql_num_rows($query) > 0) {
+                while ($row = mysql_fetch_object($query)) {
+                    $selected = ($row->id_penjamin == @$d['id_penjamin']) ? 'selected' : '';
+                    printf('<option value="%s" %s>%s</option>', $row->id_penjamin, $selected, $row->penjamin);
+                }
             }
+
+            echo '</select>';
+
+            echo '</td>';
+
+            echo '<td>';
+
+            echo '<textarea  name="ket" id="ket" col=1>'.$d['ket'].'</textarea>';
+
+            echo '</td>';
+
+            echo '<td>';
+
+            echo '<button type="submit"  class="btn btn-primary btn-xs">';
+
+            echo '<span class="glyphicon glyphicon-floppy-disk" aria-hidden="true"></span>';
+
+            echo '</button>';
+
+            echo '</td>';
+
+            echo '</tr>';
+
+            echo '</form>';
+        } else {
+            echo'<tr>';
+
+            echo' <td>';
+
+            echo $d['notrans'];
+
+            echo'</td>';
+
+            echo' <td>';
+
+            echo $d['pasien'];
+
+            echo'</td>';
+
+            echo' <td>';
+
+            echo $d['jenis_transaksi'];
+
+            echo'</td>';
+
+            echo" <td  style='text-align:right;'>";
+
+            echo $ijumlah;
+
+            echo'</td>';
+
+            echo' <td>';
+
+            echo $d['jenis_pembayaran'];
+
+            echo'</td>';
+
+            echo' <td>';
+
+            echo $d['penjamin'];
+
+            echo'</td>';
+
+            echo' <td>';
+
+            echo $d['ket'];
+
+            echo'</td>';
+
+            echo" <td  style='text-align:center;'>";
+
+            if ($r_edit == 'Y') {
+                echo"<span class='btn btn-success btn-sm' disabled><i class='fa fa-pencil'></i></span>";
+            }
+
+            if ($r_delete == 'Y') {
+                echo"<span class='btn btn-danger btn-sm' disabled><i class='fa fa-trash'></i></span>";
+            }
+
+            echo'</td>';
+
+            echo'</tr>';
         }
-
-        echo '</select>';
-
-        echo '</td>';
-
-        echo '<td>';
-
-        echo '<textarea  name="ket" id="ket" col=1>'.$d['ket'].'</textarea>';
-
-        echo '</td>';
-
-        echo '<td>';
-
-        echo '<button type="submit"  class="btn btn-primary btn-xs">';
-
-        echo '<span class="glyphicon glyphicon-floppy-disk" aria-hidden="true"></span>';
-
-        echo '</button>';
-
-        echo '</td>';
-
-        echo '</tr>';
-
-        echo '</form>';
-    } else {
-        echo'<tr>';
-
-        echo' <td>';
-
-        echo $d['notrans'];
-
-        echo'</td>';
-
-        echo' <td>';
-
-        echo $d['pasien'];
-
-        echo'</td>';
-
-        echo' <td>';
-
-        echo $d['jenis_transaksi'];
-
-        echo'</td>';
-
-        echo" <td  style='text-align:right;'>";
-
-        echo $ijumlah;
-
-        echo'</td>';
-
-        echo' <td>';
-
-        echo $d['jenis_pembayaran'];
-
-        echo'</td>';
-
-        echo' <td>';
-
-        echo $d['penjamin'];
-
-        echo'</td>';
-
-        echo' <td>';
-
-        echo $d['ket'];
-
-        echo'</td>';
-
-        echo" <td  style='text-align:center;'>";
-
-        if ($r_edit == 'Y') {
-            echo"<span class='btn btn-success btn-sm' disabled><i class='fa fa-pencil'></i></span>";
-        }
-
-        if ($r_delete == 'Y') {
-            echo"<span class='btn btn-danger btn-sm' disabled><i class='fa fa-trash'></i></span>";
-        }
-
-        echo'</td>';
-
-        echo'</tr>';
-    }
 }
 
-?>
+    ?>
 
 
 
@@ -1940,6 +1940,6 @@ while ($d = mysql_fetch_array($dtampil)) {
 
 <?php
 
-endswitch;
+    endswitch;
 
 ?>

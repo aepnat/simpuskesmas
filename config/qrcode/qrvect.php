@@ -31,12 +31,12 @@
         {
             $vect = self::vectEPS($frame, $pixelPerPoint, $outerFrame, $back_color, $fore_color, $cmyk);
 
-            if ($filename === false) {
+            if ($filename===false) {
                 header('Content-Type: application/postscript');
                 header('Content-Disposition: filename="qrcode.eps"');
                 echo $vect;
             } else {
-                if ($saveandprint === true) {
+                if ($saveandprint===true) {
                     QRtools::save($vect, $filename);
                     header('Content-Type: application/postscript');
                     header('Content-Disposition: filename="qrcode.eps"');
@@ -112,9 +112,9 @@
 
             // Convert the matrix into pixels
 
-            for ($i = 0; $i < $h; $i++) {
-                for ($j = 0; $j < $w; $j++) {
-                    if ($frame[$i][$j] == '1') {
+            for ($i = 0; $i<$h; $i++) {
+                for ($j = 0; $j<$w; $j++) {
+                    if ($frame[$i][$j]=='1') {
                         $y = $h - 1 - $i;
                         $x = $j;
                         $output .= $x.' '.$y.' 1 1 F'."\n";
@@ -132,12 +132,12 @@
         {
             $vect = self::vectSVG($frame, $pixelPerPoint, $outerFrame, $back_color, $fore_color);
 
-            if ($filename === false) {
+            if ($filename===false) {
                 header('Content-Type: image/svg+xml');
                 //header('Content-Disposition: attachment, filename="qrcode.svg"');
                 echo $vect;
             } else {
-                if ($saveandprint === true) {
+                if ($saveandprint===true) {
                     QRtools::save($vect, $filename);
                     header('Content-Type: image/svg+xml');
                     //header('Content-Disposition: filename="'.$filename.'"');
@@ -182,9 +182,9 @@
 
             // Convert the matrix into pixels
 
-            for ($i = 0; $i < $h; $i++) {
-                for ($j = 0; $j < $w; $j++) {
-                    if ($frame[$i][$j] == '1') {
+            for ($i = 0; $i<$h; $i++) {
+                for ($j = 0; $j<$w; $j++) {
+                    if ($frame[$i][$j]=='1') {
                         $y = ($i + $outerFrame) * $pixelPerPoint;
                         $x = ($j + $outerFrame) * $pixelPerPoint;
                         $output .= '<use x="'.$x.'" y="'.$y.'" xlink:href="#p" />'."\n";

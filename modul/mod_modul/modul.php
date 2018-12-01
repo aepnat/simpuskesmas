@@ -1,9 +1,9 @@
-  
-<?php
+      
+    <?php
 switch ($_GET[act]) {
 
-default:
-  ?>
+        default:
+          ?>
 
  <div class="">
                    
@@ -54,15 +54,15 @@ default:
 
                                     echo"<td style='text-align:center;'>$r[aktif]</td>";
                                     echo"<td style='text-align:center;'>";
-                                    if ($r_input == 'Y') {
+                                    if ($r_input=='Y') {
                                         echo"<a class='thickbox' href='modul/mod_$module/form_sub$module.php?parentid=$r[id_modul]&id_module=$id&width=720&height=560&module=$module&TB_iframe=true' title='Sub $nmmodule Baru'><span class='icon'><i class='fa fa-pencil-square-o'></i></span></a>";
                                     }
 
-                                    if ($r_edit == 'Y') {
+                                    if ($r_edit=='Y') {
                                         echo"<a class='thickbox' href='modul/mod_$module/form_$module.php?id_modul=$r[id_modul]&id_module=$id&width=720&height=560&module=$module&TB_iframe=true' title='Update $nmmodule '><span class='icon'><i class='fa fa-pencil'></i></span></a>";
                                     }
 
-                                    if ($r_delete == 'Y') {
+                                    if ($r_delete=='Y') {
                                         echo"<a href='modul/mod_$module/aksi_$module.php?module=$module&act=hapusmod&id=$r[id_modul]&id_module=$id' onClick=\"return confirm('Hapus data ?')\"><span class='icon'><i class='fa fa-trash'></i></span></a>";
                                     }
                                     echo'</td>';
@@ -80,11 +80,11 @@ default:
 
                                         echo"<td style='text-align:center;'>$d[aktif]</td>";
                                         echo" <td style='text-align:right;'>";
-                                        if ($r_edit == 'Y') {
+                                        if ($r_edit=='Y') {
                                             echo"<a class='thickbox' href='modul/mod_$module/form_sub$module.php?id_modul=$d[id_modul]&id_module=$id&width=720&height=560&module=$module&TB_iframe=true' title='Update Sub $imodule'><span class='icon'><i class='fa fa-pencil'></i></span></a>";
                                         }
 
-                                        if ($r_delete == 'Y') {
+                                        if ($r_delete=='Y') {
                                             echo"<a href='modul/mod_$module/aksi_$module.php?module=$module&act=hapus&id=$d[id_modul]&id_module=$id' onClick=\"return confirm('Hapus data ?')\"><span class='icon'><i class='fa fa-trash'></i></span></a>";
                                         }
                                         echo'</td>';

@@ -1,41 +1,41 @@
-<?php
+    <?php
 
-session_start();
+    session_start();
 
-include './../../config/koneksi.php';
-include './../../config/fungsi_indobulan.php';
-include './../../config/barcode_gen.php';
-include './../../config/qrcode/qrlib.php';
+    include './../../config/koneksi.php';
+    include './../../config/fungsi_indobulan.php';
+    include './../../config/barcode_gen.php';
+    include './../../config/qrcode/qrlib.php';
 
-$tampil = mysql_query("SELECT * FROM modul WHERE id_modul ='".$_GET[report_id]."'");
+    $tampil = mysql_query("SELECT * FROM modul WHERE id_modul ='".$_GET[report_id]."'");
 
-$r = mysql_fetch_array($tampil);
+    $r = mysql_fetch_array($tampil);
 
-$module = $_GET['module'];
+    $module = $_GET['module'];
 
-$imodule = ucwords($r['nama_modul']);
+    $imodule = ucwords($r['nama_modul']);
 
-$nmmodule = ucwords($r['nama_modul']);
+    $nmmodule = ucwords($r['nama_modul']);
 
-$id = $r['id_modul'];
+    $id = $r['id_modul'];
 
-$fa_icon = $r['fa_icon'];
+    $fa_icon = $r['fa_icon'];
 
-// if($r[orientation] == 'P') {
+    // if($r[orientation] == 'P') {
 
-//  $orientation = 'portrait';
+    //  $orientation = 'portrait';
 
-// } else {
+    // } else {
 
-//  $orientation = 'landscape';
+    //  $orientation = 'landscape';
 
-// }
+    // }
 
-$orientation = 'portrait';
+    $orientation = 'portrait';
 
-$status = $_GET['status'];
+    $status = $_GET['status'];
 
-?>
+    ?>
 
 
 
@@ -345,9 +345,9 @@ $tgl = tgl_indo(date('Y-m-d', $time));
 
 $id_pasien = $_GET['id_pasien'];
 
- $gtampil = mysql_query("SELECT * FROM informasi_perusahaan where id_informasi_perusahaan = '1'");
+    $gtampil = mysql_query("SELECT * FROM informasi_perusahaan where id_informasi_perusahaan = '1'");
 
- $g = mysql_fetch_array($gtampil);
+    $g = mysql_fetch_array($gtampil);
 
 if ($g['pict']) {
     $pict = $g['pict'];
@@ -357,7 +357,7 @@ if ($g['pict']) {
 
 $company = ucwords($g['company']);
 
- ?>
+    ?>
 
 <div style='border:1px solid black;'>
 
@@ -376,7 +376,7 @@ $company = ucwords($g['company']);
 
 
 <?php
- $tampil = mysql_query("SELECT a.*,b.agama,c.kategori
+    $tampil = mysql_query("SELECT a.*,b.agama,c.kategori
                 FROM pasien a left join agama b 
                  ON a.id_agama = b.id_agama
                  left join kategori c
@@ -387,7 +387,7 @@ $r = mysql_fetch_array($tampil);
 
 $tgl_lahir = date('d/m/Y', strtotime($r[tgl_lahir]));
 
-if ($r['gender'] == 'L') {
+if ($r['gender']=='L') {
     $gender = 'Laki-laki';
 } else {
     $gender = 'Perempuan';

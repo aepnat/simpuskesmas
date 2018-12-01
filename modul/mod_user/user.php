@@ -1,11 +1,11 @@
-<?php
+    <?php
 
-$outlet = $df_outlet;
+    $outlet = $df_outlet;
 
 switch ($_GET[act]) {
 
-default:
-  ?>
+        default:
+          ?>
 
  <div class="">
                    
@@ -59,25 +59,25 @@ default:
 
                                 $no = 1;
                                 while ($r = mysql_fetch_array($tampil)) {
-                                    if ($r[r_input] == 'Y') {
+                                    if ($r[r_input]=='Y') {
                                         $input = "<img src='images/cek.png' border=0> Input";
                                     } else {
                                         $input = "<img src='images/del.gif' width='20' border=0> Input";
                                     }
 
-                                    if ($r[r_edit] == 'Y') {
+                                    if ($r[r_edit]=='Y') {
                                         $edit = "<img src='images/cek.png' border=0> Edit";
                                     } else {
                                         $edit = "<img src='images/del.gif' width='20' border=0> Edit";
                                     }
 
-                                    if ($r[r_delete] == 'Y') {
+                                    if ($r[r_delete]=='Y') {
                                         $delete = "<img src='images/cek.png' border=0> Delete";
                                     } else {
                                         $delete = "<img src='images/del.gif' width='20' border=0> Delete";
                                     }
 
-                                    if ($r[outlet] == '') {
+                                    if ($r[outlet]=='') {
                                         $outlet = 'Semua Outlet';
                                     } else {
                                         $outlet = $r['outlet'];
@@ -93,7 +93,7 @@ default:
                                     echo"<td>$r[r_delete]</td>";
                                     echo"<td style='text-align:center;'>$r[aktif]</td>";
                                     echo" <td  style='text-align:center;'>";
-                                    if ($r_edit == 'Y') {
+                                    if ($r_edit=='Y') {
                                         echo"<a class='thickbox' href='modul/mod_$module/form_$module.php?id_user=$r[id_user]&id_module=$id&width=720&height=580&module=$module&TB_iframe=true' title='Update $nmmodule'><span class='icon'><i class='fa fa-pencil'></i></span></a>";
                                     }
 

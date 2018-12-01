@@ -16,7 +16,7 @@ if (empty($_SESSION['username']) and empty($_SESSION['password'])) {
     $userid = $_SESSION['userid'];
 
     // Hapus modul
-    if ($module == 'kategori' and $act == 'hapus') {
+    if ($module=='kategori' and $act=='hapus') {
         $id = $_GET['id'];
         $id_module = $_GET['id_module'];
 
@@ -33,7 +33,7 @@ if (empty($_SESSION['username']) and empty($_SESSION['password'])) {
     }
 
     // Input group
-    elseif ($module == 'kategori' and $act == 'input') {
+    elseif ($module=='kategori' and $act=='input') {
         $id_module = $_POST['id_module'];
 
         if ($_POST['ID']) {

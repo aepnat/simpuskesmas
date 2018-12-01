@@ -1,9 +1,9 @@
-<?php
-session_start();
-if (empty($_SESSION['username']) and empty($_SESSION['password'])) {
-    echo "<script>window.alert('Please login first.'); window.location=('../../index.php.php')</script>";
+    <?php
+    session_start();
+    if (empty($_SESSION['username']) and empty($_SESSION['password'])) {
+        echo "<script>window.alert('Please login first.'); window.location=('../../index.php.php')</script>";
 } else {
-    include './../../config/koneksi.php'; ?>
+        include './../../config/koneksi.php'; ?>
 <!doctype html>
 <html>
 <head>
@@ -44,7 +44,7 @@ $modul = $_GET['module'];
 
     if ($id) {
         $query = mysql_query('SELECT * FROM rujukan WHERE id_rujukan = "'.$id.'"');
-        if ($query && mysql_num_rows($query) == 1) {
+        if ($query && mysql_num_rows($query)==1) {
             $data = mysql_fetch_object($query);
         } else {
             die('Data modul tidak ditemukan');
@@ -73,7 +73,7 @@ $modul = $_GET['module'];
            <?php if ($id) {
         ?>  
     
-            <?php if (@$data->tipe == 'R') {
+            <?php if (@$data->tipe=='R') {
             ?>
               
                 <div class="form-group">
@@ -84,8 +84,8 @@ $modul = $_GET['module'];
                   </div>
               </div>  
             <?php
-        } else {
-            ?>  
+            } else {
+                ?>  
               
                 <div class="form-group">
                    <label class="control-label col-md-3 col-sm-3 col-xs-12" style='padding-top:10px;'>Tipe :</label>
@@ -95,11 +95,11 @@ $modul = $_GET['module'];
                   </div>
               </div>  
              <?php
-        } ?>
-
+            } ?>
+    
         <?php
-    } else {
-        ?>  
+        } else {
+            ?>  
 
            
                 <div class="form-group">
@@ -111,7 +111,7 @@ $modul = $_GET['module'];
               </div>  
 
         <?php
-    } ?>
+        } ?>
 
 
             <div class="form-group">
@@ -125,7 +125,7 @@ $modul = $_GET['module'];
           <?php if ($id) {
         ?>  
     
-            <?php if (@$data->aktif == 'Y') {
+            <?php if (@$data->aktif=='Y') {
             ?>
               
                 <div class="form-group">
@@ -136,8 +136,8 @@ $modul = $_GET['module'];
                   </div>
               </div>  
             <?php
-        } else {
-            ?>  
+            } else {
+                ?>  
               
                 <div class="form-group">
 	               <label class="control-label col-md-3 col-sm-3 col-xs-12" style='padding-top:10px;'>Aktif :</label>
@@ -147,11 +147,11 @@ $modul = $_GET['module'];
                   </div>
               </div>  
              <?php
-        } ?>
-
+            } ?>
+    
         <?php
-    } else {
-        ?>  
+        } else {
+            ?>  
 
            
                 <div class="form-group">
@@ -163,7 +163,7 @@ $modul = $_GET['module'];
               </div>  
 
         <?php
-    } ?>
+        } ?>
 
 
 

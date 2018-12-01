@@ -1,9 +1,9 @@
-<?php
-session_start();
-if (empty($_SESSION['username']) and empty($_SESSION['password'])) {
-    echo "<script>window.alert('Please login first.'); window.location=('../../index.php.php')</script>";
+    <?php
+    session_start();
+    if (empty($_SESSION['username']) and empty($_SESSION['password'])) {
+        echo "<script>window.alert('Please login first.'); window.location=('../../index.php.php')</script>";
 } else {
-    include './../../config/koneksi.php'; ?>
+        include './../../config/koneksi.php'; ?>
 <!doctype html>
 <html>
 <head>
@@ -44,7 +44,7 @@ $modul = $_GET['module'];
 
     if ($id) {
         $query = mysql_query('SELECT * FROM kunjungan_berobat WHERE id_kunjungan_berobat = "'.$id.'"');
-        if ($query && mysql_num_rows($query) == 1) {
+        if ($query && mysql_num_rows($query)==1) {
             $data = mysql_fetch_object($query);
         } else {
             die('Data modul tidak ditemukan');
@@ -91,7 +91,7 @@ $modul = $_GET['module'];
                  <select required name="pasien" class="form-control" disabled>
                  <option>--Pilih Pasien--</option>                
                     <?php
-                      $query = mysql_query('SELECT * FROM pasien ORDER BY nama');
+                        $query = mysql_query('SELECT * FROM pasien ORDER BY nama');
     if ($query && mysql_num_rows($query) > 0) {
         while ($row = mysql_fetch_object($query)) {
             $pasien = $row->ktp.'-'.$row->nama;
@@ -112,7 +112,7 @@ $modul = $_GET['module'];
                  <select name="poli" class="form-control" disabled>     
                  <option>--Pilih Poliklinik --</option>                          
                     <?php
-                      $query = mysql_query('SELECT * FROM poli ORDER BY poli');
+                        $query = mysql_query('SELECT * FROM poli ORDER BY poli');
     if ($query && mysql_num_rows($query) > 0) {
         while ($row = mysql_fetch_object($query)) {
             echo '<option value="'.$row->id_poli.'"';
@@ -131,7 +131,7 @@ $modul = $_GET['module'];
                  <select name="rujukan_rs" class="form-control">     
                  <option>--Pilih Rujukan RS --</option>                          
                     <?php
-                      $query = mysql_query('SELECT * FROM rujukan WHERE tipe = "R" ORDER BY rujukan');
+                        $query = mysql_query('SELECT * FROM rujukan WHERE tipe = "R" ORDER BY rujukan');
     if ($query && mysql_num_rows($query) > 0) {
         while ($row = mysql_fetch_object($query)) {
             echo '<option value="'.$row->id_rujukan.'"';
@@ -150,7 +150,7 @@ $modul = $_GET['module'];
                  <select name="rujukan_lab" class="form-control">     
                  <option>--Pilih Rujukan Lab --</option>                          
                     <?php
-                      $query = mysql_query('SELECT * FROM rujukan WHERE tipe = "L" ORDER BY rujukan');
+                        $query = mysql_query('SELECT * FROM rujukan WHERE tipe = "L" ORDER BY rujukan');
     if ($query && mysql_num_rows($query) > 0) {
         while ($row = mysql_fetch_object($query)) {
             echo '<option value="'.$row->id_rujukan.'"';

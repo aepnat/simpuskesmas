@@ -1,9 +1,9 @@
-  
-<?php
+      
+    <?php
 switch ($_GET[act]) {
 
-default:
-  ?>
+        default:
+          ?>
 
  <div class="">
                    
@@ -57,11 +57,11 @@ default:
                                     echo"<td><b>$r[nama_modul]</b></td>";
                                     echo"<td style='text-align:center;'>$r[aktif]</td>";
                                     echo" <td  style='text-align:center;'>";
-                                    if ($r_edit == 'Y') {
+                                    if ($r_edit=='Y') {
                                         echo"<a class='thickbox' href='modul/mod_$module/form_$module.php?id_groupmodul=$r[id_groupmodul]&id_module=$id&width=720&height=560&module=$module&TB_iframe=true' title='Update $nmmodule'><span class='icon'><i class='fa fa-pencil'></i></span></a>";
                                     }
 
-                                    if ($r_delete == 'Y') {
+                                    if ($r_delete=='Y') {
                                         echo"<a href='modul/mod_$module/aksi_$module.php?module=$module&act=hapus&id=$r[id_groupmodul]&id_module=$id' onClick=\"return confirm('Hapus Data ?')\" title='Delete $nmmodule'><span class='icon'><i class='fa fa-trash'></i></span></a>";
                                     }
 
@@ -84,7 +84,7 @@ default:
 
                                         echo"<td style='text-align:center;'>$d[aktif]</td>";
                                         echo"<td style='text-align:right;'>";
-                                        if ($r_delete == 'Y') {
+                                        if ($r_delete=='Y') {
                                             echo"<a href='modul/mod_$module/aksi_$module.php?module=$module&act=hapus&id=$d[id_groupmodul]&id_module=$id' onClick=\"return confirm('Delete this record ?')\"><span class='icon'><i class='fa fa-trash'></i></span></a>";
                                         }
                                         echo'</td>';

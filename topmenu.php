@@ -32,12 +32,12 @@ $SQL = 'SELECT * FROM general_setting ';
 
     $user = $_SESSION['userid'];
 
-          $sql = mysql_query("select * from modul where aktif='Y' order by urutan");
+            $sql = mysql_query("select * from modul where aktif='Y' order by urutan");
 
     while ($r = mysql_fetch_array($sql)) {
-        if ($r[status_menu] == 'M' and !empty($r[link])) {
+        if ($r[status_menu]=='M' and !empty($r[link])) {
             echo "<li class='Aktif'><a href='$r[link]&menu=$r[nama_modul]'>$r[nama_modul]</a>";
-        } elseif ($r[status_menu] == 'M' and empty($r[link])) {
+        } elseif ($r[status_menu]=='M' and empty($r[link])) {
             echo "<li class='Aktif'><a href='#'>$r[nama_modul]</a>";
         }
 
@@ -46,7 +46,7 @@ $SQL = 'SELECT * FROM general_setting ';
         $detil = mysql_query("select * from modul where parentid='$r[id_modul]' and status_menu='C' and aktif='Y' order by urutan");
 
         while ($d = mysql_fetch_array($detil)) {
-            if ($d[is_form] == 'Y') {
+            if ($d[is_form]=='Y') {
                 echo"<li><a href='form/form_$d[link].php?width=850&height=600&module=$d[link]&imodule=$imodule&imenu=$imenu&isub=$isub&TB_iframe=true' title='$d[nama_modul]' class='thickbox' >$d[nama_modul]</a></li>";
             } else {
                 echo"<li><a href='$d[link]&menu=$r[nama_modul]&sub=$d[nama_modul]'>$d[nama_modul]</a></li>";
@@ -56,7 +56,7 @@ $SQL = 'SELECT * FROM general_setting ';
         echo'</ul>';
     }
 
-  ?>
+    ?>
   
   
   

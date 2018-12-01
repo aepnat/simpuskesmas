@@ -17,7 +17,7 @@ if (empty($_SESSION['username']) and empty($_SESSION['password'])) {
     $business_type = $_SESSION['business_type'];
 
     // Hapus modul
-    if ($module == 'pasien' and $act == 'hapus') {
+    if ($module=='pasien' and $act=='hapus') {
         $id = $_GET['id'];
         $id_module = $_GET['id_module'];
 
@@ -34,7 +34,7 @@ if (empty($_SESSION['username']) and empty($_SESSION['password'])) {
     }
 
     // Input group
-    elseif ($module == 'pasien' and $act == 'input') {
+    elseif ($module=='pasien' and $act=='input') {
         $id_module = $_POST['id_module'];
 
         if ($_POST['ID']) {
@@ -50,8 +50,8 @@ if (empty($_SESSION['username']) and empty($_SESSION['password'])) {
                     ,updby   = '$userid' 
                     ,aktif     = '$_POST[aktif]'  
                  WHERE id_pasien    = '$_POST[ID]'");
-        } else {
-            mysql_query("INSERT INTO pasien(ktp
+            } else {
+                mysql_query("INSERT INTO pasien(ktp
                    ,nama
                    ,gender
                    ,tgl_lahir
@@ -77,9 +77,9 @@ if (empty($_SESSION['username']) and empty($_SESSION['password'])) {
                   ,'$datetime'
                   ,'$userid'
                     ,'$_POST[aktif]')");
-        }
+            }
 
-        //header('location:../../main.php?module='.$module.'&id_module='.$id_module);?>
+            //header('location:../../main.php?module='.$module.'&id_module='.$id_module);?>
    
   <script language="javascript">
      window.parent.location.href = "<?php echo"./../../main.php?module=$module&id_module=$id_module"; ?>";  
@@ -87,6 +87,6 @@ if (empty($_SESSION['username']) and empty($_SESSION['password'])) {
    </script>
   
   <?php
-    }
+        }
 }
-?>
+    ?>

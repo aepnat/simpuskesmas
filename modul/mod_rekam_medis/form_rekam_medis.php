@@ -1,9 +1,9 @@
-<?php
-session_start();
-if (empty($_SESSION['username']) and empty($_SESSION['password'])) {
-    echo "<script>window.alert('Please login first.'); window.location=('../../index.php.php')</script>";
+    <?php
+    session_start();
+    if (empty($_SESSION['username']) and empty($_SESSION['password'])) {
+        echo "<script>window.alert('Please login first.'); window.location=('../../index.php.php')</script>";
 } else {
-    include './../../config/koneksi.php'; ?>
+        include './../../config/koneksi.php'; ?>
 <!doctype html>
 <html>
 <head>
@@ -44,7 +44,7 @@ $modul = $_GET['module'];
 
     if ($id) {
         $query = mysql_query('SELECT * FROM kunjungan_berobat WHERE id_kunjungan_berobat = "'.$id.'"');
-        if ($query && mysql_num_rows($query) == 1) {
+        if ($query && mysql_num_rows($query)==1) {
             $data = mysql_fetch_object($query);
         } else {
             die('Data modul tidak ditemukan');
@@ -91,7 +91,7 @@ $modul = $_GET['module'];
                  <select required name="pasien" class="form-control" disabled>
                  <option>--Pilih Pasien--</option>                
                     <?php
-                      $query = mysql_query('SELECT * FROM pasien ORDER BY nama');
+                        $query = mysql_query('SELECT * FROM pasien ORDER BY nama');
     if ($query && mysql_num_rows($query) > 0) {
         while ($row = mysql_fetch_object($query)) {
             $pasien = $row->ktp.'-'.$row->nama;
@@ -112,7 +112,7 @@ $modul = $_GET['module'];
                  <select name="poli" class="form-control" disabled>     
                  <option>--Pilih Poliklinik --</option>                          
                     <?php
-                      $query = mysql_query('SELECT * FROM poli ORDER BY poli');
+                        $query = mysql_query('SELECT * FROM poli ORDER BY poli');
     if ($query && mysql_num_rows($query) > 0) {
         while ($row = mysql_fetch_object($query)) {
             echo '<option value="'.$row->id_poli.'"';
@@ -151,7 +151,7 @@ $modul = $_GET['module'];
 
 
  
-                  <?php if (@$data->rujukan == 'Y') {
+                  <?php if (@$data->rujukan=='Y') {
         ?>
               
                     <div class="form-group">
@@ -162,8 +162,8 @@ $modul = $_GET['module'];
                       </div>
                   </div>  
                 <?php
-    } else {
-        ?>  
+        } else {
+            ?>  
                   
                     <div class="form-group">
                      <label class="control-label col-md-3 col-sm-3 col-xs-12" style='padding-top:10px;'>Rujukan :</label>
@@ -173,7 +173,7 @@ $modul = $_GET['module'];
                       </div>
                   </div>  
                  <?php
-    } ?>
+        } ?>
 
 
 

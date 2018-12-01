@@ -79,7 +79,7 @@ $modul = $_GET['module'];
 
     if ($id) {
         $query = mysql_query('SELECT * FROM general_setting WHERE id_general_setting = "'.$id.'"');
-        if ($query && mysql_num_rows($query) == 1) {
+        if ($query && mysql_num_rows($query)==1) {
             $data = mysql_fetch_object($query);
         } else {
             die('Data general_setting tidak ditemukan');
@@ -371,11 +371,11 @@ $modul = $_GET['module'];
         <!-- /editor -->
 
          <?php 
-         if (empty($pict)) {
-             $ipict = 'logo.png';
-         } else {
-             $ipict = $pict;
-         } ?>
+            if (empty($pict)) {
+                $ipict = 'logo.png';
+            } else {
+                $ipict = $pict;
+            } ?>
 
         <script>
           var btnCust = '<button type="button" class="btn btn-default" title="Add picture tags" ' + 

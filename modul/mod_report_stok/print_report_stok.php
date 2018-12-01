@@ -12,7 +12,7 @@ $nmmodule = ucwords($r['nama_modul']);
 $id = $r['id_modul'];
 $fa_icon = $r['fa_icon'];
 
-if ($r[orientation] == 'P') {
+if ($r[orientation]=='P') {
     $orientation = 'portrait';
 } else {
     $orientation = 'landscape';
@@ -139,7 +139,7 @@ function icetak(){
 
 <!--<body onload="cetakspk()">-->
 
-<?php if ($_GET['printto'] == '2') {
+<?php if ($_GET['printto']=='2') {
     ?>
 <body onload="icetak()">
 <?php
@@ -166,7 +166,7 @@ function icetak(){
 
 <?php
 $gtampil = mysql_query("SELECT * FROM informasi_perusahaan where id_informasi_perusahaan = '1'");
- $g = mysql_fetch_array($gtampil);
+    $g = mysql_fetch_array($gtampil);
 
 if ($g['pict']) {
     $pict = $g['pict'];
@@ -184,8 +184,8 @@ $company = ucwords($g['company']);
 </td>
 <td style="text-align:center;" width='80%'>
 <span class='h1'><?=$nmmodule; ?></span>
-<?php echo "<span class='h2'>".$g['company'].'</span><br>'; ?>
-<br>Periode : <?=$ftgl; ?> - <?=$ltgl; ?>
+    <?php echo "<span class='h2'>".$g['company'].'</span><br>'; ?>
+    <br>Periode : <?=$ftgl; ?> - <?=$ltgl; ?>
 </td>
 <td width='10%'>
 &nbsp
@@ -212,7 +212,7 @@ $company = ucwords($g['company']);
                             
                          <?php
 
-             $tampil = mysql_query("SELECT a.obat,b.satuan,a.jumlah,ifnull(sum(d.qty),0) as keluar
+                $tampil = mysql_query("SELECT a.obat,b.satuan,a.jumlah,ifnull(sum(d.qty),0) as keluar
                                 FROM obat a left join satuan b 
                                  ON a.id_satuan = b.id_satuan
                                  left join kunjungan_berobat c 
@@ -224,33 +224,33 @@ $company = ucwords($g['company']);
                                  AND a.id_obat = d.id_obat
                                  GROUP BY a.obat,b.satuan,a.jumlah ");
 
-            $no = 1;
+                $no = 1;
 
-            while ($r = mysql_fetch_array($tampil)) {
-                $tgl = date('d/m/Y', strtotime($r[tanggal]));
+                while ($r = mysql_fetch_array($tampil)) {
+                    $tgl = date('d/m/Y', strtotime($r[tanggal]));
 
-                $id_pasien = $r[id_pasien];
+                    $id_pasien = $r[id_pasien];
 
-                $stok = $r[jumlah] + $r[keluar];
+                    $stok = $r[jumlah] + $r[keluar];
 
-                echo'<tr>';
-                echo"<td style='text-align:center;'>$no</td>";
-                echo"<td>$r[obat]</td>";
-                echo"<td>$r[satuan]</td>";
-                echo"<td style='text-align:right;'>$stok</td>";
-                echo"<td style='text-align:right;'>$r[keluar]</td>";
-                echo"<td style='text-align:right;'>$r[jumlah]</td>";
-                echo'</tr>';
-                $no++;
-            }
-            ?>
+                    echo'<tr>';
+                    echo"<td style='text-align:center;'>$no</td>";
+                    echo"<td>$r[obat]</td>";
+                    echo"<td>$r[satuan]</td>";
+                    echo"<td style='text-align:right;'>$stok</td>";
+                    echo"<td style='text-align:right;'>$r[keluar]</td>";
+                    echo"<td style='text-align:right;'>$r[jumlah]</td>";
+                    echo'</tr>';
+                    $no++;
+                }
+                ?>
 
             <tfoot>
                             <tr>                               
                                 <th colspan= '3'>TOTAL</th>
 
                                 <?php
-                                $dtampil = mysql_query("SELECT sum(a.jumlah) as jumlah,ifnull(sum(d.qty),0) as keluar
+                                    $dtampil = mysql_query("SELECT sum(a.jumlah) as jumlah,ifnull(sum(d.qty),0) as keluar
                                 FROM obat a left join satuan b 
                                  ON a.id_satuan = b.id_satuan
                                  left join kunjungan_berobat c 
@@ -261,16 +261,16 @@ $company = ucwords($g['company']);
                                  ON c.id_kunjungan_berobat = d.id_kunjungan_berobat
                                  AND a.id_obat = d.id_obat");
 
-                                $d = mysql_fetch_array($dtampil);
+                                    $d = mysql_fetch_array($dtampil);
 
-                                $tstok = $d[jumlah] + $d[keluar];
+                                    $tstok = $d[jumlah] + $d[keluar];
 
-                                echo"<td style='text-align:right;'>$tstok</td>";
-                                echo"<td style='text-align:right;'>$d[keluar]</td>";
-                                echo"<td style='text-align:right;'>$d[jumlah]</td>";
+                                    echo"<td style='text-align:right;'>$tstok</td>";
+                                    echo"<td style='text-align:right;'>$d[keluar]</td>";
+                                    echo"<td style='text-align:right;'>$d[jumlah]</td>";
 
-                                //}
-                                ?>
+                                    //}
+                                    ?>
 
                             </tr>
                         </tfoot>

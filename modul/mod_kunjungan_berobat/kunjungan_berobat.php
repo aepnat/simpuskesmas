@@ -1,8 +1,8 @@
-<?php
+    <?php
 switch ($_GET[act]) {
 
-default:
-  ?>
+        default:
+          ?>
 
  <div class="">
                    
@@ -47,7 +47,7 @@ default:
                             
                          <?php
 
-            $tampil = mysql_query('SELECT a.*,b.nama,b.tgl_lahir,b.ktp,c.poli,d.kategori 
+                    $tampil = mysql_query('SELECT a.*,b.nama,b.tgl_lahir,b.ktp,c.poli,d.kategori 
                                 FROM kunjungan_berobat a left join pasien b 
                                  ON a.id_pasien = b.id_pasien
                                  left join poli c 
@@ -73,15 +73,15 @@ default:
                 echo"<td>$r[kategori]</td>";
                 echo" <td  style='text-align:center;'>";
 
-                if ($r_edit == 'Y') {
+                if ($r_edit=='Y') {
                     //if ($status == '0') {
                     echo"<a class='thickbox' href='modul/mod_$module/form_$module.php?id_kunjungan_berobat=$r[id_kunjungan_berobat]&id_module=$id&width=720&height=560&module=$module&TB_iframe=true' title='Update $nmmodule'><span class='icon'><i class='fa fa-pencil'></i></span></a>";
                     // } else {
-              //  echo"<span class='icon'><i class='fa fa-pencil'></i></span>";
-              // }
+                //  echo"<span class='icon'><i class='fa fa-pencil'></i></span>";
+                // }
                 }
 
-                if ($r_delete == 'Y') {
+                if ($r_delete=='Y') {
                     //if ($status == '0') {
                     echo"<a href='modul/mod_$module/aksi_$module.php?module=$module&act=hapus&id=$r[id_kunjungan_berobat]&id_module=$id' onClick=\"return confirm('Delete this record ?')\" title='Delete $nmmodule'><span class='icon'><i class='fa fa-trash'></i></span></a>";
 
@@ -139,4 +139,4 @@ default:
 
     <?php
 }
-?>
+    ?>

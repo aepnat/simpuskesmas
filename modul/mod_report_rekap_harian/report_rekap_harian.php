@@ -64,7 +64,7 @@ $ldate = date('Y-m-d');
 $prd = date('Y-m');
 
 $userid = $_SESSION['userid'];
-  ?>
+    ?>
 
  <div class="">
                    
@@ -101,16 +101,16 @@ $userid = $_SESSION['userid'];
                 <div class="col-md-9 col-sm-9 col-xs-9 form-group"> 
                      <select name="jenis_transaksi" class="form-control">
                         <?php
-                          $query = mysql_query('SELECT * FROM jenis_transaksi ORDER BY id_jenis_transaksi');
-                           if ($query && mysql_num_rows($query) > 0) {
-                               while ($row = mysql_fetch_object($query)) {
-                                   echo '<option value="'.$row->id_jenis_transaksi.'"';
-                                   if ($row->id_jenis_transaksi == '1') {
-                                       echo ' selected';
-                                   }
-                                   echo '>'.$row->jenis_transaksi.'</option>';
-                               }
-                           }
+                            $query = mysql_query('SELECT * FROM jenis_transaksi ORDER BY id_jenis_transaksi');
+                            if ($query && mysql_num_rows($query) > 0) {
+                                while ($row = mysql_fetch_object($query)) {
+                                    echo '<option value="'.$row->id_jenis_transaksi.'"';
+                                    if ($row->id_jenis_transaksi == '1') {
+                                        echo ' selected';
+                                    }
+                                    echo '>'.$row->jenis_transaksi.'</option>';
+                                }
+                            }
                         ?>  
                         </select>                
                 </div>
@@ -132,17 +132,17 @@ $userid = $_SESSION['userid'];
 
              <?php
 
-             $module = '?module='.$_GET['module'];
-             $tampil = mysql_query("SELECT id_modul as id FROM modul WHERE link='".$module."'");
-             $r = mysql_fetch_array($tampil);
+                $module = '?module='.$_GET['module'];
+                $tampil = mysql_query("SELECT id_modul as id FROM modul WHERE link='".$module."'");
+                $r = mysql_fetch_array($tampil);
 
-             echo"<input type='hidden' name='report_id' id='report_id' value=".$r[id].'>';
-             echo"<input type='hidden' name='module' value=".$_GET[module].'>';
+                echo"<input type='hidden' name='report_id' id='report_id' value=".$r[id].'>';
+                echo"<input type='hidden' name='module' value=".$_GET[module].'>';
             ?>
             </form>    
                    
                 </div>
-                <?php for ($i = 0; $i <= 20; $i++) {
+                <?php for ($i = 0; $i<=20; $i++) {
                 ?>
                     <br />
                     <?php
@@ -156,5 +156,5 @@ $userid = $_SESSION['userid'];
 
     <?php
 }
-?>
-
+    ?>
+    

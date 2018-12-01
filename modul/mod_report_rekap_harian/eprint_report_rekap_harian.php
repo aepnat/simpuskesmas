@@ -1,10 +1,10 @@
-<?php
-include './../../config/koneksi.php';
-//include "./../../config/fungsi_indobulan.php";
+    <?php
+    include './../../config/koneksi.php';
+    //include "./../../config/fungsi_indobulan.php";
 
-function getBulan1($bln1)
-{
-    switch ($bln1) {
+    function getBulan1($bln1)
+    {
+        switch ($bln1) {
 
                     case 1:
 
@@ -78,7 +78,7 @@ function getBulan1($bln1)
 
                         break;
 
-                }
+                    }
 }
 
 $report_id = $_GET[report_id];
@@ -139,46 +139,46 @@ header('Content-Transfer-Encoding: binary ');
 
       <?php
 
-       $gtampil = mysql_query("SELECT * FROM informasi_perusahaan where id_informasi_perusahaan = '1'");
+        $gtampil = mysql_query("SELECT * FROM informasi_perusahaan where id_informasi_perusahaan = '1'");
 
-       $g = mysql_fetch_array($gtampil);
+        $g = mysql_fetch_array($gtampil);
 
-      if ($g['pict']) {
-          $pict = $g['pict'];
-      } else {
-          $pict = '';
-      }
+        if ($g['pict']) {
+            $pict = $g['pict'];
+        } else {
+            $pict = '';
+        }
 
-      $company = ucwords($g['company']);
+        $company = ucwords($g['company']);
 
-      $jsql = mysql_query("SELECT * FROM jenis_transaksi
+        $jsql = mysql_query("SELECT * FROM jenis_transaksi
                             WHERE id_jenis_transaksi = '$jenis_transaksi' 
 
                            ");
 
-      $j = mysql_fetch_array($jsql);
+        $j = mysql_fetch_array($jsql);
 
-      $jenis_transaksi = $j['jenis_transaksi'];
+        $jenis_transaksi = $j['jenis_transaksi'];
 
-      $sql = mysql_query("SELECT a.*,b.shift FROM kasir  a LEFT JOIN shift b 
+        $sql = mysql_query("SELECT a.*,b.shift FROM kasir  a LEFT JOIN shift b 
                             ON a.id_shift = b.id_shift
                             WHERE a.id_kasir = '$k_ID' 
 
                            ");
 
-      $r = mysql_fetch_array($sql);
+        $r = mysql_fetch_array($sql);
 
-      $penjualan_barang = $r['id_kasir'];
+        $penjualan_barang = $r['id_kasir'];
 
-      $shift = $r['shift'];
+        $shift = $r['shift'];
 
-      $petugas = $r['petugas'];
+        $petugas = $r['petugas'];
 
-      $status = $r['status'];
+        $status = $r['status'];
 
-      $tanggal = date('d/m/Y', strtotime($r['tanggal']));
+        $tanggal = date('d/m/Y', strtotime($r['tanggal']));
 
-      ?>
+        ?>
 
       <table width="100%">
       <tr>
@@ -212,7 +212,7 @@ header('Content-Transfer-Encoding: binary ');
                     echo "<th colspan='2'>".$h['penjamin'].'</th>';
                 }
 
-               ?> 	
+                ?> 	
 
                <th colspan ="4" >UMUM</th>  
                <th rowspan="2" >PIC</th>  
@@ -227,11 +227,11 @@ header('Content-Transfer-Encoding: binary ');
             <tr>
 
                <?php 
-                   for ($j = 1; $j <= $hjml; $j++) {
-                       echo '<th>JML</th>';
-                       echo '<th>RUPIAH</th>';
-                   }
-               ?>	
+                    for ($j = 1; $j <= $hjml; $j++) {
+                        echo '<th>JML</th>';
+                        echo '<th>RUPIAH</th>';
+                    }
+                ?>	
 
 
                <th>JML</th>  
@@ -253,18 +253,18 @@ header('Content-Transfer-Encoding: binary ');
       	<tbody>
 
       	  <?php for ($i = 1; $i <= 31; $i++) {
-                   echo'<tr>';
+                    echo'<tr>';
 
-                   echo"<td style='text-align:center;'>$i</td>";
+                    echo"<td style='text-align:center;'>$i</td>";
 
-                   if (strlen($i) == '1') {
-                       $tgl = $prd.'-0'.$i;
-                   } else {
-                       $tgl = $prd.'-'.$i;
-                   }
+                    if (strlen($i) == '1') {
+                        $tgl = $prd.'-0'.$i;
+                    } else {
+                        $tgl = $prd.'-'.$i;
+                    }
 
-                   //transaksi asuransi
-                   $dtampil1 = mysql_query("SELECT a.id_penjamin
+                    //transaksi asuransi
+                    $dtampil1 = mysql_query("SELECT a.id_penjamin
 										,	COUNT(c.jumlah) as jml 
 										,	IFNULL(SUM(c.jumlah),0) as rp  
 									FROM penjamin a LEFT JOIN kasir b
@@ -280,13 +280,13 @@ header('Content-Transfer-Encoding: binary ');
 									GROUP BY a.id_penjamin
 									ORDER BY a.id_penjamin");
 
-                   while ($d1 = mysql_fetch_array($dtampil1)) {
-                       echo '<th>'.$d1['jml'].'</th>';
-                       echo "<th style='text-align:right;'>".number_format($d1['rp'], 0, '.', ',').'</th>';
-                   }
+                    while ($d1 = mysql_fetch_array($dtampil1)) {
+                        echo '<th>'.$d1['jml'].'</th>';
+                        echo "<th style='text-align:right;'>".number_format($d1['rp'], 0, '.', ',').'</th>';
+                    }
 
-                   //transaksi umum tunai
-                   $dtampil2 = mysql_query("SELECT COUNT(c.jumlah) as jml 
+                    //transaksi umum tunai
+                    $dtampil2 = mysql_query("SELECT COUNT(c.jumlah) as jml 
 										,	IFNULL(SUM(c.jumlah),0) as rp  
 									FROM kasir b LEFT JOIN kasir_detail c
 									ON  b.id_kasir = c.id_kasir
@@ -296,13 +296,13 @@ header('Content-Transfer-Encoding: binary ');
 									WHERE b.tanggal = '$tgl'
 									AND b.status != '4'");
 
-                   $d2 = mysql_fetch_array($dtampil2);
+                    $d2 = mysql_fetch_array($dtampil2);
 
-                   echo '<th>'.$d2['jml'].'</th>';
-                   echo "<th style='text-align:right;'>".number_format($d2['rp'], 0, '.', ',').'</th>';
+                    echo '<th>'.$d2['jml'].'</th>';
+                    echo "<th style='text-align:right;'>".number_format($d2['rp'], 0, '.', ',').'</th>';
 
-                   //transaksi umum tunai
-                   $dtampil3 = mysql_query("SELECT COUNT(c.jumlah) as jml 
+                    //transaksi umum tunai
+                    $dtampil3 = mysql_query("SELECT COUNT(c.jumlah) as jml 
 										,	IFNULL(SUM(c.jumlah),0) as rp  
 									FROM kasir b LEFT JOIN kasir_detail c
 									ON  b.id_kasir = c.id_kasir
@@ -312,21 +312,21 @@ header('Content-Transfer-Encoding: binary ');
 									WHERE b.tanggal = '$tgl'
 									AND b.status != '4'");
 
-                   $d3 = mysql_fetch_array($dtampil3);
+                    $d3 = mysql_fetch_array($dtampil3);
 
-                   echo '<th>'.$d3['jml'].'</th>';
-                   echo "<th style='text-align:right;'>".number_format($d3['rp'], 0, '.', ',').'</th>';
+                    echo '<th>'.$d3['jml'].'</th>';
+                    echo "<th style='text-align:right;'>".number_format($d3['rp'], 0, '.', ',').'</th>';
 
-                   echo '<th></th>';
-                   echo '<th></th>';
-                   echo '<th></th>';
+                    echo '<th></th>';
+                    echo '<th></th>';
+                    echo '<th></th>';
 
-                   echo '<th></th>';
-                   echo '<th></th>';
-                   echo '<th></th>';
+                    echo '<th></th>';
+                    echo '<th></th>';
+                    echo '<th></th>';
 
-                   //total jml
-                   $dtampil4 = mysql_query("SELECT COUNT(c.jumlah) as jml 
+                    //total jml
+                    $dtampil4 = mysql_query("SELECT COUNT(c.jumlah) as jml 
 									FROM kasir b LEFT JOIN kasir_detail c
 									ON  b.id_kasir = c.id_kasir
 									AND c.status != '4'
@@ -334,12 +334,12 @@ header('Content-Transfer-Encoding: binary ');
 									WHERE b.tanggal = '$tgl'
 									AND b.status != '4'");
 
-                   $d4 = mysql_fetch_array($dtampil4);
+                    $d4 = mysql_fetch_array($dtampil4);
 
-                   echo '<th>'.$d4['jml'].'</th>';
+                    echo '<th>'.$d4['jml'].'</th>';
 
-                   //total pembayaran
-                   $dtampil5 = mysql_query("SELECT a.groups
+                    //total pembayaran
+                    $dtampil5 = mysql_query("SELECT a.groups
 										,	IFNULL(SUM(c.jumlah),0) as rp  
 									FROM jenis_pembayaran a LEFT JOIN kasir b
 									ON  b.tanggal = '$tgl'
@@ -352,23 +352,23 @@ header('Content-Transfer-Encoding: binary ');
 									GROUP BY a.groups
 									ORDER BY a.groups");
 
-                   while ($d5 = mysql_fetch_array($dtampil5)) {
-                       echo "<th style='text-align:right;'>".number_format($d5['rp'], 0, '.', ',').'</th>';
-                   }
+                    while ($d5 = mysql_fetch_array($dtampil5)) {
+                        echo "<th style='text-align:right;'>".number_format($d5['rp'], 0, '.', ',').'</th>';
+                    }
 
-                   echo'</tr>';
-               } ?>
+                    echo'</tr>';
+                } ?>
 
       	</tbody>
 
       	<?php 
 
-               echo'<tr>';
+                echo'<tr>';
 
-             echo"<th style='text-align:center;'>TOTAL</th>";
+                echo"<th style='text-align:center;'>TOTAL</th>";
 
-             //transaksi asuransi
-             $dtampil1 = mysql_query("SELECT a.id_penjamin
+                //transaksi asuransi
+                $dtampil1 = mysql_query("SELECT a.id_penjamin
 										,	COUNT(c.jumlah) as jml 
 										,	IFNULL(SUM(c.jumlah),0) as rp  
 									FROM penjamin a LEFT JOIN kasir b
@@ -384,13 +384,13 @@ header('Content-Transfer-Encoding: binary ');
 									GROUP BY a.id_penjamin
 									ORDER BY a.id_penjamin");
 
-             while ($d1 = mysql_fetch_array($dtampil1)) {
-                 echo '<th>'.$d1['jml'].'</th>';
-                 echo "<th style='text-align:right;'>".number_format($d1['rp'], 0, '.', ',').'</th>';
-             }
+                while ($d1 = mysql_fetch_array($dtampil1)) {
+                    echo '<th>'.$d1['jml'].'</th>';
+                    echo "<th style='text-align:right;'>".number_format($d1['rp'], 0, '.', ',').'</th>';
+                }
 
-              //transaksi umum tunai
-              $dtampil2 = mysql_query("SELECT COUNT(c.jumlah) as jml 
+                //transaksi umum tunai
+                $dtampil2 = mysql_query("SELECT COUNT(c.jumlah) as jml 
 										,	IFNULL(SUM(c.jumlah),0) as rp  
 									FROM kasir b LEFT JOIN kasir_detail c
 									ON  b.id_kasir = c.id_kasir
@@ -400,13 +400,13 @@ header('Content-Transfer-Encoding: binary ');
 									AND  b.tanggal LIKE '$prd%'
 									AND b.status != '4'");
 
-             $d2 = mysql_fetch_array($dtampil2);
+                $d2 = mysql_fetch_array($dtampil2);
 
-             echo '<th>'.$d2['jml'].'</th>';
-             echo "<th style='text-align:right;'>".number_format($d2['rp'], 0, '.', ',').'</th>';
+                echo '<th>'.$d2['jml'].'</th>';
+                echo "<th style='text-align:right;'>".number_format($d2['rp'], 0, '.', ',').'</th>';
 
-              //transaksi umum tunai
-              $dtampil3 = mysql_query("SELECT COUNT(c.jumlah) as jml 
+                //transaksi umum tunai
+                $dtampil3 = mysql_query("SELECT COUNT(c.jumlah) as jml 
 										,	IFNULL(SUM(c.jumlah),0) as rp  
 									FROM kasir b LEFT JOIN kasir_detail c
 									ON  b.id_kasir = c.id_kasir
@@ -416,33 +416,33 @@ header('Content-Transfer-Encoding: binary ');
 									WHERE b.tanggal LIKE '$prd%'
 									AND b.status != '4'");
 
-             $d3 = mysql_fetch_array($dtampil3);
+                $d3 = mysql_fetch_array($dtampil3);
 
-             echo '<th>'.$d3['jml'].'</th>';
-             echo "<th style='text-align:right;'>".number_format($d3['rp'], 0, '.', ',').'</th>';
+                echo '<th>'.$d3['jml'].'</th>';
+                echo "<th style='text-align:right;'>".number_format($d3['rp'], 0, '.', ',').'</th>';
 
-             echo '<th></th>';
-             echo '<th></th>';
-             echo '<th></th>';
+                echo '<th></th>';
+                echo '<th></th>';
+                echo '<th></th>';
 
-             echo '<th></th>';
-             echo '<th></th>';
-             echo '<th></th>';
+                echo '<th></th>';
+                echo '<th></th>';
+                echo '<th></th>';
 
-             //total jml
-              $dtampil4 = mysql_query("SELECT COUNT(c.jumlah) as jml 
+                //total jml
+                $dtampil4 = mysql_query("SELECT COUNT(c.jumlah) as jml 
 									FROM kasir b LEFT JOIN kasir_detail c
 									ON  b.id_kasir = c.id_kasir
 									AND c.status != '4'
 									WHERE b.tanggal LIKE '$prd%'
 									AND b.status != '4'");
 
-             $d4 = mysql_fetch_array($dtampil4);
+                $d4 = mysql_fetch_array($dtampil4);
 
-             echo '<th>'.$d4['jml'].'</th>';
+                echo '<th>'.$d4['jml'].'</th>';
 
-             //total pembayaran
-             $dtampil5 = mysql_query("SELECT a.groups
+                //total pembayaran
+                $dtampil5 = mysql_query("SELECT a.groups
 										,	IFNULL(SUM(c.jumlah),0) as rp  
 									FROM jenis_pembayaran a LEFT JOIN kasir b
 									ON  b.tanggal LIKE '$prd%'
@@ -455,18 +455,18 @@ header('Content-Transfer-Encoding: binary ');
 									GROUP BY a.groups
 									ORDER BY a.groups");
 
-             while ($d5 = mysql_fetch_array($dtampil5)) {
-                 echo "<th style='text-align:right;'>".number_format($d5['rp'], 0, '.', ',').'</th>';
-             }
+                while ($d5 = mysql_fetch_array($dtampil5)) {
+                    echo "<th style='text-align:right;'>".number_format($d5['rp'], 0, '.', ',').'</th>';
+                }
 
-             echo'</tr>';
+                echo'</tr>';
 
-             echo'<tr>';
+                echo'<tr>';
 
-             echo"<th style='text-align:center;' colspan='23'>TOTAL REVENUE</th>";
+                echo"<th style='text-align:center;' colspan='23'>TOTAL REVENUE</th>";
 
-             //total jml
-              $dtampil4 = mysql_query("SELECT COUNT(c.jumlah) as jml 
+                //total jml
+                $dtampil4 = mysql_query("SELECT COUNT(c.jumlah) as jml 
 									FROM kasir b LEFT JOIN kasir_detail c
 									ON  b.id_kasir = c.id_kasir
 									AND c.status != '4'
@@ -474,12 +474,12 @@ header('Content-Transfer-Encoding: binary ');
 									WHERE b.tanggal LIKE '$prd%'
 									AND b.status != '4'");
 
-             $d4 = mysql_fetch_array($dtampil4);
+                $d4 = mysql_fetch_array($dtampil4);
 
-             echo '<th>'.$d4['jml'].'</th>';
+                echo '<th>'.$d4['jml'].'</th>';
 
-             //total pembayaran
-             $dtampil5 = mysql_query("SELECT IFNULL(SUM(c.jumlah),0) as rp  
+                //total pembayaran
+                $dtampil5 = mysql_query("SELECT IFNULL(SUM(c.jumlah),0) as rp  
 									FROM  kasir b LEFT JOIN kasir_detail c
 									ON  b.id_kasir = c.id_kasir
 									AND c.status != '4'
@@ -487,9 +487,9 @@ header('Content-Transfer-Encoding: binary ');
 									WHERE b.tanggal LIKE '$prd%'
 									AND b.status != '4'");
 
-             $d5 = mysql_fetch_array($dtampil5);
+                $d5 = mysql_fetch_array($dtampil5);
 
-                  echo "<th style='text-align:right;' colspan='2'>".number_format($d5['rp'], 0, '.', ',').'</th>';
+                    echo "<th style='text-align:right;' colspan='2'>".number_format($d5['rp'], 0, '.', ',').'</th>';
 
             ?>
 
@@ -505,7 +505,7 @@ header('Content-Transfer-Encoding: binary ');
 
     $month = date('m', strtotime($iprd)) * 1;
 
-    if ($month == '1') {
+    if ($month=='1') {
         $imonth = 12;
     } else {
         $imonth = $month - 1;

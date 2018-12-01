@@ -1,8 +1,8 @@
-<?php
+    <?php
 switch ($_GET[act]) {
 
-default:
-  ?>
+        default:
+          ?>
 
  <div class="">
                    
@@ -46,7 +46,7 @@ default:
                             
                          <?php
 
-            $tampil = mysql_query("SELECT a.*,b.nama,b.tgl_lahir,b.ktp,c.poli,d.kategori    
+                    $tampil = mysql_query("SELECT a.*,b.nama,b.tgl_lahir,b.ktp,c.poli,d.kategori    
                                     ,e.rujukan as rujukan_rs
                                     ,f.rujukan as rujukan_lab                              
                                 FROM kunjungan_berobat a left join pasien b 
@@ -78,7 +78,7 @@ default:
                 echo"<td>$r[rujukan_lab]</td>";
                 echo" <td  style='text-align:center;'>";
 
-                if ($r_edit == 'Y') {
+                if ($r_edit=='Y') {
                     echo"<a class='thickbox' href='modul/mod_$module/form_$module.php?id_kunjungan_berobat=$r[id_kunjungan_berobat]&id_module=$id&width=720&height=560&module=$module&TB_iframe=true' title='Update $nmmodule'><span class='icon'><i class='fa fa-pencil'></i></span></a>";
                 }
 
@@ -131,4 +131,4 @@ default:
 
     <?php
 }
-?>
+    ?>

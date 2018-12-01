@@ -13,7 +13,7 @@ function uploadImage($inputName, $uploadDir)
     $thumbnailPath = '';
 
     // if a file is given
-    if (trim($image['tmp_name']) != '') {
+    if (trim($image['tmp_name'])!='') {
         $ext = substr(strrchr($image['name'], '.'), 1);
 
         // generate a random new file name to avoid name conflict
@@ -72,11 +72,11 @@ function copyImage($srcFile, $destFile, $w, $h, $quality = 100)
     $tmpDest = pathinfo(strtolower($destFile));
     $size = getimagesize($srcFile);
 
-    if ($tmpDest['extension'] == 'gif' || $tmpDest['extension'] == 'jpg') {
+    if ($tmpDest['extension']=='gif' || $tmpDest['extension']=='jpg') {
         $destFile = substr_replace($destFile, 'jpg', -3);
         $dest = imagecreatetruecolor($w, $h);
     //imageantialias($dest, TRUE);
-    } elseif ($tmpDest['extension'] == 'png') {
+    } elseif ($tmpDest['extension']=='png') {
         $dest = imagecreatetruecolor($w, $h);
     //imageantialias($dest, TRUE);
     } else {
@@ -84,28 +84,28 @@ function copyImage($srcFile, $destFile, $w, $h, $quality = 100)
     }
 
     switch ($size[2]) {
-       case 1:       //GIF
+        case 1:       //GIF
            $src = imagecreatefromgif($srcFile);
-           break;
-       case 2:       //JPEG
+            break;
+        case 2:       //JPEG
            $src = imagecreatefromjpeg($srcFile);
-           break;
-       case 3:       //PNG
+            break;
+        case 3:       //PNG
            $src = imagecreatefrompng($srcFile);
-           break;
-       default:
+            break;
+        default:
            return false;
-           break;
+            break;
     }
 
     imagecopyresampled($dest, $src, 0, 0, 0, 0, $w, $h, $size[0], $size[1]);
 
     switch ($size[2]) {
-       case 1:
+        case 1:
        case 2:
            imagejpeg($dest, $destFile, $quality);
-           break;
-       case 3:
+            break;
+        case 3:
            imagepng($dest, $destFile);
     }
 

@@ -15,12 +15,12 @@ if (empty($_SESSION['username']) and empty($_SESSION['password'])) {
     $datetime = date('Y-m-d G:i:s', $hour);
     $userid = $_SESSION['userid'];
 
-    if ($module == 'approval_diskon_penjualan_barang' and $act == 'approve') {
+    if ($module=='approval_diskon_penjualan_barang' and $act=='approve') {
         $id_module = $_POST['id_module'];
 
         $jum = $_POST['jum'] - 1;
 
-        for ($i = 1; $i <= $jum; $i++) {
+        for ($i = 1; $i<=$jum; $i++) {
             $id = $_POST['id'.$i];
             $p_status = $_POST['p_status'.$i];
             $status = $_POST['status'.$i];
@@ -30,7 +30,7 @@ if (empty($_SESSION['username']) and empty($_SESSION['password'])) {
             $notrans = $_POST['notrans'.$i];
             $outlet = $_POST['outlet'.$i];
 
-            if ($p_status == '1') {
+            if ($p_status=='1') {
                 mysql_query("UPDATE penjualan_barang_detail
                     SET disc       = disc1
                       , disc_value = disc_value1      

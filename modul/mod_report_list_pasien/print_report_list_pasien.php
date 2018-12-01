@@ -12,7 +12,7 @@ $nmmodule = ucwords($r['nama_modul']);
 $id = $r['id_modul'];
 $fa_icon = $r['fa_icon'];
 
-if ($r[orientation] == 'P') {
+if ($r[orientation]=='P') {
     $orientation = 'portrait';
 } else {
     $orientation = 'landscape';
@@ -135,7 +135,7 @@ function icetak(){
 
 <!--<body onload="cetakspk()">-->
 
-<?php if ($_GET['printto'] == '2') {
+<?php if ($_GET['printto']=='2') {
     ?>
 <body onload="icetak()">
 <?php
@@ -162,7 +162,7 @@ function icetak(){
 
 <?php
 $gtampil = mysql_query("SELECT * FROM informasi_perusahaan where id_informasi_perusahaan = '1'");
- $g = mysql_fetch_array($gtampil);
+    $g = mysql_fetch_array($gtampil);
 
 if ($g['pict']) {
     $pict = $g['pict'];
@@ -172,7 +172,7 @@ if ($g['pict']) {
 
 $company = ucwords($g['company']);
 
- ?>
+    ?>
 
  <table width='100%' style="padding-top:10px;">
 <tr>
@@ -181,7 +181,7 @@ $company = ucwords($g['company']);
 </td>
 <td style="text-align:center;" width='80%'>
 <span class='h1'><?=$nmmodule; ?></span>
-<?php echo "<span class='h2'>".$g['company'].'</span><br>'; ?>
+    <?php echo "<span class='h2'>".$g['company'].'</span><br>'; ?>
 </td>
 <td width='10%'>
 &nbsp
@@ -226,7 +226,7 @@ $company = ucwords($g['company']);
                             while ($r = mysql_fetch_array($tampil)) {
                                 $tgl_lahir = date('d/m/Y', strtotime($r[tgl_lahir]));
 
-                                if ($r['gender'] == 'L') {
+                                if ($r['gender']=='L') {
                                     $gender = 'Laki-laki';
                                 } else {
                                     $gender = 'Perempuan';

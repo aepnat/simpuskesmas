@@ -1,18 +1,18 @@
-<?php
+    <?php
 
-session_start();
+    session_start();
 
-include '../../config/koneksi.php';
+    include '../../config/koneksi.php';
 
-$prd = $_GET['prd'];
+    $prd = $_GET['prd'];
 
-$notrans = $_GET['notrans'];
+    $notrans = $_GET['notrans'];
 
-$kode = $_GET['kode'];
+    $kode = $_GET['kode'];
 
-$q = '%'.trim($_REQUEST['term']).'%';
+    $q = '%'.trim($_REQUEST['term']).'%';
 
-    $sql = "select   concat(a.kode,' - ',a.barang) as barang
+        $sql = "select   concat(a.kode,' - ',a.barang) as barang
 
                 ,   a.id_barang
 
@@ -46,26 +46,26 @@ $q = '%'.trim($_REQUEST['term']).'%';
 
             ";
 
-    $tampil = mysql_query($sql);
+        $tampil = mysql_query($sql);
 
-    $data = [];
+        $data = [];
 
-    while ($r = mysql_fetch_array($tampil)) {
-        $data[] = [
+        while ($r = mysql_fetch_array($tampil)) {
+            $data[] = [
 
-                'value' => $r['barang'],
+                    'value' => $r['barang'],
 
-                'id_barang' => $r['id_barang'],
+                    'id_barang' => $r['id_barang'],
 
-                'merk' => $r['id_merk'],
+                    'merk' => $r['id_merk'],
 
-                'jenis_barang' => $r['jenis_barang'],
+                    'jenis_barang' => $r['jenis_barang'],
 
-                'unit_barang' => $r['unit_barang'],
+                    'unit_barang' => $r['unit_barang'],
 
-            ];
-    }
+                ];
+        }
 
-echo json_encode($data);
+    echo json_encode($data);
 
-flush();
+    flush();

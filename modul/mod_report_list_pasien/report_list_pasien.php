@@ -13,7 +13,7 @@ default:
 $fdate = date('Y-m-d');
 $ldate = date('Y-m-d');
 
-  ?>
+    ?>
 
  <div class="">
                    
@@ -44,10 +44,10 @@ $ldate = date('Y-m-d');
                      <option value='%'>Semua</option>
 
                      <?php for ($x = 'A'; $x <= 'Z'; $x++) {
-      ?>
+        ?>
                         <option value= '<?=$x; ?>'><?=$x; ?></option>
                      <?php
-  } ?>
+    } ?>
 
                      </select>   
                 </div> -->
@@ -65,17 +65,17 @@ $ldate = date('Y-m-d');
 
              <?php
 
-             $module = '?module='.$_GET['module'];
-             $tampil = mysql_query("SELECT id_modul as id FROM modul WHERE link='".$module."'");
-             $r = mysql_fetch_array($tampil);
+                $module = '?module='.$_GET['module'];
+                $tampil = mysql_query("SELECT id_modul as id FROM modul WHERE link='".$module."'");
+                $r = mysql_fetch_array($tampil);
 
-             echo"<input type='hidden' name='report_id' id='report_id' value=".$r[id].'>';
-             echo"<input type='hidden' name='module' value=".$_GET[module].'>';
+                echo"<input type='hidden' name='report_id' id='report_id' value=".$r[id].'>';
+                echo"<input type='hidden' name='module' value=".$_GET[module].'>';
             ?>
             </form>    
                    
                 </div>
-                <?php for ($i = 0; $i <= 20; $i++) {
+                <?php for ($i = 0; $i<=20; $i++) {
                 ?>
                     <br />
                     <?php

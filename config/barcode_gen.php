@@ -17,7 +17,7 @@ div.b128{
 </style>
 
 <?php
-global $char128asc,$char128charWidth;
+global $char128asc, $char128charWidth;
 $char128asc = ' !"#$%&\'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~';
 $char128wid = [
     '212222', '222122', '222221', '121223', '121322', '131222', '122213', '122312', '132212', '221213', // 0-9
@@ -40,7 +40,7 @@ function bar128($text)
     $onChar = 1;
     for ($x = 0; $x < strlen($text); $x++) {								// GO THRU TEXT GET LETTERS
     if (!(($pos = strpos($char128asc, $text[$x])) === false)) {	// SKIP NOT FOUND CHARS
-      $w .= $char128wid[$pos];
+        $w .= $char128wid[$pos];
         $sum += $onChar++ * $pos;
     }
     }
