@@ -1,9 +1,4 @@
-<?
-
-
-
-
-
+<?php
 if ($_GET['prd']) {
 
   $prd = $_GET['prd'];
@@ -13,10 +8,6 @@ if ($_GET['prd']) {
   $prd = DATE('Y-m');
 
 }
-
-
-
-
 
 ?>
 
@@ -188,7 +179,7 @@ function cektgl() {
 
 <?php
 
-switch($_GET[act]){
+switch($_GET[act]):
 
 
 
@@ -1938,7 +1929,7 @@ $no = 1;
 
             
 
-while ($d=mysql_fetch_array($dtampil)){  
+while ($d=mysql_fetch_array($dtampil)){
 
  $jid = $d['id_kasir_detail'];
 
@@ -1948,184 +1939,120 @@ while ($d=mysql_fetch_array($dtampil)){
  $jumlah = number_format($d['jumlah'], 0, ".", "");
 
 
-
-
  if ($jid == $d_id) {
+   echo '<form action="modul/mod_' . $module . '/aksi_' . $module . '.php?module=' . $module . '&act=add method="post" name="formData" enctype="multipart/form-data">';
 
- ?> 
-
-
-
- <form action="<?php echo"modul/mod_$module/aksi_$module.php?module=$module&act=add"; ?>" method="post" name="formData" enctype="multipart/form-data"  > 
-
-
-
-  <input type="hidden" name="module" value="<?php echo $module?>" /> 
-
-  <input type="hidden" name="id_module" value="<?php echo $id_module?>" /> 
-
-  <input type="hidden" name="imodule" value="<?php echo $imodule?>" /> 
-
-  <input type="hidden" name="k_ID" value="<?php echo $k_ID?>" />  
-
-  <input type="hidden" name="ID" value="<?php echo $jid;?>" /> 
-
-
- <tr>
-
- <td>
-
- <input type="text" name="notrans" id="notrans" value="<?=$d['notrans'];?>" autofocus required="required"  class="form-control">
-
- </td>
-
- <td>
-
- <input type="text" name="pasien" id="pasien" value="<?=$d['pasien'];?>" class="form-control">
-
-
- </td>
-
- <td>
-
-  <select name="jenis_transaksi" id="jenis_transaksi" class="form-control">
-
-
-     <?
-
+   echo '<input type="hidden" name="module" value="' . $module . '" />';
+ 
+   echo '<input type="hidden" name="id_module" value=" ' . $id_module . '" />';
+ 
+   echo '<input type="hidden" name="imodule" value="' . $imodule . '" />';
+ 
+   echo '<input type="hidden" name="k_ID" value="' . $k_ID . '" />';
+ 
+   echo  '<input type="hidden" name="ID" value="' . $jid . '" />'; 
+   
+   echo '<tr>';
+   
+   echo '<td>';
+   
+   echo '<input type="text" name="notrans" id="notrans" value=" ' .$d['notrans'] . '" autofocus required="required"  class="form-control">';
+   
+   echo '</td>';
+   
+   echo '<td>';
+   
+   echo '<input type="text" name="pasien" id="pasien" value="' . $d['pasien'] . '" class="form-control">';
+   
+   echo '</td>';
+   
+   echo '<td>';
+ 
+   echo '<select name="jenis_transaksi" id="jenis_transaksi" class="form-control">'; 
+ 
        $query = mysql_query('SELECT * FROM jenis_transaksi WHERE aktif = "Y" ORDER BY id_jenis_transaksi');
+ 
+         if($query && mysql_num_rows($query) > 0){
+ 
+            while($row = mysql_fetch_object($query)){
+               $selected = ($row->id_jenis_transaksi == @$d['id_jenis_transaksi']) ? 'selected' : '';
+               printf('<option value="%s" %s>%s</option>', $row->id_jenis_transaksi, $selected, $row->jenis_transaksi);
+            }
+ 
+         }
+ 
+   echo '</select>';
 
-        if($query && mysql_num_rows($query) > 0){
-
-           while($row = mysql_fetch_object($query)){
-
-              echo '<option value="'.$row->id_jenis_transaksi.'"';
-
-              if($row->id_jenis_transaksi == @$d['id_jenis_transaksi']) echo ' selected';
-
-              echo '>'.$row->jenis_transaksi.'</option>';
-
-           }
-
-        }        
-
-     ?>
-
-     </select>
-
- </td>
-
-
-
-  <td>
-
- <input type="text" name='ijumlah' id='ijumlah' min='1'  value="<?=$ijumlah;?>" style='text-align:right;' required="required" class="form-control col-md-7 col-xs-12"
-
-onBlur="mask_jumlah()"
-
-onFocus="mask_clear_jumlah()" 
-
->
-
-<input type="hidden" name='jumlah' id='jumlah' value="<?=$jumlah;?>" style='text-align:right;' required="required" class="form-control col-md-7 col-xs-12"> 
-
- </td>
-
-
-
- <td>
-
-  <select name="jenis_pembayaran" id="jenis_pembayaran" class="form-control" >
-
+   echo '</td>';
+   
+   echo '<td>';
+   
+   echo '<input type="text" name="ijumlah" id="ijumlah" min="1" value="' . $ijumlah . '" style="text-align:right;" required="required" class="form-control col-md-7 col-xs-12" onBlur="mask_jumlah()" onFocus="mask_clear_jumlah()"/>';
+   
+   echo '<input type="hidden" name="jumlah" id="jumlah" value="' . $jumlah . '" style="text-align:right;" required="required" class="form-control col-md-7 col-xs-12">';
+ 
+   echo '</td>';
+ 
+   echo '<td>';
+ 
+   echo '<select name="jenis_pembayaran" id="jenis_pembayaran" class="form-control">'; 
+   
+        $query = mysql_query('SELECT * FROM jenis_pembayaran WHERE aktif = "Y" ORDER BY id_jenis_pembayaran');
+ 
+         if($query && mysql_num_rows($query) > 0){
+ 
+            while($row = mysql_fetch_object($query)){
+               $selected = ($row->id_jenis_pembayaran == @$d['id_jenis_pembayaran']) ? 'selected' : '';
+               printf('<option value="%s" %s>%s</option>', $row->id_jenis_pembayaran, $selected, $row->jenis_pembayaran);
+            }
+ 
+         }
   
-     <?
+   echo '</select>';
+ 
+   echo '</td>';
 
-       $query = mysql_query('SELECT * FROM jenis_pembayaran WHERE aktif = "Y" ORDER BY id_jenis_pembayaran');
-
-        if($query && mysql_num_rows($query) > 0){
-
-           while($row = mysql_fetch_object($query)){
-
-              echo '<option value="'.$row->id_jenis_pembayaran.'"';
-
-              if($row->id_jenis_pembayaran == @$d['id_jenis_pembayaran']) echo ' selected';
-
-              echo '>'.$row->jenis_pembayaran.'</option>';
-
-           }
-
-        }        
-
-     ?>
-
-     </select>
-
- </td>
-
-<td>
-
-  <select name="penjamin" id="penjamin" class="form-control" >
-  <option value='0'></option>
+   echo '<td>';
+ 
+   echo '<select name="penjamin" id="penjamin" class="form-control">';
+   echo '<option value="0"></option>';
+    
+        $query = mysql_query('SELECT * FROM penjamin WHERE aktif = "Y" ORDER BY id_penjamin');
+ 
+         if($query && mysql_num_rows($query) > 0){
+ 
+            while($row = mysql_fetch_object($query)){
+               $selected = ($row->id_penjamin == @$d['id_penjamin']) ? 'selected' : '';
+               printf('<option value="%s" %s>%s</option>', $row->id_penjamin, $selected, $row->penjamin);
+            }
+ 
+         }
   
-     <?
+   echo '</select>';
+ 
+   echo '</td>';
+ 
+   echo '<td>';
+ 
+   echo '<textarea  name="ket" id="ket" col=1>' . $d['ket'] . '</textarea>';
+ 
+   echo '</td>'; 
+ 
+   echo '<td>';
+ 
+   echo '<button type="submit"  class="btn btn-primary btn-xs">';
+ 
+   echo '<span class="glyphicon glyphicon-floppy-disk" aria-hidden="true"></span>';
+ 
+   echo '</button>';
 
-       $query = mysql_query('SELECT * FROM penjamin WHERE aktif = "Y" ORDER BY id_penjamin');
-
-        if($query && mysql_num_rows($query) > 0){
-
-           while($row = mysql_fetch_object($query)){
-
-              echo '<option value="'.$row->id_penjamin.'"';
-
-              if($row->id_penjamin == @$d['id_penjamin']) echo ' selected';
-
-              echo '>'.$row->penjamin.'</option>';
-
-           }
-
-        }        
-
-     ?>
-
-     </select>
-
- </td>
-
-  <td>
-
-  <textarea  name="ket" id="ket" col=1><?=$d['ket'];?></textarea>
-
- </td>
-
-
- <td>
-
- <button type="submit"  class="btn btn-primary btn-xs">
-
-      <span class="glyphicon glyphicon-floppy-disk" aria-hidden="true"></span>
-
-     </button>
-
- </td>
-
- </tr>  
-
-
-
-
-
-
-</form>
-
-
-
-<?php } else { ?>
-
-
-
- <?
-
-
+   echo '</td>';
+   
+   echo '</tr>';
+ 
+   echo '</form>';
+   
+ } else { 
 
  echo"<tr>";
 
@@ -2210,12 +2137,11 @@ echo" <td>";
 
 
 
- echo"</td>";              
+ echo"</td>"; 
 
  echo"</tr>";
 
 }
-
 
 
 }
@@ -2243,11 +2169,8 @@ echo" <td>";
 
 </div>
 
-<?
+<?php
 
-break;
-
-}
+endswitch;
 
 ?>
-

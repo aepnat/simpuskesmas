@@ -1277,5 +1277,6 @@ GRAND TOTAL
 
 </body></html>
 
+<?php
 
-
+}
