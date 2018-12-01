@@ -40,7 +40,8 @@ if (empty($_SESSION['username']) and empty($_SESSION['password'])) {
         if ($_POST['ID']) {
             mysql_query("UPDATE obat SET obat   = '$_POST[obat]'
                     ,id_satuan   = '$_POST[satuan]'
-                    ,jumlah   = '$_POST[jumlah]'    
+                    ,jumlah   = '$_POST[jumlah]'
+                    ,kadaluwarsa = '$_POST[kadaluwarsa]'
                     ,upddt   = '$datetime' 
                     ,updby   = '$userid' 
                     ,aktif     = '$_POST[aktif]'  
@@ -49,6 +50,7 @@ if (empty($_SESSION['username']) and empty($_SESSION['password'])) {
             mysql_query("INSERT INTO obat(obat
                    ,id_satuan
                    ,jumlah
+                   ,kadaluwarsa
                    ,crtdt
                    ,crtby
                    ,upddt
@@ -56,12 +58,13 @@ if (empty($_SESSION['username']) and empty($_SESSION['password'])) {
                    ,aktif) 
                     VALUES('$_POST[obat]' 
                    ,'$_POST[satuan]' 
-                   ,'$_POST[jumlah]'    
+                   ,'$_POST[jumlah]'
+                   ,'$_POST[kadaluwarsa]'
                    ,'$datetime'
-                  ,'$userid'
-                  ,'$datetime'
-                  ,'$userid'
-                    ,'$_POST[aktif]')");
+                   ,'$userid'
+                   ,'$datetime'
+                   ,'$userid'
+                   ,'$_POST[aktif]')");
         }
 
         //header('location:../../main.php?module='.$module.'&id_module='.$id_module);?>

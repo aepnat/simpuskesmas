@@ -35,6 +35,7 @@ switch ($_GET[act]) {
                                 <th><h3 style='font-size:12px;'>Nama Obat</h3></th>
                                 <th><h3 style='font-size:12px;'>Satuan</h3></th>
                                 <th><h3 style='font-size:12px;text-align: right;'>Jumlah</h3></th>
+                                <th><h3 style='font-size:12px;'>Kadaluwarsa</h3></th>
                                 <th width="50px;"><h3 style='font-size:12px;'>Aktif</h3></th>   
                                 <th class='nosort' width="100px" style='text-align:center;'>
                                     <h3 style='font-size:12px;'>Aksi</h3>
@@ -54,11 +55,13 @@ switch ($_GET[act]) {
 
             while ($r = mysql_fetch_array($tampil)) {
                 $jumlah = number_format($r[jumlah], 0, '', '.');
+                $kadaluwarsa = ($r[kadaluwarsa] != '') ? date('d/m/Y', strtotime($r[kadaluwarsa])) : '-';
 
                 echo'<tr>';
                 echo"<td>$r[obat]</td>";
                 echo"<td>$r[satuan]</td>";
                 echo"<td style='text-align:right;'>$jumlah</td>";
+                echo"<td style='text-align:left;'>$kadaluwarsa</td>";
                 echo"<td style='text-align:center;'>$r[aktif]</td>";
                 echo" <td  style='text-align:center;'>";
 

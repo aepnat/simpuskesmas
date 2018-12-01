@@ -201,10 +201,11 @@ $company = ucwords($g['company']);
                             <tr>                               
                                 <th width="1%"><h3 style='font-size:12px;'>No.</h3></th>
                                 <th><h3 style='font-size:12px;'>Nama Obat</h3></th>
+                                <th><h3 style='font-size:12px;'>Kadaluwarsa</h3></th>
                                 <th><h3 style='font-size:12px;'>Satuan</h3></th>
-                                <th width="10%"><h3 style='font-size:12px;'>Saldo Awal</h3></th> 
+                                <th width="10%"><h3 style='font-size:12px;'>Stok Awal</h3></th> 
                                 <th width="10%"><h3 style='font-size:12px;'>Qty Keluar</h3></th> 
-                                <th width="10%"><h3 style='font-size:12px;'>Saldo Akhir</h3></th>   
+                                <th width="10%"><h3 style='font-size:12px;'>Stok Akhir</h3></th>   
 
                             </tr>
                         </thead>
@@ -212,7 +213,7 @@ $company = ucwords($g['company']);
                             
                          <?php
 
-                $tampil = mysql_query("SELECT a.obat,b.satuan,a.jumlah,ifnull(sum(d.qty),0) as keluar
+                $tampil = mysql_query("SELECT a.obat,a.kadaluwarsa,b.satuan,a.jumlah,ifnull(sum(d.qty),0) as keluar
                                 FROM obat a left join satuan b 
                                  ON a.id_satuan = b.id_satuan
                                  left join kunjungan_berobat c 
@@ -233,9 +234,12 @@ $company = ucwords($g['company']);
 
                     $stok = $r[jumlah] + $r[keluar];
 
+                    $kadaluwarsa = ($r[kadaluwarsa] != '') ? date('d/m/Y', strtotime($r[kadaluwarsa])) : '-';
+
                     echo'<tr>';
                     echo"<td style='text-align:center;'>$no</td>";
                     echo"<td>$r[obat]</td>";
+                    echo"<td>$kadaluwarsa</td>";
                     echo"<td>$r[satuan]</td>";
                     echo"<td style='text-align:right;'>$stok</td>";
                     echo"<td style='text-align:right;'>$r[keluar]</td>";
