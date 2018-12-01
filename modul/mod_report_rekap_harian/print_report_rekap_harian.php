@@ -512,21 +512,21 @@ function idownload(){
 									WHERE b.tanggal LIKE '$prd%'
 									AND b.status != '4'");
 
-             $d3 = mysql_fetch_array($dtampil3);
+                $d3 = mysql_fetch_array($dtampil3);
 
-             echo '<th>'.$d3['jml'].'</th>';
-             echo "<th style='text-align:right;'>".number_format($d3['rp'], 0, '.', ',').'</th>';
+                echo '<th>'.$d3['jml'].'</th>';
+                echo "<th style='text-align:right;'>".number_format($d3['rp'], 0, '.', ',').'</th>';
 
-             echo '<th></th>';
-             echo '<th></th>';
-             echo '<th></th>';
+                echo '<th></th>';
+                echo '<th></th>';
+                echo '<th></th>';
 
-             echo '<th></th>';
-             echo '<th></th>';
-             echo '<th></th>';
+                echo '<th></th>';
+                echo '<th></th>';
+                echo '<th></th>';
 
-             //total jml
-              $dtampil4 = mysql_query("SELECT COUNT(c.jumlah) as jml 
+                //total jml
+                $dtampil4 = mysql_query("SELECT COUNT(c.jumlah) as jml 
 									FROM kasir b LEFT JOIN kasir_detail c
 									ON  b.id_kasir = c.id_kasir
 									AND c.status != '4'
@@ -534,12 +534,12 @@ function idownload(){
 									WHERE b.tanggal LIKE '$prd%'
 									AND b.status != '4'");
 
-             $d4 = mysql_fetch_array($dtampil4);
+                $d4 = mysql_fetch_array($dtampil4);
 
-             echo '<th>'.$d4['jml'].'</th>';
+                echo '<th>'.$d4['jml'].'</th>';
 
-             //total pembayaran
-             $dtampil5 = mysql_query("SELECT a.groups
+                //total pembayaran
+                $dtampil5 = mysql_query("SELECT a.groups
 										,	IFNULL(SUM(c.jumlah),0) as rp  
 									FROM jenis_pembayaran a LEFT JOIN kasir b
 									ON  b.tanggal LIKE '$prd%'

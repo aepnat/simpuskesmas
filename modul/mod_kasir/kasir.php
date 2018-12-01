@@ -1189,50 +1189,50 @@ onFocus="mask_clear_jumlah()"
 
 break;
 
-case 'ubah':
+    case 'ubah':
 
-$k_ID = $_GET['k_ID'];
+    $k_ID = $_GET['k_ID'];
 
-$sql = mysql_query("SELECT * FROM kasir 
+    $sql = mysql_query("SELECT * FROM kasir 
 
                         WHERE id_kasir = '$k_ID' 
 
                         ");
 
-$r = mysql_fetch_array($sql);
+    $r = mysql_fetch_array($sql);
 
-$ID = $r['id_kasir'];
+    $ID = $r['id_kasir'];
 
-$shift = $r['id_shift'];
+    $shift = $r['id_shift'];
 
-$petugas = $r['petugas'];
+    $petugas = $r['petugas'];
 
-$status = $r['status'];
+    $status = $r['status'];
 
-$tanggal = $r['tanggal'];
+    $tanggal = $r['tanggal'];
 
-$dsql = mysql_query("SELECT * FROM kasir_detail 
+    $dsql = mysql_query("SELECT * FROM kasir_detail 
 
                         WHERE id_kasir = '$k_ID' ");
 
-$jml = mysql_num_rows($dsql);
+    $jml = mysql_num_rows($dsql);
 
-if ($jml > 0) {
+    if ($jml > 0) {
 
-    // $readonly = 'readonly';
+        // $readonly = 'readonly';
 
-    // $disabled = 'disabled';
+        // $disabled = 'disabled';
 
-    $readonly = '';
+        $readonly = '';
 
-    $disabled = '';
-} else {
-    $readonly = '';
+        $disabled = '';
+    } else {
+        $readonly = '';
 
-    $disabled = '';
-}
+        $disabled = '';
+    }
 
-?>
+    ?>
 
 
 
@@ -1339,21 +1339,21 @@ if ($jml > 0) {
 
  <?php
 
-    $query = mysql_query('SELECT * FROM shift WHERE aktif = "Y" ORDER BY shift');
+        $query = mysql_query('SELECT * FROM shift WHERE aktif = "Y" ORDER BY shift');
 
-    if ($query && mysql_num_rows($query) > 0) {
-        while ($row = mysql_fetch_object($query)) {
-            echo '<option value="'.$row->id_shift.'"';
+        if ($query && mysql_num_rows($query) > 0) {
+            while ($row = mysql_fetch_object($query)) {
+                echo '<option value="'.$row->id_shift.'"';
 
-            if ($row->id_shift == $shift) {
-                echo ' selected';
+                if ($row->id_shift == $shift) {
+                    echo ' selected';
+                }
+
+                echo '>'.$row->shift.'</option>';
             }
-
-            echo '>'.$row->shift.'</option>';
         }
-    }
 
-    ?>  
+        ?>  
 
  </select>         
 
@@ -1410,7 +1410,7 @@ if ($jml > 0) {
  <?php
 
 
-    $dSQL = "SELECT a.*,b.jenis_transaksi,c.penjamin,d.jenis_pembayaran
+        $dSQL = "SELECT a.*,b.jenis_transaksi,c.penjamin,d.jenis_pembayaran
 
 
          FROM kasir_detail a LEFT JOIN jenis_transaksi b
@@ -1433,69 +1433,69 @@ if ($jml > 0) {
 
          ";
 
-    $dtampil = mysql_query($dSQL);
+        $dtampil = mysql_query($dSQL);
 
-    $no = 1;
+        $no = 1;
 
-    while ($d = mysql_fetch_array($dtampil)) {
-        $d_id = $d['id_kasir_detail'];
+        while ($d = mysql_fetch_array($dtampil)) {
+            $d_id = $d['id_kasir_detail'];
 
-        $ijumlah = number_format($d['jumlah'], 0, '.', ',');
+            $ijumlah = number_format($d['jumlah'], 0, '.', ',');
 
-        $jumlah = number_format($d['jumlah'], 0, '.', '');
+            $jumlah = number_format($d['jumlah'], 0, '.', '');
 
-        $total = $total + $d['jumlah'];
+            $total = $total + $d['jumlah'];
 
-        $itotal = number_format($total, 0, '.', ',');
+            $itotal = number_format($total, 0, '.', ',');
 
-        echo'<tr>';
+            echo'<tr>';
 
-        echo' <td>';
+            echo' <td>';
 
-        echo $d['notrans'];
+            echo $d['notrans'];
 
-        echo'</td>';
+            echo'</td>';
 
-        echo' <td>';
+            echo' <td>';
 
-        echo $d['pasien'];
+            echo $d['pasien'];
 
-        echo'</td>';
+            echo'</td>';
 
-        echo' <td>';
+            echo' <td>';
 
-        echo $d['jenis_transaksi'];
+            echo $d['jenis_transaksi'];
 
-        echo'</td>';
+            echo'</td>';
 
-        echo" <td  style='text-align:right;'>";
+            echo" <td  style='text-align:right;'>";
 
-        echo $ijumlah;
+            echo $ijumlah;
 
-        echo'</td>';
+            echo'</td>';
 
-        echo' <td>';
+            echo' <td>';
 
-        echo $d['jenis_pembayaran'];
+            echo $d['jenis_pembayaran'];
 
-        echo'</td>';
+            echo'</td>';
 
-        echo' <td>';
+            echo' <td>';
 
-        echo $d['penjamin'];
+            echo $d['penjamin'];
 
-        echo'</td>';
+            echo'</td>';
 
-        echo' <td>';
+            echo' <td>';
 
-        echo $d['ket'];
+            echo $d['ket'];
 
-        echo'</td>';
+            echo'</td>';
 
-        echo'</tr>';
-    }
+            echo'</tr>';
+        }
 
-    ?>
+        ?>
 
 
 </table> 
@@ -1519,7 +1519,7 @@ if ($jml > 0) {
 
 <?php
 
-    break;
+        break;
 
     case 'edit':
 

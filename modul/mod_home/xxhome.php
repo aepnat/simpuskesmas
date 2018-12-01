@@ -2,18 +2,18 @@
 <?php
 switch ($_GET[act]) {
 
-default:
+    default:
 
- $gtampil = mysql_query("SELECT * FROM informasi_perusahaan where id_informasi_perusahaan = '1'");
-    $g = mysql_fetch_array($gtampil);
+     $gtampil = mysql_query("SELECT * FROM informasi_perusahaan where id_informasi_perusahaan = '1'");
+        $g = mysql_fetch_array($gtampil);
 
-if ($g['pict']) {
-    $pict = $g['pict'];
-} else {
-    $pict = '';
-}
+    if ($g['pict']) {
+        $pict = $g['pict'];
+    } else {
+        $pict = '';
+    }
 
-?>
+    ?>
 <div class="col-md-12 col-sm-12 col-xs-12 ">
 <div class="x_panel">
    <div class="x_title">

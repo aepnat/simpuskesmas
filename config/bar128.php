@@ -40,7 +40,7 @@ function bar128($text)
     $onChar = 1;
     for ($x = 0; $x < strlen($text); $x++) {								// GO THRU TEXT GET LETTERS
     if (!(($pos = strpos($char128asc, $text[$x])) === false)) {	// SKIP NOT FOUND CHARS
-      $w .= $char128wid[$pos];
+        $w .= $char128wid[$pos];
         $sum += $onChar++ * $pos;
     }
     }
