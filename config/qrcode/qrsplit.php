@@ -290,7 +290,7 @@
             $p = 0;
 
             while ($p < $stringLen) {
-                $mode = self::identifyMode(substr($this->dataStr, $p), $this->modeHint);
+                $mode = $this->identifyMode(substr($this->dataStr, $p));
                 if ($mode == QR_MODE_KANJI) {
                     $p += 2;
                 } else {
