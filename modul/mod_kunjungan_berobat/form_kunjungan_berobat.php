@@ -88,13 +88,17 @@ $modul = $_GET['module'];
            <div class="form-group">
             <label class="control-label col-md-3 col-sm-3 col-xs-12" style='padding-top:10px;'>Pasien :</label>
               <div class="col-md-6 col-sm-6 col-xs-12" >
-                 <select required name="pasien" class="form-control">
+                 <select required name="pasien" class="form-control select2_single">
                  <option>--Pilih Pasien--</option>                
                     <?php
                         $query = mysql_query('SELECT * FROM pasien ORDER BY nama');
         if ($query && mysql_num_rows($query) > 0) {
             while ($row = mysql_fetch_object($query)) {
-                $pasien = $row->ktp.'-'.$row->nama;
+                if ($row->ktp != '') {
+                    $pasien = sprintf('%s - %s', $row->ktp, ($row->nama));
+                } else {
+                    $pasien = ($row->nama);
+                }
 
                 echo '<option value="'.$row->id_pasien.'"';
                 if ($row->id_pasien == @$data->id_pasien) {
@@ -194,7 +198,7 @@ $modul = $_GET['module'];
         <script>
             $(document).ready(function () {
                 $(".select2_single").select2({
-                    placeholder: "Select a state",
+                    placeholder: "Pilih Pasien",
                     allowClear: true
                 });
                 $(".select2_group").select2({});
