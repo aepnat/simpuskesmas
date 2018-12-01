@@ -70,8 +70,8 @@ switch ($_GET[act]) {
                                     $gender = 'Perempuan';
                                 }
 
-                                $ktp = ($r['ktp'] != "") ? $r['ktp'] : '-';
-                                $bpjs = ($r['bpjs'] != "") ? $r['bpjs'] : '-';
+                                $ktp = ($r['ktp'] != '') ? $r['ktp'] : '-';
+                                $bpjs = ($r['bpjs'] != '') ? $r['bpjs'] : '-';
 
                                 echo'<tr>';
                                 echo"<td>$r[nama]</td>";

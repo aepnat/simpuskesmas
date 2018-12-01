@@ -92,13 +92,13 @@ $modul = $_GET['module'];
                         <option>--Pilih Pasien --</option>
                         <?php
                             $query = mysql_query('SELECT * FROM pasien ORDER BY nama');
-                            if ($query && mysql_num_rows($query) > 0) {
-                                while ($row = mysql_fetch_object($query)) {
-                                    $pasien = $row->ktp.'-'.$row->nama;
-                                    $selected = ($row->id_pasien == @$data->id_pasien) ? 'selected' : '';
-                                    printf('<option value="%s" %s>%s</option>', $row->id_pasien, $selected, $pasien);
-                                }
-                            } ?>
+        if ($query && mysql_num_rows($query) > 0) {
+            while ($row = mysql_fetch_object($query)) {
+                $pasien = $row->ktp.'-'.$row->nama;
+                $selected = ($row->id_pasien == @$data->id_pasien) ? 'selected' : '';
+                printf('<option value="%s" %s>%s</option>', $row->id_pasien, $selected, $pasien);
+            }
+        } ?>
                     </select>
                 </div>
             </div>
@@ -110,12 +110,12 @@ $modul = $_GET['module'];
                         <option>--Pilih Poliklinik --</option>
                         <?php
                             $query = mysql_query('SELECT * FROM poli ORDER BY poli');
-                            if ($query && mysql_num_rows($query) > 0) {
-                                while ($row = mysql_fetch_object($query)) {
-                                    $selected = ($row->id_poli == @$data->id_poli) ? 'selected' : '';
-                                    printf('<option value="%s" %s>%s</option>', $row->id_poli, $selected, $row->poli);
-                                }
-                            } ?>
+        if ($query && mysql_num_rows($query) > 0) {
+            while ($row = mysql_fetch_object($query)) {
+                $selected = ($row->id_poli == @$data->id_poli) ? 'selected' : '';
+                printf('<option value="%s" %s>%s</option>', $row->id_poli, $selected, $row->poli);
+            }
+        } ?>
                     </select>
                 </div>
             </div>
@@ -127,12 +127,12 @@ $modul = $_GET['module'];
                         <option>--Pilih Penyakit --</option>
                         <?php
                             $query = mysql_query('SELECT * FROM penyakit ORDER BY penyakit');
-                            if ($query && mysql_num_rows($query) > 0) {
-                                while ($row = mysql_fetch_object($query)) {
-                                    $selected = ($row->id_penyakit == @$data->id_penyakit) ? 'selected' : '';
-                                    printf('<option value="%s" %s>%s</option>', $row->id_penyakit, $selected, $row->penyakit);
-                                }
-                            } ?>
+        if ($query && mysql_num_rows($query) > 0) {
+            while ($row = mysql_fetch_object($query)) {
+                $selected = ($row->id_penyakit == @$data->id_penyakit) ? 'selected' : '';
+                printf('<option value="%s" %s>%s</option>', $row->id_penyakit, $selected, $row->penyakit);
+            }
+        } ?>
                     </select>
                 </div>
             </div>
@@ -167,7 +167,8 @@ $modul = $_GET['module'];
                 </div>
             </div>
 
-            <?php if (@$data->rujukan == 'Y') {?>
+            <?php if (@$data->rujukan == 'Y') {
+            ?>
             <div class="form-group">
                 <label class="control-label col-md-3 col-sm-3 col-xs-12" style='padding-top:10px;'>Rujukan
                     :</label>
@@ -176,7 +177,9 @@ $modul = $_GET['module'];
                     <input type=radio name='rujukan' value='N' class="flat"> T
                 </div>
             </div>
-            <?php } else { ?>
+            <?php
+        } else {
+            ?>
 
             <div class="form-group">
                 <label class="control-label col-md-3 col-sm-3 col-xs-12" style='padding-top:10px;'>Rujukan
@@ -186,7 +189,8 @@ $modul = $_GET['module'];
                     <input type=radio name='rujukan' value='N' class="flat" checked> T
                 </div>
             </div>
-            <?php } ?>
+            <?php
+        } ?>
 
             <div class="form-group">
                 <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3" style='margin-top:20px;'>

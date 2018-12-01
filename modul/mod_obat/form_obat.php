@@ -84,15 +84,15 @@
                     <select name="satuan" class="form-control">
                         <?php
                         $query = mysql_query('SELECT * FROM satuan ORDER BY satuan');
-                        if ($query && mysql_num_rows($query) > 0) {
-                            while ($row = mysql_fetch_object($query)) {
-                                echo '<option value="'.$row->id_satuan.'"';
-                                if ($row->id_satuan == @$data->id_satuan) {
-                                    echo ' selected';
-                                }
-                                echo '>'.$row->satuan.'</option>';
-                            }
-                        } ?>
+        if ($query && mysql_num_rows($query) > 0) {
+            while ($row = mysql_fetch_object($query)) {
+                echo '<option value="'.$row->id_satuan.'"';
+                if ($row->id_satuan == @$data->id_satuan) {
+                    echo ' selected';
+                }
+                echo '>'.$row->satuan.'</option>';
+            }
+        } ?>
                     </select>
                 </div>
 

@@ -46,8 +46,7 @@
             } else {
                 die('Data modul tidak ditemukan');
             }
-        }
-    ?>
+        } ?>
 
 
     <div class="ix_panel">
