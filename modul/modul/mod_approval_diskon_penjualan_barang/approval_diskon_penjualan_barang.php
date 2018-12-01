@@ -6,7 +6,7 @@
 
 <script type="text/javascript">
 
-<?php for ($i = 1; $i<=100; $i++) {
+<?php for ($i = 1; $i <= 100; $i++) {
     ?>  
 
 function Getstatus<?php echo $i; ?>(str) {
@@ -26,7 +26,7 @@ function Getstatus<?php echo $i; ?>(str) {
 
 
 
-<?php for ($i = 1; $i<=100; $i++) {
+<?php for ($i = 1; $i <= 100; $i++) {
         ?>  
 
 <script>
@@ -92,39 +92,39 @@ switch ($_GET[act]) {
 
     if ($_SESSION['outlet'] == '0') {
         $d_outlet = '%';
-} else {
+    } else {
         $d_outlet = $_SESSION['outlet'];
-}
+    }
 
     if ($_GET['ioutlet']) {
         $outlet = $_GET['ioutlet'];
-} else {
+    } else {
         if ($_SESSION['outlet'] == '0') {
             $outlet = '1';
         } else {
             $outlet = $_SESSION['outlet'];
         }
-}
+    }
 
     $query = mysql_query('SELECT * FROM periode ');
 
     if ($query && mysql_num_rows($query) == 1) {
         $data = mysql_fetch_object($query);
-}
+    }
 
     $iprd = $data->periode;
 
     if ($_GET['prd']) {
         $prd = $_GET['prd'];
-} else {
+    } else {
         $prd = $prd;
-}
+    }
 
     if ($_GET['istatus']) {
         $status = $_GET['istatus'];
-} else {
+    } else {
         $status = '0';
-}
+    }
 
         ?>
 

@@ -16,7 +16,7 @@ if (empty($_SESSION['username']) and empty($_SESSION['password'])) {
     $userid = $_SESSION['userid'];
 
     // Hapus modul
-    if ($module=='user' and $act=='hapus') {
+    if ($module == 'user' and $act == 'hapus') {
         $id = $_GET['id'];
         $id_module = $_GET['id_module'];
 
@@ -26,7 +26,7 @@ if (empty($_SESSION['username']) and empty($_SESSION['password'])) {
     }
 
     // Input group
-    elseif ($module=='user' and $act=='input') {
+    elseif ($module == 'user' and $act == 'input') {
         $id_module = $_POST['id_module'];
 
         $lokasi_file = $_FILES['fupload']['tmp_name'];
@@ -37,25 +37,25 @@ if (empty($_SESSION['username']) and empty($_SESSION['password'])) {
 
         $pass = $_POST[password];
 
-        if ($_POST['r_input']=='Y') {
+        if ($_POST['r_input'] == 'Y') {
             $r_input = 'Y';
         } else {
             $r_input = 'N';
         }
 
-        if ($_POST['r_edit']=='Y') {
+        if ($_POST['r_edit'] == 'Y') {
             $r_edit = 'Y';
         } else {
             $r_edit = 'N';
         }
 
-        if ($_POST['r_delete']=='Y') {
+        if ($_POST['r_delete'] == 'Y') {
             $r_delete = 'Y';
         } else {
             $r_delete = 'N';
         }
 
-        if ($_POST['r_admin']=='Y') {
+        if ($_POST['r_admin'] == 'Y') {
             $r_admin = 'Y';
         } else {
             $r_admin = 'N';

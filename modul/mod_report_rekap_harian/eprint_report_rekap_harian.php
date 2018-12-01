@@ -227,7 +227,7 @@ header('Content-Transfer-Encoding: binary ');
             <tr>
 
                <?php 
-                    for ($j = 1; $j<=$hjml; $j++) {
+                    for ($j = 1; $j <= $hjml; $j++) {
                         echo '<th>JML</th>';
                         echo '<th>RUPIAH</th>';
                     }
@@ -252,12 +252,12 @@ header('Content-Transfer-Encoding: binary ');
 
       	<tbody>
 
-      	  <?php for ($i = 1; $i<=31; $i++) {
+      	  <?php for ($i = 1; $i <= 31; $i++) {
                     echo'<tr>';
 
                     echo"<td style='text-align:center;'>$i</td>";
 
-                    if (strlen($i)=='1') {
+                    if (strlen($i) == '1') {
                         $tgl = $prd.'-0'.$i;
                     } else {
                         $tgl = $prd.'-'.$i;
@@ -505,7 +505,7 @@ header('Content-Transfer-Encoding: binary ');
 
     $month = date('m', strtotime($iprd)) * 1;
 
-    if ($month=='1') {
+    if ($month == '1') {
         $imonth = 12;
     } else {
         $imonth = $month - 1;

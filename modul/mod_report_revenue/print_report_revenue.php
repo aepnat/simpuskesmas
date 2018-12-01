@@ -120,7 +120,7 @@ $nprd = getBulan1($month).' '.$year;
 
 $jenis_transaksi = $_GET['jenis_transaksi'];
 
-if ($tipe=='R') {
+if ($tipe == 'R') {
     $kertas = 'portrait';
 } else {
     $kertas = 'landscape';
@@ -286,7 +286,7 @@ function idownload(){
 
         ?>
 
-      <?php if ($tipe=='R') {
+      <?php if ($tipe == 'R') {
             ?>
 
 
@@ -425,7 +425,7 @@ function idownload(){
 
 
                    <?php 
-                        for ($j = 1; $j<=$hjml; $j++) {
+                        for ($j = 1; $j <= $hjml; $j++) {
                             echo '<th>KUNJ</th>';
                             echo '<th>REV</th>';
                         } ?>	
@@ -614,7 +614,7 @@ function idownload(){
 
             $month = date('m', strtotime($iprd)) * 1;
 
-            if ($month=='1') {
+            if ($month == '1') {
                 $imonth = 12;
             } else {
                 $imonth = $month - 1;

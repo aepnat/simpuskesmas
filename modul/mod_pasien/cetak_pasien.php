@@ -387,7 +387,7 @@ $r = mysql_fetch_array($tampil);
 
 $tgl_lahir = date('d/m/Y', strtotime($r[tgl_lahir]));
 
-if ($r['gender']=='L') {
+if ($r['gender'] == 'L') {
     $gender = 'Laki-laki';
 } else {
     $gender = 'Perempuan';

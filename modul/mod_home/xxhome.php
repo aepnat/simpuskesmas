@@ -9,9 +9,9 @@ switch ($_GET[act]) {
 
     if ($g['pict']) {
         $pict = $g['pict'];
-} else {
+    } else {
         $pict = '';
-}
+    }
 
     ?>
 <div class="col-md-12 col-sm-12 col-xs-12 ">

@@ -25,7 +25,7 @@ if (empty($_SESSION['username']) and empty($_SESSION['password'])) {
 
     // Hapus modul
 
-    if ($module=='kasir' and $act=='hapus') {
+    if ($module == 'kasir' and $act == 'hapus') {
         $id = $_GET['id'];
 
         $id_module = $_GET['id_module'];
@@ -53,7 +53,7 @@ if (empty($_SESSION['username']) and empty($_SESSION['password'])) {
 
     // Input group
 
-    elseif ($module=='kasir' and $act=='input') {
+    elseif ($module == 'kasir' and $act == 'input') {
         $id_module = $_POST['id_module'];
 
         if ($_POST['ID']) {
@@ -122,7 +122,7 @@ if (empty($_SESSION['username']) and empty($_SESSION['password'])) {
   
 
   <?php
-    } elseif ($module=='kasir' and $act=='add') {
+    } elseif ($module == 'kasir' and $act == 'add') {
         $id_module = $_POST['id_module'];
 
         $k_ID = $_POST['k_ID'];
@@ -242,7 +242,7 @@ if (empty($_SESSION['username']) and empty($_SESSION['password'])) {
   
 
   <?php
-    } elseif ($module=='kasir' and $act=='dhapus') {
+    } elseif ($module == 'kasir' and $act == 'dhapus') {
         $id = $_GET['id'];
 
         $id_module = $_GET['id_module'];
@@ -258,7 +258,7 @@ if (empty($_SESSION['username']) and empty($_SESSION['password'])) {
                               WHERE id_kasir_detail = '$id'");
 
         header('location:../../main.php?module='.$module.'&id_module='.$id_module.'&act=save&ID='.$k_ID);
-    } elseif ($module=='kasir' and $act=='verified') {
+    } elseif ($module == 'kasir' and $act == 'verified') {
         $id = $_GET['id'];
 
         $id_module = $_GET['id_module'];
@@ -310,7 +310,7 @@ if (empty($_SESSION['username']) and empty($_SESSION['password'])) {
                               ");
 
         header('location:../../main.php?module='.$module.'&id_module='.$id_module.'&act=save&notrans='.$notrans.'&prd='.$prd.'&kode='.$kode.'&outlet='.$outlet);
-    } elseif ($module=='kasir' and $act=='reset') {
+    } elseif ($module == 'kasir' and $act == 'reset') {
         $id = $_GET['id'];
 
         $id_module = $_GET['id_module'];

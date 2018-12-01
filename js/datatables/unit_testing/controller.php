@@ -47,8 +47,8 @@
                 function fnReadDir(&$aReturn, $path)
                 {
                     $rDir = opendir($path);
-                    while (($file = readdir($rDir))!==false) {
-                        if ($file=='.' || $file=='..' || $file=='.DS_Store') {
+                    while (($file = readdir($rDir)) !== false) {
+                        if ($file == '.' || $file == '..' || $file == '.DS_Store') {
                             continue;
                         } elseif (is_dir($path.'/'.$file)) {
                             fnReadDir($aReturn, $path.'/'.$file);
@@ -63,7 +63,7 @@
                 $aFiles = [];
                 fnReadDir($aFiles, 'tests');
 
-                for ($i = 0; $i<count($aFiles); $i++) {
+                for ($i = 0; $i < count($aFiles); $i++) {
                     $sTemplate;
                     $fp = fopen($aFiles[$i], 'r');
                     fscanf($fp, '// DATA_TEMPLATE: %s', $sTemplate);

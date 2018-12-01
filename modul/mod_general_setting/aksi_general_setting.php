@@ -17,7 +17,7 @@ if (empty($_SESSION['username']) and empty($_SESSION['password'])) {
     $datetime = date('Y-m-d G:i:s', $hour);
     $userid = $_SESSION['userid'];
 
-    if ($module=='general_setting' and $act=='input') {
+    if ($module == 'general_setting' and $act == 'input') {
         $id_module = $_POST['id_module'];
 
         $lokasi_file = $_FILES['fupload']['tmp_name'];
