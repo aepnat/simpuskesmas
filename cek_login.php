@@ -32,6 +32,7 @@ if ($find > 0) {
     //  session_register("posisi");
     //  session_register("uclient");
 
+    $id_user = $r['id_user'];
     $_SESSION['userid'] = $r['id_user'];
     $_SESSION['username'] = $r['username'];
     $_SESSION['iusername'] = $r['username'];
@@ -68,6 +69,11 @@ if ($find > 0) {
         $id_module = '54';
         $kode = '';
     }
+
+    // update user last login
+    $loginDateFormat = 'Y-m-d H:i:s';
+    $last_login = date($loginDateFormat, time());
+    $sql = mysql_query("UPDATE user SET last_login='$last_login' WHERE id_user='$id_user'");
 
     header('location:main.php'.$imodule.'&id_module='.$id_module.'&kode='.$kode.'');
 } else {
