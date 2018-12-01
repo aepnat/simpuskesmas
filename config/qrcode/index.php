@@ -49,13 +49,13 @@
 
     $matrixPointSize = 4;
     if (isset($_REQUEST['size'])) {
-        $matrixPointSize = min(max((int) $_REQUEST['size'], 1), 10);
+        $matrixPointSize = min(max((int)$_REQUEST['size'], 1), 10);
     }
 
     if (isset($_REQUEST['data'])) {
 
         //it's very important!
-        if (trim($_REQUEST['data']) == '') {
+        if (trim($_REQUEST['data'])=='') {
             die('data cannot be empty! <a href="?">back</a>');
         }
 
@@ -76,15 +76,15 @@
     echo '<form action="index.php" method="post">
         Data:&nbsp;<input name="data" value="'.(isset($_REQUEST['data']) ? htmlspecialchars($_REQUEST['data']) : 'PHP QR Code :)').'" />&nbsp;
         ECC:&nbsp;<select name="level">
-            <option value="L"'.(($errorCorrectionLevel == 'L') ? ' selected' : '').'>L - smallest</option>
-            <option value="M"'.(($errorCorrectionLevel == 'M') ? ' selected' : '').'>M</option>
-            <option value="Q"'.(($errorCorrectionLevel == 'Q') ? ' selected' : '').'>Q</option>
-            <option value="H"'.(($errorCorrectionLevel == 'H') ? ' selected' : '').'>H - best</option>
+            <option value="L"'.(($errorCorrectionLevel=='L') ? ' selected' : '').'>L - smallest</option>
+            <option value="M"'.(($errorCorrectionLevel=='M') ? ' selected' : '').'>M</option>
+            <option value="Q"'.(($errorCorrectionLevel=='Q') ? ' selected' : '').'>Q</option>
+            <option value="H"'.(($errorCorrectionLevel=='H') ? ' selected' : '').'>H - best</option>
         </select>&nbsp;
         Size:&nbsp;<select name="size">';
 
-    for ($i = 1; $i <= 10; $i++) {
-        echo '<option value="'.$i.'"'.(($matrixPointSize == $i) ? ' selected' : '').'>'.$i.'</option>';
+    for ($i = 1; $i<=10; $i++) {
+        echo '<option value="'.$i.'"'.(($matrixPointSize==$i) ? ' selected' : '').'>'.$i.'</option>';
     }
 
     echo '</select>&nbsp;

@@ -44,7 +44,7 @@ $modul = $_GET['module'];
 
         if ($id) {
             $query = mysql_query('SELECT * FROM kunjungan_berobat WHERE id_kunjungan_berobat = "'.$id.'"');
-            if ($query && mysql_num_rows($query) == 1) {
+            if ($query && mysql_num_rows($query)==1) {
                 $data = mysql_fetch_object($query);
             } else {
                 die('Data modul tidak ditemukan');
@@ -101,12 +101,12 @@ $modul = $_GET['module'];
                  <option>--Pilih Pasien--</option>                
                     <?php
                         $query = mysql_query('SELECT * FROM pasien ORDER BY nama');
-        if ($query && mysql_num_rows($query) > 0) {
+        if ($query && mysql_num_rows($query)>0) {
             while ($row = mysql_fetch_object($query)) {
                 $pasien = $row->ktp.'-'.$row->nama;
 
                 echo '<option value="'.$row->id_pasien.'"';
-                if ($row->id_pasien == @$data->id_pasien) {
+                if ($row->id_pasien==@$data->id_pasien) {
                     echo ' selected';
                 }
                 echo '>'.$pasien.'</option>';
@@ -128,10 +128,10 @@ $modul = $_GET['module'];
                  <option>--Pilih Poliklinik --</option>                          
                     <?php
                         $query = mysql_query('SELECT * FROM poli ORDER BY poli');
-        if ($query && mysql_num_rows($query) > 0) {
+        if ($query && mysql_num_rows($query)>0) {
             while ($row = mysql_fetch_object($query)) {
                 echo '<option value="'.$row->id_poli.'"';
-                if ($row->id_poli == @$data->id_poli) {
+                if ($row->id_poli==@$data->id_poli) {
                     echo ' selected';
                 }
                 echo '>'.$row->poli.'</option>';
@@ -191,10 +191,10 @@ $modul = $_GET['module'];
                                          <option value='0'></option>
                                             <?php
                                                 $query = mysql_query('SELECT * FROM obat ORDER BY obat');
-        if ($query && mysql_num_rows($query) > 0) {
+        if ($query && mysql_num_rows($query)>0) {
             while ($row = mysql_fetch_object($query)) {
                 echo '<option value="'.$row->id_obat.'"';
-                if ($row->id_obat == @$r['id_obat']) {
+                if ($row->id_obat==@$r['id_obat']) {
                     echo ' selected';
                 }
                 echo '>'.$row->obat.'</option>';
@@ -263,10 +263,10 @@ $modul = $_GET['module'];
                                          <option value='0'></option>
                                             <?php
                                                 $query = mysql_query('SELECT * FROM obat ORDER BY obat');
-            if ($query && mysql_num_rows($query) > 0) {
+            if ($query && mysql_num_rows($query)>0) {
                 while ($row = mysql_fetch_object($query)) {
                     echo '<option value="'.$row->id_obat.'"';
-                    if ($row->id_obat == @$r['id_obat']) {
+                    if ($row->id_obat==@$r['id_obat']) {
                         echo ' selected';
                     }
                     echo '>'.$row->obat.'</option>';
@@ -276,12 +276,12 @@ $modul = $_GET['module'];
                                        </td>
 
                                       <td>
-                                          <input type="number" required name='qty' id='iqty<?php echo $no; ?>' min = '0' value="<?php if ($jml > 0) {
+                                          <input type="number" required name='qty' id='iqty<?php echo $no; ?>' min = '0' value="<?php if ($jml>0) {
                 echo number_format($r['qty'], 0, '.', '');
             } else {
                 echo 1;
             } ?>" style='text-align:right;' class="form-control col-md-7 col-xs-12">  
-                                          <input type="hidden" name='eqty' id='eiqty<?php echo $no; ?>' min = '0' value="<?php if ($jml > 0) {
+                                          <input type="hidden" name='eqty' id='eiqty<?php echo $no; ?>' min = '0' value="<?php if ($jml>0) {
                 echo number_format($r['qty'], 0, '.', '');
             } else {
                 echo 1;

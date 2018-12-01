@@ -110,7 +110,7 @@
 
       <ul class="nav nav-tabs">
 
-       <li <?php if ($tab == 'ip') {
+       <li <?php if ($tab=='ip') {
             echo 'class="active"';
         } ?> ><a data-toggle="tab" href="#home">Informasi Perusahaan</a>
         </li>
@@ -124,7 +124,7 @@
 
       <div class="tab-content">
 
-          <div id="home" class="tab-pane fade <?php if ($tab == 'ip') {
+          <div id="home" class="tab-pane fade <?php if ($tab=='ip') {
             echo 'in active primary';
         } ?>">
           <br>
@@ -138,7 +138,7 @@
 
         if ($id) {
             $query = mysql_query('SELECT * FROM informasi_perusahaan WHERE id_informasi_perusahaan = "'.$id.'"');
-            if ($query && mysql_num_rows($query) == 1) {
+            if ($query && mysql_num_rows($query)==1) {
                 $data = mysql_fetch_object($query);
             } else {
                 die('Data general_setting tidak ditemukan');
@@ -223,7 +223,7 @@
 
           </div>
 
-          <div id="menu1" class="tab-pane fade <?php if ($tab == 'sa') {
+          <div id="menu1" class="tab-pane fade <?php if ($tab=='sa') {
             echo 'in active primary';
         } ?>">
               <br>
@@ -261,7 +261,7 @@
         $no = 1;
 
         while ($r = mysql_fetch_array($tampil)) {
-            if ($r['nilai'] == '0') {
+            if ($r['nilai']=='0') {
                 $disabled = 'readonly';
             } else {
                 $disabled = '';
@@ -287,10 +287,10 @@
                                          <select name="jenis_posting" class="form-control" required >
                                           <?php
                                             $query = mysql_query('SELECT * FROM jenis_posting ORDER BY jenis_posting');
-            if ($query && mysql_num_rows($query) > 0) {
+            if ($query && mysql_num_rows($query)>0) {
                 while ($row = mysql_fetch_object($query)) {
                     echo '<option value="'.$row->id_jenis_posting.'"';
-                    if ($row->id_jenis_posting == $r['id_jenis_posting']) {
+                    if ($row->id_jenis_posting==$r['id_jenis_posting']) {
                         echo ' selected';
                     }
                     echo '>'.$row->jenis_posting.'</option>';
@@ -308,10 +308,10 @@
                                                                   WHERE parentid != "0" 
                                                                   
                                                                   ORDER BY norek');
-            if ($query && mysql_num_rows($query) > 0) {
+            if ($query && mysql_num_rows($query)>0) {
                 while ($row = mysql_fetch_object($query)) {
                     echo '<option value="'.$row->id_rekening.'"';
-                    if ($row->id_rekening == $r['rek_debet']) {
+                    if ($row->id_rekening==$r['rek_debet']) {
                         echo ' selected';
                     }
                     echo '>'.$row->norek.' - '.$row->rekening.'</option>';
@@ -329,10 +329,10 @@
                                                                   WHERE parentid !=  "0"  
                                                                   
                                                                   ORDER BY norek');
-            if ($query && mysql_num_rows($query) > 0) {
+            if ($query && mysql_num_rows($query)>0) {
                 while ($row = mysql_fetch_object($query)) {
                     echo '<option value="'.$row->id_rekening.'"';
-                    if ($row->id_rekening == $r['rek_kredit']) {
+                    if ($row->id_rekening==$r['rek_kredit']) {
                         echo ' selected';
                     }
                     echo '>'.$row->norek.' - '.$row->rekening.'</option>';
@@ -375,7 +375,7 @@
 
           </div>    
 
-          <div id="menu2" class="tab-pane fade <?php if ($tab == 'pd') {
+          <div id="menu2" class="tab-pane fade <?php if ($tab=='pd') {
             echo 'in active primary';
         } ?>">
               <br>
@@ -388,7 +388,7 @@
         if ($id) {
             $query = mysql_query('SELECT * FROM pg_penarikan_dana
                                              WHERE  prd = "'.$prd.'" ');
-            if ($query && mysql_num_rows($query) == 1) {
+            if ($query && mysql_num_rows($query)==1) {
                 $data = mysql_fetch_object($query);
             } else {
                 die('Data pg_penarikan_dana tidak ditemukan');
@@ -455,10 +455,10 @@
                                WHERE parentid != "0" 
                                
                                ORDER BY norek');
-        if ($query && mysql_num_rows($query) > 0) {
+        if ($query && mysql_num_rows($query)>0) {
             while ($row = mysql_fetch_object($query)) {
                 echo '<option value="'.$row->id_rekening.'"';
-                if ($row->id_rekening == $data->rek_debet) {
+                if ($row->id_rekening==$data->rek_debet) {
                     echo ' selected';
                 }
                 echo '>'.$row->norek.' - '.$row->rekening.'</option>';
@@ -477,10 +477,10 @@
                                WHERE parentid != "0" 
                                
                                ORDER BY norek');
-        if ($query && mysql_num_rows($query) > 0) {
+        if ($query && mysql_num_rows($query)>0) {
             while ($row = mysql_fetch_object($query)) {
                 echo '<option value="'.$row->id_rekening.'"';
-                if ($row->id_rekening == $data->rek_kredit) {
+                if ($row->id_rekening==$data->rek_kredit) {
                     echo ' selected';
                 }
                 echo '>'.$row->norek.' - '.$row->rekening.'</option>';
@@ -511,7 +511,7 @@
 
           </div>    
 
-          <div id="menu3" class="tab-pane fade <?php if ($tab == 'pm') {
+          <div id="menu3" class="tab-pane fade <?php if ($tab=='pm') {
             echo 'in active primary';
         } ?>">
               <br>
@@ -519,11 +519,11 @@
 
                   <ul class="nav nav-tabs" >
 
-                   <li <?php if ($stab == 'tunai') {
+                   <li <?php if ($stab=='tunai') {
             echo 'class="active"';
         } ?> ><a data-toggle="tab" href="#tunai">Dana Tunai</a>
                     </li>
-                    <li <?php if ($stab == 'barang') {
+                    <li <?php if ($stab=='barang') {
             echo 'class="active"';
         } ?> ><a data-toggle="tab" href="#barang">Barang</a>
                     </li>
@@ -531,7 +531,7 @@
 
                   <div class="tab-content">
 
-                      <div id="tunai" class="tab-pane fade <?php if ($stab == 'tunai') {
+                      <div id="tunai" class="tab-pane fade <?php if ($stab=='tunai') {
             echo 'in active primary';
         } ?>">
                       <br>
@@ -604,10 +604,10 @@
                                             $query = mysql_query('SELECT * FROM rekening 
                                                                   WHERE parentid != "0"         
                                                                   ORDER BY norek');
-        if ($query && mysql_num_rows($query) > 0) {
+        if ($query && mysql_num_rows($query)>0) {
             while ($row = mysql_fetch_object($query)) {
                 echo '<option value="'.$row->id_rekening.'"';
-                if ($row->id_rekening == $k['rek_debet']) {
+                if ($row->id_rekening==$k['rek_debet']) {
                     echo ' selected';
                 }
                 echo '>'.$row->norek.' - '.$row->rekening.'</option>';
@@ -623,10 +623,10 @@
                                             $query = mysql_query('SELECT * FROM rekening 
                                                                   WHERE parentid != "0" 
                                                                   ORDER BY norek');
-        if ($query && mysql_num_rows($query) > 0) {
+        if ($query && mysql_num_rows($query)>0) {
             while ($row = mysql_fetch_object($query)) {
                 echo '<option value="'.$row->id_rekening.'"';
-                if ($row->id_rekening == $k['rek_kredit']) {
+                if ($row->id_rekening==$k['rek_kredit']) {
                     echo ' selected';
                 }
                 echo '>'.$row->norek.' - '.$row->rekening.'</option>';
@@ -654,10 +654,10 @@
                                             $query = mysql_query('SELECT * FROM rekening 
                                                                   WHERE parentid != "0"         
                                                                   ORDER BY norek');
-        if ($query && mysql_num_rows($query) > 0) {
+        if ($query && mysql_num_rows($query)>0) {
             while ($row = mysql_fetch_object($query)) {
                 echo '<option value="'.$row->id_rekening.'"';
-                if ($row->id_rekening == $k['rek_debet_pelunasan']) {
+                if ($row->id_rekening==$k['rek_debet_pelunasan']) {
                     echo ' selected';
                 }
                 echo '>'.$row->norek.' - '.$row->rekening.'</option>';
@@ -673,10 +673,10 @@
                                             $query = mysql_query('SELECT * FROM rekening 
                                                                   WHERE parentid != "0" 
                                                                   ORDER BY norek');
-        if ($query && mysql_num_rows($query) > 0) {
+        if ($query && mysql_num_rows($query)>0) {
             while ($row = mysql_fetch_object($query)) {
                 echo '<option value="'.$row->id_rekening.'"';
-                if ($row->id_rekening == $k['rek_kredit_pelunasan']) {
+                if ($row->id_rekening==$k['rek_kredit_pelunasan']) {
                     echo ' selected';
                 }
                 echo '>'.$row->norek.' - '.$row->rekening.'</option>';
@@ -832,10 +832,10 @@
                                                                   WHERE parentid != "0" 
                                                                   
                                                                   ORDER BY norek');
-        if ($query && mysql_num_rows($query) > 0) {
+        if ($query && mysql_num_rows($query)>0) {
             while ($row = mysql_fetch_object($query)) {
                 echo '<option value="'.$row->id_rekening.'"';
-                if ($row->id_rekening == $k['rek_debet_bunga']) {
+                if ($row->id_rekening==$k['rek_debet_bunga']) {
                     echo ' selected';
                 }
                 echo '>'.$row->norek.' - '.$row->rekening.'</option>';
@@ -851,10 +851,10 @@
                                             $query = mysql_query('SELECT * FROM rekening 
                                                                   WHERE parentid != "0"                                                                   
                                                                   ORDER BY norek');
-        if ($query && mysql_num_rows($query) > 0) {
+        if ($query && mysql_num_rows($query)>0) {
             while ($row = mysql_fetch_object($query)) {
                 echo '<option value="'.$row->id_rekening.'"';
-                if ($row->id_rekening == $k['rek_kredit_bunga']) {
+                if ($row->id_rekening==$k['rek_kredit_bunga']) {
                     echo ' selected';
                 }
                 echo '>'.$row->norek.' - '.$row->rekening.'</option>';
@@ -898,10 +898,10 @@
                                             $query = mysql_query('SELECT * FROM rekening 
                                                                   WHERE parentid != "0" 
                                                                   ORDER BY norek');
-        if ($query && mysql_num_rows($query) > 0) {
+        if ($query && mysql_num_rows($query)>0) {
             while ($row = mysql_fetch_object($query)) {
                 echo '<option value="'.$row->id_rekening.'"';
-                if ($row->id_rekening == $k['rek_debet_ipoint']) {
+                if ($row->id_rekening==$k['rek_debet_ipoint']) {
                     echo ' selected';
                 }
                 echo '>'.$row->norek.' - '.$row->rekening.'</option>';
@@ -917,10 +917,10 @@
                                             $query = mysql_query('SELECT * FROM rekening 
                                                                   WHERE parentid != "0" 
                                                                   ORDER BY norek');
-        if ($query && mysql_num_rows($query) > 0) {
+        if ($query && mysql_num_rows($query)>0) {
             while ($row = mysql_fetch_object($query)) {
                 echo '<option value="'.$row->id_rekening.'"';
-                if ($row->id_rekening == $k['rek_kredit_ipoint']) {
+                if ($row->id_rekening==$k['rek_kredit_ipoint']) {
                     echo ' selected';
                 }
                 echo '>'.$row->norek.' - '.$row->rekening.'</option>';
@@ -1040,7 +1040,7 @@
                        
                        </div>
 
-                        <div id="barang" class="tab-pane fade <?php if ($stab == 'barang') {
+                        <div id="barang" class="tab-pane fade <?php if ($stab=='barang') {
             echo 'in active primary';
         } ?>">
                       <br>
@@ -1109,10 +1109,10 @@
                                             $query = mysql_query('SELECT * FROM rekening 
                                                                   WHERE parentid != "0"         
                                                                   ORDER BY norek');
-        if ($query && mysql_num_rows($query) > 0) {
+        if ($query && mysql_num_rows($query)>0) {
             while ($row = mysql_fetch_object($query)) {
                 echo '<option value="'.$row->id_rekening.'"';
-                if ($row->id_rekening == $k['rek_debet']) {
+                if ($row->id_rekening==$k['rek_debet']) {
                     echo ' selected';
                 }
                 echo '>'.$row->norek.' - '.$row->rekening.'</option>';
@@ -1128,10 +1128,10 @@
                                             $query = mysql_query('SELECT * FROM rekening 
                                                                   WHERE parentid != "0" 
                                                                   ORDER BY norek');
-        if ($query && mysql_num_rows($query) > 0) {
+        if ($query && mysql_num_rows($query)>0) {
             while ($row = mysql_fetch_object($query)) {
                 echo '<option value="'.$row->id_rekening.'"';
-                if ($row->id_rekening == $k['rek_kredit']) {
+                if ($row->id_rekening==$k['rek_kredit']) {
                     echo ' selected';
                 }
                 echo '>'.$row->norek.' - '.$row->rekening.'</option>';
@@ -1160,10 +1160,10 @@
                                             $query = mysql_query('SELECT * FROM rekening 
                                                                   WHERE parentid != "0"         
                                                                   ORDER BY norek');
-        if ($query && mysql_num_rows($query) > 0) {
+        if ($query && mysql_num_rows($query)>0) {
             while ($row = mysql_fetch_object($query)) {
                 echo '<option value="'.$row->id_rekening.'"';
-                if ($row->id_rekening == $k['rek_debet_pelunasan']) {
+                if ($row->id_rekening==$k['rek_debet_pelunasan']) {
                     echo ' selected';
                 }
                 echo '>'.$row->norek.' - '.$row->rekening.'</option>';
@@ -1179,10 +1179,10 @@
                                             $query = mysql_query('SELECT * FROM rekening 
                                                                   WHERE parentid != "0" 
                                                                   ORDER BY norek');
-        if ($query && mysql_num_rows($query) > 0) {
+        if ($query && mysql_num_rows($query)>0) {
             while ($row = mysql_fetch_object($query)) {
                 echo '<option value="'.$row->id_rekening.'"';
-                if ($row->id_rekening == $k['rek_kredit_pelunasan']) {
+                if ($row->id_rekening==$k['rek_kredit_pelunasan']) {
                     echo ' selected';
                 }
                 echo '>'.$row->norek.' - '.$row->rekening.'</option>';
@@ -1338,10 +1338,10 @@
                                                                   WHERE parentid != "0" 
                                                                   
                                                                   ORDER BY norek');
-        if ($query && mysql_num_rows($query) > 0) {
+        if ($query && mysql_num_rows($query)>0) {
             while ($row = mysql_fetch_object($query)) {
                 echo '<option value="'.$row->id_rekening.'"';
-                if ($row->id_rekening == $k['rek_debet_bunga']) {
+                if ($row->id_rekening==$k['rek_debet_bunga']) {
                     echo ' selected';
                 }
                 echo '>'.$row->norek.' - '.$row->rekening.'</option>';
@@ -1357,10 +1357,10 @@
                                             $query = mysql_query('SELECT * FROM rekening 
                                                                   WHERE parentid != "0"                                                                   
                                                                   ORDER BY norek');
-        if ($query && mysql_num_rows($query) > 0) {
+        if ($query && mysql_num_rows($query)>0) {
             while ($row = mysql_fetch_object($query)) {
                 echo '<option value="'.$row->id_rekening.'"';
-                if ($row->id_rekening == $k['rek_kredit_bunga']) {
+                if ($row->id_rekening==$k['rek_kredit_bunga']) {
                     echo ' selected';
                 }
                 echo '>'.$row->norek.' - '.$row->rekening.'</option>';
@@ -1404,10 +1404,10 @@
                                             $query = mysql_query('SELECT * FROM rekening 
                                                                   WHERE parentid != "0" 
                                                                   ORDER BY norek');
-        if ($query && mysql_num_rows($query) > 0) {
+        if ($query && mysql_num_rows($query)>0) {
             while ($row = mysql_fetch_object($query)) {
                 echo '<option value="'.$row->id_rekening.'"';
-                if ($row->id_rekening == $k['rek_debet_ipoint']) {
+                if ($row->id_rekening==$k['rek_debet_ipoint']) {
                     echo ' selected';
                 }
                 echo '>'.$row->norek.' - '.$row->rekening.'</option>';
@@ -1423,10 +1423,10 @@
                                             $query = mysql_query('SELECT * FROM rekening 
                                                                   WHERE parentid != "0" 
                                                                   ORDER BY norek');
-        if ($query && mysql_num_rows($query) > 0) {
+        if ($query && mysql_num_rows($query)>0) {
             while ($row = mysql_fetch_object($query)) {
                 echo '<option value="'.$row->id_rekening.'"';
-                if ($row->id_rekening == $k['rek_kredit_ipoint']) {
+                if ($row->id_rekening==$k['rek_kredit_ipoint']) {
                     echo ' selected';
                 }
                 echo '>'.$row->norek.' - '.$row->rekening.'</option>';
@@ -1552,7 +1552,7 @@
 
           </div>       
 
-          <div id="menu4" class="tab-pane fade <?php if ($tab == 'pl') {
+          <div id="menu4" class="tab-pane fade <?php if ($tab=='pl') {
             echo 'in active primary';
         } ?>">
              <br>
@@ -1593,10 +1593,10 @@
                                          <select name="jenis_pinjaman" class="form-control" disabled>
                                           <?php
                                             $query = mysql_query('SELECT * FROM jenis_pinjaman ORDER BY jenis_pinjaman');
-            if ($query && mysql_num_rows($query) > 0) {
+            if ($query && mysql_num_rows($query)>0) {
                 while ($row = mysql_fetch_object($query)) {
                     echo '<option value="'.$row->id_jenis_pinjaman.'"';
-                    if ($row->id_jenis_pinjaman == $r['id_jenis_pinjaman']) {
+                    if ($row->id_jenis_pinjaman==$r['id_jenis_pinjaman']) {
                         echo ' selected';
                     }
                     echo '>'.$row->jenis_pinjaman.'</option>';
@@ -1645,7 +1645,7 @@
 
           </div>   
 
-          <div id="menu5" class="tab-pane fade <?php if ($tab == 'jr') {
+          <div id="menu5" class="tab-pane fade <?php if ($tab=='jr') {
             echo 'in active primary';
         } ?>">
               <br>
@@ -1683,10 +1683,10 @@
                                          <select name="modul" class="form-control" required >
                                           <?php
                                             $query = mysql_query('SELECT * FROM modul WHERE jurnal = "Y" and aktif = "Y" ORDER BY nama_modul');
-            if ($query && mysql_num_rows($query) > 0) {
+            if ($query && mysql_num_rows($query)>0) {
                 while ($row = mysql_fetch_object($query)) {
                     echo '<option value="'.$row->id_modul.'"';
-                    if ($row->id_modul == $r['id_modul']) {
+                    if ($row->id_modul==$r['id_modul']) {
                         echo ' selected';
                     }
                     echo '>'.$row->nama_modul.'</option>';
@@ -1704,10 +1704,10 @@
                                                                   FROM jenis_transaksi a inner join tipe_transaksi b
                                                                   ON a.id_tipe_transaksi = b.id_tipe_transaksi
                                                                   ORDER BY a.id_tipe_transaksi,a.id_jenis_transaksi');
-            if ($query && mysql_num_rows($query) > 0) {
+            if ($query && mysql_num_rows($query)>0) {
                 while ($row = mysql_fetch_object($query)) {
                     echo '<option value="'.$row->id_jenis_transaksi.'"';
-                    if ($row->id_jenis_transaksi == $r['id_jenis_transaksi']) {
+                    if ($row->id_jenis_transaksi==$r['id_jenis_transaksi']) {
                         echo ' selected';
                     }
                     echo '>'.$row->kode.' - '.$row->tipe_transaksi.' - '.$row->jenis_transaksi.'</option>';
@@ -1752,7 +1752,7 @@
 
 
 
-           <div id="menu6" class="tab-pane fade <?php if ($tab == 'ln') {
+           <div id="menu6" class="tab-pane fade <?php if ($tab=='ln') {
             echo 'in active primary';
         } ?>">
              <br>
@@ -1769,7 +1769,7 @@
                                                 WHERE prd =  "'.$prd.'"
                                                 ');
 
-            if ($query && mysql_num_rows($query) == 1) {
+            if ($query && mysql_num_rows($query)==1) {
                 $data = mysql_fetch_object($query);
             } else {
                 die('Data general_setting tidak ditemukan');
@@ -1804,10 +1804,10 @@
                                             $query = mysql_query('SELECT * FROM rekening 
                                                                   WHERE parentid != "0" 
                                                                   ORDER BY norek');
-        if ($query && mysql_num_rows($query) > 0) {
+        if ($query && mysql_num_rows($query)>0) {
             while ($row = mysql_fetch_object($query)) {
                 echo '<option value="'.$row->id_rekening.'"';
-                if ($row->id_rekening == $data->rek_shu) {
+                if ($row->id_rekening==$data->rek_shu) {
                     echo ' selected';
                 }
                 echo '>'.$row->norek.' - '.$row->rekening.'</option>';
@@ -2083,7 +2083,7 @@
 
         if ($id) {
             $query = mysql_query('SELECT * FROM informasi_perusahaan WHERE id_informasi_perusahaan = "'.$id.'"');
-            if ($query && mysql_num_rows($query) == 1) {
+            if ($query && mysql_num_rows($query)==1) {
                 $data = mysql_fetch_object($query);
             } else {
                 die('Data general_setting tidak ditemukan');

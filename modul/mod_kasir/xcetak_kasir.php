@@ -286,21 +286,21 @@ function icetak(){
     {
         $abil = ['', 'satu', 'dua', 'tiga', 'empat', 'lima', 'enam', 'tujuh', 'delapan', 'sembilan', 'sepuluh', 'sebelas'];
 
-        if ($x < 12) {
+        if ($x<12) {
             return ' '.$abil[$x];
-        } elseif ($x < 20) {
+        } elseif ($x<20) {
             return Terbilang($x - 10).'belas';
-        } elseif ($x < 100) {
+        } elseif ($x<100) {
             return Terbilang($x / 10).' puluh'.Terbilang($x % 10);
-        } elseif ($x < 200) {
+        } elseif ($x<200) {
             return ' seratus'.Terbilang($x - 100);
-        } elseif ($x < 1000) {
+        } elseif ($x<1000) {
             return Terbilang($x / 100).' ratus'.Terbilang($x % 100);
-        } elseif ($x < 2000) {
+        } elseif ($x<2000) {
             return ' seribu'.Terbilang($x - 1000);
-        } elseif ($x < 1000000) {
+        } elseif ($x<1000000) {
             return Terbilang($x / 1000).' ribu'.Terbilang($x % 1000);
-        } elseif ($x < 1000000000) {
+        } elseif ($x<1000000000) {
             return Terbilang($x / 1000000).' juta'.Terbilang($x % 1000000);
         }
     }
@@ -469,13 +469,13 @@ $company = ucwords($g['company']);
 
     $tgl = date('d/m/Y', strtotime($r['tanggal']));
 
-    if ($r['status'] == '0') {
+    if ($r['status']=='0') {
         $istatus = 'Baru';
-    } elseif ($r['status'] == '1') {
+    } elseif ($r['status']=='1') {
         $istatus = 'Disetujui';
-    } elseif ($r['status'] == '2') {
+    } elseif ($r['status']=='2') {
         $istatus = 'Ditolak';
-    } elseif ($r['status'] == '9') {
+    } elseif ($r['status']=='9') {
         $istatus = 'Posting';
     } else {
         $istatus = 'Dibatalkan';
@@ -739,7 +739,7 @@ $company = ucwords($g['company']);
 
      <th width='15%'  class="iborder" style="text-align: right">Harga</th> 
 
-     <?php if ($mata_uang == '1') {
+     <?php if ($mata_uang=='1') {
         ?> 
 
      <th width='15%'  class="lborder" style="text-align: right">Total</th>
@@ -834,7 +834,7 @@ $company = ucwords($g['company']);
 
             echo'</td>';
 
-            if ($mata_uang == '1') {
+            if ($mata_uang=='1') {
                 echo" <td  class='border' style='text-align:right;'>";
 
                 echo $total;
@@ -857,8 +857,8 @@ $company = ucwords($g['company']);
             $no++;
         }
 
-        if ($no < 10) {
-            while ($no < 10) {
+        if ($no<10) {
+            while ($no<10) {
                 echo '<tr>';
 
                 echo'<td colspan=4>&nbsp</td>';
@@ -895,7 +895,7 @@ $company = ucwords($g['company']);
 
         $icgtotal = $r['cgtotal'];
 
-        if ($mata_uang == '1') {
+        if ($mata_uang=='1') {
             $rterbilang = ucwords(Terbilang($igtotal)).' Rupiah';
         } else {
             $rterbilang = ucwords(Terbilang($icgtotal)).' '.$cnote;
@@ -925,7 +925,7 @@ TOTAL
 
 </td>
 
-<?php if ($mata_uang != '1') {
+<?php if ($mata_uang!='1') {
             ?> 
 
 <td style="text-align:right;border-bottom:1px black solid;">
@@ -965,7 +965,7 @@ PPN <?php echo $ippn; ?> %
 
 </td>
 
-<?php if ($mata_uang != '1') {
+<?php if ($mata_uang!='1') {
             ?> 
 
 <td style="text-align:right;border-bottom:1px black solid;">
@@ -995,7 +995,7 @@ GRAND TOTAL
 
 </td>
 
-<?php if ($mata_uang != '1') {
+<?php if ($mata_uang!='1') {
             ?> 
 
 <td style="text-align:right;border-bottom:1px black solid;">

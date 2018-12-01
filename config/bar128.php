@@ -40,14 +40,14 @@ function bar128($text)
     $onChar = 1;
     for ($x = 0; $x < strlen($text); $x++) {								// GO THRU TEXT GET LETTERS
     if (!(($pos = strpos($char128asc, $text[$x])) === false)) {	// SKIP NOT FOUND CHARS
-      $w .= $char128wid[$pos];
+        $w .= $char128wid[$pos];
         $sum += $onChar++ * $pos;
     }
     }
     $w .= $char128wid[$sum % 103].$char128wid[106]; //Check Code, then END
     //Part 2, Write rows
     $html = '<table cellpadding=0 cellspacing=0><tr>';
-    for ($x = 0; $x < strlen($w); $x += 2) {   						// code 128 widths: black border, then white space
+    for ($x = 0; $x<strlen($w); $x += 2) {   						// code 128 widths: black border, then white space
         $html .= "<td><div class=\"b128\" style=\"border-left-width:{$w[$x]};width:{$w[$x + 1]}\"></div>";
     }
 

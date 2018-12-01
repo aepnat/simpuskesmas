@@ -16,7 +16,7 @@ if (empty($_SESSION['username']) and empty($_SESSION['password'])) {
     $userid = $_SESSION['userid'];
 
     // Hapus modul
-    if ($module == 'modul' and $act == 'hapus') {
+    if ($module=='modul' and $act=='hapus') {
         $id_module = $_GET['id_module'];
         $id = $_GET['id'];
 
@@ -26,8 +26,8 @@ if (empty($_SESSION['username']) and empty($_SESSION['password'])) {
     }
 
     // Input modul
-    elseif ($module == 'modul' and $act == 'input') {
-        if ($_POST['is_form'] == 'Y') {
+    elseif ($module=='modul' and $act=='input') {
+        if ($_POST['is_form']=='Y') {
             $link = $_POST['link'];
         } else {
             if ($_POST['link']) {
@@ -80,7 +80,7 @@ if (empty($_SESSION['username']) and empty($_SESSION['password'])) {
    </script>
   
   <?php
-    } elseif ($module == 'modul' and $act == 'hapusmod') {
+    } elseif ($module=='modul' and $act=='hapusmod') {
         // membaca ID dari data yang akan dihapus
     $id = $_GET['id'];
         $id_module = $_GET['id_module'];
@@ -103,8 +103,8 @@ if (empty($_SESSION['username']) and empty($_SESSION['password'])) {
    </script>
   
   <?php
-    } elseif ($module == 'modul' and $act == 'subinput') {
-        if ($_POST['is_form'] == 'Y') {
+    } elseif ($module=='modul' and $act=='subinput') {
+        if ($_POST['is_form']=='Y') {
             $link = $_POST['link'];
         } else {
             if ($_POST['link']) {

@@ -73,7 +73,7 @@ switch ($_GET[act]) {
                 echo"<td>$r[kategori]</td>";
                 echo" <td  style='text-align:center;'>";
 
-                if ($r_edit == 'Y') {
+                if ($r_edit=='Y') {
                     //if ($status == '0') {
                     echo"<a class='thickbox' href='modul/mod_$module/form_$module.php?id_kunjungan_berobat=$r[id_kunjungan_berobat]&id_module=$id&width=720&height=560&module=$module&TB_iframe=true' title='Update $nmmodule'><span class='icon'><i class='fa fa-pencil'></i></span></a>";
                     // } else {
@@ -81,7 +81,7 @@ switch ($_GET[act]) {
                 // }
                 }
 
-                if ($r_delete == 'Y') {
+                if ($r_delete=='Y') {
                     //if ($status == '0') {
                     echo"<a href='modul/mod_$module/aksi_$module.php?module=$module&act=hapus&id=$r[id_kunjungan_berobat]&id_module=$id' onClick=\"return confirm('Delete this record ?')\" title='Delete $nmmodule'><span class='icon'><i class='fa fa-trash'></i></span></a>";
 

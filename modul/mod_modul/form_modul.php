@@ -44,7 +44,7 @@ $modul = $_GET['module'];
 
         if ($id) {
             $query = mysql_query('SELECT * FROM modul WHERE id_modul = "'.$id.'"');
-            if ($query && mysql_num_rows($query) == 1) {
+            if ($query && mysql_num_rows($query)==1) {
                 $data = mysql_fetch_object($query);
             } else {
                 die('Data modul tidak ditemukan');
@@ -93,7 +93,7 @@ $modul = $_GET['module'];
           <?php if ($id) {
             ?>  
     
-            <?php if (@$data->is_form == 'Y') {
+            <?php if (@$data->is_form=='Y') {
                 ?>
               <div class="form-group">
                 <label class="control-label col-md-3 col-sm-3 col-xs-12" style='padding-top:10px;'>Is Form :</label>
@@ -142,7 +142,7 @@ $modul = $_GET['module'];
           <?php if ($id) {
             ?>  
     
-            <?php if (@$data->aktif == 'Y') {
+            <?php if (@$data->aktif=='Y') {
                 ?>
               <div class="form-group">
                 <label class="control-label col-md-3 col-sm-3 col-xs-12" style='padding-top:10px;'>Aktif :</label>

@@ -23,7 +23,7 @@ if (empty($_SESSION['username']) and empty($_SESSION['password'])) {
 
     $prd = $p['periode'];
 
-    if ($module == 'pengaturan_sistem' and $act == 'ip') {
+    if ($module=='pengaturan_sistem' and $act=='ip') {
         $id_module = $_POST['id_module'];
 
         $lokasi_file = $_FILES['fupload']['tmp_name'];
@@ -62,7 +62,7 @@ if (empty($_SESSION['username']) and empty($_SESSION['password'])) {
         $id = $_POST['ID'];
 
         header('location:form_'.$module.'.php?id='.$id.'&module='.$module.'&id_module='.$id_module.'&tab='.$act.'&imodule='.$imodule);
-    } elseif ($module == 'pengaturan_sistem' and $act == 'sa') {
+    } elseif ($module=='pengaturan_sistem' and $act=='sa') {
         mysql_query("UPDATE pg_setoran_awal SET jenis    = '$_POST[jenis]'
                           ,nilai   = '$_POST[nilai]'
                           ,id_jenis_posting      = '$_POST[jenis_posting]'
@@ -74,7 +74,7 @@ if (empty($_SESSION['username']) and empty($_SESSION['password'])) {
                        AND prd = '$prd'
                        ");
 
-        if ($_POST['u_tab'] == '1') {
+        if ($_POST['u_tab']=='1') {
             mysql_query("DELETE FROM pembukaan_tabungan 
                        WHERE id_pg_setoran_awal     = '$_POST[ID]'
                        AND status    = '2' 
@@ -116,7 +116,7 @@ if (empty($_SESSION['username']) and empty($_SESSION['password'])) {
                           ");
         }
 
-        if ($_POST['u_tab'] == '2') {
+        if ($_POST['u_tab']=='2') {
             mysql_query("DELETE FROM pembukaan_tabungan 
                        WHERE id_pg_setoran_awal     = '$_POST[ID]'
                        AND status    = '2' 
@@ -159,7 +159,7 @@ if (empty($_SESSION['username']) and empty($_SESSION['password'])) {
 
         $id = $_POST['ID'];
         header('location:form_'.$module.'.php?id='.$id.'&module='.$module.'&id_module='.$id_module.'&tab='.$act.'&imodule='.$imodule);
-    } elseif ($module == 'pengaturan_sistem' and $act == 'pd') {
+    } elseif ($module=='pengaturan_sistem' and $act=='pd') {
         mysql_query("UPDATE pg_penarikan_dana SET max_pencairan   = '$_POST[max_pencairan]'
                                       ,max_penarikan         = '$_POST[max_penarikan]'
                                       ,jeda_waktu      = '$_POST[jeda_waktu]'
@@ -174,8 +174,8 @@ if (empty($_SESSION['username']) and empty($_SESSION['password'])) {
 
         $id = $_POST['ID'];
         header('location:form_'.$module.'.php?id='.$id.'&module='.$module.'&id_module='.$id_module.'&tab='.$act.'&imodule='.$imodule);
-    } elseif ($module == 'pengaturan_sistem' and $act == 'pm') {
-        if ($_POST[stab] == 'tunai') {
+    } elseif ($module=='pengaturan_sistem' and $act=='pm') {
+        if ($_POST[stab]=='tunai') {
             mysql_query("UPDATE pg_peminjaman_tunai SET min_tenor     = '$_POST[min_tenor_k]'
                                                 ,max_tenor     = '$_POST[max_tenor_k]'
                                                 ,max_pinjaman  = '$_POST[max_pinjaman_k]'      
@@ -272,7 +272,7 @@ if (empty($_SESSION['username']) and empty($_SESSION['password'])) {
         $stab = $_POST['stab'];
 
         header('location:form_'.$module.'.php?id='.$id.'&module='.$module.'&id_module='.$id_module.'&tab='.$act.'&imodule='.$imodule.'&stab='.$stab);
-    } elseif ($module == 'pengaturan_sistem' and $act == 'ln') {
+    } elseif ($module=='pengaturan_sistem' and $act=='ln') {
         mysql_query("UPDATE pg_lainnya SET harga_saham    = '$_POST[harga_saham]'
                                      ,rek_shu        = '$_POST[rek_shu]'
                                      ,ftgl           = '$_POST[ftgl]'
@@ -287,7 +287,7 @@ if (empty($_SESSION['username']) and empty($_SESSION['password'])) {
 
         $id = $_POST['ID'];
         header('location:form_'.$module.'.php?id='.$id.'&module='.$module.'&id_module='.$id_module.'&tab='.$act.'&imodule='.$imodule);
-    } elseif ($module == 'pengaturan_sistem' and $act == 'jr') {
+    } elseif ($module=='pengaturan_sistem' and $act=='jr') {
         mysql_query("UPDATE pg_jurnal SET id_jenis_transaksi    = '$_POST[jenis_transaksi]'
                           ,id_modul      = '$_POST[modul]'
                          ,upddt     = '$datetime' 
@@ -298,7 +298,7 @@ if (empty($_SESSION['username']) and empty($_SESSION['password'])) {
 
         $id = $_POST['ID'];
         header('location:form_'.$module.'.php?id='.$id.'&module='.$module.'&id_module='.$id_module.'&tab='.$act.'&imodule='.$imodule);
-    } elseif ($module == 'pengaturan_sistem' and $act == 'pl') {
+    } elseif ($module=='pengaturan_sistem' and $act=='pl') {
         mysql_query("UPDATE pg_plafon SET plafon    = '$_POST[plafon]'
                                      ,upddt     = '$datetime' 
                                      ,updby     = '$userid'    

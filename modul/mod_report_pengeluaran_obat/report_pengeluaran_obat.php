@@ -56,15 +56,15 @@ function getLokasi(str) {
 <?php
 switch ($_GET[act]) {
 
-default:
+    default:
 
-$fdate = date('Y-m-01');
-$ldate = date('Y-m-d');
+    $fdate = date('Y-m-01');
+    $ldate = date('Y-m-d');
 
-$prd = date('Y-m');
+    $prd = date('Y-m');
 
-$userid = $_SESSION['userid'];
-    ?>
+    $userid = $_SESSION['userid'];
+        ?>
 
  <div class="">
                    
@@ -125,7 +125,7 @@ $userid = $_SESSION['userid'];
             </form>    
                    
                 </div>
-                <?php for ($i = 0; $i <= 20; $i++) {
+                <?php for ($i = 0; $i<=20; $i++) {
                 ?>
                     <br />
                     <?php
