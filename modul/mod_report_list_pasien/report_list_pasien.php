@@ -43,7 +43,7 @@ $ldate = date('Y-m-d');
                      <select name="tipe" class="form-control">
                      <option value='%'>Semua</option>
 
-                     <?php for ($x = 'A'; $x <= 'Z'; $x++) {
+                     <?php for ($x = 'A'; $x<='Z'; $x++) {
         ?>
                         <option value= '<?=$x; ?>'><?=$x; ?></option>
                      <?php
@@ -75,7 +75,7 @@ $ldate = date('Y-m-d');
             </form>    
                    
                 </div>
-                <?php for ($i = 0; $i <= 20; $i++) {
+                <?php for ($i = 0; $i<=20; $i++) {
                 ?>
                     <br />
                     <?php

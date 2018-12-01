@@ -17,7 +17,7 @@ if (empty($_SESSION['username']) and empty($_SESSION['password'])) {
     $business_type = $_SESSION['business_type'];
 
     // Hapus modul
-    if ($module == 'groups' and $act == 'hapus') {
+    if ($module=='groups' and $act=='hapus') {
         $id = $_GET['id'];
         $id_module = $_GET['id_module'];
 
@@ -34,7 +34,7 @@ if (empty($_SESSION['username']) and empty($_SESSION['password'])) {
     }
 
     // Input group
-    elseif ($module == 'groups' and $act == 'input') {
+    elseif ($module=='groups' and $act=='input') {
         $id_module = $_POST['id_module'];
 
         if ($_POST['ID']) {

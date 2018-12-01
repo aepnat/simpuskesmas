@@ -43,7 +43,7 @@ $modul = $_GET['module'];
 
         if ($id) {
             $query = mysql_query('SELECT * FROM groupmodul WHERE id_groupmodul = "'.$id.'"');
-            if ($query && mysql_num_rows($query) == 1) {
+            if ($query && mysql_num_rows($query)==1) {
                 $data = mysql_fetch_object($query);
             } else {
                 die('Data groupmodul tidak ditemukan');
@@ -74,10 +74,10 @@ $modul = $_GET['module'];
                  <select name="igroup" class="form-control" autofocus >
 				    <?php
                         $query = mysql_query('SELECT * FROM groups ORDER BY groups');
-        if ($query && mysql_num_rows($query) > 0) {
+        if ($query && mysql_num_rows($query)>0) {
             while ($row = mysql_fetch_object($query)) {
                 echo '<option value="'.$row->id_groups.'"';
-                if ($row->id_groups == @$data->id_groups) {
+                if ($row->id_groups==@$data->id_groups) {
                     echo ' selected';
                 }
                 echo '>'.$row->groups.'</option>';
@@ -97,10 +97,10 @@ $modul = $_GET['module'];
 				          <option value=''></option>
 				    <?php
                         $query = mysql_query("SELECT * FROM modul WHERE status_menu = 'M' AND aktif = 'Y' ORDER BY urutan ASC");
-        if ($query && mysql_num_rows($query) > 0) {
+        if ($query && mysql_num_rows($query)>0) {
             while ($row = mysql_fetch_object($query)) {
                 echo '<option value="'.$row->id_modul.'"';
-                if ($imenu == $row->id_modul) {
+                if ($imenu==$row->id_modul) {
                     echo ' selected';
                 }
                 echo '>'.$row->nama_modul.'</option>';
@@ -137,12 +137,12 @@ $modul = $_GET['module'];
 				                          WHERE a.status_menu = 'C' AND a.aktif = 'Y' AND a.parentid = '$imenu'
 				                        ORDER BY a.urutan ASC");
 
-                                if ($query && mysql_num_rows($query) > 0) {
+                                if ($query && mysql_num_rows($query)>0) {
                                     $no = 1;
                                     while ($row = mysql_fetch_object($query)) {
                                         $status = $row->status_menu;
 
-                                        if ($row->flag == '1') {
+                                        if ($row->flag=='1') {
                                             echo"<input checked type='checkbox' value='id".$no."'  name='id".$no."' style='width:12px;'>";
                                         } else {
                                             echo"<input type='checkbox' value='id".$no."'  name='id".$no."' style='width:12px;'>";
@@ -156,7 +156,7 @@ $modul = $_GET['module'];
                             } else {
                                 $query = mysql_query("SELECT * FROM modul WHERE status_menu = 'C' AND aktif = 'Y' AND parentid= '$imenu' ORDER BY urutan ASC");
 
-                                if ($query && mysql_num_rows($query) > 0) {
+                                if ($query && mysql_num_rows($query)>0) {
                                     $no = 1;
                                     while ($row = mysql_fetch_object($query)) {
                                         $status = $row->status_menu;

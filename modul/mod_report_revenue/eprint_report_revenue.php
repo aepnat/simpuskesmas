@@ -118,7 +118,7 @@ header('Content-Type: application/octet-stream');
 header('Content-Type: application/download');
 header('Content-Type: application/vnd.ms-excel');
 
-if ($tipe == 'R') {
+if ($tipe=='R') {
     header("Content-Disposition: attachment;filename=rekap_revenue_$nprd.xls ");
 } else {
     header("Content-Disposition: attachment;filename=detail_rekap_$nprd.xls ");
@@ -187,7 +187,7 @@ header('Content-Transfer-Encoding: binary ');
 
         ?>
 
-      <?php if ($tipe == 'R') {
+      <?php if ($tipe=='R') {
             ?>
 
 
@@ -344,7 +344,7 @@ header('Content-Transfer-Encoding: binary ');
 
 
                    <?php 
-                    for ($j = 1; $j <= $hjml; $j++) {
+                    for ($j = 1; $j<=$hjml; $j++) {
                         echo '<th>KUNJ</th>';
                         echo '<th>REV</th>';
                     } ?> 
@@ -533,7 +533,7 @@ header('Content-Transfer-Encoding: binary ');
 
             $month = date('m', strtotime($iprd)) * 1;
 
-            if ($month == '1') {
+            if ($month=='1') {
                 $imonth = 12;
             } else {
                 $imonth = $month - 1;

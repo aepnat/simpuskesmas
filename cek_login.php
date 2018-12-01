@@ -22,7 +22,7 @@ $find = mysql_num_rows($login);
 $r = mysql_fetch_array($login);
 
 // Apabila userid dan password ditemukan
-if ($find > 0) {
+if ($find>0) {
     session_start();
     //session_register("userid");
     //  session_register("username");

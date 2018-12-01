@@ -49,7 +49,7 @@ switch ($_GET[act]) {
             $no = 1;
 
             while ($r = mysql_fetch_array($tampil)) {
-                if ($r[tipe] == 'R') {
+                if ($r[tipe]=='R') {
                     $tipe = 'RS/Klinik';
                 } else {
                     $tipe = 'Lab';
@@ -61,7 +61,7 @@ switch ($_GET[act]) {
                 echo"<td style='text-align:center;'>$r[aktif]</td>";
                 echo" <td  style='text-align:center;'>";
 
-                if ($r_edit == 'Y') {
+                if ($r_edit=='Y') {
                     echo"<a class='thickbox' href='modul/mod_$module/form_$module.php?id_rujukan=$r[id_rujukan]&id_module=$id&width=720&height=560&module=$module&TB_iframe=true' title='Update $nmmodule'><span class='icon'><i class='fa fa-pencil'></i></span></a>";
                 }
 

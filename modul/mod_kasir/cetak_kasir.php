@@ -475,7 +475,7 @@ function idownload(){
 
             <?php 
 
-                    if ($r[id_shift] == '1') {
+                    if ($r[id_shift]=='1') {
                         $id_shift = '1';
                     } else {
                         $id_shift = '%';
@@ -586,7 +586,7 @@ function idownload(){
 
                 ?> 
 
-               <?php if ($id_shift == '%') {
+               <?php if ($id_shift=='%') {
                     ?>
                <tr>
                     <th></th>

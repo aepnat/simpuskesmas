@@ -61,7 +61,7 @@ $modul = $_GET['module'];
 
         if ($id) {
             $query = mysql_query('SELECT * FROM user WHERE id_user = "'.$id.'"');
-            if ($query && mysql_num_rows($query) == 1) {
+            if ($query && mysql_num_rows($query)==1) {
                 $data = mysql_fetch_object($query);
             } else {
                 die('Data user tidak ditemukan');
@@ -122,10 +122,10 @@ $modul = $_GET['module'];
                           <option value=''></option>
                     <?php
                         $query = mysql_query('SELECT * FROM groups ORDER BY groups');
-        if ($query && mysql_num_rows($query) > 0) {
+        if ($query && mysql_num_rows($query)>0) {
             while ($row = mysql_fetch_object($query)) {
                 echo '<option value="'.$row->id_groups.'"';
-                if ($row->id_groups == @$data->id_groups) {
+                if ($row->id_groups==@$data->id_groups) {
                     echo ' selected';
                 }
                 echo '>'.$row->groups.'</option>';
@@ -142,7 +142,7 @@ $modul = $_GET['module'];
                 <?php if ($data->id_user) {
             ?>
 
-                    <?php if ($data->r_input == 'Y') {
+                    <?php if ($data->r_input=='Y') {
                 ?>  
                         <input checked type='checkbox' class='flat' value='Y' name='r_input' >&nbsp;<label>Input</label>  &nbsp; 
                     <?php
@@ -152,7 +152,7 @@ $modul = $_GET['module'];
                     <?php
             } ?>  
                     
-                    <?php if ($data->r_edit == 'Y') {
+                    <?php if ($data->r_edit=='Y') {
                 ?>  
                         <input checked type='checkbox' class='flat' value='Y' name='r_edit' >&nbsp;<label>Edit</label>  &nbsp; 
                     <?php
@@ -162,7 +162,7 @@ $modul = $_GET['module'];
                     <?php
             } ?>         
                     
-                    <?php if ($data->r_delete == 'Y') {
+                    <?php if ($data->r_delete=='Y') {
                 ?>  
                         <input checked type='checkbox' class='flat' value='Y' name='r_delete' >&nbsp;<label>Delete</label>  &nbsp; 
                     <?php
@@ -187,7 +187,7 @@ $modul = $_GET['module'];
           <?php if ($id) {
             ?>  
     
-            <?php if (@$data->aktif == 'Y') {
+            <?php if (@$data->aktif=='Y') {
                 ?>
           
                 <label class="control-label col-md-3 col-sm-3 col-xs-12" style='padding-top:10px;'>Aktif :</label>

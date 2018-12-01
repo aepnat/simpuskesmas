@@ -194,7 +194,7 @@ $mod = '?module='.$_GET['module'];
     $tampil = mysql_query("SELECT orientation FROM modul WHERE link='".$mod."'");
     $r = mysql_fetch_array($tampil);
 
-    if ($r[orientation] == 'P') {
+    if ($r[orientation]=='P') {
         ?>
         
 <SCRIPT TYPE="text/javascript">
@@ -210,7 +210,7 @@ return true;
 </SCRIPT>
 
 <?php
-    } elseif ($r[orientation] == 'A') {
+    } elseif ($r[orientation]=='A') {
         ?>
 
 <SCRIPT TYPE="text/javascript">

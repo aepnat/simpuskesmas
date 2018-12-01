@@ -17,7 +17,7 @@ if (empty($_SESSION['username']) and empty($_SESSION['password'])) {
     $business_type = $_SESSION['business_type'];
 
     // Hapus modul
-    if ($module == 'resep_obat' and $act == 'dhapus') {
+    if ($module=='resep_obat' and $act=='dhapus') {
         $id = $_GET['id'];
         $id_module = $_GET['id_module'];
         $id_kunjungan_berobat = $_GET['id_kunjungan_berobat'];
@@ -33,7 +33,7 @@ if (empty($_SESSION['username']) and empty($_SESSION['password'])) {
     }
 
     // Input group
-    elseif ($module == 'resep_obat' and $act == 'input') {
+    elseif ($module=='resep_obat' and $act=='input') {
         $id_module = $_POST['id_module'];
         $id_kunjungan_berobat = $_POST['id_kunjungan_berobat'];
 
@@ -79,7 +79,7 @@ if (empty($_SESSION['username']) and empty($_SESSION['password'])) {
         }
         header('location:form_'.$module.'.php?id_kunjungan_berobat='.$id_kunjungan_berobat.'&module='.$module.'&id_module='.$id_modul);
     }  // Input group
-    elseif ($module == 'resep_obat' and $act == 'close') {
+    elseif ($module=='resep_obat' and $act=='close') {
         $id_module = $_POST['id_module']; ?>
   
     <script language="javascript">

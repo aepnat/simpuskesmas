@@ -31,11 +31,11 @@
         {
             $image = self::image($frame, $pixelPerPoint, $outerFrame, $back_color, $fore_color);
 
-            if ($filename === false) {
+            if ($filename===false) {
                 header('Content-type: image/png');
                 imagepng($image);
             } else {
-                if ($saveandprint === true) {
+                if ($saveandprint===true) {
                     imagepng($image, $filename);
                     header('Content-type: image/png');
                     imagepng($image);
@@ -52,7 +52,7 @@
         {
             $image = self::image($frame, $pixelPerPoint, $outerFrame);
 
-            if ($filename === false) {
+            if ($filename===false) {
                 header('Content-type: image/jpeg');
                 imagejpeg($image, null, $q);
             } else {
@@ -88,9 +88,9 @@
 
             imagefill($base_image, 0, 0, $col[0]);
 
-            for ($y = 0; $y < $h; $y++) {
-                for ($x = 0; $x < $w; $x++) {
-                    if ($frame[$y][$x] == '1') {
+            for ($y = 0; $y<$h; $y++) {
+                for ($x = 0; $x<$w; $x++) {
+                    if ($frame[$y][$x]=='1') {
                         imagesetpixel($base_image, $x + $outerFrame, $y + $outerFrame, $col[1]);
                     }
                 }

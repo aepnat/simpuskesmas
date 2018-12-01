@@ -427,7 +427,7 @@ $imodule = $_GET['imodule'];
 
               
 
-    <?php if ($size == '10') {
+    <?php if ($size=='10') {
         ?>
 
     <option value="10" selected="selected">10</option>
@@ -443,7 +443,7 @@ $imodule = $_GET['imodule'];
 
 
 
-     <?php if ($size == '15') {
+     <?php if ($size=='15') {
         ?>
 
     <option value="15" selected="selected">15</option>
@@ -459,7 +459,7 @@ $imodule = $_GET['imodule'];
 
 
 
-    <?php if ($size == '20') {
+    <?php if ($size=='20') {
         ?>
 
     <option value="20" selected="selected">20</option>
@@ -475,7 +475,7 @@ $imodule = $_GET['imodule'];
 
 
 
-    <?php if ($size == '50') {
+    <?php if ($size=='50') {
         ?>
 
     <option value="50" selected="selected">20</option>
@@ -491,7 +491,7 @@ $imodule = $_GET['imodule'];
 
 
 
-    <?php if ($size == '100') {
+    <?php if ($size=='100') {
         ?>
 
     <option value="100" selected="selected">100</option>

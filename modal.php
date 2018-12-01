@@ -110,10 +110,10 @@ include 'config/koneksi.php';
                                          <select name="itipe_barang" class="form-control" onChange="document.myform.submit();">
                                             <?php
                                                 $query = mysql_query('SELECT * FROM tipe_barang ORDER BY id_tipe_barang');
-                                                if ($query && mysql_num_rows($query) > 0) {
+                                                if ($query && mysql_num_rows($query)>0) {
                                                     while ($row = mysql_fetch_object($query)) {
                                                         echo '<option value="'.$row->id_tipe_barang.'"';
-                                                        if ($row->id_tipe_barang == $tipe_barang) {
+                                                        if ($row->id_tipe_barang==$tipe_barang) {
                                                             echo ' selected';
                                                         }
                                                         echo '>'.$row->tipe_barang.'</option>';
@@ -127,10 +127,10 @@ include 'config/koneksi.php';
                                          <select name="ioutlet" class="form-control" onChange="document.myform.submit();">
                                             <?php
                                                 $query = mysql_query('SELECT * FROM outlet ORDER BY id_outlet');
-                                                if ($query && mysql_num_rows($query) > 0) {
+                                                if ($query && mysql_num_rows($query)>0) {
                                                     while ($row = mysql_fetch_object($query)) {
                                                         echo '<option value="'.$row->id_outlet.'"';
-                                                        if ($row->id_outlet == $outlet) {
+                                                        if ($row->id_outlet==$outlet) {
                                                             echo ' selected';
                                                         }
                                                         echo '>'.$row->outlet.'</option>';
@@ -234,7 +234,7 @@ include 'config/koneksi.php';
 
                                     $sisa_stok = $r['stok'] - $reserve;
 
-                                    if ($sisa_stok == '0') {
+                                    if ($sisa_stok=='0') {
                                         echo '';
                                     } else {
                                         echo'<tr>';

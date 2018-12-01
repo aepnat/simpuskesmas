@@ -13,7 +13,7 @@ include 'config/koneksi.php';
         //  echo"modul/mod_$mod.php<br>";
 //
 
-        if ($_GET['module'] == $mod) {
+        if ($_GET['module']==$mod) {
             //include "modul/mod_$mod.php";
             include "modul/mod_$mod/$mod.php";
         }

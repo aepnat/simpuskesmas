@@ -91,7 +91,7 @@ $ldate1 = date('m/d/Y', strtotime($ldate));
     $jml = ($lday - $fday) + 1;
 
 if ($_GET['ldate']) {
-    if ($lmonth == $fmonth and $lyear == $fyear) {
+    if ($lmonth==$fmonth and $lyear==$fyear) {
         $jcol = $jml;
     } else {
         $jcol = $f_jml + $l_jml;
@@ -120,10 +120,10 @@ if ($_GET['ldate']) {
 							                 	<option value="">--------- Room Type ---------</option>
 							                    <?php
                                                     $query = mysql_query('SELECT * FROM room_type ORDER BY room_type');
-                                                    if ($query && mysql_num_rows($query) > 0) {
+                                                    if ($query && mysql_num_rows($query)>0) {
                                                         while ($row = mysql_fetch_object($query)) {
                                                             echo '<option value="'.$row->id_room_type.'"';
-                                                            if ($row->id_room_type == $_GET['room_type']) {
+                                                            if ($row->id_room_type==$_GET['room_type']) {
                                                                 echo ' selected';
                                                             }
                                                             echo '>'.$row->room_type.'</option>';
@@ -156,9 +156,9 @@ if ($_GET['ldate']) {
 		                        	<?php
                                     $col = (83 / $jcol);
 
-                                    if ($lmonth == $fmonth and $lyear == $fyear) {
-                                        for ($i = $fday; $i <= $lday; $i++) {
-                                            if (strlen($i) == '1') {
+                                    if ($lmonth==$fmonth and $lyear==$fyear) {
+                                        for ($i = $fday; $i<=$lday; $i++) {
+                                            if (strlen($i)=='1') {
                                                 $tgl = '0'.$i;
                                             } else {
                                                 $tgl = $i;
@@ -176,7 +176,7 @@ if ($_GET['ldate']) {
 
                                             if ($s['sdate']) {
                                                 $bg = '#eba51c';
-                                            } elseif ($nday == '6' or $nday == '7') {
+                                            } elseif ($nday=='6' or $nday=='7') {
                                                 $bg = '#eb1c41';
                                             } else {
                                                 $bg = '';
@@ -191,8 +191,8 @@ if ($_GET['ldate']) {
 										</th>";
                                         }
                                     } else {
-                                        for ($i = $fday; $i <= $f_lastday; $i++) {
-                                            if (strlen($i) == '1') {
+                                        for ($i = $fday; $i<=$f_lastday; $i++) {
+                                            if (strlen($i)=='1') {
                                                 $tgl = '0'.$i;
                                             } else {
                                                 $tgl = $i;
@@ -210,7 +210,7 @@ if ($_GET['ldate']) {
 
                                             if ($s['sdate']) {
                                                 $bg = '#eba51c';
-                                            } elseif ($nday == '6' or $nday == '7') {
+                                            } elseif ($nday=='6' or $nday=='7') {
                                                 $bg = '#eb1c41';
                                             } else {
                                                 $bg = '';
@@ -225,8 +225,8 @@ if ($_GET['ldate']) {
 										</th>";
                                         }
 
-                                        for ($i = 1; $i <= $lday; $i++) {
-                                            if (strlen($i) == '1') {
+                                        for ($i = 1; $i<=$lday; $i++) {
+                                            if (strlen($i)=='1') {
                                                 $tgl = '0'.$i;
                                             } else {
                                                 $tgl = $i;
@@ -244,7 +244,7 @@ if ($_GET['ldate']) {
 
                                             if ($s['sdate']) {
                                                 $bg = '#eba51c';
-                                            } elseif ($nday == '6' or $nday == '7') {
+                                            } elseif ($nday=='6' or $nday=='7') {
                                                 $bg = '#eb1c41';
                                             } else {
                                                 $bg = '';
@@ -286,9 +286,9 @@ if ($_GET['ldate']) {
                                         echo'<tr>';
                                         echo"<td style='background-color: #1ABB9C;color: #E7E7E7;'>".$t['room_type'].'</td>';
 
-                                        if ($lmonth == $fmonth and $lyear == $fyear) {
-                                            for ($i = $fday; $i <= $lday; $i++) {
-                                                if (strlen($i) == '1') {
+                                        if ($lmonth==$fmonth and $lyear==$fyear) {
+                                            for ($i = $fday; $i<=$lday; $i++) {
+                                                if (strlen($i)=='1') {
                                                     $tgl = '0'.$i;
                                                 } else {
                                                     $tgl = $i;
@@ -300,8 +300,8 @@ if ($_GET['ldate']) {
 										</td>";
                                             }
                                         } else {
-                                            for ($i = $fday; $i <= $f_lastday; $i++) {
-                                                if (strlen($i) == '1') {
+                                            for ($i = $fday; $i<=$f_lastday; $i++) {
+                                                if (strlen($i)=='1') {
                                                     $tgl = '0'.$i;
                                                 } else {
                                                     $tgl = $i;
@@ -315,8 +315,8 @@ if ($_GET['ldate']) {
 										</td>";
                                             }
 
-                                            for ($i = 1; $i <= $lday; $i++) {
-                                                if (strlen($i) == '1') {
+                                            for ($i = 1; $i<=$lday; $i++) {
+                                                if (strlen($i)=='1') {
                                                     $tgl = '0'.$i;
                                                 } else {
                                                     $tgl = $i;
@@ -341,7 +341,7 @@ if ($_GET['ldate']) {
                                         while ($r = mysql_fetch_array($room)) {
                                             $aktif = $r['aktif'];
 
-                                            if (($no % 2) == 0) {
+                                            if (($no % 2)==0) {
                                                 $sty = 'ftd';
                                             } else {
                                                 $sty = 'ltd';
@@ -352,9 +352,9 @@ if ($_GET['ldate']) {
                                             echo'<tr>';
                                             echo"<td style='padding-left:20px;text-align:left;' class=$sty>".$r['room_no'].'</td>';
 
-                                            if ($lmonth == $fmonth and $lyear == $fyear) {
-                                                for ($i = $fday; $i <= $lday; $i++) {
-                                                    if (strlen($i) == '1') {
+                                            if ($lmonth==$fmonth and $lyear==$fyear) {
+                                                for ($i = $fday; $i<=$lday; $i++) {
+                                                    if (strlen($i)=='1') {
                                                         $tgl = '0'.$i;
                                                     } else {
                                                         $tgl = $i;
@@ -364,7 +364,7 @@ if ($_GET['ldate']) {
 
                                                     echo"<td class=$sty style='padding:0;'>";
 
-                                                    if ($aktif == 'T') {
+                                                    if ($aktif=='T') {
                                                         echo"
 												<i class='fa fa-warning' style='color: red;font-size:18px' onMouseover=\"ddrivetip('Out of Order')\"; onMouseout=\"hideddrivetip()\"></i>
 												";
@@ -434,15 +434,15 @@ if ($_GET['ldate']) {
                                                         $legend = $c['legend'];
                                                         $status = $c['status'];
 
-                                                        if ($status == 0) {
+                                                        if ($status==0) {
                                                             $icolor = '#fff';
                                                         } else {
                                                             $icolor = '#fff';
                                                         }
 
-                                                        if ($status == 0) {
+                                                        if ($status==0) {
                                                             $istatus = 'Reserved';
-                                                        } elseif ($status == 1) {
+                                                        } elseif ($status==1) {
                                                             $istatus = 'Check In';
                                                         } else {
                                                             $istatus = 'Check Out';
@@ -450,7 +450,7 @@ if ($_GET['ldate']) {
 
                                                         $iguest = trim($c['initial']).'. '.trim($c['guest']).' | '.$istatus;
 
-                                                        if ($c['initial'] == 'Mr ') {
+                                                        if ($c['initial']=='Mr ') {
                                                             $icon = 'fa fa-male';
                                                         } else {
                                                             $icon = 'fa fa-female';
@@ -460,7 +460,7 @@ if ($_GET['ldate']) {
 
                                                         //if ($jml == '1') {
 
-                                                        if ($ljml == '0' and $jml == '1' and $njml == '1') {
+                                                        if ($ljml=='0' and $jml=='1' and $njml=='1') {
                                                             echo"<td width='50%'>
 														</td>";
                                                         }
@@ -477,7 +477,7 @@ if ($_GET['ldate']) {
                                                         }
                                                     }
 
-                                                    if ($ljml != '0' and $jml == '1') {
+                                                    if ($ljml!='0' and $jml=='1') {
                                                         echo"<td width='50%'>
 														</td>";
                                                     }
@@ -489,8 +489,8 @@ if ($_GET['ldate']) {
                                                     echo'</td>';
                                                 }
                                             } else {
-                                                for ($i = $fday; $i <= $f_lastday; $i++) {
-                                                    if (strlen($i) == '1') {
+                                                for ($i = $fday; $i<=$f_lastday; $i++) {
+                                                    if (strlen($i)=='1') {
                                                         $tgl = '0'.$i;
                                                     } else {
                                                         $tgl = $i;
@@ -500,7 +500,7 @@ if ($_GET['ldate']) {
 
                                                     echo"<td class=$sty style='padding:0;'>";
 
-                                                    if ($aktif == 'T') {
+                                                    if ($aktif=='T') {
                                                         echo"
 												<i class='fa fa-warning' style='color: red;font-size:18px' onMouseover=\"ddrivetip('Out of Order')\"; onMouseout=\"hideddrivetip()\"></i>
 												";
@@ -532,15 +532,15 @@ if ($_GET['ldate']) {
                                                         $legend = $c['legend'];
                                                         $status = $c['status'];
 
-                                                        if ($status == 0) {
+                                                        if ($status==0) {
                                                             $icolor = '#fff';
                                                         } else {
                                                             $icolor = '#fff';
                                                         }
 
-                                                        if ($status == 0) {
+                                                        if ($status==0) {
                                                             $istatus = 'Reserved';
-                                                        } elseif ($status == 1) {
+                                                        } elseif ($status==1) {
                                                             $istatus = 'Check In';
                                                         } else {
                                                             $istatus = 'Check Out';
@@ -548,7 +548,7 @@ if ($_GET['ldate']) {
 
                                                         $iguest = trim($c['initial']).'. '.trim($c['guest']).' | '.$istatus;
 
-                                                        if ($c['initial'] == 'Mr ') {
+                                                        if ($c['initial']=='Mr ') {
                                                             $icon = 'fa fa-male';
                                                         } else {
                                                             $icon = 'fa fa-female';
@@ -566,7 +566,7 @@ if ($_GET['ldate']) {
                                                         }
                                                     }
 
-                                                    if ($jml == '1') {
+                                                    if ($jml=='1') {
                                                         echo"<td width='50%'>
 												</td>";
                                                     }
@@ -576,8 +576,8 @@ if ($_GET['ldate']) {
                                                     echo'</td>';
                                                 }
 
-                                                for ($i = 1; $i <= $lday; $i++) {
-                                                    if (strlen($i) == '1') {
+                                                for ($i = 1; $i<=$lday; $i++) {
+                                                    if (strlen($i)=='1') {
                                                         $tgl = '0'.$i;
                                                     } else {
                                                         $tgl = $i;
@@ -587,7 +587,7 @@ if ($_GET['ldate']) {
 
                                                     echo"<td class=$sty style='padding:0;'>";
 
-                                                    if ($aktif == 'T') {
+                                                    if ($aktif=='T') {
                                                         echo"
 												<i class='fa fa-warning' style='color: red;font-size:18px' onMouseover=\"ddrivetip('Out of Order')\"; onMouseout=\"hideddrivetip()\"></i>
 												";
@@ -619,15 +619,15 @@ if ($_GET['ldate']) {
                                                         $legend = $c['legend'];
                                                         $status = $c['status'];
 
-                                                        if ($status == 0) {
+                                                        if ($status==0) {
                                                             $icolor = '#fff';
                                                         } else {
                                                             $icolor = '#fff';
                                                         }
 
-                                                        if ($status == 0) {
+                                                        if ($status==0) {
                                                             $istatus = 'Reserved';
-                                                        } elseif ($status == 1) {
+                                                        } elseif ($status==1) {
                                                             $istatus = 'Check In';
                                                         } else {
                                                             $istatus = 'Check Out';
@@ -635,7 +635,7 @@ if ($_GET['ldate']) {
 
                                                         $iguest = trim($c['initial']).'. '.trim($c['guest']).' | '.$istatus;
 
-                                                        if ($c['initial'] == 'Mr ') {
+                                                        if ($c['initial']=='Mr ') {
                                                             $icon = 'fa fa-male';
                                                         } else {
                                                             $icon = 'fa fa-female';
@@ -653,7 +653,7 @@ if ($_GET['ldate']) {
                                                         }
                                                     }
 
-                                                    if ($jml == '1') {
+                                                    if ($jml=='1') {
                                                         echo"<td width='50%'>
 												</td>";
                                                     }

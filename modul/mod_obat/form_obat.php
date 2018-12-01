@@ -44,7 +44,7 @@ $modul = $_GET['module'];
 
         if ($id) {
             $query = mysql_query('SELECT * FROM obat WHERE id_obat = "'.$id.'"');
-            if ($query && mysql_num_rows($query) == 1) {
+            if ($query && mysql_num_rows($query)==1) {
                 $data = mysql_fetch_object($query);
             } else {
                 die('Data modul tidak ditemukan');
@@ -85,10 +85,10 @@ $modul = $_GET['module'];
                  <select name="satuan" class="form-control">                
                     <?php
                         $query = mysql_query('SELECT * FROM satuan ORDER BY satuan');
-        if ($query && mysql_num_rows($query) > 0) {
+        if ($query && mysql_num_rows($query)>0) {
             while ($row = mysql_fetch_object($query)) {
                 echo '<option value="'.$row->id_satuan.'"';
-                if ($row->id_satuan == @$data->id_satuan) {
+                if ($row->id_satuan==@$data->id_satuan) {
                     echo ' selected';
                 }
                 echo '>'.$row->satuan.'</option>';
@@ -108,7 +108,7 @@ $modul = $_GET['module'];
           <?php if ($id) {
             ?>  
     
-            <?php if (@$data->aktif == 'Y') {
+            <?php if (@$data->aktif=='Y') {
                 ?>
               
                 <div class="form-group">

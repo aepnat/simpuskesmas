@@ -63,7 +63,7 @@ switch ($_GET[act]) {
                             while ($r = mysql_fetch_array($tampil)) {
                                 $tgl_lahir = date('d/m/Y', strtotime($r[tgl_lahir]));
 
-                                if ($r['gender'] == 'L') {
+                                if ($r['gender']=='L') {
                                     $gender = 'Laki-laki';
                                 } else {
                                     $gender = 'Perempuan';
@@ -88,7 +88,7 @@ switch ($_GET[act]) {
 
                             <?php
 
-                            if ($r_edit == 'Y') {
+                            if ($r_edit=='Y') {
                                 echo"<a class='thickbox' href='modul/mod_$module/form_$module.php?id_pasien=$r[id_pasien]&id_module=$id&width=720&height=560&module=$module&TB_iframe=true' title='Update $nmmodule'><span class='icon'><i class='fa fa-pencil'></i></span></a>";
                             }
 
