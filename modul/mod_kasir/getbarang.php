@@ -69,4 +69,3 @@
     echo json_encode($data);
 
     flush();
-?>
