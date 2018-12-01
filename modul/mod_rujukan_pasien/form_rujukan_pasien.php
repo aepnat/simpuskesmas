@@ -2,7 +2,7 @@
     session_start();
     if (empty($_SESSION['username']) and empty($_SESSION['password'])) {
         echo "<script>window.alert('Please login first.'); window.location=('../../index.php.php')</script>";
-} else {
+    } else {
         include './../../config/koneksi.php'; ?>
 <!doctype html>
 <html>
@@ -34,40 +34,40 @@
 <?php
 
 $modul = $_GET['module'];
-    $title = $_GET['title'];
-    $business_type = $_SESSION['business_type'];
-    $role = $_SESSION['role'];
+        $title = $_GET['title'];
+        $business_type = $_SESSION['business_type'];
+        $role = $_SESSION['role'];
 
-    $id_module = $_GET['id_module'];
+        $id_module = $_GET['id_module'];
 
-    $id = isset($_GET['id_kunjungan_berobat']) ? intval($_GET['id_kunjungan_berobat']) : false;
+        $id = isset($_GET['id_kunjungan_berobat']) ? intval($_GET['id_kunjungan_berobat']) : false;
 
-    if ($id) {
-        $query = mysql_query('SELECT * FROM kunjungan_berobat WHERE id_kunjungan_berobat = "'.$id.'"');
-        if ($query && mysql_num_rows($query)==1) {
-            $data = mysql_fetch_object($query);
-        } else {
-            die('Data modul tidak ditemukan');
+        if ($id) {
+            $query = mysql_query('SELECT * FROM kunjungan_berobat WHERE id_kunjungan_berobat = "'.$id.'"');
+            if ($query && mysql_num_rows($query) == 1) {
+                $data = mysql_fetch_object($query);
+            } else {
+                die('Data modul tidak ditemukan');
+            }
         }
-    }
 
-    if ($_GET['igroup']) {
-        $group = $_GET['igroup'];
-    } else {
-        $group = $data->id_kunjungan_berobat;
-    }
+        if ($_GET['igroup']) {
+            $group = $_GET['igroup'];
+        } else {
+            $group = $data->id_kunjungan_berobat;
+        }
 
-    if ($_GET['imenu']) {
-        $imenu = $_GET['imenu'];
-    } else {
-        $imenu = $data->id_modul;
-    }
+        if ($_GET['imenu']) {
+            $imenu = $_GET['imenu'];
+        } else {
+            $imenu = $data->id_modul;
+        }
 
-    if ($data->tanggal) {
-        $tanggal = $data->tanggal;
-    } else {
-        $tanggal = date('Y-m-d');
-    } ?>
+        if ($data->tanggal) {
+            $tanggal = $data->tanggal;
+        } else {
+            $tanggal = date('Y-m-d');
+        } ?>
 
 
 <div class="ix_panel">
@@ -92,17 +92,17 @@ $modul = $_GET['module'];
                  <option>--Pilih Pasien--</option>                
                     <?php
                         $query = mysql_query('SELECT * FROM pasien ORDER BY nama');
-    if ($query && mysql_num_rows($query) > 0) {
-        while ($row = mysql_fetch_object($query)) {
-            $pasien = $row->ktp.'-'.$row->nama;
+        if ($query && mysql_num_rows($query) > 0) {
+            while ($row = mysql_fetch_object($query)) {
+                $pasien = $row->ktp.'-'.$row->nama;
 
-            echo '<option value="'.$row->id_pasien.'"';
-            if ($row->id_pasien == @$data->id_pasien) {
-                echo ' selected';
+                echo '<option value="'.$row->id_pasien.'"';
+                if ($row->id_pasien == @$data->id_pasien) {
+                    echo ' selected';
+                }
+                echo '>'.$pasien.'</option>';
             }
-            echo '>'.$pasien.'</option>';
-        }
-    } ?>
+        } ?>
                     </select>
               </div>
 
@@ -113,15 +113,15 @@ $modul = $_GET['module'];
                  <option>--Pilih Poliklinik --</option>                          
                     <?php
                         $query = mysql_query('SELECT * FROM poli ORDER BY poli');
-    if ($query && mysql_num_rows($query) > 0) {
-        while ($row = mysql_fetch_object($query)) {
-            echo '<option value="'.$row->id_poli.'"';
-            if ($row->id_poli == @$data->id_poli) {
-                echo ' selected';
+        if ($query && mysql_num_rows($query) > 0) {
+            while ($row = mysql_fetch_object($query)) {
+                echo '<option value="'.$row->id_poli.'"';
+                if ($row->id_poli == @$data->id_poli) {
+                    echo ' selected';
+                }
+                echo '>'.$row->poli.'</option>';
             }
-            echo '>'.$row->poli.'</option>';
-        }
-    } ?>
+        } ?>
                     </select>
               </div>
 
@@ -132,15 +132,15 @@ $modul = $_GET['module'];
                  <option>--Pilih Rujukan RS --</option>                          
                     <?php
                         $query = mysql_query('SELECT * FROM rujukan WHERE tipe = "R" ORDER BY rujukan');
-    if ($query && mysql_num_rows($query) > 0) {
-        while ($row = mysql_fetch_object($query)) {
-            echo '<option value="'.$row->id_rujukan.'"';
-            if ($row->id_rujukan == @$data->id_rujukan_rs) {
-                echo ' selected';
+        if ($query && mysql_num_rows($query) > 0) {
+            while ($row = mysql_fetch_object($query)) {
+                echo '<option value="'.$row->id_rujukan.'"';
+                if ($row->id_rujukan == @$data->id_rujukan_rs) {
+                    echo ' selected';
+                }
+                echo '>'.$row->rujukan.'</option>';
             }
-            echo '>'.$row->rujukan.'</option>';
-        }
-    } ?>
+        } ?>
                     </select>
               </div>
 
@@ -151,15 +151,15 @@ $modul = $_GET['module'];
                  <option>--Pilih Rujukan Lab --</option>                          
                     <?php
                         $query = mysql_query('SELECT * FROM rujukan WHERE tipe = "L" ORDER BY rujukan');
-    if ($query && mysql_num_rows($query) > 0) {
-        while ($row = mysql_fetch_object($query)) {
-            echo '<option value="'.$row->id_rujukan.'"';
-            if ($row->id_rujukan == @$data->id_rujukan_lab) {
-                echo ' selected';
+        if ($query && mysql_num_rows($query) > 0) {
+            while ($row = mysql_fetch_object($query)) {
+                echo '<option value="'.$row->id_rujukan.'"';
+                if ($row->id_rujukan == @$data->id_rujukan_lab) {
+                    echo ' selected';
+                }
+                echo '>'.$row->rujukan.'</option>';
             }
-            echo '>'.$row->rujukan.'</option>';
-        }
-    } ?>
+        } ?>
                     </select>
               </div>
 
@@ -380,5 +380,5 @@ $modul = $_GET['module'];
 </body>
 </html>
 <?php
-}
+    }
 ?>

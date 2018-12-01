@@ -16,7 +16,7 @@ if (empty($_SESSION['username']) and empty($_SESSION['password'])) {
     $userid = $_SESSION['userid'];
 
     // Hapus modul
-    if ($module=='user' and $act=='hapus') {
+    if ($module == 'user' and $act == 'hapus') {
         $id = $_GET['id'];
         $id_module = $_GET['id_module'];
 
@@ -26,7 +26,7 @@ if (empty($_SESSION['username']) and empty($_SESSION['password'])) {
     }
 
     // Input group
-    elseif ($module=='user' and $act=='input') {
+    elseif ($module == 'user' and $act == 'input') {
         $id_module = $_POST['id_module'];
 
         $lokasi_file = $_FILES['fupload']['tmp_name'];
@@ -37,25 +37,25 @@ if (empty($_SESSION['username']) and empty($_SESSION['password'])) {
 
         $pass = $_POST[password];
 
-        if ($_POST['r_input']=='Y') {
+        if ($_POST['r_input'] == 'Y') {
             $r_input = 'Y';
         } else {
             $r_input = 'N';
         }
 
-        if ($_POST['r_edit']=='Y') {
+        if ($_POST['r_edit'] == 'Y') {
             $r_edit = 'Y';
         } else {
             $r_edit = 'N';
         }
 
-        if ($_POST['r_delete']=='Y') {
+        if ($_POST['r_delete'] == 'Y') {
             $r_delete = 'Y';
         } else {
             $r_delete = 'N';
         }
 
-        if ($_POST['r_admin']=='Y') {
+        if ($_POST['r_admin'] == 'Y') {
             $r_admin = 'Y';
         } else {
             $r_admin = 'N';
@@ -75,9 +75,9 @@ if (empty($_SESSION['username']) and empty($_SESSION['password'])) {
                        ,updby       = '$userid' 
                        ,aktif         = '$_POST[aktif]'
                      WHERE id_user        = '$_POST[ID]'");
-                    } else {
-                        ProfileImage($nama_file_unik);
-                        mysql_query("UPDATE user SET  username      = '$_POST[username]'
+                } else {
+                    ProfileImage($nama_file_unik);
+                    mysql_query("UPDATE user SET  username      = '$_POST[username]'
                        ,id_groups     = '$_POST[groups]'  
                        ,nik           = '$_POST[nik]'  
                        ,r_input     = '$r_input'  
@@ -89,16 +89,16 @@ if (empty($_SESSION['username']) and empty($_SESSION['password'])) {
                          ,updby       = '$userid' 
                          ,aktif         = '$_POST[aktif]'
                      WHERE id_user        = '$_POST[ID]'");
-                    }
                 }
-                // Apabila password diubah
-                else {
+            }
+            // Apabila password diubah
+            else {
 
         //$pass=md5($_POST[password]);
-                    $pass = $_POST[password];
+                $pass = $_POST[password];
 
-                    if (empty($lokasi_file)) {
-                        mysql_query("UPDATE user SET password     = '$pass'
+                if (empty($lokasi_file)) {
+                    mysql_query("UPDATE user SET password     = '$pass'
                          ,username    = '$_POST[username]'
                          ,id_groups   = '$_POST[groups]'  
                          ,nik           = '$_POST[nik]'  
@@ -110,9 +110,9 @@ if (empty($_SESSION['username']) and empty($_SESSION['password'])) {
                          ,updby     = '$userid' 
                          ,aktif       = '$_POST[aktif]'      
                        WHERE id_user      = '$_POST[ID]'");
-                    } else {
-                        ProfileImage($nama_file_unik);
-                        mysql_query("UPDATE user SET password     = '$pass'
+                } else {
+                    ProfileImage($nama_file_unik);
+                    mysql_query("UPDATE user SET password     = '$pass'
                          ,username    = '$_POST[username]'
                          ,id_groups   = '$_POST[groups]'  
                          ,nik           = '$_POST[nik]'  
@@ -125,13 +125,13 @@ if (empty($_SESSION['username']) and empty($_SESSION['password'])) {
                          ,updby     = '$userid' 
                          ,aktif       = '$_POST[aktif]'      
                        WHERE id_user      = '$_POST[ID]'");
-                    }
                 }
-            } else {
-                if (!empty($lokasi_file)) {
-                    ProfileImage($nama_file_unik);
+            }
+        } else {
+            if (!empty($lokasi_file)) {
+                ProfileImage($nama_file_unik);
 
-                    mysql_query("INSERT INTO user (id_user
+                mysql_query("INSERT INTO user (id_user
                         ,username
                         ,password      
                         ,nik
@@ -161,8 +161,8 @@ if (empty($_SESSION['username']) and empty($_SESSION['password'])) {
                        ,'$datetime'
                        ,'$userid'
                        ,'$_POST[aktif]')");
-                } else {
-                    mysql_query("INSERT INTO user (id_user
+            } else {
+                mysql_query("INSERT INTO user (id_user
                         ,username
                         ,password     
                         ,nik 
@@ -192,10 +192,10 @@ if (empty($_SESSION['username']) and empty($_SESSION['password'])) {
                        ,'$datetime'
                        ,'$userid'
                        ,'$_POST[aktif]')");
-                }
             }
+        }
 
-            //header('location:../../main.php?module='.$module.'&id_module='.$id_module);?>
+        //header('location:../../main.php?module='.$module.'&id_module='.$id_module);?>
    
   <script language="javascript">
      window.parent.location.href = "<?php echo"./../../main.php?module=$module&id_module=$id_module"; ?>";  
@@ -203,6 +203,6 @@ if (empty($_SESSION['username']) and empty($_SESSION['password'])) {
    </script>
   
   <?php
-        }
+    }
 }
     ?>

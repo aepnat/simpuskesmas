@@ -17,7 +17,7 @@ if (empty($_SESSION['username']) and empty($_SESSION['password'])) {
     $business_type = $_SESSION['business_type'];
 
     // Hapus modul
-    if ($module=='groupmodul' and $act=='hapus') {
+    if ($module == 'groupmodul' and $act == 'hapus') {
         $id = $_GET['id'];
 
         mysql_query('DELETE FROM '.$module.' WHERE id_'.$module." = $id");
@@ -28,7 +28,7 @@ if (empty($_SESSION['username']) and empty($_SESSION['password'])) {
     }
 
     // Input groupmodul
-    elseif ($module=='groupmodul' and $act=='input') {
+    elseif ($module == 'groupmodul' and $act == 'input') {
         $jum = $_POST['jum'];
 
         mysql_query("DELETE FROM groupmodul WHERE id_groups = '$_POST[groups]' AND id_modul = '$_POST[imenu]'");
@@ -48,7 +48,7 @@ if (empty($_SESSION['username']) and empty($_SESSION['password'])) {
                         ,'$userid'
                         ,'Y')");
 
-        for ($i = 1; $i<=$jum; $i++) {
+        for ($i = 1; $i <= $jum; $i++) {
             $id = $_POST['id'.$i];
             $modul = $_POST['modul'.$i];
 
@@ -69,10 +69,10 @@ if (empty($_SESSION['username']) and empty($_SESSION['password'])) {
                         ,'$datetime'
                         ,'$userid'
                         ,'Y')");
-                }
             }
+        }
 
-            $id_module = $_POST['id_module']; ?>
+        $id_module = $_POST['id_module']; ?>
    
   <script language="javascript">
      window.parent.location.href = "<?php echo"./../../main.php?module=$module&id_module=$id_module"; ?>";  
@@ -80,6 +80,6 @@ if (empty($_SESSION['username']) and empty($_SESSION['password'])) {
    </script>
   
   <?php
-        }
+    }
 }
     ?>

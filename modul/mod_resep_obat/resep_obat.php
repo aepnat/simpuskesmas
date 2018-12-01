@@ -81,26 +81,26 @@ switch ($_GET[act]) {
                                       WHERE a.id_kunjungan_berobat = '$id' 
                                       order by a.id_kunjungan_berobat_detail");
 
-                while ($d = mysql_fetch_array($dtampil)) {
-                    echo"<table width='100%'>";
-                    echo'<tr>';
-                    echo"<td width='70%'>$d[obat]</td>";
-                    echo"<td width='30%'>$d[qty] $d[satuan]</td>";
-                    echo'</tr>';
-                    echo'</table>';
-                }
+                        while ($d = mysql_fetch_array($dtampil)) {
+                            echo"<table width='100%'>";
+                            echo'<tr>';
+                            echo"<td width='70%'>$d[obat]</td>";
+                            echo"<td width='30%'>$d[qty] $d[satuan]</td>";
+                            echo'</tr>';
+                            echo'</table>';
+                        }
 
-                echo'</td>';
-                echo" <td  style='text-align:center;'>";
+                        echo'</td>';
+                        echo" <td  style='text-align:center;'>";
 
-                if ($r_edit=='Y') {
-                    echo"<a class='thickbox' href='modul/mod_$module/form_$module.php?id_kunjungan_berobat=$r[id_kunjungan_berobat]&id_module=$id&width=720&height=620&module=$module&TB_iframe=true' title='Tambah $nmmodule'><span class='icon'><i class='fa fa-pencil'></i></span></a>";
-                }
+                        if ($r_edit == 'Y') {
+                            echo"<a class='thickbox' href='modul/mod_$module/form_$module.php?id_kunjungan_berobat=$r[id_kunjungan_berobat]&id_module=$id&width=720&height=620&module=$module&TB_iframe=true' title='Tambah $nmmodule'><span class='icon'><i class='fa fa-pencil'></i></span></a>";
+                        }
 
-                echo'</td>';
-                echo'</tr>';
-                $no++;
-            }
+                        echo'</td>';
+                        echo'</tr>';
+                        $no++;
+                    }
                                 ?>
                          </tbody>
                     </table>

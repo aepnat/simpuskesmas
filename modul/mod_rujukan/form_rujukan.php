@@ -2,7 +2,7 @@
     session_start();
     if (empty($_SESSION['username']) and empty($_SESSION['password'])) {
         echo "<script>window.alert('Please login first.'); window.location=('../../index.php.php')</script>";
-} else {
+    } else {
         include './../../config/koneksi.php'; ?>
 <!doctype html>
 <html>
@@ -34,34 +34,34 @@
 <?php
 
 $modul = $_GET['module'];
-    $title = $_GET['title'];
+        $title = $_GET['title'];
 
-    $role = $_SESSION['role'];
+        $role = $_SESSION['role'];
 
-    $id_module = $_GET['id_module'];
+        $id_module = $_GET['id_module'];
 
-    $id = isset($_GET['id_rujukan']) ? intval($_GET['id_rujukan']) : false;
+        $id = isset($_GET['id_rujukan']) ? intval($_GET['id_rujukan']) : false;
 
-    if ($id) {
-        $query = mysql_query('SELECT * FROM rujukan WHERE id_rujukan = "'.$id.'"');
-        if ($query && mysql_num_rows($query)==1) {
-            $data = mysql_fetch_object($query);
-        } else {
-            die('Data modul tidak ditemukan');
+        if ($id) {
+            $query = mysql_query('SELECT * FROM rujukan WHERE id_rujukan = "'.$id.'"');
+            if ($query && mysql_num_rows($query) == 1) {
+                $data = mysql_fetch_object($query);
+            } else {
+                die('Data modul tidak ditemukan');
+            }
         }
-    }
 
-    if ($_GET['igroup']) {
-        $group = $_GET['igroup'];
-    } else {
-        $group = $data->id_rujukan;
-    }
+        if ($_GET['igroup']) {
+            $group = $_GET['igroup'];
+        } else {
+            $group = $data->id_rujukan;
+        }
 
-    if ($_GET['imenu']) {
-        $imenu = $_GET['imenu'];
-    } else {
-        $imenu = $data->id_modul;
-    } ?>
+        if ($_GET['imenu']) {
+            $imenu = $_GET['imenu'];
+        } else {
+            $imenu = $data->id_modul;
+        } ?>
 
 
 <div class="ix_panel">
@@ -71,10 +71,10 @@ $modul = $_GET['module'];
      
           
            <?php if ($id) {
-        ?>  
+            ?>  
     
-            <?php if (@$data->tipe=='R') {
-            ?>
+            <?php if (@$data->tipe == 'R') {
+                ?>
               
                 <div class="form-group">
                    <label class="control-label col-md-3 col-sm-3 col-xs-12" style='padding-top:10px;'>Tipe :</label>
@@ -123,10 +123,10 @@ $modul = $_GET['module'];
 
         
           <?php if ($id) {
-        ?>  
+            ?>  
     
-            <?php if (@$data->aktif=='Y') {
-            ?>
+            <?php if (@$data->aktif == 'Y') {
+                ?>
               
                 <div class="form-group">
 	               <label class="control-label col-md-3 col-sm-3 col-xs-12" style='padding-top:10px;'>Aktif :</label>
@@ -383,5 +383,5 @@ $modul = $_GET['module'];
 </body>
 </html>
 <?php
-}
+    }
 ?>

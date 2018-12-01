@@ -44,7 +44,7 @@ $modul = $_GET['module'];
 
     if ($id) {
         $query = mysql_query('SELECT * FROM poli WHERE id_poli = "'.$id.'"');
-        if ($query && mysql_num_rows($query)==1) {
+        if ($query && mysql_num_rows($query) == 1) {
             $data = mysql_fetch_object($query);
         } else {
             die('Data modul tidak ditemukan');
@@ -81,7 +81,7 @@ $modul = $_GET['module'];
           <?php if ($id) {
         ?>  
     
-            <?php if (@$data->aktif=='Y') {
+            <?php if (@$data->aktif == 'Y') {
             ?>
               
                 <div class="form-group">

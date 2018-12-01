@@ -16,7 +16,7 @@ if (empty($_SESSION['username']) and empty($_SESSION['password'])) {
     $userid = $_SESSION['userid'];
     $business_type = $_SESSION['business_type'];
 
-    if ($module=='rekam_medis' and $act=='update') {
+    if ($module == 'rekam_medis' and $act == 'update') {
         $id_module = $_POST['id_module'];
 
         mysql_query("UPDATE kunjungan_berobat SET keluhan   = '$_POST[keluhan]'
@@ -29,7 +29,7 @@ if (empty($_SESSION['username']) and empty($_SESSION['password'])) {
                     ,status     = '1'  
                  WHERE id_kunjungan_berobat    = '$_POST[ID]'");
 
-            //header('location:../../main.php?module='.$module.'&id_module='.$id_module);?>
+        //header('location:../../main.php?module='.$module.'&id_module='.$id_module);?>
    
   <script language="javascript">
      window.parent.location.href = "<?php echo"./../../main.php?module=$module&id_module=$id_module"; ?>";  
@@ -37,6 +37,6 @@ if (empty($_SESSION['username']) and empty($_SESSION['password'])) {
    </script>
   
   <?php
-        }
+    }
 }
     ?>

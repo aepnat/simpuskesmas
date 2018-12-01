@@ -16,7 +16,7 @@ if (empty($_SESSION['username']) and empty($_SESSION['password'])) {
     $userid = $_SESSION['userid'];
     $business_type = $_SESSION['business_type'];
 
-    if ($module=='rujukan_pasien' and $act=='update') {
+    if ($module == 'rujukan_pasien' and $act == 'update') {
         $id_module = $_POST['id_module'];
 
         mysql_query("UPDATE kunjungan_berobat SET id_rujukan_rs   = '$_POST[rujukan_rs]'
@@ -34,6 +34,6 @@ if (empty($_SESSION['username']) and empty($_SESSION['password'])) {
    </script>
   
   <?php
-        }
+    }
 }
     ?>

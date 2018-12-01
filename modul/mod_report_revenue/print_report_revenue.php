@@ -120,7 +120,7 @@ $nprd = getBulan1($month).' '.$year;
 
 $jenis_transaksi = $_GET['jenis_transaksi'];
 
-if ($tipe=='R') {
+if ($tipe == 'R') {
     $kertas = 'portrait';
 } else {
     $kertas = 'landscape';

@@ -2,7 +2,7 @@
     session_start();
     if (empty($_SESSION['username']) and empty($_SESSION['password'])) {
         echo "<script>window.alert('Please login first.'); window.location=('../../index.php.php')</script>";
-} else {
+    } else {
         include './../../config/koneksi.php'; ?>
 <!doctype html>
 <html>
@@ -34,40 +34,40 @@
 <?php
 
 $modul = $_GET['module'];
-    $title = $_GET['title'];
-    $business_type = $_SESSION['business_type'];
-    $role = $_SESSION['role'];
+        $title = $_GET['title'];
+        $business_type = $_SESSION['business_type'];
+        $role = $_SESSION['role'];
 
-    $id_module = $_GET['id_module'];
+        $id_module = $_GET['id_module'];
 
-    $id = isset($_GET['id_kunjungan_berobat']) ? intval($_GET['id_kunjungan_berobat']) : false;
+        $id = isset($_GET['id_kunjungan_berobat']) ? intval($_GET['id_kunjungan_berobat']) : false;
 
-    if ($id) {
-        $query = mysql_query('SELECT * FROM kunjungan_berobat WHERE id_kunjungan_berobat = "'.$id.'"');
-        if ($query && mysql_num_rows($query)==1) {
-            $data = mysql_fetch_object($query);
-        } else {
-            die('Data modul tidak ditemukan');
+        if ($id) {
+            $query = mysql_query('SELECT * FROM kunjungan_berobat WHERE id_kunjungan_berobat = "'.$id.'"');
+            if ($query && mysql_num_rows($query) == 1) {
+                $data = mysql_fetch_object($query);
+            } else {
+                die('Data modul tidak ditemukan');
+            }
         }
-    }
 
-    if ($_GET['igroup']) {
-        $group = $_GET['igroup'];
-    } else {
-        $group = $data->id_kunjungan_berobat;
-    }
+        if ($_GET['igroup']) {
+            $group = $_GET['igroup'];
+        } else {
+            $group = $data->id_kunjungan_berobat;
+        }
 
-    if ($_GET['imenu']) {
-        $imenu = $_GET['imenu'];
-    } else {
-        $imenu = $data->id_modul;
-    }
+        if ($_GET['imenu']) {
+            $imenu = $_GET['imenu'];
+        } else {
+            $imenu = $data->id_modul;
+        }
 
-    if ($data->tanggal) {
-        $tanggal = $data->tanggal;
-    } else {
-        $tanggal = date('Y-m-d');
-    } ?>
+        if ($data->tanggal) {
+            $tanggal = $data->tanggal;
+        } else {
+            $tanggal = date('Y-m-d');
+        } ?>
 
 <div class="ix_panel">
 
@@ -101,17 +101,17 @@ $modul = $_GET['module'];
                  <option>--Pilih Pasien--</option>                
                     <?php
                         $query = mysql_query('SELECT * FROM pasien ORDER BY nama');
-    if ($query && mysql_num_rows($query) > 0) {
-        while ($row = mysql_fetch_object($query)) {
-            $pasien = $row->ktp.'-'.$row->nama;
+        if ($query && mysql_num_rows($query) > 0) {
+            while ($row = mysql_fetch_object($query)) {
+                $pasien = $row->ktp.'-'.$row->nama;
 
-            echo '<option value="'.$row->id_pasien.'"';
-            if ($row->id_pasien == @$data->id_pasien) {
-                echo ' selected';
+                echo '<option value="'.$row->id_pasien.'"';
+                if ($row->id_pasien == @$data->id_pasien) {
+                    echo ' selected';
+                }
+                echo '>'.$pasien.'</option>';
             }
-            echo '>'.$pasien.'</option>';
-        }
-    } ?>
+        } ?>
                     </select>
               </div>
 
@@ -128,15 +128,15 @@ $modul = $_GET['module'];
                  <option>--Pilih Poliklinik --</option>                          
                     <?php
                         $query = mysql_query('SELECT * FROM poli ORDER BY poli');
-    if ($query && mysql_num_rows($query) > 0) {
-        while ($row = mysql_fetch_object($query)) {
-            echo '<option value="'.$row->id_poli.'"';
-            if ($row->id_poli == @$data->id_poli) {
-                echo ' selected';
+        if ($query && mysql_num_rows($query) > 0) {
+            while ($row = mysql_fetch_object($query)) {
+                echo '<option value="'.$row->id_poli.'"';
+                if ($row->id_poli == @$data->id_poli) {
+                    echo ' selected';
+                }
+                echo '>'.$row->poli.'</option>';
             }
-            echo '>'.$row->poli.'</option>';
-        }
-    } ?>
+        } ?>
                     </select>
               </div> -->
 
@@ -191,15 +191,15 @@ $modul = $_GET['module'];
                                          <option value='0'></option>
                                             <?php
                                                 $query = mysql_query('SELECT * FROM obat ORDER BY obat');
-    if ($query && mysql_num_rows($query) > 0) {
-        while ($row = mysql_fetch_object($query)) {
-            echo '<option value="'.$row->id_obat.'"';
-            if ($row->id_obat == @$r['id_obat']) {
-                echo ' selected';
+        if ($query && mysql_num_rows($query) > 0) {
+            while ($row = mysql_fetch_object($query)) {
+                echo '<option value="'.$row->id_obat.'"';
+                if ($row->id_obat == @$r['id_obat']) {
+                    echo ' selected';
+                }
+                echo '>'.$row->obat.'</option>';
             }
-            echo '>'.$row->obat.'</option>';
-        }
-    } ?>
+        } ?>
                                             </select> 
                             
                                      </td>
@@ -224,8 +224,8 @@ $modul = $_GET['module'];
                                     </button>
                                     <?php 
                                     echo'</td>';
-    echo'</tr>';
-    $no++; ?>
+        echo'</tr>';
+        $no++; ?>
 
                                   <input type="hidden" name="id_module" value="<?php echo $id_module?>" /> 
                                   <input type="hidden" name="imodule" value="<?php echo $imodule?>" /> 
@@ -241,16 +241,16 @@ $modul = $_GET['module'];
                                             WHERE a.id_kunjungan_berobat = '$id' 
                                             order by a.id_kunjungan_berobat_detail";
 
-    $tampil = mysql_query($SQL);
+        $tampil = mysql_query($SQL);
 
-    $jml = mysql_num_rows($tampil);
+        $jml = mysql_num_rows($tampil);
 
-    $no = 1;
+        $no = 1;
 
-    while ($r = mysql_fetch_array($tampil)) {
-        $ID = $r['id_kunjungan_berobat'];
+        while ($r = mysql_fetch_array($tampil)) {
+            $ID = $r['id_kunjungan_berobat'];
 
-        echo'<tr>'; ?>
+            echo'<tr>'; ?>
 
                                      <form action="<?php echo"../../modul/mod_$modul/aksi_$modul.php?module=$modul&act=input"; ?>" method="post" name="formData" enctype="multipart/form-data"  > 
                                                             
@@ -263,29 +263,29 @@ $modul = $_GET['module'];
                                          <option value='0'></option>
                                             <?php
                                                 $query = mysql_query('SELECT * FROM obat ORDER BY obat');
-        if ($query && mysql_num_rows($query) > 0) {
-            while ($row = mysql_fetch_object($query)) {
-                echo '<option value="'.$row->id_obat.'"';
-                if ($row->id_obat == @$r['id_obat']) {
-                    echo ' selected';
+            if ($query && mysql_num_rows($query) > 0) {
+                while ($row = mysql_fetch_object($query)) {
+                    echo '<option value="'.$row->id_obat.'"';
+                    if ($row->id_obat == @$r['id_obat']) {
+                        echo ' selected';
+                    }
+                    echo '>'.$row->obat.'</option>';
                 }
-                echo '>'.$row->obat.'</option>';
-            }
-        } ?>
+            } ?>
                                             </select> 
                                        </td>
 
                                       <td>
-                                          <input type="number" required name='qty' id='iqty<?php echo $no; ?>' min = '0' value="<?php if ($jml>0) {
-            echo number_format($r['qty'], 0, '.', '');
-        } else {
-            echo 1;
-        } ?>" style='text-align:right;' class="form-control col-md-7 col-xs-12">  
-                                          <input type="hidden" name='eqty' id='eiqty<?php echo $no; ?>' min = '0' value="<?php if ($jml>0) {
-            echo number_format($r['qty'], 0, '.', '');
-        } else {
-            echo 1;
-        } ?>" style='text-align:right;' class="form-control col-md-7 col-xs-12">    
+                                          <input type="number" required name='qty' id='iqty<?php echo $no; ?>' min = '0' value="<?php if ($jml > 0) {
+                echo number_format($r['qty'], 0, '.', '');
+            } else {
+                echo 1;
+            } ?>" style='text-align:right;' class="form-control col-md-7 col-xs-12">  
+                                          <input type="hidden" name='eqty' id='eiqty<?php echo $no; ?>' min = '0' value="<?php if ($jml > 0) {
+                echo number_format($r['qty'], 0, '.', '');
+            } else {
+                echo 1;
+            } ?>" style='text-align:right;' class="form-control col-md-7 col-xs-12">    
 
                                        </td>
 
@@ -305,10 +305,10 @@ $modul = $_GET['module'];
                                     </button>
                                     <?php 
                                     echo"<a href='../../modul/mod_$modul/aksi_$modul.php?module=$modul&act=dhapus&id=$r[id_kunjungan_berobat_detail]&id_kunjungan_berobat=$r[id_kunjungan_berobat]&obat=$r[id_obat]&qty=$r[qty]&id_module=$id_module' onClick=\"return confirm('Hapus data ?')\" title='Hapus $nmmodule'><span class='btn btn-danger btn-sm '><i class='glyphicon glyphicon-trash'></i></span></a>";
-        echo'</td>';
-        echo'</tr>';
+            echo'</td>';
+            echo'</tr>';
 
-        $no++; ?>
+            $no++; ?>
 
                                   <input type="hidden" name="ID" value="<?php echo $r['id_kunjungan_berobat_detail']?>" />
                                   <input type="hidden" name="id_module" value="<?php echo $id_module?>" /> 
@@ -316,7 +316,7 @@ $modul = $_GET['module'];
 
                                 <?php
                                 echo'</form>';
-    } ?>  
+        } ?>  
 
 
 
@@ -532,5 +532,5 @@ $modul = $_GET['module'];
 </body>
 </html>
 <?php
-}
+    }
 ?>

@@ -602,7 +602,7 @@ function idownload(){
 
     $month = date('m', strtotime($iprd)) * 1;
 
-    if ($month=='1') {
+    if ($month == '1') {
         $imonth = 12;
     } else {
         $imonth = $month - 1;

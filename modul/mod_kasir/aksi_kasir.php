@@ -25,7 +25,7 @@ if (empty($_SESSION['username']) and empty($_SESSION['password'])) {
 
     // Hapus modul
 
-    if ($module=='kasir' and $act=='hapus') {
+    if ($module == 'kasir' and $act == 'hapus') {
         $id = $_GET['id'];
 
         $id_module = $_GET['id_module'];
@@ -38,7 +38,7 @@ if (empty($_SESSION['username']) and empty($_SESSION['password'])) {
 
                               WHERE id_kasir = '$id'");
 
-            mysql_query("UPDATE kasir_detail SET status   = '4'
+        mysql_query("UPDATE kasir_detail SET status   = '4'
 
                                 ,upddt   = '$datetime' 
 
@@ -53,7 +53,7 @@ if (empty($_SESSION['username']) and empty($_SESSION['password'])) {
 
     // Input group
 
-    elseif ($module=='kasir' and $act=='input') {
+    elseif ($module == 'kasir' and $act == 'input') {
         $id_module = $_POST['id_module'];
 
         if ($_POST['ID']) {
@@ -68,8 +68,8 @@ if (empty($_SESSION['username']) and empty($_SESSION['password'])) {
                                     ,updby   = '$userid' 
 
                                   WHERE id_kasir = '$_POST[ID]'");
-            } else {
-                mysql_query("INSERT INTO kasir (tanggal
+        } else {
+            mysql_query("INSERT INTO kasir (tanggal
 
                             , id_shift
 
@@ -103,13 +103,13 @@ if (empty($_SESSION['username']) and empty($_SESSION['password'])) {
                         ,'$datetime'
 
                         ,'$userid')");
-            }
+        }
 
-            $sql = mysql_query('SELECT max(id_kasir) as id FROM kasir');
+        $sql = mysql_query('SELECT max(id_kasir) as id FROM kasir');
 
-            $r = mysql_fetch_array($sql);
+        $r = mysql_fetch_array($sql);
 
-            $k_ID = $r['id']; ?>
+        $k_ID = $r['id']; ?>
 
    
 
@@ -122,7 +122,7 @@ if (empty($_SESSION['username']) and empty($_SESSION['password'])) {
   
 
   <?php
-    } elseif ($module=='kasir' and $act=='add') {
+    } elseif ($module == 'kasir' and $act == 'add') {
         $id_module = $_POST['id_module'];
 
         $k_ID = $_POST['k_ID'];
@@ -137,18 +137,18 @@ if (empty($_SESSION['username']) and empty($_SESSION['password'])) {
 
                               ");
 
-            $d = mysql_fetch_array($detil);
+        $d = mysql_fetch_array($detil);
 
-            $seqno = $d['seqno'];
+        $seqno = $d['seqno'];
 
-            if (empty($seqno)) {
-                $iseqno = '1';
-            } else {
-                $iseqno = $seqno + 1;
-            }
+        if (empty($seqno)) {
+            $iseqno = '1';
+        } else {
+            $iseqno = $seqno + 1;
+        }
 
-            if ($_POST['ID']) {
-                mysql_query("UPDATE kasir_detail SET notrans ='$_POST[notrans]' 
+        if ($_POST['ID']) {
+            mysql_query("UPDATE kasir_detail SET notrans ='$_POST[notrans]' 
 
                                 , pasien ='$_POST[pasien]' 
 
@@ -169,8 +169,8 @@ if (empty($_SESSION['username']) and empty($_SESSION['password'])) {
                               WHERE id_kasir_detail = '$_POST[ID]'
 
                               ");
-            } else {
-                mysql_query("INSERT INTO kasir_detail (
+        } else {
+            mysql_query("INSERT INTO kasir_detail (
 
                               id_kasir
 
@@ -229,7 +229,7 @@ if (empty($_SESSION['username']) and empty($_SESSION['password'])) {
                         ,'$datetime'
 
                         ,'$userid')");
-            } ?>
+        } ?>
 
    
 
@@ -242,7 +242,7 @@ if (empty($_SESSION['username']) and empty($_SESSION['password'])) {
   
 
   <?php
-    } elseif ($module=='kasir' and $act=='dhapus') {
+    } elseif ($module == 'kasir' and $act == 'dhapus') {
         $id = $_GET['id'];
 
         $id_module = $_GET['id_module'];
@@ -258,7 +258,7 @@ if (empty($_SESSION['username']) and empty($_SESSION['password'])) {
                               WHERE id_kasir_detail = '$id'");
 
         header('location:../../main.php?module='.$module.'&id_module='.$id_module.'&act=save&ID='.$k_ID);
-    } elseif ($module=='kasir' and $act=='verified') {
+    } elseif ($module == 'kasir' and $act == 'verified') {
         $id = $_GET['id'];
 
         $id_module = $_GET['id_module'];
@@ -291,7 +291,7 @@ if (empty($_SESSION['username']) and empty($_SESSION['password'])) {
 
                               ");
 
-            mysql_query("UPDATE kasir_detail SET status   = '$istatus'
+        mysql_query("UPDATE kasir_detail SET status   = '$istatus'
 
                                 ,upddt   = '$datetime' 
 
@@ -310,7 +310,7 @@ if (empty($_SESSION['username']) and empty($_SESSION['password'])) {
                               ");
 
         header('location:../../main.php?module='.$module.'&id_module='.$id_module.'&act=save&notrans='.$notrans.'&prd='.$prd.'&kode='.$kode.'&outlet='.$outlet);
-    } elseif ($module=='kasir' and $act=='reset') {
+    } elseif ($module == 'kasir' and $act == 'reset') {
         $id = $_GET['id'];
 
         $id_module = $_GET['id_module'];
@@ -341,7 +341,7 @@ if (empty($_SESSION['username']) and empty($_SESSION['password'])) {
 
                               ");
 
-            mysql_query("UPDATE kasir_detail SET status   = '0'
+        mysql_query("UPDATE kasir_detail SET status   = '0'
 
                                 ,upddt   = '$datetime' 
 
@@ -359,8 +359,8 @@ if (empty($_SESSION['username']) and empty($_SESSION['password'])) {
 
                               ");
 
-            header('location:../../main.php?module='.$module.'&id_module='.$id_module.'&act=save&notrans='.$notrans.'&prd='.$prd.'&kode='.$kode.'&outlet='.$outlet);
-        }
+        header('location:../../main.php?module='.$module.'&id_module='.$id_module.'&act=save&notrans='.$notrans.'&prd='.$prd.'&kode='.$kode.'&outlet='.$outlet);
+    }
 }
 
     ?>

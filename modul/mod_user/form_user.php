@@ -2,7 +2,7 @@
     session_start();
     if (empty($_SESSION['username']) and empty($_SESSION['password'])) {
         echo "<script>window.alert('Please login first.'); window.location=('../../index.php.php')</script>";
-} else {
+    } else {
         include './../../config/koneksi.php';
         include './../../config/fungsi_thumb.php';
 
@@ -70,36 +70,36 @@
 <?php
 
 $modul = $_GET['module'];
-    $title = $_GET['title'];
+        $title = $_GET['title'];
 
-    $role = $_SESSION['role'];
+        $role = $_SESSION['role'];
 
-    $id_module = $_GET['id_module'];
+        $id_module = $_GET['id_module'];
 
-    $id = $_GET['id_user']; // isset($_GET['id_user']) ? intval($_GET['id_user']) : false;
+        $id = $_GET['id_user']; // isset($_GET['id_user']) ? intval($_GET['id_user']) : false;
 
-    if ($id) {
-        $query = mysql_query('SELECT * FROM user WHERE id_user = "'.$id.'"');
-        if ($query && mysql_num_rows($query)==1) {
-            $data = mysql_fetch_object($query);
-        } else {
-            die('Data user tidak ditemukan');
+        if ($id) {
+            $query = mysql_query('SELECT * FROM user WHERE id_user = "'.$id.'"');
+            if ($query && mysql_num_rows($query) == 1) {
+                $data = mysql_fetch_object($query);
+            } else {
+                die('Data user tidak ditemukan');
+            }
         }
-    }
 
-    if ($_GET['igroup']) {
-        $group = $_GET['igroup'];
-    } else {
-        $group = $data->id_groups;
-    }
+        if ($_GET['igroup']) {
+            $group = $_GET['igroup'];
+        } else {
+            $group = $data->id_groups;
+        }
 
-    if ($_GET['imenu']) {
-        $imenu = $_GET['imenu'];
-    } else {
-        $imenu = $data->id_modul;
-    }
+        if ($_GET['imenu']) {
+            $imenu = $_GET['imenu'];
+        } else {
+            $imenu = $data->id_modul;
+        }
 
-    $pict = $data->pict; ?>
+        $pict = $data->pict; ?>
 
 
 <div class="ix_panel">
@@ -161,15 +161,15 @@ $modul = $_GET['module'];
                           <option value=''></option>
                     <?php
                         $query = mysql_query('SELECT * FROM groups ORDER BY groups');
-    if ($query && mysql_num_rows($query) > 0) {
-        while ($row = mysql_fetch_object($query)) {
-            echo '<option value="'.$row->id_groups.'"';
-            if ($row->id_groups == @$data->id_groups) {
-                echo ' selected';
+        if ($query && mysql_num_rows($query) > 0) {
+            while ($row = mysql_fetch_object($query)) {
+                echo '<option value="'.$row->id_groups.'"';
+                if ($row->id_groups == @$data->id_groups) {
+                    echo ' selected';
+                }
+                echo '>'.$row->groups.'</option>';
             }
-            echo '>'.$row->groups.'</option>';
-        }
-    } ?>
+        } ?>
                     </select>
               </div>
   
@@ -179,66 +179,66 @@ $modul = $_GET['module'];
               <div class="col-md-6 col-sm-6 col-xs-12" >
 
                 <?php if ($data->id_user) {
-        ?>
+            ?>
 
-                    <?php if ($data->r_input=='Y') {
-            ?>  
+                    <?php if ($data->r_input == 'Y') {
+                ?>  
                         <input checked type='checkbox' class='flat' value='Y' name='r_input' >&nbsp;<label>Input</label>  &nbsp; 
                     <?php
-        } else {
-            ?>  
+            } else {
+                ?>  
                         <input  type='checkbox'  class='flat'value='Y' name='r_input' >&nbsp;<label>Input</label>  &nbsp; 
                     <?php
-        } ?>  
+            } ?>  
                     
-                    <?php if ($data->r_edit=='Y') {
-            ?>  
+                    <?php if ($data->r_edit == 'Y') {
+                ?>  
                         <input checked type='checkbox' class='flat' value='Y' name='r_edit' >&nbsp;<label>Ubah</label>  &nbsp; 
                     <?php
-        } else {
-            ?>  
+            } else {
+                ?>  
                         <input  type='checkbox' class='flat' value='Y' name='r_edit' >&nbsp;<label>Ubah</label>  &nbsp; 
                     <?php
-        } ?>         
+            } ?>         
                     
-                    <?php if ($data->r_delete=='Y') {
-            ?>  
+                    <?php if ($data->r_delete == 'Y') {
+                ?>  
                         <input checked type='checkbox' class='flat' value='Y' name='r_delete' >&nbsp;<label>Hapus</label>   &nbsp; 
                     <?php
-        } else {
-            ?>  
+            } else {
+                ?>  
                         <input  type='checkbox' class='flat' value='Y' name='r_delete' >&nbsp;<label>Hapus</label>   &nbsp; 
                     <?php
-        } ?> 
+            } ?> 
 
-                     <?php if ($data->r_admin=='Y') {
-            ?>  
+                     <?php if ($data->r_admin == 'Y') {
+                ?>  
                         <input checked type='checkbox' class='flat' value='Y' name='r_admin' >&nbsp;<label>Grup Admin</label>   &nbsp; 
                     <?php
-        } else {
-            ?>  
+            } else {
+                ?>  
                         <input  type='checkbox' class='flat' value='Y' name='r_admin' >&nbsp;<label>Grup Admin</label>   &nbsp; 
                     <?php
-        } ?> 
+            } ?> 
 
                   <?php
-    } else {
-        ?>
+        } else {
+            ?>
                     
                     <input checked type='checkbox' value='Y' name='r_input' class="flat">&nbsp;<label>Input</label>  &nbsp; 
                     <input checked type='checkbox' value='Y' name='r_edit' class="flat">&nbsp;<label>Ubah</label>  &nbsp; 
                     <input checked type='checkbox' value='Y' name='r_delete' class="flat">&nbsp;<label>Hapus</label>  &nbsp;   
                     <input type = 'hidden' type='checkbox' value='N' name='r_admin' class="flat"> 
                   <?php
-    } ?>   
+        } ?>   
                 </div>
 
         
           <?php if ($id) {
-        ?>  
+            ?>  
     
-            <?php if (@$data->aktif=='Y') {
-            ?>
+            <?php if (@$data->aktif == 'Y') {
+                ?>
           
                 <label class="control-label col-md-3 col-sm-3 col-xs-12" style='padding-top:10px;'>Aktif :</label>
                   <div class="col-md-6 col-sm-6 col-xs-12">
@@ -524,5 +524,5 @@ $modul = $_GET['module'];
 </body>
 </html>
 <?php
-}
+    }
 ?>

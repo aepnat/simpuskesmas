@@ -79,7 +79,7 @@
                         break;
 
                     }
-}
+    }
 
 $report_id = $_GET[report_id];
 $tampil = mysql_query("SELECT * FROM modul WHERE id_modul ='".$report_id."'");
@@ -505,7 +505,7 @@ header('Content-Transfer-Encoding: binary ');
 
     $month = date('m', strtotime($iprd)) * 1;
 
-    if ($month=='1') {
+    if ($month == '1') {
         $imonth = 12;
     } else {
         $imonth = $month - 1;

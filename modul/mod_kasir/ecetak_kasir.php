@@ -251,42 +251,42 @@
 
                          ";
 
-                    $ptampil = mysql_query($pSQL);
+                        $ptampil = mysql_query($pSQL);
 
-                    $p = mysql_fetch_array($ptampil);
+                        $p = mysql_fetch_array($ptampil);
 
-                    if ($p[jumlah]) {
-                        $jml = number_format($p['jumlah'], 0, '.', ',');
-                    } else {
-                        $jml = 0;
+                        if ($p[jumlah]) {
+                            $jml = number_format($p['jumlah'], 0, '.', ',');
+                        } else {
+                            $jml = 0;
+                        }
+
+                        echo"<td  style='text-align:right;'>$jml </td>";
                     }
 
-                    echo"<td  style='text-align:right;'>$jml </td>";
-                }
+                    echo' <td>';
 
-                echo' <td>';
-
-                $jtampil = mysql_query("SELECT b.ket  FROM kasir a INNER JOIN kasir_detail b 
+                    $jtampil = mysql_query("SELECT b.ket  FROM kasir a INNER JOIN kasir_detail b 
                                          ON a.id_kasir = b.id_kasir 
                                          where a.tanggal = '$r[tanggal]'
                                          AND a.id_shift  = '$r[id_shift]'
                                          AND b.notrans  = '$d[notrans]'
                                          ");
 
-                $j = mysql_fetch_array($jtampil);
+                    $j = mysql_fetch_array($jtampil);
 
-                echo $j[ket];
+                    echo $j[ket];
 
-                if ($d['penjamin']) {
-                    echo'<br>'.'('.$d['penjamin'].')';
+                    if ($d['penjamin']) {
+                        echo'<br>'.'('.$d['penjamin'].')';
+                    }
+
+                    echo'</td>';
+
+                    echo '</tr>';
+
+                    $no++;
                 }
-
-                echo'</td>';
-
-                echo '</tr>';
-
-                $no++;
-            }
                 ?>
              </tbody> 
 

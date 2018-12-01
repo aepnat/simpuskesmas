@@ -91,7 +91,7 @@ $ldate1 = date('m/d/Y', strtotime($ldate));
     $jml = ($lday - $fday) + 1;
 
 if ($_GET['ldate']) {
-    if ($lmonth==$fmonth and $lyear==$fyear) {
+    if ($lmonth == $fmonth and $lyear == $fyear) {
         $jcol = $jml;
     } else {
         $jcol = $f_jml + $l_jml;
@@ -156,9 +156,9 @@ if ($_GET['ldate']) {
 		                        	<?php
                                     $col = (83 / $jcol);
 
-                                    if ($lmonth==$fmonth and $lyear==$fyear) {
-                                        for ($i = $fday; $i<=$lday; $i++) {
-                                            if (strlen($i)=='1') {
+                                    if ($lmonth == $fmonth and $lyear == $fyear) {
+                                        for ($i = $fday; $i <= $lday; $i++) {
+                                            if (strlen($i) == '1') {
                                                 $tgl = '0'.$i;
                                             } else {
                                                 $tgl = $i;
@@ -176,7 +176,7 @@ if ($_GET['ldate']) {
 
                                             if ($s['sdate']) {
                                                 $bg = '#eba51c';
-                                            } elseif ($nday=='6' or $nday=='7') {
+                                            } elseif ($nday == '6' or $nday == '7') {
                                                 $bg = '#eb1c41';
                                             } else {
                                                 $bg = '';
@@ -191,8 +191,8 @@ if ($_GET['ldate']) {
 										</th>";
                                         }
                                     } else {
-                                        for ($i = $fday; $i<=$f_lastday; $i++) {
-                                            if (strlen($i)=='1') {
+                                        for ($i = $fday; $i <= $f_lastday; $i++) {
+                                            if (strlen($i) == '1') {
                                                 $tgl = '0'.$i;
                                             } else {
                                                 $tgl = $i;
@@ -210,7 +210,7 @@ if ($_GET['ldate']) {
 
                                             if ($s['sdate']) {
                                                 $bg = '#eba51c';
-                                            } elseif ($nday=='6' or $nday=='7') {
+                                            } elseif ($nday == '6' or $nday == '7') {
                                                 $bg = '#eb1c41';
                                             } else {
                                                 $bg = '';
@@ -225,8 +225,8 @@ if ($_GET['ldate']) {
 										</th>";
                                         }
 
-                                        for ($i = 1; $i<=$lday; $i++) {
-                                            if (strlen($i)=='1') {
+                                        for ($i = 1; $i <= $lday; $i++) {
+                                            if (strlen($i) == '1') {
                                                 $tgl = '0'.$i;
                                             } else {
                                                 $tgl = $i;
@@ -244,7 +244,7 @@ if ($_GET['ldate']) {
 
                                             if ($s['sdate']) {
                                                 $bg = '#eba51c';
-                                            } elseif ($nday=='6' or $nday=='7') {
+                                            } elseif ($nday == '6' or $nday == '7') {
                                                 $bg = '#eb1c41';
                                             } else {
                                                 $bg = '';

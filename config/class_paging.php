@@ -32,7 +32,7 @@ class paging
     {
         $link_halaman = '';
 
-        if (($halaman_aktif - 1)>0) {
+        if (($halaman_aktif - 1) > 0) {
             $previous = $halaman_aktif - 1;
 
             $link_halaman .= "<a href=$_SERVER[PHP_SELF]?module=$_GET[module]&halaman=$previous title=Previous><<</a>&nbsp;";
@@ -66,30 +66,30 @@ class paging
 
         ///
 
-        $angka = ($halaman>3 ? ' ... ' : ' ');
-        for ($i = $halaman - 2; $i<$halaman; $i++) {
-            if ($i<1) {
+        $angka = ($halaman > 3 ? ' ... ' : ' ');
+        for ($i = $halaman - 2; $i < $halaman; $i++) {
+            if ($i < 1) {
                 continue;
             }
             $angka .= "<a href=$_SERVER[PHP_SELF]?halaman=$i>$i</A> ";
         }
 
         $angka .= " <b>$halaman</b> ";
-        for ($i = $halaman + 1; $i<($halaman + 3); $i++) {
-            if ($i>$jmlhalaman) {
+        for ($i = $halaman + 1; $i < ($halaman + 3); $i++) {
+            if ($i > $jmlhalaman) {
                 break;
             }
             $angka .= "<a href=$_SERVER[PHP_SELF]?module=$_GET[module]&halaman=$i>$i</A> ";
         }
 
-        $angka .= ($halaman + 2<$jmlhalaman ? " ...  
+        $angka .= ($halaman + 2 < $jmlhalaman ? " ...  
           <a href=$_SERVER[PHP_SELF]?module=$_GET[module]&halaman=$jmlhalaman>$jmlhalaman</A> " : ' ');
 
         echo "$angka";
 
         // Link Next dan Last
 
-        if ($halaman_aktif<$jmlhalaman) {
+        if ($halaman_aktif < $jmlhalaman) {
             $next = $halaman_aktif + 1;
 
             $link_halaman .= " <a href=$_SERVER[PHP_SELF]?module=$_GET[module]&halaman=$next title=Next>>></a> ";
