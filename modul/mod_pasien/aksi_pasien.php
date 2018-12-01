@@ -39,6 +39,7 @@ if (empty($_SESSION['username']) and empty($_SESSION['password'])) {
 
         if ($_POST['ID']) {
             mysql_query("UPDATE pasien SET ktp   = '$_POST[ktp]'
+                    ,bpjs   = '$_POST[bpjs]'
                     ,nama   = '$_POST[nama]'
                     ,gender   = '$_POST[gender]'    
                     ,tgl_lahir   = '$_POST[tgl_lahir]'    
@@ -52,6 +53,7 @@ if (empty($_SESSION['username']) and empty($_SESSION['password'])) {
                  WHERE id_pasien    = '$_POST[ID]'");
         } else {
             mysql_query("INSERT INTO pasien(ktp
+                   ,bpjs
                    ,nama
                    ,gender
                    ,tgl_lahir
@@ -65,6 +67,7 @@ if (empty($_SESSION['username']) and empty($_SESSION['password'])) {
                    ,updby
                    ,aktif) 
                     VALUES('$_POST[ktp]' 
+                   ,'$_POST[bpjs]' 
                    ,'$_POST[nama]' 
                    ,'$_POST[gender]'    
                    ,'$_POST[tgl_lahir]'    

@@ -198,6 +198,7 @@ $company = ucwords($g['company']);
                             <tr>                               
                                 <th><h3 style='font-size:12px;'>Nama Pasien</h3></th>
                                 <th><h3 style='font-size:12px;'>No KTP</h3></th>
+                                <th><h3 style='font-size:12px;'>No BPJS</h3></th>
                                 <th><h3 style='font-size:12px;'>Tanggal Lahir</h3></th>
                                 <th><h3 style='font-size:12px;'>Jenis Kelamin</h3></th>
                                 <th><h3 style='font-size:12px;'>Agama</h3></th>
@@ -232,9 +233,13 @@ $company = ucwords($g['company']);
                                     $gender = 'Perempuan';
                                 }
 
+                                $ktp = ($r['ktp'] != "") ? $r['ktp'] : '-';
+                                $bpjs = ($r['bpjs'] != "") ? $r['bpjs'] : '-';
+
                                 echo'<tr>';
                                 echo"<td>$r[nama]</td>";
-                                echo"<td>$r[ktp]</td>";
+                                echo"<td>$ktp</td>";
+                                echo"<td>$bpjs</td>";
                                 echo"<td>$tgl_lahir</td>";
                                 echo"<td>$gender</td>";
                                 echo"<td>$r[agama]</td>";

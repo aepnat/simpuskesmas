@@ -73,21 +73,28 @@ $modul = $_GET['module'];
           <div class="form-group">
 	               <label class="control-label col-md-3 col-sm-3 col-xs-12" style='padding-top:10px;'>No KTP :</label>
               <div class="col-md-6 col-sm-6 col-xs-12" >
-                 <input type="text" name='ktp' name='ktp' value="<?php echo @$data->ktp?>" autofocus required="required" class="form-control col-md-7 col-xs-12">
+                 <input type="text" name='ktp' name='ktp' value="<?php echo @$data->ktp?>" autofocus class="form-control col-md-7 col-xs-12">
+              </div>
+          </div>
+
+          <div class="form-group">
+	               <label class="control-label col-md-3 col-sm-3 col-xs-12" style='padding-top:10px;'>No BPJS :</label>
+              <div class="col-md-6 col-sm-6 col-xs-12" >
+                 <input type="text" name='bpjs' name='bpjs' value="<?php echo @$data->bpjs?>" class="form-control col-md-7 col-xs-12">
               </div>
           </div>
 
           <div class="form-group">
                  <label class="control-label col-md-3 col-sm-3 col-xs-12" style='padding-top:10px;'>Nama Pasien :</label>
               <div class="col-md-6 col-sm-6 col-xs-12" >
-                 <input type="text" name='nama' name='nama' value="<?php echo @$data->nama?>" autofocus required="required" class="form-control col-md-7 col-xs-12">
+                 <input type="text" name='nama' name='nama' value="<?php echo @$data->nama?>" required="required" class="form-control col-md-7 col-xs-12">
               </div>
           </div>
 
           <div class="form-group">
                  <label class="control-label col-md-3 col-sm-3 col-xs-12" style='padding-top:10px;'>Tanggal Lahir :</label>
               <div class="col-md-6 col-sm-6 col-xs-12" >
-                 <input type="date" name='tgl_lahir' name='tgl_lahir' value="<?php echo @$data->tgl_lahir?>" autofocus required="required" class="form-control col-md-7 col-xs-12">
+                 <input type="date" name='tgl_lahir' name='tgl_lahir' value="<?php echo @$data->tgl_lahir?>" required="required" class="form-control col-md-7 col-xs-12">
               </div>
           </div>
 

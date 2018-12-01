@@ -399,7 +399,7 @@ if ($r['gender'] == 'L') {
 <tr>
     <td width='30%'>NIP</td>
     <td width='1%'>:</td>
-    <td><?=$r['ktp']; ?></td>
+    <td><?php echo ($r['ktp'] != "") ? $r['ktp'] : '-'; ?></td>
 </tr>
 <tr>
     <td width='30%'>Nama</td>
@@ -416,6 +416,13 @@ if ($r['gender'] == 'L') {
     <td width='1%'>:</td>
     <td><?=$r['kategori']; ?></td>
 </tr>
+<?php if (strtolower($r['kategori']) == 'bpjs'):?>
+<tr>
+    <td width='30%'>No. BPJS</td>
+    <td width='1%'>:</td>
+    <td><?php echo ($r['bpjs'] != "") ? $r['bpjs'] : '-'; ?></td>
+</tr>
+<?php endif;?>
 </table>    
 
 </div>
