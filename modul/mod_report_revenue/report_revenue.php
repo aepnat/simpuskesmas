@@ -34,7 +34,7 @@ function showLokasi(str) {
 
   }
 
-  xmlhttp.open("GET","<?php echo"./modul/mod_$module/getlokasi.php?q=";?>"+str,true);
+  xmlhttp.open("GET","<?php echo"./modul/mod_$module/getlokasi.php?q="; ?>"+str,true);
 
   xmlhttp.send();
 
@@ -54,28 +54,28 @@ function getLokasi(str) {
 
 
 <?php
-switch($_GET[act]){
+switch ($_GET[act]) {
 
-default:  
+default:
 
-$fdate   = date("Y-m-01");
-$ldate   = date("Y-m-d");
+$fdate = date('Y-m-01');
+$ldate = date('Y-m-d');
 
-$prd   = date("Y-m");
+$prd = date('Y-m');
 
-$userid   = $_SESSION['userid'];  
+$userid = $_SESSION['userid'];
   ?>
 
  <div class="">
                    
         <div class="row">
 
-          <form name="myform" id="myform" method="get" action="<? echo"modul/mod_$module/print_$module.php";?>"  onSubmit="popup<?=$module?>(this, 'join')"> 
+          <form name="myform" id="myform" method="get" action="<?php echo"modul/mod_$module/print_$module.php"; ?>"  onSubmit="popup<?=$module?>(this, 'join')"> 
   
                 <div class="col-md-12 col-sm-12 col-xs-12">
                     <div class="x_panel">
                         <div class="x_title">
-                               <h2><?=$nmmodule;?></h2>
+                               <h2><?=$nmmodule; ?></h2>
                                <div class='pull-right'>
                                 <Button type="submit" class="btn btn-primary">
                                  <span class="glyphicon glyphicon-print" style='color:#fff;'></span>
@@ -99,7 +99,7 @@ $userid   = $_SESSION['userid'];
                 </div> 
                 <div class="col-md-9 col-sm-9 col-xs-9 form-group"> 
                  <label class="control-label">
-                    <?
+                    <?php
                     echo"<label><input type=radio name='tipe' value='R' class='flat' checked>&nbsp Rekap &nbsp</label>";
                     echo"<label><input type=radio name='tipe' value='D' class='flat'>&nbsp Detail</label> ";
                     ?>      
@@ -113,30 +113,30 @@ $userid   = $_SESSION['userid'];
                 </div> 
                 <div class="col-md-9 col-sm-9 col-xs-9 form-group"> 
                  <label class="control-label">
-                    <?
+                    <?php
                     echo"<label><input type=radio name='printto' value='1' class='flat' checked>&nbsp Preview &nbsp</label>";
                     echo"<label><input type=radio name='printto' value='2' class='flat'>&nbsp Print</label> ";
                     ?>      
                  </label>             
                 </div> 
 
-             <?
+             <?php
 
-             $module = '?module='.$_GET['module'];          
-             $tampil=mysql_query("SELECT id_modul as id FROM modul WHERE link='".$module."'");                       
-             $r=mysql_fetch_array($tampil);
+             $module = '?module='.$_GET['module'];
+             $tampil = mysql_query("SELECT id_modul as id FROM modul WHERE link='".$module."'");
+             $r = mysql_fetch_array($tampil);
 
-             echo"<input type='hidden' name='report_id' id='report_id' value=".$r[id].">"; 
-             echo"<input type='hidden' name='module' value=".$_GET[module].">";
+             echo"<input type='hidden' name='report_id' id='report_id' value=".$r[id].'>';
+             echo"<input type='hidden' name='module' value=".$_GET[module].'>';
             ?>
             </form>    
                    
                 </div>
-                <?for($i = 0; $i <= 20; $i++)  { 
-                    ?>
+                <?php for ($i = 0; $i <= 20; $i++) {
+                ?>
                     <br />
-                    <?
-                    }
+                    <?php
+            }
                     ?>
                  </div>
                    
@@ -144,7 +144,7 @@ $userid   = $_SESSION['userid'];
                  </div>
         </div>
 
-    <?
+    <?php
 }
 ?>
 

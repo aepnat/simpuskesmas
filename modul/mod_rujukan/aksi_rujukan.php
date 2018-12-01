@@ -22,7 +22,7 @@ if (empty($_SESSION['username']) and empty($_SESSION['password'])) {
 
         mysql_query('DELETE FROM '.$module.' WHERE id_'.$module." = $id");
 
-        //header('location:../../main.php?module='.$module.'&id_module='.$id_module); ?>
+        //header('location:../../main.php?module='.$module.'&id_module='.$id_module);?>
    
   <script language="javascript">
      window.parent.location.href = "<?php echo"./../../main.php?module=$module&id_module=$id_module"; ?>";  
@@ -60,7 +60,7 @@ if (empty($_SESSION['username']) and empty($_SESSION['password'])) {
                     ,'$_POST[aktif]')");
         }
 
-        //header('location:../../main.php?module='.$module.'&id_module='.$id_module); ?>
+        //header('location:../../main.php?module='.$module.'&id_module='.$id_module);?>
    
   <script language="javascript">
      window.parent.location.href = "<?php echo"./../../main.php?module=$module&id_module=$id_module"; ?>";  

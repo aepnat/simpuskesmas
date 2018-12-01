@@ -62,7 +62,7 @@ if ($_GET['userid']) {
     ?>
                 
 	<div class="wifi" style="font-size: 33px;"><?php echo $app; ?></div>
-		<!-- <p class="copyright">Version : <?php echo $versi;?></p> -->
+		<!-- <p class="copyright">Version : <?php echo $versi; ?></p> -->
 	</footer>
 </body>
 </html>

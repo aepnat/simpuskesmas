@@ -1,7 +1,7 @@
 <?php
-switch($_GET[act]){
+switch ($_GET[act]) {
 
-default:  
+default:
   ?>
 
  <div class="">
@@ -11,8 +11,8 @@ default:
                         <div class="col-md-12 col-sm-12 col-xs-12">
                             <div class="x_panel">
                                 <div class="x_title">
-                                    <h2><?php echo $nmmodule;?></h2>
-                                      <p class="pull-right"><a href='<?php echo"modul/mod_$module/form_$module.php?width=720&height=560&module=$module&id_module=$id_module&TB_iframe=true";?>' title='New <?php echo $nmmodule;?>' class='thickbox btn btn-sm btn-success'><i class="fa fa-plus"></i> New</a></p>
+                                    <h2><?php echo $nmmodule; ?></h2>
+                                      <p class="pull-right"><a href='<?php echo"modul/mod_$module/form_$module.php?width=720&height=560&module=$module&id_module=$id_module&TB_iframe=true"; ?>' title='New <?php echo $nmmodule; ?>' class='thickbox btn btn-sm btn-success'><i class="fa fa-plus"></i> New</a></p>
                                     <div class="clearfix"></div>
                                 </div>
                                 <div class="x_content">
@@ -45,58 +45,55 @@ default:
                         </thead>
                         <tbody>
                             
-                         <?
-                        
-            $tampil=mysql_query("SELECT a.*,b.nama,b.tgl_lahir,b.ktp,c.poli,d.kategori 
+                         <?php
+
+            $tampil = mysql_query('SELECT a.*,b.nama,b.tgl_lahir,b.ktp,c.poli,d.kategori 
                                 FROM kunjungan_berobat a left join pasien b 
                                  ON a.id_pasien = b.id_pasien
                                  left join poli c 
                                  ON a.id_poli = c.id_poli
                                  left join kategori d
                                  ON b.id_kategori = d.id_kategori
-                                 ORDER BY a.tanggal,a.id_poli,a.no_urut ASC");
-            
+                                 ORDER BY a.tanggal,a.id_poli,a.no_urut ASC');
+
             $no = 1;
-            
-            while ($r=mysql_fetch_array($tampil)){  
 
-            $tgl       = DATE('d/m/Y',strtotime($r[tanggal]));
-            $tgl_lahir = DATE('d/m/Y',strtotime($r[tgl_lahir]));
-            $status    = $r[status];
+            while ($r = mysql_fetch_array($tampil)) {
+                $tgl = date('d/m/Y', strtotime($r[tanggal]));
+                $tgl_lahir = date('d/m/Y', strtotime($r[tgl_lahir]));
+                $status = $r[status];
 
-            echo"<tr>";
-            echo"<td>$tgl</td>";
-            echo"<td>$r[poli]</td>";
-            echo"<td>$r[no_urut]</td>";            
-            echo"<td>$r[nama]</td>";
-            echo"<td>$r[ktp]</td>";
-            echo"<td>$tgl_lahir</td>";
-            echo"<td>$r[kategori]</td>";
-            echo" <td  style='text-align:center;'>";
+                echo'<tr>';
+                echo"<td>$tgl</td>";
+                echo"<td>$r[poli]</td>";
+                echo"<td>$r[no_urut]</td>";
+                echo"<td>$r[nama]</td>";
+                echo"<td>$r[ktp]</td>";
+                echo"<td>$tgl_lahir</td>";
+                echo"<td>$r[kategori]</td>";
+                echo" <td  style='text-align:center;'>";
 
-            if($r_edit == 'Y') {
-              //if ($status == '0') {
-               echo"<a class='thickbox' href='modul/mod_$module/form_$module.php?id_kunjungan_berobat=$r[id_kunjungan_berobat]&id_module=$id&width=720&height=560&module=$module&TB_iframe=true' title='Update $nmmodule'><span class='icon'><i class='fa fa-pencil'></i></span></a>";
-              // } else {
-              //  echo"<span class='icon'><i class='fa fa-pencil'></i></span>"; 
+                if ($r_edit == 'Y') {
+                    //if ($status == '0') {
+                    echo"<a class='thickbox' href='modul/mod_$module/form_$module.php?id_kunjungan_berobat=$r[id_kunjungan_berobat]&id_module=$id&width=720&height=560&module=$module&TB_iframe=true' title='Update $nmmodule'><span class='icon'><i class='fa fa-pencil'></i></span></a>";
+                    // } else {
+              //  echo"<span class='icon'><i class='fa fa-pencil'></i></span>";
               // }
-             }
+                }
 
-               
-               if($r_delete == 'Y') {
-                //if ($status == '0') {
-                  echo"<a href='modul/mod_$module/aksi_$module.php?module=$module&act=hapus&id=$r[id_kunjungan_berobat]&id_module=$id' onClick=\"return confirm('Delete this record ?')\" title='Delete $nmmodule'><span class='icon'><i class='fa fa-trash'></i></span></a>";
-               
-                // }else {
+                if ($r_delete == 'Y') {
+                    //if ($status == '0') {
+                    echo"<a href='modul/mod_$module/aksi_$module.php?module=$module&act=hapus&id=$r[id_kunjungan_berobat]&id_module=$id' onClick=\"return confirm('Delete this record ?')\" title='Delete $nmmodule'><span class='icon'><i class='fa fa-trash'></i></span></a>";
+
+                    // }else {
                 //   echo"<span class='icon'><i class='fa fa-trash'></i></span>";
-                  
+
                 // }
-               }  
-            echo"</td>";              
-                                echo"</tr>";
-                                $no++;
-                                
-                                }
+                }
+                echo'</td>';
+                echo'</tr>';
+                $no++;
+            }
                                 ?>
                          </tbody>
                     </table>
@@ -140,6 +137,6 @@ default:
                </div>
         </div>
 
-    <?
+    <?php
 }
 ?>

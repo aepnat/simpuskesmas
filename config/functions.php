@@ -1,9 +1,9 @@
 <?php
 
 /*
-    Upload an image and create the thumbnail. The thumbnail is stored 
+    Upload an image and create the thumbnail. The thumbnail is stored
     under the thumbnail sub-directory of $uploadDir.
-    
+
     Return the uploaded image name and the thumbnail also.
 */
 function uploadImage($inputName, $uploadDir)

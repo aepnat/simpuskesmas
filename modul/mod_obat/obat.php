@@ -1,8 +1,8 @@
   
 <?php
-switch($_GET[act]){
+switch ($_GET[act]) {
 
-default:  
+default:
   ?>
 
  <div class="">
@@ -12,8 +12,8 @@ default:
                         <div class="col-md-12 col-sm-12 col-xs-12">
                             <div class="x_panel">
                                 <div class="x_title">
-                                    <h2><?php echo $nmmodule;?></h2>
-                                      <p class="pull-right"><a href='<?php echo"modul/mod_$module/form_$module.php?width=720&height=560&module=$module&id_module=$id_module&TB_iframe=true";?>' title='New <?php echo $nmmodule;?>' class='thickbox btn btn-sm btn-success'><i class="fa fa-plus"></i> New</a></p>
+                                    <h2><?php echo $nmmodule; ?></h2>
+                                      <p class="pull-right"><a href='<?php echo"modul/mod_$module/form_$module.php?width=720&height=560&module=$module&id_module=$id_module&TB_iframe=true"; ?>' title='New <?php echo $nmmodule; ?>' class='thickbox btn btn-sm btn-success'><i class="fa fa-plus"></i> New</a></p>
                                     <div class="clearfix"></div>
                                 </div>
                                 <div class="x_content">
@@ -43,39 +43,36 @@ default:
                         </thead>
                         <tbody>
                             
-                         <?
-                        
-            $tampil=mysql_query("SELECT a.*,b.satuan 
+                         <?php
+
+            $tampil = mysql_query('SELECT a.*,b.satuan 
                                 FROM obat a left join satuan b 
                                  ON a.id_satuan = b.id_satuan
-                                 ORDER BY a.obat ");
-            
+                                 ORDER BY a.obat ');
+
             $no = 1;
-            
-            while ($r=mysql_fetch_array($tampil)){  
 
-                $jumlah = number_format($r[jumlah],0,'','.');
-            
-            echo"<tr>";
-            echo"<td>$r[obat]</td>";
-            echo"<td>$r[satuan]</td>";
-            echo"<td style='text-align:right;'>$jumlah</td>";
-            echo"<td style='text-align:center;'>$r[aktif]</td>";  
-            echo" <td  style='text-align:center;'>";
+            while ($r = mysql_fetch_array($tampil)) {
+                $jumlah = number_format($r[jumlah], 0, '', '.');
 
-            if($r_edit == 'Y') {
-               echo"<a class='thickbox' href='modul/mod_$module/form_$module.php?id_obat=$r[id_obat]&id_module=$id&width=720&height=560&module=$module&TB_iframe=true' title='Update $nmmodule'><span class='icon'><i class='fa fa-pencil'></i></span></a>";
-               }
+                echo'<tr>';
+                echo"<td>$r[obat]</td>";
+                echo"<td>$r[satuan]</td>";
+                echo"<td style='text-align:right;'>$jumlah</td>";
+                echo"<td style='text-align:center;'>$r[aktif]</td>";
+                echo" <td  style='text-align:center;'>";
 
-               
-               // if($r_delete == 'Y') {
-               // echo"<a href='modul/mod_$module/aksi_$module.php?module=$module&act=hapus&id=$r[id_obat]&id_module=$id' onClick=\"return confirm('Delete this record ?')\" title='Delete $nmmodule'><span class='icon'><i class='fa fa-trash'></i></span></a>";
-               // }  
-            echo"</td>";              
-                                echo"</tr>";
-                                $no++;
-                                
-                                }
+                if ($r_edit == 'Y') {
+                    echo"<a class='thickbox' href='modul/mod_$module/form_$module.php?id_obat=$r[id_obat]&id_module=$id&width=720&height=560&module=$module&TB_iframe=true' title='Update $nmmodule'><span class='icon'><i class='fa fa-pencil'></i></span></a>";
+                }
+
+                // if($r_delete == 'Y') {
+                // echo"<a href='modul/mod_$module/aksi_$module.php?module=$module&act=hapus&id=$r[id_obat]&id_module=$id' onClick=\"return confirm('Delete this record ?')\" title='Delete $nmmodule'><span class='icon'><i class='fa fa-trash'></i></span></a>";
+                // }
+                echo'</td>';
+                echo'</tr>';
+                $no++;
+            }
                                 ?>
                          </tbody>
                     </table>
@@ -119,6 +116,6 @@ default:
                </div>
         </div>
 
-    <?
+    <?php
 }
 ?>

@@ -195,7 +195,7 @@ if (empty($_SESSION['username']) and empty($_SESSION['password'])) {
             }
         }
 
-        //header('location:../../main.php?module='.$module.'&id_module='.$id_module); ?>
+        //header('location:../../main.php?module='.$module.'&id_module='.$id_module);?>
    
   <script language="javascript">
      window.parent.location.href = "<?php echo"./../../main.php?module=$module&id_module=$id_module"; ?>";  

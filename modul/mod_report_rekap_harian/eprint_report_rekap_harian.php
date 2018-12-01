@@ -517,7 +517,7 @@ header('Content-Transfer-Encoding: binary ');
     <table width="100%">
     	<tr><td colspan="26"><br></td></tr>
     	<tr>
-    		<td width="70%" colspan="20">Bekasi, <?=$nprd;?></td>
+    		<td width="70%" colspan="20">Bekasi, <?=$nprd; ?></td>
     		<td width="30%" colspan="7">Mengetahui,</td>
     	</tr>
     	<tr>

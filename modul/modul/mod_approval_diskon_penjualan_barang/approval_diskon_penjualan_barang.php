@@ -6,15 +6,17 @@
 
 <script type="text/javascript">
 
-<?php for($i = 1; $i <= 100; $i++)  { ?>  
+<?php for ($i = 1; $i <= 100; $i++) {
+    ?>  
 
-function Getstatus<?php echo $i;?>(str) {
+function Getstatus<?php echo $i; ?>(str) {
 
-    document.getElementById("p_status<?php echo $i;?>").value = str;
+    document.getElementById("p_status<?php echo $i; ?>").value = str;
 
 }
 
-<?php } ?>
+<?php
+} ?>
 
 
 
@@ -24,7 +26,8 @@ function Getstatus<?php echo $i;?>(str) {
 
 
 
-<?php for($i = 1; $i <= 100; $i++)  { ?>  
+<?php for ($i = 1; $i <= 100; $i++) {
+        ?>  
 
 <script>
 
@@ -74,7 +77,8 @@ document.getElementById("jumlah_realisasi<?php echo $i?>").value = nilai ;
 
 </script>  
 
-<?php } ?>
+<?php
+    } ?>
 
 
 
@@ -82,95 +86,45 @@ document.getElementById("jumlah_realisasi<?php echo $i?>").value = nilai ;
 
 <?php
 
-switch($_GET[act]){
+switch ($_GET[act]) {
 
-
-
-default:  
-
-
-
-
+default:
 
 if ($_SESSION['outlet'] == '0') {
-
-  $d_outlet = '%'; 
-
-}  else {
-
-   $d_outlet = $_SESSION['outlet'];
-
-} 
-
-
-
-
-
-if ($_GET['ioutlet']) {
-
-  $outlet = $_GET['ioutlet'];   
-
+    $d_outlet = '%';
 } else {
-
-  if ($_SESSION['outlet'] == '0') {
-
-    $outlet = '1';    
-
-  }  else {
-
-     $outlet = $_SESSION['outlet'];
-
-     
-
-  } 
-
+    $d_outlet = $_SESSION['outlet'];
 }
 
-  
-
-
+if ($_GET['ioutlet']) {
+    $outlet = $_GET['ioutlet'];
+} else {
+    if ($_SESSION['outlet'] == '0') {
+        $outlet = '1';
+    } else {
+        $outlet = $_SESSION['outlet'];
+    }
+}
 
 $query = mysql_query('SELECT * FROM periode ');
 
+if ($query && mysql_num_rows($query) == 1) {
+    $data = mysql_fetch_object($query);
+}
 
-
-if($query && mysql_num_rows($query) == 1){
-
-  $data = mysql_fetch_object($query);
-
- }
-
-  
-
-$iprd  =  $data->periode; 
-
-
+$iprd = $data->periode;
 
 if ($_GET['prd']) {
-
-  $prd = $_GET['prd'];
-
+    $prd = $_GET['prd'];
 } else {
-
-  $prd = $prd;
-
+    $prd = $prd;
 }
-
-
 
 if ($_GET['istatus']) {
-
-  $status = $_GET['istatus'];   
-
+    $status = $_GET['istatus'];
 } else {
-
-  $status = '0';
-
-   
-
+    $status = '0';
 }
-
-
 
   ?>
 
@@ -192,7 +146,7 @@ if ($_GET['istatus']) {
 
     <div class="col-md-6 col-sm-12 col-xs-12">  
 
-    <h2><?php echo $nmmodule;?></h2>
+    <h2><?php echo $nmmodule; ?></h2>
 
     </div>
 
@@ -214,7 +168,7 @@ if ($_GET['istatus']) {
 
     <div class="col-md-6 col-sm-12 col-xs-12">
 
-      <input type="month" name="prd" id="prd" value="<?php echo $prd;?>" onChange="document.myform.submit();" class="form-control"  required>
+      <input type="month" name="prd" id="prd" value="<?php echo $prd; ?>" onChange="document.myform.submit();" class="form-control"  required>
 
     </div>
 
@@ -224,23 +178,21 @@ if ($_GET['istatus']) {
 
       <select name="ioutlet" class="form-control" onChange="document.myform.submit();">
 
-       <?
+       <?php
 
          $query = mysql_query("SELECT * FROM outlet where id_outlet like '$d_outlet' ORDER BY id_outlet");
 
-          if($query && mysql_num_rows($query) > 0){
+          if ($query && mysql_num_rows($query) > 0) {
+              while ($row = mysql_fetch_object($query)) {
+                  echo '<option value="'.$row->id_outlet.'"';
 
-             while($row = mysql_fetch_object($query)){
+                  if ($row->id_outlet == $outlet) {
+                      echo ' selected';
+                  }
 
-             echo '<option value="'.$row->id_outlet.'"';
-
-             if($row->id_outlet == $outlet) echo ' selected';
-
-             echo '>'.$row->outlet.'</option>';
-
-             }
-
-          }        
+                  echo '>'.$row->outlet.'</option>';
+              }
+          }
 
        ?>  
 
@@ -254,23 +206,21 @@ if ($_GET['istatus']) {
 
      <select name="istatus" class="form-control" onChange="document.myform.submit();">
 
-        <?
+        <?php
 
           $query = mysql_query('SELECT * FROM status ORDER BY id_status');
 
-           if($query && mysql_num_rows($query) > 0){
+           if ($query && mysql_num_rows($query) > 0) {
+               while ($row = mysql_fetch_object($query)) {
+                   echo '<option value="'.$row->id_status.'"';
 
-              while($row = mysql_fetch_object($query)){
+                   if ($row->id_status == $status) {
+                       echo ' selected';
+                   }
 
-              echo '<option value="'.$row->id_status.'"';
-
-              if($row->id_status == $status) echo ' selected';
-
-              echo '>'.$row->status.'</option>';
-
-              }
-
-           }        
+                   echo '>'.$row->status.'</option>';
+               }
+           }
 
         ?>  
 
@@ -324,8 +274,7 @@ if ($_GET['istatus']) {
 
 
 
-   <?
-
+   <?php
 
 
     $pjSQL = mysql_query("SELECT * FROM penjualan_barang_detail 
@@ -336,35 +285,19 @@ if ($_GET['istatus']) {
 
                           ");
 
-
-
-   $pj=mysql_num_rows($pjSQL);
-
-
+   $pj = mysql_num_rows($pjSQL);
 
    if ($iprd == $prd) {
-
-      $disabled = ''; 
-
-    } else {
-
-      $disabled = 'disabled';
-
-    }
-
-
+       $disabled = '';
+   } else {
+       $disabled = 'disabled';
+   }
 
     if ($pj == 0) {
-
-      $disabled1 = 'disabled'; 
-
+        $disabled1 = 'disabled';
     } else {
-
-      $disabled1 = '';
-
+        $disabled1 = '';
     }
-
-
 
     ?>
 
@@ -438,17 +371,10 @@ if ($_GET['istatus']) {
 
            
 
-        <?
-
-        
+        <?php
 
 
-
-
-
-
-
-         $tampil=mysql_query("SELECT b.*,c.customer,a.tanggal 
+         $tampil = mysql_query("SELECT b.*,c.customer,a.tanggal 
 
                                 , case when b.id_barang = '0' then e.paket else d.barang end as barang 
 
@@ -490,65 +416,44 @@ if ($_GET['istatus']) {
 
                               ");
 
-         
-
          $no = 1;
 
-         
+         while ($r = mysql_fetch_array($tampil)) {
+             $tgl = date('d/m/y', strtotime($r['tanggal']));
 
-         while ($r=mysql_fetch_array($tampil)){  
+             echo'<tr>';
 
+             echo"<td>$tgl </td>";
 
+             echo"<td>$r[notrans]</td>";
 
-          
+             echo"<td>$r[customer]</td>";
 
-          $tgl = date("d/m/y", strtotime($r['tanggal']));
+             echo"<td>$r[barang]</td>";
 
+             echo"<td  style='text-align:right;'>".number_format($r[total], '0', '.', ',').'</td>';
 
+             echo"<td  style='text-align:right;'>".number_format($r[disc1], '2', '.', ',').' % | Rp. '.number_format($r[disc_value1], '0', '.', ',').'</td>';
 
-             
+             echo'<td>'; ?>
 
-         echo"<tr>";
+         <select name="status<?php echo $no; ?>" class="form-control" onchange="Getstatus<?php echo $no; ?>(this.value)">
 
-
-
-         echo"<td>$tgl </td>";
-
-         echo"<td>$r[notrans]</td>";
-
-         echo"<td>$r[customer]</td>";
-
-         echo"<td>$r[barang]</td>";
-
-         echo"<td  style='text-align:right;'>".number_format($r[total],'0','.',',')."</td>";
-
-         echo"<td  style='text-align:right;'>".number_format($r[disc1],'2','.',',')." % | Rp. ".number_format($r[disc_value1],'0','.',',')."</td>";
-
-         echo"<td>";
-
-         ?>
-
-         <select name="status<?php echo $no;?>" class="form-control" onchange="Getstatus<?php echo $no;?>(this.value)">
-
-        <?
+        <?php
 
           $query = mysql_query('SELECT * FROM status ORDER BY id_status');
 
-           if($query && mysql_num_rows($query) > 0){
+             if ($query && mysql_num_rows($query) > 0) {
+                 while ($row = mysql_fetch_object($query)) {
+                     echo '<option value="'.$row->id_status.'"';
 
-              while($row = mysql_fetch_object($query)){
+                     if ($row->id_status == $r[status_diskon]) {
+                         echo ' selected';
+                     }
 
-              echo '<option value="'.$row->id_status.'"';
-
-              if($row->id_status == $r[status_diskon]) echo ' selected';
-
-              echo '>'.$row->status.'</option>';
-
-              }
-
-           }        
-
-        ?>  
+                     echo '>'.$row->status.'</option>';
+                 }
+             } ?>  
 
         </select>        
 
@@ -556,43 +461,30 @@ if ($_GET['istatus']) {
 
 
 
-         <?
+         <?php
 
-         echo"</td>";  
+         echo'</td>';
 
-         echo"<td style='text-align:center;'>";  
+             echo"<td style='text-align:center;'>";
 
-       
+             echo"<input type='hidden' name='id".$no."' value = '$r[id_penjualan_barang_detail]'>";
 
-        echo"<input type='hidden' name='id".$no."' value = '$r[id_penjualan_barang_detail]'>";
+             echo"<input type='hidden' name='prd".$no."' value = '$r[prd]'>";
 
-        echo"<input type='hidden' name='prd".$no."' value = '$r[prd]'>"; 
+             echo"<input type='hidden' name='notrans".$no."' value = '$r[notrans]'>";
 
-        echo"<input type='hidden' name='notrans".$no."' value = '$r[notrans]'>";
+             echo"<input type='hidden' name='outlet".$no."' value = '$r[id_outlet]'>";
 
-        echo"<input type='hidden' name='outlet".$no."' value = '$r[id_outlet]'>"; 
+             echo"<input type='hidden' name='p_status".$no."' id='p_status".$no."' value = '$status'>";
 
-        echo"<input type='hidden' name='p_status".$no."' id='p_status".$no."' value = '$status'>"; 
+             // echo"<a class='btn btn-default btn-sm' href='?module=$module&id_module=$id_module&id_pemesanan_barang=$r[id_pemesanan_barang]&prd=$prd&outlet=$outlet&act=detail' title='Detail Penarikan Simpanan'><span class='icon'><i class='fa fa-pencil-square-o'></i></span></a>";
 
+             echo'</td>';
 
+             echo'</tr>';
 
-         
-
-  // echo"<a class='btn btn-default btn-sm' href='?module=$module&id_module=$id_module&id_pemesanan_barang=$r[id_pemesanan_barang]&prd=$prd&outlet=$outlet&act=detail' title='Detail Penarikan Simpanan'><span class='icon'><i class='fa fa-pencil-square-o'></i></span></a>"; 
-
- 
-
-         echo"</td>";          
-
-
-
-         echo"</tr>";
-
-         $no++;            
-
+             $no++;
          }
-
-       
 
          ?>
 
@@ -602,9 +494,9 @@ if ($_GET['istatus']) {
 
    </table>
 
-    <input type='hidden' name='jum' value='<?php echo $no;?>' />
+    <input type='hidden' name='jum' value='<?php echo $no; ?>' />
 
-    <input type='hidden' name='istatus' value='<?php echo $status;?>' />
+    <input type='hidden' name='istatus' value='<?php echo $status; ?>' />
 
    </form>
 
@@ -690,7 +582,7 @@ if ($_GET['istatus']) {
 
 
 
-    <?
+    <?php
 
 break;
 

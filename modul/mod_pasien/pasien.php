@@ -1,8 +1,8 @@
   
 <?php
-switch($_GET[act]){
+switch ($_GET[act]) {
 
-default:  
+default:
   ?>
 
  <div class="">
@@ -12,8 +12,8 @@ default:
                         <div class="col-md-12 col-sm-12 col-xs-12">
                             <div class="x_panel">
                                 <div class="x_title">
-                                    <h2><?php echo $nmmodule;?></h2>
-                                      <p class="pull-right"><a href='<?php echo"modul/mod_$module/form_$module.php?width=720&height=560&module=$module&id_module=$id_module&TB_iframe=true";?>' title='New <?php echo $nmmodule;?>' class='thickbox btn btn-sm btn-success'><i class="fa fa-plus"></i> New</a></p>
+                                    <h2><?php echo $nmmodule; ?></h2>
+                                      <p class="pull-right"><a href='<?php echo"modul/mod_$module/form_$module.php?width=720&height=560&module=$module&id_module=$id_module&TB_iframe=true"; ?>' title='New <?php echo $nmmodule; ?>' class='thickbox btn btn-sm btn-success'><i class="fa fa-plus"></i> New</a></p>
                                     <div class="clearfix"></div>
                                 </div>
                                 <div class="x_content">
@@ -48,62 +48,57 @@ default:
                         </thead>
                         <tbody>
                             
-                         <?
-                                       
+                         <?php
 
-                            $tampil=mysql_query("SELECT a.*,b.agama,c.kategori
+
+                            $tampil = mysql_query('SELECT a.*,b.agama,c.kategori
                                                 FROM pasien a left join agama b 
                                                  ON a.id_agama = b.id_agama
                                                  left join kategori c
                                                  ON a.id_kategori = c.id_kategori
-                                                 ORDER BY a.nama ");
-                            
-                            $no = 1;
-                            
-                            while ($r=mysql_fetch_array($tampil)){  
+                                                 ORDER BY a.nama ');
 
-                                $tgl_lahir = DATE('d/m/Y',strtotime($r[tgl_lahir]));
+                            $no = 1;
+
+                            while ($r = mysql_fetch_array($tampil)) {
+                                $tgl_lahir = date('d/m/Y', strtotime($r[tgl_lahir]));
 
                                 if ($r['gender'] == 'L') {
-                                    $gender    = 'Laki-laki';
+                                    $gender = 'Laki-laki';
                                 } else {
-                                    $gender    = 'Perempuan';
+                                    $gender = 'Perempuan';
                                 }
-                                
-                            
-                            echo"<tr>";
-                            echo"<td>$r[nama]</td>";
-                            echo"<td>$r[ktp]</td>";
-                            echo"<td>$tgl_lahir</td>";
-                            echo"<td>$gender</td>";
-                            echo"<td>$r[agama]</td>";
-                            echo"<td>$r[kategori]</td>";
-                            echo"<td>$r[telp]</td>";
-                            echo"<td>$r[alamat]</td>";
-                            echo"<td style='text-align:center;'>$r[aktif]</td>";  
-                            echo" <td  style='text-align:center;'>";
-                            ?>
-                            <a href='#' title='Cetak' onclick="window.open('./modul/mod_<?php echo $module;?>/cetak_pasien.php?id_pasien=<?php echo $r[id_pasien];?>', '', 'height=500,width=600,resizable=1,scrollbars=1,addressbars=0,directories=no,location=no')">
+
+                                echo'<tr>';
+                                echo"<td>$r[nama]</td>";
+                                echo"<td>$r[ktp]</td>";
+                                echo"<td>$tgl_lahir</td>";
+                                echo"<td>$gender</td>";
+                                echo"<td>$r[agama]</td>";
+                                echo"<td>$r[kategori]</td>";
+                                echo"<td>$r[telp]</td>";
+                                echo"<td>$r[alamat]</td>";
+                                echo"<td style='text-align:center;'>$r[aktif]</td>";
+                                echo" <td  style='text-align:center;'>"; ?>
+                            <a href='#' title='Cetak' onclick="window.open('./modul/mod_<?php echo $module; ?>/cetak_pasien.php?id_pasien=<?php echo $r[id_pasien]; ?>', '', 'height=500,width=600,resizable=1,scrollbars=1,addressbars=0,directories=no,location=no')">
 
                             <span class='icon'><i class='fa fa-print'></i></span>
 
                             </a>
 
-                            <?
+                            <?php
 
-                            if($r_edit == 'Y') {
-                               echo"<a class='thickbox' href='modul/mod_$module/form_$module.php?id_pasien=$r[id_pasien]&id_module=$id&width=720&height=560&module=$module&TB_iframe=true' title='Update $nmmodule'><span class='icon'><i class='fa fa-pencil'></i></span></a>";
-                               }
+                            if ($r_edit == 'Y') {
+                                echo"<a class='thickbox' href='modul/mod_$module/form_$module.php?id_pasien=$r[id_pasien]&id_module=$id&width=720&height=560&module=$module&TB_iframe=true' title='Update $nmmodule'><span class='icon'><i class='fa fa-pencil'></i></span></a>";
+                            }
 
-                               
-                               // if($r_delete == 'Y') {
-                               // echo"<a href='modul/mod_$module/aksi_$module.php?module=$module&act=hapus&id=$r[id_pasien]&id_module=$id' onClick=\"return confirm('Delete this record ?')\" title='Delete $nmmodule'><span class='icon'><i class='fa fa-trash'></i></span></a>";
-                               // }  
-                            echo"</td>";              
-                                echo"</tr>";
+                                // if($r_delete == 'Y') {
+                                // echo"<a href='modul/mod_$module/aksi_$module.php?module=$module&act=hapus&id=$r[id_pasien]&id_module=$id' onClick=\"return confirm('Delete this record ?')\" title='Delete $nmmodule'><span class='icon'><i class='fa fa-trash'></i></span></a>";
+                                // }
+                                echo'</td>';
+                                echo'</tr>';
                                 $no++;
-                                
-                                }
+                            }
                                 ?>
                          </tbody>
                     </table>
@@ -147,6 +142,6 @@ default:
                </div>
         </div>
 
-    <?
+    <?php
 }
 ?>

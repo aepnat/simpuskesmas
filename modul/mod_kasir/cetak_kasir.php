@@ -742,7 +742,7 @@ function idownload(){
                 <tr>
                     <th style="border:none;">&nbsp</th>
                     <th colspan="5" style="text-align: left;">Disetorkan Ke Bendahara</th>
-                    <th style="text-align: right;">Rp.<?=$total;?></th>  
+                    <th style="text-align: right;">Rp.<?=$total; ?></th>  
                     <th style="" colspan="6">&nbsp</th>  
                 </tr>    
 
@@ -776,7 +776,7 @@ function idownload(){
         <tr>
                     <th style="border:none;">&nbsp</th>
                     <th style="border:none;">&nbsp</th>
-                    <th style="text-align: center;">(<?=$petugas;?>)</th>
+                    <th style="text-align: center;">(<?=$petugas; ?>)</th>
                     <th style="border:none;">&nbsp</th>
                     <th style="border:none;">&nbsp</th>
                     <th style="text-align: center;">
