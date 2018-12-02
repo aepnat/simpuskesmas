@@ -1,17 +1,15 @@
 <?php
-
     session_start();
 
-    session_destroy();
+    include 'config/koneksi.php';
 
-    $userid = $_GET['userid'];
-    $module = $_GET['module'];
+    $id_user = $_SESSION['userid'];
 
-    header('location:index.php?userid='.$userid.'&module='.$module.'');
+    // session_destroy();
 
-// Apabila setelah logout langsung menuju halaman utama website, aktifkan baris di bawah ini:
-
-//  header('location:http://www.alamatwebsite.com');
+    // user_log
+    user_log('Logout dari Aplikasi Puskemas');
+    header('location:index.php');
 
 ?>
 

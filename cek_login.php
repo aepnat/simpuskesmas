@@ -24,13 +24,6 @@ $r = mysql_fetch_array($login);
 // Apabila userid dan password ditemukan
 if ($find > 0) {
     session_start();
-    //session_register("userid");
-    //  session_register("username");
-    //  session_register("pass");
-    //  session_register("role");
-    //  session_register("dept");
-    //  session_register("posisi");
-    //  session_register("uclient");
 
     $id_user = $r['id_user'];
     $_SESSION['userid'] = $r['id_user'];
@@ -74,6 +67,9 @@ if ($find > 0) {
     $loginDateFormat = 'Y-m-d H:i:s';
     $last_login = date($loginDateFormat, time());
     $sql = mysql_query("UPDATE user SET last_login='$last_login' WHERE id_user='$id_user'");
+
+    // user_log
+    user_log('Login ke Aplikasi Puskesmas');
 
     header('location:main.php'.$imodule.'&id_module='.$id_module.'&kode='.$kode.'');
 } else {
