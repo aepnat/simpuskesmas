@@ -3,12 +3,11 @@
 
     include 'config/koneksi.php';
 
-    $id_user = $_SESSION['userid'];
-
-    // session_destroy();
-
     // user_log
     user_log('Logout dari Aplikasi Puskemas');
+
+    session_destroy();
+
     header('location:index.php');
 
 ?>

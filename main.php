@@ -5,7 +5,6 @@ if (empty($_SESSION['userid']) and empty($_SESSION['password'])) {
 } else {
     date_default_timezone_set('Asia/Jakarta');
     include 'config/koneksi.php';
-    //include "config/koneksi_odbc.php";
     include 'config/fungsi_indobulan.php';
     include 'config/browser_detection.php';
 
