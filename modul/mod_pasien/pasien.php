@@ -1,6 +1,6 @@
       
     <?php
-switch ($_GET[act]) {
+switch (isset($_GET['act']) && $_GET['act']) {
 
         default:
           ?>
@@ -62,7 +62,7 @@ switch ($_GET[act]) {
                             $no = 1;
 
                             while ($r = mysql_fetch_array($tampil)) {
-                                $tgl_lahir = date('d/m/Y', strtotime($r[tgl_lahir]));
+                                $tgl_lahir = date('d/m/Y', strtotime($r['tgl_lahir']));
 
                                 if ($r['gender'] == 'L') {
                                     $gender = 'Laki-laki';
@@ -85,7 +85,7 @@ switch ($_GET[act]) {
                                 echo"<td>$r[alamat]</td>";
                                 echo"<td style='text-align:center;'>$r[aktif]</td>";
                                 echo" <td  style='text-align:center;'>"; ?>
-                            <a href='#' title='Cetak' onclick="window.open('./modul/mod_<?php echo $module; ?>/cetak_pasien.php?id_pasien=<?php echo $r[id_pasien]; ?>', '', 'height=500,width=600,resizable=1,scrollbars=1,addressbars=0,directories=no,location=no')">
+                            <a href='#' title='Cetak' onclick="window.open('./modul/mod_<?php echo $module; ?>/cetak_pasien.php?id_pasien=<?php echo $r['id_pasien']; ?>', '', 'height=500,width=600,resizable=1,scrollbars=1,addressbars=0,directories=no,location=no')">
 
                             <span class='icon'><i class='fa fa-print'></i></span>
 

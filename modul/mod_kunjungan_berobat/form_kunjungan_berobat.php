@@ -1,9 +1,9 @@
-    <?php
-    session_start();
-    if (empty($_SESSION['username']) and empty($_SESSION['password'])) {
-        echo "<script>window.alert('Please login first.'); window.location=('../../index.php.php')</script>";
-    } else {
-        include './../../config/koneksi.php'; ?>
+<?php
+error_reporting(0);session_start();
+if (empty($_SESSION['username']) and empty($_SESSION['password'])) {
+    echo "<script>window.alert('Please login first.'); window.location=('../../index.php.php')</script>";
+} else {
+    include './../../config/koneksi.php'; ?>
 <!doctype html>
 <html>
 <head>

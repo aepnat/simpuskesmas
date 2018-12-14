@@ -9,9 +9,9 @@ function anti_injection($data)
 
 //$pass=md5($_POST[password]);
 
-$userid = anti_injection($_POST[userid]);
-$pass = anti_injection($_POST[password]);
-$module = anti_injection($_POST[module]);
+$userid = anti_injection($_POST['userid']);
+$pass = anti_injection($_POST['password']);
+$module = anti_injection($_POST['module']);
 
 $login = mysql_query("SELECT a.*,b.id_tipe_sales 
                     FROM user a LEFT JOIN groups b

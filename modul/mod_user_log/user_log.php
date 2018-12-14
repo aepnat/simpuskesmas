@@ -1,6 +1,6 @@
       
     <?php
-switch ($_GET[act]) {
+switch (isset($_GET['act']) && $_GET['act']) {
 
         default:
           ?>
@@ -50,7 +50,7 @@ switch ($_GET[act]) {
             $no = 1;
 
             while ($r = mysql_fetch_array($tampil)) {
-                $waktu = date('d-M-Y H:i:s', strtotime($r[time]));
+                $waktu = date('d-M-Y H:i:s', strtotime($r['time']));
                 echo'<tr>';
                 echo"<td>$waktu</td>";
                 echo"<td>$r[id_user]</td>";

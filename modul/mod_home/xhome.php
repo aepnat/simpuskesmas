@@ -47,7 +47,7 @@ z-index: 100;
 </style>
 
 <?php
-switch ($_GET[act]) {
+switch (isset($_GET['act']) && $_GET['act']) {
 
 default:
 

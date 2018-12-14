@@ -1,6 +1,6 @@
       
     <?php
-switch ($_GET[act]) {
+switch (isset($_GET['act']) && $_GET['act']) {
 
         default:
           ?>
@@ -49,7 +49,7 @@ switch ($_GET[act]) {
             $no = 1;
 
             while ($r = mysql_fetch_array($tampil)) {
-                if ($r[tipe] == 'R') {
+                if ($r['tipe'] == 'R') {
                     $tipe = 'RS/Klinik';
                 } else {
                     $tipe = 'Lab';

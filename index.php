@@ -14,7 +14,7 @@ include 'config/koneksi.php';
 <body>
 
 <?php
-if ($_GET['userid']) {
+if (isset($_GET['userid']) && $_GET['userid']) {
     $userid = $_GET['userid'];
     $module = $_GET['module'];
 } else {

@@ -21,7 +21,6 @@ if (empty($_SESSION['userid']) and empty($_SESSION['password'])) {
     $r_edit = $_SESSION['r_edit'];
     $r_delete = $_SESSION['r_delete'];
     $r_admin = $_SESSION['r_admin'];
-    $r_department = $_SESSION['r_department'];
 
     $gsql = mysql_query("SELECT a.main_page,b.id_modul FROM groups a inner join modul b
                     on a.main_page = b.link
@@ -41,10 +40,10 @@ if (empty($_SESSION['userid']) and empty($_SESSION['password'])) {
 
     $r = mysql_fetch_array($tampil);
 
-    $company = $r[company];
+    $company = $r['company'];
 
-    $logo_hotel = $r[pict];
-    $module = trim($_GET[module]);
+    $logo_hotel = $r['pict'];
+    $module = (isset($_GET['module'])) ? trim($_GET['module']) : '';
 
     $uSQL = "SELECT pict FROM user where id_user = '$userid' ";
 
@@ -54,27 +53,25 @@ if (empty($_SESSION['userid']) and empty($_SESSION['password'])) {
 
     $pict = $u['pict'];
 
-    $id_module = $_GET['id_module'];
+    $id_module = isset($_GET['id_module']) ? $_GET['id_module'] : '';
 
-    $sql = mysql_query("select * from modul where id_modul = '$_GET[id_module]'");
+    $sql = mysql_query("select * from modul where id_modul = '$id_module'");
     $r = mysql_fetch_array($sql);
 
-    $imodule = $_GET['module'];
+    $imodule = isset($_GET['module']) ? $_GET['module'] : '';
     $nmmodule = ucwords($r['nama_modul']);
     $id = $r['id_modul'];
-
-    $fa_icon = $r['ficon'];
 
     $psql = mysql_query("select * from modul where id_modul = '$r[parentid]'");
     $p = mysql_fetch_array($psql);
 
     $p_imodule = $p['nama_modul'];
     $p_id = $p['id_modul'];
-    $p_fa_icon = $p['fa_icon'];
+    $p_fa_icon = (isset($p['fa_icon'])) ? $p['fa_icon'] : '';
 
-    $kode = $_GET['kode'];
+    $kode = (isset($_GET['kode'])) ? $_GET['kode'] : '';
 
-    if ($_GET['fdate']) {
+    if (isset($_GET['fdate']) && $_GET['fdate']) {
         $fdate = $_GET['fdate'];
         $ifdate = $_GET['fdate'];
     } else {
@@ -83,7 +80,7 @@ if (empty($_SESSION['userid']) and empty($_SESSION['password'])) {
         $ifdate = date('Y-m-d', $hour);
     }
 
-    if ($_GET['ldate']) {
+    if (isset($_GET['ldate']) && $_GET['ldate']) {
         $ldate = $_GET['ldate'];
         $ildate = $_GET['ldate'];
     } else {
@@ -132,25 +129,6 @@ if (empty($_SESSION['userid']) and empty($_SESSION['password'])) {
     <link href="css/icheck/flat/green.css" rel="stylesheet">
     <link href="css/datatables/tools/css/dataTables.tableTools.css" rel="stylesheet">
 
-
-    <!--[if lt IE 9]>
-        <script src="../assets/js/ie8-responsive-file-warning.js"></script>
-        <![endif]-->
-
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-          <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-          <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-        <![endif]-->
-             
-<!--         <script>
-        $(document).ready(function(){
-            setInterval(function(){
-                $("#screen").load('<?php echo $imod?>')
-            }, 2000);
-        });
-        </script>  -->
-
         <script type="text/javascript">
 
         function number_format(number,num_decimal_places,dec_separator,thousand_separator)
@@ -189,11 +167,11 @@ if (empty($_SESSION['userid']) and empty($_SESSION['password'])) {
 
 
 <?php
-$mod = '?module='.$_GET['module'];
+$mod = '?module='.$module;
     $tampil = mysql_query("SELECT orientation FROM modul WHERE link='".$mod."'");
     $r = mysql_fetch_array($tampil);
 
-    if ($r[orientation] == 'P') {
+    if ($r['orientation'] == 'P') {
         ?>
         
 <SCRIPT TYPE="text/javascript">
@@ -209,7 +187,7 @@ return true;
 </SCRIPT>
 
 <?php
-    } elseif ($r[orientation] == 'A') {
+    } elseif ($r['orientation'] == 'A') {
         ?>
 
 <SCRIPT TYPE="text/javascript">

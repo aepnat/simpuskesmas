@@ -2,7 +2,8 @@
 include './../../config/koneksi.php';
 include './../../config/fungsi_indobulan.php';
 
-$tampil = mysql_query("SELECT * FROM modul WHERE id_modul ='".$_GET[report_id]."'");
+$report_id = isset($_GET['report_id']) ? $_GET['report_id'] : '';
+$tampil = mysql_query("SELECT * FROM modul WHERE id_modul ='".$report_id."'");
 
 $r = mysql_fetch_array($tampil);
 
@@ -10,9 +11,8 @@ $module = $_GET['module'];
 $imodule = ucwords($r['nama_modul']);
 $nmmodule = ucwords($r['nama_modul']);
 $id = $r['id_modul'];
-$fa_icon = $r['fa_icon'];
 
-if ($r[orientation] == 'P') {
+if ($r['orientation'] == 'P') {
     $orientation = 'portrait';
 } else {
     $orientation = 'landscape';
@@ -230,7 +230,7 @@ $company = ucwords($g['company']);
             $no = 1;
 
             while ($r = mysql_fetch_array($tampil)) {
-                $tgl = date('d/m/Y', strtotime($r[tanggal]));
+                $tgl = date('d/m/Y', strtotime($r['tanggal']));
 
                 $id_pasien = $r[id_pasien];
 

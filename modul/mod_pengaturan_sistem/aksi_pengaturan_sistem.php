@@ -1,6 +1,6 @@
 <?php
 
-session_start();
+error_reporting(0);session_start();
 if (empty($_SESSION['username']) and empty($_SESSION['password'])) {
     echo "<script>window.alert('Please login first.'); window.location=('../../index.php.php')</script>";
 } else {
@@ -9,7 +9,7 @@ if (empty($_SESSION['username']) and empty($_SESSION['password'])) {
 
     $imodule = $_POST[imodule];
     $module = $_GET[module];
-    $act = $_GET[act];
+    $act = $_GET['act'];
 
     $date = date('d/m/Y');
     $idate = date('Y-m-d');

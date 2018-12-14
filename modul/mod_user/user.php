@@ -1,8 +1,6 @@
     <?php
 
-    $outlet = $df_outlet;
-
-switch ($_GET[act]) {
+switch (isset($_GET['act']) && $_GET['act']) {
 
         default:
           ?>
@@ -59,28 +57,22 @@ switch ($_GET[act]) {
 
                                 $no = 1;
                                 while ($r = mysql_fetch_array($tampil)) {
-                                    if ($r[r_input] == 'Y') {
+                                    if ($r['r_input'] == 'Y') {
                                         $input = "<img src='images/cek.png' border=0> Input";
                                     } else {
                                         $input = "<img src='images/del.gif' width='20' border=0> Input";
                                     }
 
-                                    if ($r[r_edit] == 'Y') {
+                                    if ($r['r_edit'] == 'Y') {
                                         $edit = "<img src='images/cek.png' border=0> Edit";
                                     } else {
                                         $edit = "<img src='images/del.gif' width='20' border=0> Edit";
                                     }
 
-                                    if ($r[r_delete] == 'Y') {
+                                    if ($r['r_delete'] == 'Y') {
                                         $delete = "<img src='images/cek.png' border=0> Delete";
                                     } else {
                                         $delete = "<img src='images/del.gif' width='20' border=0> Delete";
-                                    }
-
-                                    if ($r[outlet] == '') {
-                                        $outlet = 'Semua Outlet';
-                                    } else {
-                                        $outlet = $r['outlet'];
                                     }
 
                                     echo'<tr>';

@@ -1,6 +1,6 @@
 
 <?php
-switch ($_GET[act]) {
+switch (isset($_GET['act']) && $_GET['act']) {
 
     default:
 
@@ -10,7 +10,7 @@ switch ($_GET[act]) {
     if ($g['pict']) {
         $pict = $g['pict'];
     } else {
-        $pict = '';
+        $pict = ''; 
     }
 
     ?>

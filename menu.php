@@ -1,5 +1,4 @@
 <?php
-session_start();
 include 'config/koneksi.php';
 
     if ($_SESSION['role'] == 'SA') {
@@ -23,9 +22,9 @@ include 'config/koneksi.php';
     }
 
                                 while ($r = mysql_fetch_array($sql)) {
-                                    if ($r[status_menu] == 'M' and !empty($r[link])) {
+                                    if ($r['status_menu'] == 'M' and !empty($r['link'])) {
                                         echo "<li><a href='$r[link]&id_module=$r[id_modul]'><i class='$r[icon]'></i> $r[nama_modul]</a>";
-                                    } elseif ($r[status_menu] == 'M' and empty($r[link])) {
+                                    } elseif ($r['status_menu'] == 'M' and empty($r['link'])) {
                                         echo "<li><a href='#'><i class='$r[icon]'></i> $r[nama_modul] <span class='fa fa-chevron-down'></span></a>";
                                     }
 
@@ -45,10 +44,14 @@ include 'config/koneksi.php';
                                                          order by c.urutan");
                                     }
                                     while ($d = mysql_fetch_array($detil)) {
-                                        if ($d[is_form] == 'Y') {
-                                            echo"<li><a href='modul/mod_$d[link]/form_$d[link].php?width=$d[f_width]&height=$d[f_height]&module=$d[link]&imodule=$imodule&id_module=$id&imenu=$imenu&isub=$isub&TB_iframe=true' title='$d[nama_modul]' class='thickbox' ><i class='$d[fa_icon]'></i>&nbsp&nbsp$d[nama_modul]</a></li>";
+                                        if ($d['is_form'] == 'Y') {
+                                            $imenu = '';
+                                            $isub = '';
+                                            $fa_icon = (isset($d['fa_icon'])) ? $d['fa_icon'] : '';
+                                            echo"<li><a href='modul/mod_$d[link]/form_$d[link].php?width=$d[f_width]&height=$d[f_height]&module=$d[link]&imodule=$imodule&id_module=$id&imenu=$imenu&isub=$isub&TB_iframe=true' title='$d[nama_modul]' class='thickbox' ><i class='$fa_icon'></i>&nbsp&nbsp$d[nama_modul]</a></li>";
                                         } else {
-                                            echo"<li><a href='$d[link]&id_module=$d[id_modul]'><i class='$d[fa_icon]'></i>&nbsp&nbsp$d[nama_modul]</a></li>";
+                                            $fa_icon = (isset($d['fa_icon'])) ? $d['fa_icon'] : '';
+                                            echo"<li><a href='$d[link]&id_module=$d[id_modul]'><i class='$fa_icon'></i>&nbsp&nbsp$d[nama_modul]</a></li>";
                                         }
                                     }
 

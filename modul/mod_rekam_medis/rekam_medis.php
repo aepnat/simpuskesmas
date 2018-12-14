@@ -1,5 +1,5 @@
     <?php
-switch ($_GET[act]) {
+switch (isset($_GET['act']) && $_GET['act']) {
 
         default:
           ?>
@@ -63,8 +63,8 @@ switch ($_GET[act]) {
             $no = 1;
 
             while ($r = mysql_fetch_array($tampil)) {
-                $tgl = date('d/m/Y', strtotime($r[tanggal]));
-                $tgl_lahir = date('d/m/Y', strtotime($r[tgl_lahir]));
+                $tgl = date('d/m/Y', strtotime($r['tanggal']));
+                $tgl_lahir = date('d/m/Y', strtotime($r['tgl_lahir']));
 
                 echo'<tr>';
                 echo"<td>$tgl</td>";

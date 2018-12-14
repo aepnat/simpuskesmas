@@ -6,7 +6,7 @@
      }
    </script>  
 <?php
-switch ($_GET[act]) {
+switch (isset($_GET['act']) && $_GET['act']) {
 
 default:
 
@@ -69,8 +69,8 @@ $ldate = date('Y-m-d');
                 $tampil = mysql_query("SELECT id_modul as id FROM modul WHERE link='".$module."'");
                 $r = mysql_fetch_array($tampil);
 
-                echo"<input type='hidden' name='report_id' id='report_id' value=".$r[id].'>';
-                echo"<input type='hidden' name='module' value=".$_GET[module].'>';
+                echo"<input type='hidden' name='report_id' id='report_id' value=".$r['id'].'>';
+                echo"<input type='hidden' name='module' value=".$_GET['module'].'>';
             ?>
             </form>    
                    

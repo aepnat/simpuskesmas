@@ -86,7 +86,7 @@ document.getElementById("jumlah_realisasi<?php echo $i?>").value = nilai ;
 
 <?php
 
-switch ($_GET[act]) {
+switch (isset($_GET['act']) && $_GET['act']) {
 
     default:
 

@@ -2,7 +2,7 @@
 include './../../config/koneksi.php';
 include './../../config/fungsi_indobulan.php';
 
-$tampil = mysql_query("SELECT * FROM modul WHERE id_modul ='".$_GET[report_id]."'");
+$tampil = mysql_query("SELECT * FROM modul WHERE id_modul ='".$_GET['report_id']."'");
 
 $r = mysql_fetch_array($tampil);
 
@@ -10,9 +10,8 @@ $module = $_GET['module'];
 $imodule = ucwords($r['nama_modul']);
 $nmmodule = ucwords($r['nama_modul']);
 $id = $r['id_modul'];
-$fa_icon = $r['fa_icon'];
 
-if ($r[orientation] == 'P') {
+if ($r['orientation'] == 'P') {
     $orientation = 'portrait';
 } else {
     $orientation = 'landscape';
@@ -205,7 +204,7 @@ $company = ucwords($g['company']);
 
 $r = mysql_fetch_array($tampil);
 
-$tgl_lahir = date('d/m/Y', strtotime($r[tgl_lahir]));
+$tgl_lahir = date('d/m/Y', strtotime($r['tgl_lahir']));
 
 if ($r['gender'] == 'L') {
     $gender = 'Laki-laki';
@@ -215,8 +214,8 @@ if ($r['gender'] == 'L') {
 ?>      
 
 <table style="width: 100%;">
-<tr><td style="width: 20%;">NIP</td><td style="width: 1%;">:</td><td><?=$r[ktp]; ?></td></tr>
-<tr><td style="width: 20%;">Nama Pasien</td><td style="width: 1%;">:</td><td><?=$r[nama]; ?></td></tr>
+<tr><td style="width: 20%;">NIP</td><td style="width: 1%;">:</td><td><?=$r['ktp']; ?></td></tr>
+<tr><td style="width: 20%;">Nama Pasien</td><td style="width: 1%;">:</td><td><?=$r['nama']; ?></td></tr>
 <tr><td style="width: 20%;">Jenis Kelamin</td><td style="width: 1%;">:</td><td><?=$gender; ?></td></tr>
 <tr><td style="width: 20%;">Tanggal Lahir</td><td style="width: 1%;">:</td><td><?=$tgl_lahir; ?></td></tr>
 </table> 
@@ -242,7 +241,7 @@ if ($r['gender'] == 'L') {
          WHERE a.id_pasien = '$pasien'");
 
     while ($r = mysql_fetch_array($tampil)) {
-        $tgl = date('d/m/Y', strtotime($r[tanggal]));
+        $tgl = date('d/m/Y', strtotime($r['tanggal']));
 
         echo'<tr>';
         echo"<td>$tgl</td>";

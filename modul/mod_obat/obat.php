@@ -1,6 +1,6 @@
       
     <?php
-switch ($_GET[act]) {
+switch (isset($_GET['act']) && $_GET['act']) {
 
         default:
           ?>
@@ -54,8 +54,8 @@ switch ($_GET[act]) {
             $no = 1;
 
             while ($r = mysql_fetch_array($tampil)) {
-                $jumlah = number_format($r[jumlah], 0, '', '.');
-                $kadaluwarsa = ($r[kadaluwarsa] != '') ? date('d/m/Y', strtotime($r[kadaluwarsa])) : '-';
+                $jumlah = number_format($r['jumlah'], 0, '', '.');
+                $kadaluwarsa = ($r['kadaluwarsa'] != '') ? date('d/m/Y', strtotime($r['kadaluwarsa'])) : '-';
 
                 echo'<tr>';
                 echo"<td>$r[obat]</td>";
