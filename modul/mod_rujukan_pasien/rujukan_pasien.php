@@ -65,8 +65,8 @@ switch (isset($_GET['act']) && $_GET['act']) {
             $no = 1;
 
             while ($r = mysql_fetch_array($tampil)) {
-                $tgl = date('d/m/Y', strtotime($r[tanggal]));
-                $tgl_lahir = date('d/m/Y', strtotime($r[tgl_lahir]));
+                $tgl = date('d/m/Y', strtotime($r['tanggal']));
+                $tgl_lahir = date('d/m/Y', strtotime($r['tgl_lahir']));
 
                 echo'<tr>';
                 echo"<td>$tgl</td>";
@@ -77,6 +77,7 @@ switch (isset($_GET['act']) && $_GET['act']) {
                 echo"<td>$r[rujukan_rs]</td>";
                 echo"<td>$r[rujukan_lab]</td>";
                 echo" <td  style='text-align:center;'>";
+                echo"<a href='#' title='Cetak' onclick=\"window.open('./modul/mod_". $module . "/cetak_rujukan_pasien.php?report_id=20&id_rujukan=" . $r['id_kunjungan_berobat'] . "', '', 'height=500,width=600,resizable=1,scrollbars=1,addressbars=0,directories=no,location=no')\"><span class='icon'><i class='fa fa-print'></i></span></a>";
 
                 if ($r_edit == 'Y') {
                     echo"<a class='thickbox' href='modul/mod_$module/form_$module.php?id_kunjungan_berobat=$r[id_kunjungan_berobat]&id_module=$id&width=720&height=560&module=$module&TB_iframe=true' title='Update $nmmodule'><span class='icon'><i class='fa fa-pencil'></i></span></a>";
