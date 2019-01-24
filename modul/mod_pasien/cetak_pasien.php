@@ -4,8 +4,6 @@
 
     include './../../config/koneksi.php';
     include './../../config/fungsi_indobulan.php';
-    include './../../config/barcode_gen.php';
-    include './../../config/qrcode/qrlib.php';
 
     $tampil = mysql_query("SELECT * FROM modul WHERE id_modul ='".$_GET[report_id]."'");
 
